@@ -1,13 +1,16 @@
-# Biomime
+# EvoForm
 
 **Design in accordance with nature** · **Rua · Kai**  
-**Folder:** `biomime` · **Started:** 2026-07-28  
+**Folder:** `evoform` · **Started:** 2026-07-28  
+**Earlier working name:** Biomime (folder renamed; BioMime is a medical stent brand)
 
 ## What this is
 
 A public studio-instrument that turns **human design problems** into **collaborative, evidence-grounded opportunity briefs** — drawing on living systems, deep time, extremes, and possible (including designed) life.
 
 Not nature-as-decoration. Not unlabeled sci-fi sold as fact.
+
+**EvoForm** = evolution shapes form. Design that follows how living systems get good shapes under the laws of nature.
 
 ## North star
 
@@ -30,7 +33,7 @@ Evidence-based speculation is welcome. Speculation presented as settled fact is 
 ## How it works (product shape)
 
 1. Someone brings a **human design problem**  
-2. Biomime explores multi-lane biology under physics  
+2. EvoForm explores multi-lane biology under physics  
 3. Output: a **shareable collaborative opportunity brief** (instrument + studio)  
 4. Public by default — wisdom open; strong revelations may become ventures later  
 
@@ -56,7 +59,7 @@ Full brief lives in session history until we add `briefs/` here.
 
 ## Status
 
-- Folder created. Product UI not built yet.  
+- Folder renamed to `evoform`. Product UI not built yet.  
 - Resume build only on Rua go. Masters capacity primary from Aug 2026.
 
 ## Next (when we continue)
