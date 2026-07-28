@@ -47,7 +47,7 @@ Human machines are still rudimentary compared with what simple species demonstra
 **Quiet, efficient small AUV for long surveys** — Path A hybrid recommended  
 (streamlined sensor body · variable buoyancy · paired fins for hover · pulsed jet or flexible tail for transit).
 
-Full brief lives in session history until we add `briefs/` here.
+Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md)
 
 ## Honesty bar
 
