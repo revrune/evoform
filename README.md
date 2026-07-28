@@ -2,15 +2,28 @@
 
 **Design in accordance with nature** · **Rua · Kai**  
 **Folder:** `evoform` · **Started:** 2026-07-28  
-**Earlier working name:** Biomime (folder renamed; BioMime is a medical stent brand)
-
-## What this is
-
-A public studio-instrument that turns **human design problems** into **collaborative, evidence-grounded opportunity briefs** — drawing on living systems, deep time, extremes, and possible (including designed) life.
-
-Not nature-as-decoration. Not unlabeled sci-fi sold as fact.
+**Earlier working name:** Biomime (BioMime is a medical stent brand)
 
 **EvoForm** = evolution shapes form. Design that follows how living systems get good shapes under the laws of nature.
+
+## Mission
+
+**Biologically inspired, revolutionary marine vehicles** that can **hang with marine mammals** — stay with them longer, quieter, and more gracefully than a slow underwater box with a thruster.
+
+Not only “efficient AUV.”  
+**Co-presence platforms:** match the fluid competence of life so sensors (and careful humans/partners) can listen and observe on *their* terms — not a brief flyby.
+
+## Sister project: CetaVox
+
+| | **CetaVox** (`cetavox`) | **EvoForm** (`evoform`) |
+|--|-------------------------|-------------------------|
+| Job | **Decipher** what sounds mean | **Build platforms** that can stay in the acoustic and social world of marine mammals |
+| Input | Existing recordings + new long-dwell data | Design problems + biology under physics |
+| Output | Structure, patterns, meaning hypotheses | Opportunity briefs → real vehicle concepts |
+| Link | Better co-presence → richer honest data for deciphering | Deciphering needs time *with* the animals, not only archive hours |
+
+Ocean Sounds and others already record. CetaVox works patterns and meaning.  
+EvoForm aims at the **missing machine**: vehicles life-shaped enough to loiter with whales and dolphins without wrecking the scene.
 
 ## North star
 
@@ -20,34 +33,42 @@ Physics and the nature of the universe set the possible.
 Life (past, present, and potential) is our richest catalogue of solutions that already work inside those laws.  
 Evidence-based speculation is welcome. Speculation presented as settled fact is not.
 
+## Why fluid life is the first domain
+
+Human marine vehicles are still **rudimentary** next to simple species: drag, noise, endurance, manoeuvre, soft bodies, sparse thrust.  
+To hang with marine mammals you need more than slow survey mode — you need **modes they already own**:
+
+- Quiet presence (don’t dominate the soundscape)  
+- Efficient long dwell / loiter  
+- Burst and cruise without thrashing  
+- Stability for hydrophones and cameras while the animal moves  
+- Bodies that survive clutter, current, and real sea handling  
+
 ## Lanes (always labeled)
 
 | Label | Meaning |
 |-------|---------|
-| **Living** | Extant organisms / systems |
-| **Deep-time** | Extinct / fossil strategies |
-| **Extreme** | Edge habitats (deep sea, cold, pressure, …) |
-| **Synthetic** | Designed / engineered life or living materials |
-| **Speculative** | Plausible future biology — with an evidence trail |
+| **Living** | Extant organisms / systems (fish, jelly, marine mammals themselves as teachers of form) |
+| **Deep-time** | Extinct / fossil swimmers |
+| **Extreme** | Deep, cold, high-pressure regimes |
+| **Synthetic** | Soft robots, artificial muscle, living materials |
+| **Speculative** | Plausible next forms — with evidence trail |
 
 ## How it works (product shape)
 
-1. Someone brings a **human design problem**  
+1. Someone brings a **human design problem** (default: co-presence marine vehicle)  
 2. EvoForm explores multi-lane biology under physics  
 3. Output: a **shareable collaborative opportunity brief** (instrument + studio)  
 4. Public by default — wisdom open; strong revelations may become ventures later  
 
-## First domain focus
+## Showcase brief
 
-**Movement through fluids** (water first, air second).  
-Human machines are still rudimentary compared with what simple species demonstrate.
-
-### Showcase brief (drafted in talk)
-
-**Quiet, efficient small AUV for long surveys** — Path A hybrid recommended  
+**Quiet, efficient small platform for long surveys / co-presence** — Path A hybrid  
 (streamlined sensor body · variable buoyancy · paired fins for hover · pulsed jet or flexible tail for transit).
 
 Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md)
+
+*Next brief evolution:* explicit **“hang with marine mammals”** constraints (noise budget, loiter hours, following behaviour, ethics of approach).
 
 ## Honesty bar
 
@@ -55,15 +76,15 @@ Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.m
 |----|--------|
 | Mechanisms + constraints + transfer notes | “Nature says invent this product” with no trail |
 | Evidence-based speculation, labeled | Unlabeled speculation as fact |
-| Physics / energy / scale checks | Free-lunch engineering |
+| Physics / energy / scale / welfare checks | Free-lunch engineering or harassing animals for data |
 
 ## Status
 
-- Folder renamed to `evoform`. Product UI not built yet.  
-- Resume build only on Rua go. Masters capacity primary from Aug 2026.
+- Mission linked to CetaVox co-presence need (2026-07-28).  
+- Product UI not built. Masters capacity primary from Aug 2026.
 
 ## Next (when we continue)
 
-1. Path A one-page first prototype definition, or  
-2. Drop the quiet-AUV brief into `briefs/` as gallery seed, or  
-3. Scaffold a minimal web shell for problem → brief → share  
+1. Rewrite Path A brief with **co-presence / hang-with** done bar (noise, hours, follow, ethics)  
+2. Path A one-page prototype definition  
+3. Scaffold minimal problem → brief shell  
