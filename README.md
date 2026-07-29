@@ -66,9 +66,10 @@ To hang with marine mammals you need more than slow survey mode — you need **m
 **Quiet, efficient small platform for long surveys / co-presence** — Path A hybrid  
 (streamlined sensor body · variable buoyancy · paired fins for hover · pulsed jet or flexible tail for transit).
 
-Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md)
+Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md)  
+**Success research pack (2026-07-29):** [`docs/research-success-pack-2026-07-29.md`](docs/research-success-pack-2026-07-29.md)
 
-*Next brief evolution:* explicit **“hang with marine mammals”** constraints (noise budget, loiter hours, following behaviour, ethics of approach).
+*Next brief evolution:* explicit **“hang with marine mammals”** constraints (noise budget, loiter hours, following behaviour, ethics of approach) — spelled out in the success pack §4.
 
 ## Honesty bar
 
@@ -85,6 +86,7 @@ Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.m
 
 ## Next (when we continue)
 
-1. Rewrite Path A brief with **co-presence / hang-with** done bar (noise, hours, follow, ethics)  
-2. Path A one-page prototype definition  
-3. Scaffold minimal problem → brief shell  
+1. Use the **success research pack** — field map, Path A hang-with bars, lab reading order  
+2. Rewrite Path A brief with **co-presence / hang-with** done bar (noise, hours, follow, ethics)  
+3. Path A one-page prototype definition  
+4. Scaffold minimal problem → brief shell only when capacity allows  
