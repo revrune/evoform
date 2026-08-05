@@ -6,6 +6,12 @@
 
 **EvoForm** = evolution shapes form. Design that follows how living systems get good shapes under the laws of nature.
 
+**Name locked (2026-08-05):** Keep **EvoForm**. Not cetacean-only branding. Co-presence *targets* may centre marine mammals (sister to CetaVox); **form teachers** are multi-taxon — any lineage that solved the physics we need (Living · Deep-time · Extreme · Synthetic · Speculative, always labeled).
+
+### Form teachers ≠ only hang-with subjects
+
+Example **Living** lane — leatherback turtle (*Dermochelys coriacea*): longest known marine migrations; leathery carapace with interlocking / compliant structure that tolerates significant compression at depth; efficient long-range movement; internal volume usable as a model for component packing; body strategies that may thrash hardware less than hard-shell or thruster-box norms. **Not** “build a robot turtle.” **Yes** — extract mechanisms (compliance under pressure, migration-scale efficiency, packing geometry) with evidence trail, then transfer under physics and welfare constraints.
+
 ## Mission
 
 **Biologically inspired, revolutionary marine vehicles** that can **hang with marine mammals** — stay with them longer, quieter, and more gracefully than a slow underwater box with a thruster.

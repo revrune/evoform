@@ -120,6 +120,9 @@ When rewriting `briefs/quiet-small-auv-survey.md`, add an explicit **“hang wit
 | Tank demos of robotic fish | **Mission-complete hybrid** (VBS + fins + soft transit) specified for field science |
 | Military stealth | **Scientific / conservation** use cases with Ocean Sounds–class partners |
 | Full vehicle companies | **Brief studio + concept IP + student/lab collaboration** first |
+| Cetacean-only biomimicry branding | **Multi-taxon form teachers** (e.g. leatherback compliance + migration efficiency) while hang-with targets may still be marine mammals |
+
+**Name lock:** EvoForm kept (2026-08-05) so the catalogue of teachers stays open. Sister CetaVox stays cetacean-sound focused; EvoForm does not have to mirror that noun.
 
 **Leitner parallel:** world-class is not more features — it is **truth + craft** on a thin spine.
 
