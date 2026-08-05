@@ -50,8 +50,8 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 
 ## Local tree notes
 
-- Uncommitted (may still exist): `AGENTS.md`, `README.md`, `docs/research-success-pack-2026-07-29.md` — law/docs edits; commit when intentional.
-- This handoff file should be committed with NOW-law AGENTS/Claude updates.
+- **Canonical path:** `~/evoform` only (not Desktop / not Ruairí life archive). Folder moves rescued 2026-08-06; empty Desktop shells removed.
+- **main @ bb41a4e+:** spine site · NOW law · handoff · name-lock / leatherback form-teacher notes on README + research pack.
 
 ## Open (real blockers only)
 
