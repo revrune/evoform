@@ -36,7 +36,9 @@ Output is a **shareable collaborative opportunity brief**: mechanisms, constrain
 transfer notes, and an evidence trail. Not "nature says invent this product". Physics,
 energy, scale, and animal-welfare checks are part of the brief, not an appendix.
 
-## Capacity
+## Capacity & NOW law
 
-Rua's Masters (Marine Ecology) starts ~11 Aug 2026 and is the primary capacity. EvoForm and
-CetaVox are **drip work** until then. Propose small.
+Masters (Marine Ecology, ~11 Aug 2026) is life context — **not** a rest command. **NOW law
+(permanent · 2026-08-06):** if Rua is communicating about doing something, agents do it now.
+Never invent pause/rest/later. Real blockers only (registry, auth, moral, truly stuck). Prefer
+tight done bars over sprawl; size the unit, don’t refuse the session.
