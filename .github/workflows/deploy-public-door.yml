@@ -1,5 +1,5 @@
-# Deploy thin public door (index, 404, CNAME, .nojekyll, version.json) to GitHub Pages.
-# Research tree on main is not published — only these files.
+# Deploy public door + Path A concept to GitHub Pages.
+# Research tree on main is not published — only door + path-a public surface.
 name: Deploy public door
 
 on:
@@ -11,6 +11,7 @@ on:
       - "CNAME"
       - ".nojekyll"
       - "version.json"
+      - "path-a/**"
       - ".github/workflows/deploy-public-door.yml"
   workflow_dispatch:
 
@@ -33,10 +34,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Stage door files only
+      - name: Stage door files + Path A
         run: |
           mkdir -p _site
           cp index.html 404.html CNAME .nojekyll version.json _site/
+          if [ -d path-a ]; then
+            cp -R path-a _site/path-a
+          fi
+          # Ensure directory URLs work
+          if [ -f _site/path-a/index.html ]; then
+            echo "path-a staged"
+          fi
+          find _site -type f | sort
           ls -la _site
 
       - name: Configure Pages

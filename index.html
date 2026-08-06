@@ -19,7 +19,8 @@
     <meta property="og:url" content="https://evoform.no/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="EvoForm" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="EvoForm · nature-inspired underwater vehicles" />
     <meta
       name="twitter:description"
@@ -79,7 +80,6 @@
         margin: 0 0 1.75rem;
       }
 
-      /* Pair as two intentional lines — no mid-phrase wrap */
       h1.pair {
         font-family: var(--font-display);
         font-size: clamp(1.7rem, 5.2vw, 2.35rem);
@@ -112,9 +112,57 @@
         font-size: 1.08rem;
         font-weight: 450;
         color: var(--muted);
-        margin: 0 0 2.5rem;
+        margin: 0 0 1.75rem;
         max-width: 30rem;
         line-height: 1.55;
+      }
+
+      .path-card {
+        display: block;
+        margin: 0 0 2.25rem;
+        padding: 1rem 1.1rem 1.05rem;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: rgba(94, 201, 168, 0.04);
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s ease, background 0.15s ease;
+      }
+
+      .path-card:hover {
+        border-color: rgba(94, 201, 168, 0.35);
+        background: rgba(94, 201, 168, 0.07);
+      }
+
+      .path-card:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .path-card .kicker {
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin: 0 0 0.4rem;
+      }
+
+      .path-card .title {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 0 0 0.35rem;
+      }
+
+      .path-card .desc {
+        display: block;
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.45;
+        margin: 0;
       }
 
       .sister {
@@ -138,6 +186,11 @@
         outline: 2px solid var(--accent);
         outline-offset: 3px;
         border-radius: 0.2rem;
+      }
+
+      .path-card a,
+      .path-card:hover {
+        border-bottom-color: transparent;
       }
 
       footer {
@@ -194,7 +247,7 @@
         .lede {
           font-size: 1.02rem;
           max-width: none;
-          margin-bottom: 2.15rem;
+          margin-bottom: 1.5rem;
         }
       }
     </style>
@@ -211,12 +264,22 @@
       <p class="lede">
         Nature-inspired underwater vehicles for long, quiet observation.
       </p>
+      <a class="path-card" href="/path-a/">
+        <span class="kicker">Early concept</span>
+        <span class="title">Path A · Quiet Hybrid</span>
+        <span class="desc"
+          >Leatherback-form study · quieter longer observation · interactive concept boards. Not a
+          finished product.</span
+        >
+      </a>
       <p class="sister">
         Sister · <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
       </p>
       <footer>
         <p class="foot-links">
           <a href="https://github.com/revrune/evoform">GitHub</a>
+          <span class="sep" aria-hidden="true">·</span>
+          <a href="/path-a/">Path A</a>
           <span class="sep" aria-hidden="true">·</span>
           <a href="https://cetavox.com/">CetaVox</a>
         </p>
