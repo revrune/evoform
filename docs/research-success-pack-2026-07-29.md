@@ -7,9 +7,11 @@
 
 This pack turns the showcase brief into a **success map**: field state, whitespace, Path A done bars, ethics, labs to study, capacity, next builds.
 
+**Path A research stack (PERMANENT · 2026-08-06):** [`docs/path-a-research-stack-permanent-2026-08-06.md`](path-a-research-stack-permanent-2026-08-06.md)
+
 **Eli research instrument (2026-08-06):** [`docs/research-instrument-path-a-eli-2026-08-06.md`](research-instrument-path-a-eli-2026-08-06.md) — mechanism catalogue, innovation shortlist, Path A composition, reading list, refuse list.
 
-**Papers working note:** [`docs/path-a-papers-working-note-2026-08-06.md`](path-a-papers-working-note-2026-08-06.md)
+**Papers working note (PERMANENT shelf):** [`docs/path-a-papers-working-note-2026-08-06.md`](path-a-papers-working-note-2026-08-06.md)
 
 **Path A opportunity briefs (actionable bets):**
 | Bet | Brief |

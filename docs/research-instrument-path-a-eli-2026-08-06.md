@@ -2,7 +2,7 @@
 
 **Path A · Co-presence first · Integrity first**  
 **Source:** Eli · **Date:** 2026-08-06 · **Filed by:** Kai  
-**Status:** Research instrument · study + opportunity-brief input · not a finished product claim  
+**Status:** **PERMANENT research instrument** · study + opportunity-brief input · not a finished product claim · skill-laws locked  
 **Judge against:** `briefs/path-a-job-card.md` (LOCKED · PERMANENT)  
 **Related:** `docs/research-success-pack-2026-07-29.md` · `briefs/quiet-small-auv-survey.md` · leatherback osteoderm pack  
 **Papers shelf:** `docs/path-a-papers-working-note-2026-08-06.md`  

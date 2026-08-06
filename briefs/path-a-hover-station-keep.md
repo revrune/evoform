@@ -1,6 +1,6 @@
 # EvoForm opportunity brief  
 **Title:** Hover / station-keep without continuous prop wash (Path A bet 3)  
-**Status:** Collaborative opportunity brief · 2026-08-06 · Kai from Eli instrument  
+**Status:** **PERMANENT house opportunity brief** · 2026-08-06 · Kai from Eli instrument · judge against Path A job card  
 **Project:** EvoForm · *In Accordance with Nature* · *Form Shaped by Evolution*  
 **Job card (LOCKED · PERMANENT):** `briefs/path-a-job-card.md`  
 **Instrument:** `docs/research-instrument-path-a-eli-2026-08-06.md` · **Papers:** `docs/path-a-papers-working-note-2026-08-06.md`  

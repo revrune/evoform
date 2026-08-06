@@ -67,15 +67,21 @@ To hang with marine mammals you need more than slow survey mode — you need **m
 3. Output: a **shareable collaborative opportunity brief** (instrument + studio)  
 4. Public by default — wisdom open; strong revelations may become ventures later  
 
-## Showcase brief
+## Path A research (permanent · 2026-08-06)
 
-**Quiet, efficient small platform for long surveys / co-presence** — Path A hybrid  
-(streamlined sensor body · variable buoyancy · paired fins for hover · pulsed jet or flexible tail for transit).
+**Canonical map:** [`docs/path-a-research-stack-permanent-2026-08-06.md`](docs/path-a-research-stack-permanent-2026-08-06.md)
 
-Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md)  
-**Success research pack (2026-07-29):** [`docs/research-success-pack-2026-07-29.md`](docs/research-success-pack-2026-07-29.md)
+| Layer | Path |
+|-------|------|
+| **Job card (LOCKED)** | [`briefs/path-a-job-card.md`](briefs/path-a-job-card.md) |
+| **Eli instrument** | [`docs/research-instrument-path-a-eli-2026-08-06.md`](docs/research-instrument-path-a-eli-2026-08-06.md) |
+| **Papers shelf** | [`docs/path-a-papers-working-note-2026-08-06.md`](docs/path-a-papers-working-note-2026-08-06.md) |
+| **Success pack** | [`docs/research-success-pack-2026-07-29.md`](docs/research-success-pack-2026-07-29.md) |
+| **Showcase seed** | [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md) |
+| **Bets 1–5 + law** | `briefs/path-a-*.md` (propulsion · riblets · hover · hydrophone · foul-aware · abort law) |
+| **Secondary volume-following** | [`briefs/leatherback-osteoderm-volume-following.md`](briefs/leatherback-osteoderm-volume-following.md) |
 
-*Next brief evolution:* explicit **“hang with marine mammals”** constraints (noise budget, loiter hours, following behaviour, ethics of approach) — spelled out in the success pack §4.
+Path A hybrid sketch: streamlined sensor body · variable buoyancy · paired fins for hover · sparse/quiet thrust · pulsed or flexible transit only when earned.
 
 ## Honesty bar
 
@@ -88,11 +94,12 @@ Full brief: [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.m
 ## Status
 
 - Mission linked to CetaVox co-presence need (2026-07-28).  
-- Product UI not built. Masters capacity primary from Aug 2026.
+- Public door: thin spine only (evoform.no) · no product UI.  
+- Path A research stack permanent (job card · instrument · papers · opportunity briefs · skill-laws).  
+- Masters capacity primary from Aug 2026.
 
 ## Next (when we continue)
 
-1. Use the **success research pack** — field map, Path A hang-with bars, lab reading order  
-2. Rewrite Path A brief with **co-presence / hang-with** done bar (noise, hours, follow, ethics)  
-3. Path A one-page prototype definition  
-4. Scaffold minimal problem → brief shell only when capacity allows  
+1. Study papers shelf + kill criteria on bets **1–4**  
+2. First experiment plan only after founder **go** (tank noise / coupons / hydrophone layout)  
+3. Buildable packages only after explicit **go** (job card)  

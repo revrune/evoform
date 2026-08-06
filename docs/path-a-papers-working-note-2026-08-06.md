@@ -1,6 +1,7 @@
 # Path A · papers working note
 
 **Date:** 2026-08-06 · **Kai**  
+**Status:** **PERMANENT** evidence shelf · 2026-08-06
 **Purpose:** Shared evidence shelf for Path A opportunity briefs. Expands instrument reading list (`docs/research-instrument-path-a-eli-2026-08-06.md` §6).  
 **Law:** In Accordance with Nature · lanes labeled · no free lunch · paywalled items cited by DOI/abstract only  
 **Judge:** `briefs/path-a-job-card.md` (LOCKED · PERMANENT)
