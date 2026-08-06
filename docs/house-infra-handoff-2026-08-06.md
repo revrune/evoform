@@ -25,8 +25,9 @@ Varde offline until tokens reset (Saturday ~2026-08-09) — does not change NOW 
 
 | Domain | State |
 |--------|--------|
-| **evoform.no** | Ordered Webhuset **333609** · customer **140458** · list shows Active · **Norid egenerklæring pending** (human staff email; chat escalated). NS change blocked until registered. |
-| **Cloudflare zone** | Exists · **pending** · NS `cleo` / `raphaela` · DNS-only A×4 GitHub Pages + `www` → `revrune.github.io` |
+| **evoform.no** | **LIVE** (CF Active 2026-08-06) · registered Webhuset · order **333609** · customer **140458** · **N.PRI.99477784** · egenerklæring confirmed · NS `cleo` / `raphaela` |
+| **Cloudflare zone** | **Active / protected** · NS `cleo` / `raphaela` · apex A×4 GitHub Pages (185.199.108–111.153) · `www` CNAME → `revrune.github.io` · prefer DNS-only (grey) for Pages TLS |
+| **Site** | **http://evoform.no** serves thin spine · **HTTPS** wait GitHub custom-domain cert (`https_enforced` false until cert exists) |
 | **evoform.com** | **Not ours** (ACTIVE third party / Afternic parking). Do not set as custom domain. |
 
 **When egenerklæring signed + Webhuset allows NS:** set only
@@ -53,12 +54,30 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 - **Canonical path:** `~/evoform` only (not Desktop / not Ruairí life archive). Folder moves rescued 2026-08-06; empty Desktop shells removed.
 - **main @ bb41a4e+:** spine site · NOW law · handoff · name-lock / leatherback form-teacher notes on README + research pack.
 
+## Product law (permanent · 2026-08-06)
+
+| Item | Lock |
+|------|------|
+| **Path A job card** | **LOCKED** · `briefs/path-a-job-card.md` · job · market win order · envelope · year-1 users · build posture |
+| **Kai role (fab)** | Specs + opportunity briefs · buildable packages after explicit **go** · coordinates shops/labs · workflow detail when fabrication starts |
+| **Public spine** | Thin mission only · Eli A · `docs/eli-public-spine-A-2026-08-06.md` |
+| **Public pair (locked)** | **In Accordance with Nature · Form Shaped by Evolution** · Title Case · join with ` · ` · no em dashes on door |
+| **Osteoderm** | Living teacher secondary · volume-following ≠ pressure hull · not first hull requirement |
+
 ## Open (real blockers only)
 
-1. Webhuset human → egenerklæring link → sign as privatperson (`ruairithered@gmail.com`).
-2. Point NS to Cloudflare.
-3. Optional later: Sentry **project** + SDK when there is a runtime to instrument.
-4. Optional later: GitHub Pages **https_enforced** once domain verifies.
+1. ~~Egenerklæring + register~~ **Done** 2026-08-06.
+2. ~~Point NS to Cloudflare~~ **Saved at Webhuset** 2026-08-06 · Norid whois shows CLEO/RAPH handles.
+3. ~~Package A door verify~~ **Mostly done 2026-08-06:** CF Active · public NS OK · HTTP spine live · HTTPS cert pending GitHub.
+4. Optional later: Sentry **project** + SDK when there is a runtime to instrument.
+
+### Package A checklist
+
+- [x] Cloudflare zone status **Active**
+- [x] `dig +short NS evoform.no @1.1.1.1` → cleo + raphaela
+- [x] `http://evoform.no` serves thin spine (mission · north star · sister · early briefs)
+- [ ] `https://evoform.no` — wait GitHub Pages cert for custom domain, then **Enforce HTTPS**
+- [x] Handoff updated live date 2026-08-06
 
 ## House map (unchanged integrity)
 

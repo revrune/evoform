@@ -28,6 +28,8 @@ EvoForm is known for **honest bio-inspired marine co-presence design** — publi
 ### Core job
 **Co-presence platform:** stay with marine mammals **longer, quieter, more gracefully** than a slow box with a thruster — so sensors (and careful partners) observe on *their* terms.
 
+**Path A job card (LOCKED 2026-08-06 · permanent until founder reopens):** `briefs/path-a-job-card.md` — primary win = quieter + more efficient motion (form · riblets where earned · sparse/undulating thrust) · then loiter · then easy deploy.
+
 ### Not the job
 - Outrun a dolphin  
 - Harass animals for content  
@@ -121,6 +123,9 @@ When rewriting `briefs/quiet-small-auv-survey.md`, add an explicit **“hang wit
 | Military stealth | **Scientific / conservation** use cases with Ocean Sounds–class partners |
 | Full vehicle companies | **Brief studio + concept IP + student/lab collaboration** first |
 | Cetacean-only biomimicry branding | **Multi-taxon form teachers** (e.g. leatherback compliance + migration efficiency) while hang-with targets may still be marine mammals |
+| Ridge-only leatherback hydro (gliders) | **Osteoderm-suture volume-following compliance** as outer-envelope teacher (mechanism transfer open; Eli seal 2026-08-06) |
+
+**Form teacher seal (Eli · 2026-08-06):** Leatherback osteoderm mosaic = accepted **Living** teacher for volume-following compliant outer structure · secondary-to-medium Path A · not pressure hull · opportunity brief only after Rua go. Full research: `docs/research-leatherback-osteoderms-2026-08-06.md`.
 
 **Name lock:** EvoForm kept (2026-08-05) so the catalogue of teachers stays open. Sister CetaVox stays cetacean-sound focused; EvoForm does not have to mirror that noun.
 

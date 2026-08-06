@@ -1,7 +1,8 @@
 # EvoForm opportunity brief  
 **Lane:** Fluid locomotion · water first  
 **Status:** Showcase seed (from 2026-07-28 product talk) — collaborative, not a finished engineering spec  
-**Project:** EvoForm · *In Accordance with Nature*
+**Project:** EvoForm · *In Accordance with Nature*  
+**Job card (locked 2026-08-06):** `briefs/path-a-job-card.md` — every mechanism judged against that job
 
 ---
 
@@ -99,6 +100,17 @@ For a **small AUV at survey speeds**, you are usually in a **mixed / inertial re
 | **Mechanism** | Don’t fight gravity/buoyancy every second; thrusters only correct error |
 | **Transfer** | Variable buoyancy system (VBS); survey = drift + micro-corrections |
 | **Status** | **Established** in nature and in gliders / some AUVs |
+
+### 3.5b Living · osteoderm mosaic volume-following (leatherback) — Path A secondary
+
+| | |
+|--|--|
+| **What** | Mosaic of rigid osteoderms under leathery skin, linked by collagenous sutures (~30° interlock); longitudinal ridges for hydro + stiffness |
+| **Mechanism** | **Volume-following compliance** — envelope changes with internal compressible volume under hydrostatic load; not a pressure hull |
+| **Transfer** | Candidate outer architecture for tough, quieter, depth-aware fairings **around** dry cores and VBS; extract suture kinematics + ridge dual-use |
+| **Status** | **Established** biology/materials (Chen et al. 2015); **inferred / open** vehicle transfer of mosaic kinematics |
+| **Do not claim** | Robot turtle · plates cancel hydrostatic pressure · finished vehicle · world-first without novelty pass |
+| **Full brief** | `briefs/leatherback-osteoderm-volume-following.md` · research `docs/research-leatherback-osteoderms-2026-08-06.md` |
 
 ### 3.6 Extreme · deep / cold / high-pressure body plans
 

@@ -14,7 +14,7 @@
 ## Public claims
 
 **evoform.no (current spine only):**  
-EvoForm · form shaped by evolution · bio-inspired marine vehicles for long, quiet co-presence · In Accordance with Nature · sister CetaVox · early honest opportunity briefs under physics and welfare · multi-taxon teachers labeled · not a finished product page · house RevRune.
+**In Accordance with Nature · Form Shaped by Evolution** (locked public pair · Title Case · ` · ` joins) · EvoForm · bio-inspired marine vehicles for long, quiet co-presence · sister CetaVox · early honest opportunity briefs under physics and welfare · multi-taxon teachers labeled · not a finished product page · house RevRune.
 
 **cetavox.com platforms:** optional max one quiet line — *Quiet co-presence platforms for longer listening live under the house as EvoForm.* Prefer **zero** unless Rua explicitly adds it.
 
