@@ -76,6 +76,7 @@ To hang with marine mammals you need more than slow survey mode — you need **m
 | **Job card (LOCKED)** | [`briefs/path-a-job-card.md`](briefs/path-a-job-card.md) |
 | **Eli instrument** | [`docs/research-instrument-path-a-eli-2026-08-06.md`](docs/research-instrument-path-a-eli-2026-08-06.md) |
 | **Papers shelf** | [`docs/path-a-papers-working-note-2026-08-06.md`](docs/path-a-papers-working-note-2026-08-06.md) |
+| **First-experiment plan (LOCKED)** | [`docs/path-a-first-experiment-plan-2026-08-06.md`](docs/path-a-first-experiment-plan-2026-08-06.md) · #1 tank noise+power + hydrophone · not fab |
 | **Success pack** | [`docs/research-success-pack-2026-07-29.md`](docs/research-success-pack-2026-07-29.md) |
 | **Showcase seed** | [`briefs/quiet-small-auv-survey.md`](briefs/quiet-small-auv-survey.md) |
 | **Bets 1–5 + law** | `briefs/path-a-*.md` (propulsion · riblets · hover · hydrophone · foul-aware · abort law) |
@@ -101,6 +102,6 @@ Path A hybrid sketch: streamlined sensor body · variable buoyancy · paired fin
 
 ## Next (when we continue)
 
-1. Study papers shelf + kill criteria on bets **1–4**  
-2. First experiment plan only after founder **go** (tank noise / coupons / hydrophone layout)  
-3. Buildable packages only after explicit **go** (job card)  
+1. Study papers shelf + kill criteria on bets **1–4** (against the locked experiment plan)  
+2. Run lab protocol only when founder schedules it — plan is locked; **fab/build packages still need a separate go**  
+3. Do not re-rank bets 1–4 without founder rewrite of the experiment plan  

@@ -19,6 +19,7 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 | **Public pair** | evoform.no h1 · thin spine | In Accordance with Nature · Form Shaped by Evolution |
 | **Public category** | thin door | nature-inspired underwater vehicles |
 | **Public copy law** | global memory | No honesty theater · Leitner-clean door |
+| **First-experiment plan** | `docs/path-a-first-experiment-plan-2026-08-06.md` | **LOCKED · PERMANENT** · rank #1 tank noise+power (bet 1) + hydrophone (bet 4) · not fab |
 
 ---
 
@@ -26,8 +27,8 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 
 | Item | Path |
 |------|------|
-| **Papers working note** | `docs/path-a-papers-working-note-2026-08-06.md` |
-| **First-experiment plan** | `docs/path-a-first-experiment-plan-2026-08-06.md` · ranks bets 1–4 · tank/coupon only · fab still later go |
+| **Papers working note** | `docs/path-a-papers-working-note-2026-08-06.md` · PERMANENT shelf |
+| **First-experiment plan** | `docs/path-a-first-experiment-plan-2026-08-06.md` · LOCKED · PERMANENT · tank/coupon only · fab still later go |
 | **Success pack** | `docs/research-success-pack-2026-07-29.md` |
 | **Eli deep-dive paste (archive)** | `docs/eli-paste-bioinspired-deep-dive-2026-08-06.md` |
 | **Eli ack** | `docs/eli-ack-path-a-permanent-2026-08-06.md` |

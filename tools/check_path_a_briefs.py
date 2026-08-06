@@ -51,6 +51,18 @@ REQUIRED = {
     "briefs/leatherback-osteoderm-volume-following.md": [
         r".+",  # exists; secondary pointer target
     ],
+    "docs/path-a-first-experiment-plan-2026-08-06.md": [
+        r"LOCKED|PERMANENT",
+        r"Quiet multi-mode|sparse thrust|bet 1",
+        r"Hydrophone|bet 4",
+        r"[Kk]ill",
+        r"path-a-job-card",
+        r"not a fab|Not a fab|fab still|later go",
+    ],
+    "docs/path-a-research-stack-permanent-2026-08-06.md": [
+        r"First-experiment plan",
+        r"LOCKED · PERMANENT",
+    ],
 }
 
 

@@ -13,7 +13,7 @@ This pack turns the showcase brief into a **success map**: field state, whitespa
 
 **Papers working note (PERMANENT shelf):** [`docs/path-a-papers-working-note-2026-08-06.md`](path-a-papers-working-note-2026-08-06.md)
 
-**First-experiment plan:** [`docs/path-a-first-experiment-plan-2026-08-06.md`](path-a-first-experiment-plan-2026-08-06.md) — rank #1 tank noise+power (bet 1) coupled with hydrophone layout (bet 4); riblets/hover sequenced; fab still later go.
+**First-experiment plan (LOCKED · PERMANENT):** [`docs/path-a-first-experiment-plan-2026-08-06.md`](path-a-first-experiment-plan-2026-08-06.md) — rank #1 tank noise+power (bet 1) coupled with hydrophone layout (bet 4); riblets/hover sequenced; fab still later go · reopen only on founder rewrite.
 
 **Path A opportunity briefs (actionable bets):**
 | Bet | Brief |

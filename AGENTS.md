@@ -30,6 +30,6 @@ Kai is the same Build seat as Leitner/CetaVox. Global memory + three-company spi
 
 **House infra handoff:** `docs/house-infra-handoff-2026-08-06.md`
 
-**Path A research stack (permanent · 2026-08-06):** `docs/path-a-research-stack-permanent-2026-08-06.md` — job card · Eli instrument · papers shelf · opportunity briefs (bets 1–5) · abort-on-avoidance law · skill-laws. Judge vehicle work against `briefs/path-a-job-card.md`.
+**Path A research stack (permanent · 2026-08-06):** `docs/path-a-research-stack-permanent-2026-08-06.md` — job card · Eli instrument · papers shelf · opportunity briefs (bets 1–5) · abort-on-avoidance law · first-experiment plan (LOCKED) · skill-laws. Judge vehicle work against `briefs/path-a-job-card.md`.
 
 See `README.md`, `briefs/`, and `docs/` for full law.

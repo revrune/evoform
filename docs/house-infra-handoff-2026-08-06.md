@@ -62,6 +62,7 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 |------|------|
 | **Path A job card** | **LOCKED** · `briefs/path-a-job-card.md` · job · market win order · envelope · year-1 users · build posture |
 | **Path A research stack** | **PERMANENT** · map `docs/path-a-research-stack-permanent-2026-08-06.md` · instrument · papers shelf · bets 1–5 briefs · bet 6 composition · bet 7 leatherback secondary · bet 8 abort law · skill-laws in `evoform-product-partner` |
+| **First-experiment plan** | **LOCKED · PERMANENT** · `docs/path-a-first-experiment-plan-2026-08-06.md` · #1 tank noise+power (bet 1) + hydrophone (bet 4) · #3 hover · #4 riblets · **not** a fab go |
 | **Kai role (fab)** | Specs + opportunity briefs · buildable packages after explicit **go** · coordinates shops/labs · workflow detail when fabrication starts |
 | **Eli** | **Grok.com only.** When Rua says Eli, Kai gives **paste packet only** — never role-play Eli in Build (house-wide · 2026-08-06) |
 | **Public spine** | Thin mission only · Eli A · `docs/eli-public-spine-A-2026-08-06.md` · Leitner-clean · no honesty theater |

@@ -1,11 +1,15 @@
 # Path A · first-experiment plan (one page)
 
-**Status:** Filed on Rua **go** 2026-08-06 · **not** a fab go · tank/coupon/bench class only  
+**Status:** **LOCKED · PERMANENT** · 2026-08-06 · founder Rua go + “lock permanent”  
+**Reopen only:** explicit founder rewrite of rank or top protocol  
+**Not a fab go:** tank/coupon/bench class only · buildable packages still need a separate go  
 **Judge:** `briefs/path-a-job-card.md` (LOCKED · PERMANENT)  
 **Grounding:** opportunity briefs bets 1–4 · `docs/path-a-papers-working-note-2026-08-06.md` · instrument  
 **Stack map:** `docs/path-a-research-stack-permanent-2026-08-06.md`  
 
 **Law reminder:** Abort-on-avoidance remains product law for any later field work. This plan is lab only. No co-presence claim. No finished AUV.
+
+**Permanent rank (do not thrash):** #1 bet 1 (tank noise+power) · #2 bet 4 (hydrophone on same rig) · #3 bet 3 (hover) · #4 bet 2 (riblet coupons).
 
 ---
 

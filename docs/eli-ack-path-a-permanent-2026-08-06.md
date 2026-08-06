@@ -21,29 +21,22 @@
 
 ## Still open (real next work only)
 
-1. **Study** papers shelf + kill criteria on bets **1–4** (no go required · Masters context)  
-2. **First experiments** only on explicit Rua **go** (tank noise · riblet coupons · hydrophone spectra · hover power)  
-3. **Buildable packages / fab** only after explicit **go**  
+1. **Study** papers shelf + kill criteria on bets **1–4** (Masters · against locked experiment plan)  
+2. **Run** the locked lab protocol when Rua schedules it (tank/coupon — plan is permanent; scheduling ≠ re-ranking)  
+3. **Buildable packages / fab** only after a **separate** explicit **go**  
 
 ---
 
-## Next action (Eli ranked)
+## Closed since this ack
 
-1. **Study the papers shelf against bets 1–4**  
-   `docs/path-a-papers-working-note-2026-08-06.md` +  
-   `briefs/path-a-quiet-multimode-propulsion.md` ·  
-   `briefs/path-a-riblets-regime-matched.md` ·  
-   `briefs/path-a-hover-station-keep.md` ·  
-   `briefs/path-a-hydrophone-first-layout.md`  
-   Apply kill criteria already written. Research mode only.
+- **First-experiment plan** — written on Rua go · **LOCKED · PERMANENT** · `docs/path-a-first-experiment-plan-2026-08-06.md`  
+  Rank: #1 bet 1 tank noise+power · #2 bet 4 hydrophone same rig · #3 hover · #4 riblets  
 
-2. **One-page first-experiment plan** — only if Rua wants it now. Rank/scope tank or coupon tests. No fab until go.
+## Next action (post-lock)
 
-3. **Nothing else on product surface** — door, job card, skill-laws, briefs stay locked.
-
-**Eli recommendation:** Start with action 1. Then decide which kill criteria / evidence gaps matter most for the next study session.
-
-When Rua wants the one-page experiment plan or a ranking of which bet to test first — ask; do not landscape dump.
+1. Study papers + briefs 1–4 against that plan.  
+2. Do not re-rank without founder rewrite.  
+3. Fab still later go. No landscape dump.
 
 ---
 
