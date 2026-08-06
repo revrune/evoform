@@ -96,7 +96,7 @@ Path A hybrid sketch: streamlined sensor body · variable buoyancy · paired fin
 
 - Mission linked to CetaVox co-presence need (2026-07-28).  
 - Public door: thin spine only (https://evoform.no) · no product UI.  
-- **Live publish path:** GitHub Pages from branch **`gh-pages`** (door files only). Research commits on **main** do not auto-update the door. After door HTML changes: `tools/publish-public-door.sh`.  
+- **Live publish path:** GitHub Actions **Deploy public door** (workflow) from door files on **main**. Research-only commits do not rebuild the door. After door HTML/`version.json` change: push those files (or run the workflow). Fallback: `tools/publish-public-door.sh`.  
 - Path A research stack permanent (job card · instrument · papers · opportunity briefs · skill-laws).  
 - Masters capacity primary from Aug 2026.
 

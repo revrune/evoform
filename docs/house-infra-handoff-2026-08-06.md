@@ -47,7 +47,8 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 | Remote | `git@github.com:revrune/evoform.git` (fixed off wrong `leitnerlearning/` remote) |
 | Pages | Enabled · source **`gh-pages` `/`** (switched 2026-08-06) · CNAME **`evoform.no`** · HTTPS enforced |
 | Site | Thin public door only on `gh-pages`: `index.html`, `404.html`, `CNAME`, `.nojekyll` — research tree stays on **main** |
-| Publish door | After changing public HTML: `tools/publish-public-door.sh` (force-pushes thin files to `gh-pages`). Do **not** rely on main research pushes for the live door. |
+| Publish door | **Primary:** GitHub Actions workflow `Deploy public door` on push of door files on **main** (or Actions → Run workflow). Stages only index/404/CNAME/.nojekyll/version.json. **Fallback:** `tools/publish-public-door.sh` → gh-pages if needed. |
+| Pages build type | **workflow** (2026-08-06) — left legacy gh-pages thrash (queued/errored deploy) |
 | Pages incident (2026-08-06) | Deploy thrash: 503s + concurrent cancel + monitor re-runs while publishing whole `main`. Fix: kill monitor thrash · thin `gh-pages` · stop empty-commit spam. |
 | Sisters | cetavox.com · leitnerlearning.com same CF NS + Pages pattern |
 

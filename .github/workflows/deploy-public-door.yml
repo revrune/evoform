@@ -1,0 +1,52 @@
+# Deploy thin public door (index, 404, CNAME, .nojekyll, version.json) to GitHub Pages.
+# Research tree on main is not published — only these files.
+name: Deploy public door
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "404.html"
+      - "CNAME"
+      - ".nojekyll"
+      - "version.json"
+      - ".github/workflows/deploy-public-door.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: evoform-public-door
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage door files only
+        run: |
+          mkdir -p _site
+          cp index.html 404.html CNAME .nojekyll version.json _site/
+          ls -la _site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
