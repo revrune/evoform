@@ -53,20 +53,22 @@
       body {
         margin: 0;
         min-height: 100vh;
+        min-height: 100dvh;
         color: var(--ink);
         font-family: var(--font-ui);
         font-size: 1.02rem;
-        line-height: 1.6;
+        line-height: 1.65;
         background:
           radial-gradient(ellipse 80% 50% at 50% -10%, rgba(94, 201, 168, 0.08), transparent 55%),
           var(--bg);
+        -webkit-font-smoothing: antialiased;
       }
 
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
-        padding: max(2.5rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right))
-          max(3rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+        padding: max(3rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
+          max(3.5rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
       }
 
       .mark {
@@ -76,56 +78,73 @@
         text-transform: uppercase;
         color: var(--accent);
         font-weight: 600;
-        margin-bottom: 1.25rem;
+        margin: 0 0 1.75rem;
       }
 
+      /* North-star pair: more air, stronger weight vs body */
       h1 {
         font-family: var(--font-display);
-        font-size: clamp(2.1rem, 7vw, 2.85rem);
-        font-weight: 600;
-        line-height: 1.08;
-        letter-spacing: -0.02em;
-        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 6.5vw, 2.75rem);
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        margin: 0 0 1.5rem;
+        max-width: 22em;
+        color: var(--ink);
       }
 
       .lede {
-        font-size: 1.125rem;
+        font-size: 1.08rem;
+        font-weight: 450;
         color: var(--muted);
-        margin: 0 0 1.75rem;
+        margin: 0 0 0.85rem;
         max-width: 32rem;
+        line-height: 1.55;
+      }
+
+      .lede-sub {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin: 0 0 2.25rem;
+        max-width: 30rem;
+        line-height: 1.55;
+        opacity: 0.92;
       }
 
       .card {
         background: var(--bg-elev);
         border: 1px solid var(--line);
-        border-radius: 1rem;
-        padding: 1.25rem 1.35rem;
-        margin: 0 0 1.5rem;
+        border-radius: 0.85rem;
+        padding: 1.35rem 1.4rem;
+        margin: 0 0 1.75rem;
       }
 
       .card p {
         margin: 0;
         color: var(--ink);
+        font-size: 0.98rem;
+        line-height: 1.6;
       }
 
       .card p + p {
-        margin-top: 0.85rem;
+        margin-top: 0.9rem;
         color: var(--muted);
-        font-size: 0.95rem;
+        font-size: 0.92rem;
       }
 
       ul {
-        margin: 0 0 1.75rem;
+        margin: 0 0 2rem;
         padding: 0;
         list-style: none;
       }
 
       li {
         position: relative;
-        padding: 0.55rem 0 0.55rem 1.1rem;
+        padding: 0.65rem 0 0.65rem 1.15rem;
         border-top: 1px solid var(--line);
         color: var(--muted);
         font-size: 0.95rem;
+        line-height: 1.5;
       }
 
       li:last-child {
@@ -136,9 +155,9 @@
         content: "";
         position: absolute;
         left: 0;
-        top: 1rem;
-        width: 0.4rem;
-        height: 0.4rem;
+        top: 1.1rem;
+        width: 0.35rem;
+        height: 0.35rem;
         border-radius: 50%;
         background: var(--accent-soft);
         box-shadow: inset 0 0 0 1px var(--accent);
@@ -147,12 +166,6 @@
       li strong {
         color: var(--ink);
         font-weight: 600;
-      }
-
-      .meta {
-        font-size: 0.875rem;
-        color: var(--muted);
-        margin: 0 0 0.5rem;
       }
 
       a {
@@ -165,16 +178,94 @@
         border-bottom-color: rgba(94, 201, 168, 0.45);
       }
 
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 0.2rem;
+      }
+
+      /* Quiet end links — GitHub + sister explicit */
       footer {
-        margin-top: 2.5rem;
-        padding-top: 1.25rem;
+        margin-top: 2.75rem;
+        padding-top: 1.35rem;
         border-top: 1px solid var(--line);
         font-size: 0.8125rem;
         color: var(--muted);
+        line-height: 1.55;
       }
 
       footer p {
-        margin: 0 0 0.4rem;
+        margin: 0 0 0.55rem;
+      }
+
+      footer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .foot-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem 0;
+        margin: 0 0 0.75rem;
+      }
+
+      .foot-links a {
+        color: var(--muted);
+        border-bottom-color: transparent;
+      }
+
+      .foot-links a:hover {
+        color: var(--accent);
+        border-bottom-color: rgba(94, 201, 168, 0.4);
+      }
+
+      .sep {
+        margin: 0 0.5rem;
+        opacity: 0.4;
+        user-select: none;
+      }
+
+      .foot-tag {
+        opacity: 0.85;
+      }
+
+      /* Mobile: breathable measure, not cramped sparse text */
+      @media (max-width: 420px) {
+        body {
+          font-size: 1rem;
+          line-height: 1.68;
+        }
+
+        .wrap {
+          padding-left: max(1.15rem, env(safe-area-inset-left));
+          padding-right: max(1.15rem, env(safe-area-inset-right));
+          padding-top: max(2.5rem, env(safe-area-inset-top));
+        }
+
+        h1 {
+          font-size: clamp(1.85rem, 8.5vw, 2.2rem);
+          margin-bottom: 1.35rem;
+          line-height: 1.15;
+        }
+
+        .lede {
+          font-size: 1.02rem;
+          max-width: none;
+        }
+
+        .lede-sub {
+          margin-bottom: 1.85rem;
+        }
+
+        .card {
+          padding: 1.15rem 1.1rem;
+        }
+
+        li {
+          padding-top: 0.7rem;
+          padding-bottom: 0.7rem;
+        }
       }
     </style>
   </head>
@@ -183,19 +274,22 @@
       <p class="mark">EvoForm</p>
       <h1>In Accordance with Nature · Form Shaped by Evolution</h1>
       <p class="lede">
-        Nature-inspired underwater vehicles for long, quiet observation · not another thruster box.
+        Nature-inspired underwater vehicles for long, quiet observation · so sensors and careful
+        partners can listen without wrecking the scene.
+      </p>
+      <p class="lede-sub">
+        Work is early and honest: opportunity briefs under physics and welfare. Not a finished product
+        page.
       </p>
 
       <div class="card">
         <p>
-          Underwater vehicles that can stay with marine life longer and quieter · including craft that
-          can move and observe with less constant human piloting over time · so sensors and careful
-          partners can listen and watch without wrecking the scene.
+          Craft that can stay near marine life longer and quieter — including, over time, less
+          constant human piloting — so recording stays possible without dominating the scene.
         </p>
         <p>
-          Work is early and honest: opportunity briefs under physics and welfare constraints.
           Multi-taxon form teachers (Living · Deep-time · Extreme · Synthetic · Speculative), always
-          labeled. Not a finished product page.
+          labeled. Physics and welfare set the bounds. Opportunity briefs, not product claims.
         </p>
       </div>
 
@@ -207,14 +301,14 @@
         <li><strong>House</strong> · RevRune · drip research, not vaporware claims</li>
       </ul>
 
-      <p class="meta">
-        Public notes live on
-        <a href="https://github.com/revrune/evoform">github.com/revrune/evoform</a>.
-      </p>
-
       <footer>
-        <p>evoform.no · In Accordance with Nature · Form Shaped by Evolution</p>
-        <p>Rua · Kai · not cetacean-only branding; hang-with may centre marine mammals</p>
+        <p class="foot-links">
+          <a href="https://github.com/revrune/evoform">GitHub</a>
+          <span class="sep" aria-hidden="true">·</span>
+          <a href="https://cetavox.com/">Sister · CetaVox</a>
+        </p>
+        <p class="foot-tag">evoform.no · In Accordance with Nature · Form Shaped by Evolution</p>
+        <p class="foot-tag">Not cetacean-only · multi-taxon teachers · marine mammals often the observation focus</p>
       </footer>
     </div>
   </body>
