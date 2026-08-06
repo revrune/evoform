@@ -7,6 +7,8 @@
 
 This pack turns the showcase brief into a **success map**: field state, whitespace, Path A done bars, ethics, labs to study, capacity, next builds.
 
+**Eli research instrument (2026-08-06):** [`docs/research-instrument-path-a-eli-2026-08-06.md`](research-instrument-path-a-eli-2026-08-06.md) — mechanism catalogue, innovation shortlist, Path A composition, reading list, refuse list.
+
 ---
 
 ## 1. Bottom line (can we win?)
