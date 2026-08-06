@@ -6,6 +6,7 @@
 **Judge against:** `briefs/path-a-job-card.md` (LOCKED · PERMANENT)  
 **Related:** `docs/research-success-pack-2026-07-29.md` · `briefs/quiet-small-auv-survey.md` · leatherback osteoderm pack  
 **Papers shelf:** `docs/path-a-papers-working-note-2026-08-06.md`  
+**First-experiment plan (Rua go 2026-08-06):** `docs/path-a-first-experiment-plan-2026-08-06.md`  
 **Opportunity briefs (Path A bets):**  
 1. `briefs/path-a-quiet-multimode-propulsion.md` (bet 1 · includes efficient slow transit composition / bet 6)  
 2. `briefs/path-a-riblets-regime-matched.md` (bet 2 · transit composition with form + propulsion)  
