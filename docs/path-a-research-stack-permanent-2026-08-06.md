@@ -32,6 +32,8 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 | **Success pack** | `docs/research-success-pack-2026-07-29.md` |
 | **Eli deep-dive paste (archive)** | `docs/eli-paste-bioinspired-deep-dive-2026-08-06.md` |
 | **Eli ack** | `docs/eli-ack-path-a-permanent-2026-08-06.md` |
+| **Easy study card** | `docs/path-a-study-card-easy.md` · 30-min path |
+| **Study review (media)** | `docs/path-a-study-review.html` · open in browser with concept visuals |
 | **Structure check** | `tools/check_path_a_briefs.py` (`python3 tools/check_path_a_briefs.py`) |
 
 ---

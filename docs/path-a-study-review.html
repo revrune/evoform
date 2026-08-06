@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Path A · easy study review · EvoForm</title>
+    <style>
+      :root {
+        --bg: #0a1412;
+        --card: #101c19;
+        --ink: #e6f0ec;
+        --muted: #8fa89e;
+        --line: rgba(230, 240, 236, 0.12);
+        --accent: #5ec9a8;
+        --max: 42rem;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+        font-size: 1.05rem;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 1.75rem 1.25rem 3rem;
+      }
+      .mark {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 650;
+        margin: 0 0 0.75rem;
+      }
+      h1 {
+        font-family: Georgia, "Iowan Old Style", serif;
+        font-size: clamp(1.6rem, 5vw, 2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 0.75rem;
+      }
+      .lede {
+        color: var(--muted);
+        margin: 0 0 1.5rem;
+        font-size: 1.05rem;
+      }
+      h2 {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 2rem 0 0.75rem;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 0.85rem;
+        padding: 1.1rem 1.2rem;
+        margin: 0 0 1rem;
+      }
+      .card p {
+        margin: 0;
+      }
+      .card p + p {
+        margin-top: 0.65rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      ol.rank {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: r;
+      }
+      ol.rank li {
+        counter-increment: r;
+        position: relative;
+        padding: 0.85rem 0 0.85rem 2.5rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      ol.rank li:first-child {
+        border-top: 0;
+      }
+      ol.rank li::before {
+        content: counter(r);
+        position: absolute;
+        left: 0;
+        top: 0.9rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background: rgba(94, 201, 168, 0.15);
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      ol.rank strong {
+        color: var(--ink);
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+      .kill {
+        color: #e8b4a0;
+        font-size: 0.88rem;
+      }
+      figure {
+        margin: 0 0 1.25rem;
+      }
+      figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0.75rem;
+        border: 1px solid var(--line);
+        background: #000;
+      }
+      figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .timer {
+        display: grid;
+        gap: 0.5rem;
+      }
+      .timer div {
+        display: grid;
+        grid-template-columns: 4.5rem 1fr;
+        gap: 0.75rem;
+        padding: 0.55rem 0;
+        border-top: 1px solid var(--line);
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .timer div:first-child {
+        border-top: 0;
+      }
+      .timer b {
+        color: var(--accent);
+        font-weight: 650;
+      }
+      footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="mark">EvoForm · Path A study</p>
+      <h1>Easy review · quiet first</h1>
+      <p class="lede">
+        Stay near marine life longer and quieter than a thruster box. Measure before
+        biomimetic chrome. Lab plan is locked — this page is only for study.
+      </p>
+
+      <div class="card">
+        <p><strong>Job (locked)</strong></p>
+        <p>
+          Boat-deployable · quieter + more efficient motion first · then multi-hour
+          loiter · then easy deploy. Hydrophone + camera. No free lunch. No animal
+          harassment.
+        </p>
+      </div>
+
+      <h2>What to test first</h2>
+      <ol class="rank card" style="padding: 0.25rem 1.1rem 0.35rem">
+        <li>
+          <strong>Tank · sparse thrust vs good small prop</strong>
+          Noise + power at slow survey and ~1.5 m/s.
+          <span class="kill">Kill: can’t beat baseline on noise at useful speed.</span>
+        </li>
+        <li>
+          <strong>Same rig · hydrophone placement</strong>
+          Two or more mic positions while the thrusters run and at loiter.
+          <span class="kill">Kill: still too loud to listen while loitering.</span>
+        </li>
+        <li>
+          <strong>Hover power</strong>
+          Hold station without continuous prop wash.
+          <span class="kill">Kill: burns the multi-hour battery.</span>
+        </li>
+        <li>
+          <strong>Riblet coupons</strong>
+          Right groove size for our speeds · then fouling / clean test.
+          <span class="kill">Kill: more drag or can’t clean between missions.</span>
+        </li>
+      </ol>
+
+      <h2>Picture board</h2>
+      <figure>
+        <img
+          src="concept-visuals/path-a-concept-board.jpg"
+          alt="Path A concept board"
+          width="1200"
+          height="800"
+        />
+        <figcaption>Path A concept board · form and co-presence intent (study visual, not a product claim).</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="concept-visuals/osteoderm-mosaic-study.jpg"
+          alt="Leatherback osteoderm mosaic study"
+          width="1200"
+          height="800"
+        />
+        <figcaption>
+          Leatherback osteoderm study · secondary (later depth). Not first-hull work.
+        </figcaption>
+      </figure>
+
+      <h2>30-minute study</h2>
+      <div class="card timer">
+        <div><b>0–5</b><span>This page + the short study card markdown</span></div>
+        <div><b>5–15</b><span>Experiment plan — rank table + top protocol only</span></div>
+        <div><b>15–25</b><span>Four briefs: §1 problem + §5 kill only</span></div>
+        <div><b>25–30</b><span>Papers note theme index — pick one paper for later</span></div>
+      </div>
+
+      <h2>Open next (files)</h2>
+      <div class="card">
+        <p>
+          Study card ·
+          <a href="path-a-study-card-easy.md">path-a-study-card-easy.md</a>
+        </p>
+        <p>
+          Experiment plan ·
+          <a href="path-a-first-experiment-plan-2026-08-06.md">path-a-first-experiment-plan-2026-08-06.md</a>
+        </p>
+        <p>
+          Papers shelf ·
+          <a href="path-a-papers-working-note-2026-08-06.md">path-a-papers-working-note-2026-08-06.md</a>
+        </p>
+        <p style="margin-top: 0.85rem; color: var(--muted); font-size: 0.9rem">
+          Open this HTML from the repo folder (double-click or
+          <code>open docs/path-a-study-review.html</code>) so the images load.
+        </p>
+      </div>
+
+      <footer>
+        EvoForm · In Accordance with Nature · Form Shaped by Evolution · study only ·
+        not a finished vehicle · sister CetaVox
+      </footer>
+    </div>
+  </body>
+</html>
