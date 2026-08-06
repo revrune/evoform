@@ -79,15 +79,33 @@
         margin: 0 0 1.75rem;
       }
 
-      h1 {
+      /* Pair as two intentional lines — no mid-phrase wrap */
+      h1.pair {
         font-family: var(--font-display);
-        font-size: clamp(1.95rem, 6.5vw, 2.65rem);
+        font-size: clamp(1.7rem, 5.2vw, 2.35rem);
         font-weight: 700;
-        line-height: 1.14;
-        letter-spacing: -0.025em;
-        margin: 0 0 1.5rem;
-        max-width: 22em;
+        line-height: 1.22;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.65rem;
+        max-width: 18rem;
         color: var(--ink);
+      }
+
+      h1.pair .line {
+        display: block;
+      }
+
+      h1.pair .line-b {
+        font-weight: 550;
+        color: rgba(230, 240, 236, 0.88);
+        margin-top: 0.28em;
+      }
+
+      h1.pair .dot {
+        color: var(--accent);
+        font-weight: 500;
+        margin-right: 0.28em;
+        opacity: 0.85;
       }
 
       .lede {
@@ -167,9 +185,10 @@
           padding-top: max(2.5rem, env(safe-area-inset-top));
         }
 
-        h1 {
-          font-size: clamp(1.85rem, 8.5vw, 2.15rem);
-          margin-bottom: 1.35rem;
+        h1.pair {
+          font-size: clamp(1.65rem, 7.2vw, 1.95rem);
+          max-width: 14.5rem;
+          margin-bottom: 1.4rem;
         }
 
         .lede {
@@ -183,7 +202,12 @@
   <body>
     <div class="wrap">
       <p class="mark">EvoForm</p>
-      <h1>In Accordance with Nature · Form Shaped by Evolution</h1>
+      <h1 class="pair">
+        <span class="line">In Accordance with Nature</span>
+        <span class="line line-b"
+          ><span class="dot" aria-hidden="true">·</span>Form Shaped by Evolution</span
+        >
+      </h1>
       <p class="lede">
         Nature-inspired underwater vehicles for long, quiet observation.
       </p>
