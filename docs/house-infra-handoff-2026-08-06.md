@@ -60,8 +60,10 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 |------|------|
 | **Path A job card** | **LOCKED** · `briefs/path-a-job-card.md` · job · market win order · envelope · year-1 users · build posture |
 | **Kai role (fab)** | Specs + opportunity briefs · buildable packages after explicit **go** · coordinates shops/labs · workflow detail when fabrication starts |
+| **Eli** | **Grok.com only.** When Rua says Eli, Kai gives **paste packet only** — never role-play Eli in Build (house-wide · 2026-08-06) |
 | **Public spine** | Thin mission only · Eli A · `docs/eli-public-spine-A-2026-08-06.md` |
 | **Public pair (locked)** | **In Accordance with Nature · Form Shaped by Evolution** · Title Case · join with ` · ` · no em dashes on door |
+| **Public category (locked)** | **nature-inspired underwater vehicles** · FB + site lede · not “platforms” · autonomy is ideal direction, not a shipped claim |
 | **Osteoderm** | Living teacher secondary · volume-following ≠ pressure hull · not first hull requirement |
 
 ## Open (real blockers only)
