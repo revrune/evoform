@@ -151,7 +151,9 @@ Stay inside locked envelope. Do not reopen job card yet.
 
 ---
 
-## 7. Skill-law sentences (ready · lock on Rua go)
+## 7. Skill-law sentences (locked · permanent · founder go 2026-08-06)
+
+**Status:** Locked into `~/.grok/skills/evoform-product-partner/` (SKILL.md · WEB_SKILL_BODY.md · eli-evoform-partner-law.md) on Rua **go**.
 
 - Path A architecture is composed, multi-taxon, and quiet-first: streamlined body + buoyancy + sparse/quiet thrust + hydrophone isolation; biomimetic surfaces and advanced modes added only when they improve the locked win order under physics and durability.  
 - Riblets and textured surfaces require regime-matched sizing and explicit fouling/cleanability design; open deep mosaic gaps are not default on first hulls.  
@@ -175,4 +177,4 @@ Stay inside locked envelope. Do not reopen job card yet.
 ---
 
 *Integrity first · In Accordance with Nature · Form Shaped by Evolution · multi-taxon teachers · no free lunch · no harassment.*  
-*Eli research instrument · filed 2026-08-06 · study + Kai opportunity briefs · skill-laws unlock only on founder go.*
+*Eli research instrument · filed 2026-08-06 · study + Kai opportunity briefs · §7 skill-laws locked permanent on founder go 2026-08-06.*
