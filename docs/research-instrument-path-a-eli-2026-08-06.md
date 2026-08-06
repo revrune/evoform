@@ -5,6 +5,15 @@
 **Status:** Research instrument · study + opportunity-brief input · not a finished product claim  
 **Judge against:** `briefs/path-a-job-card.md` (LOCKED · PERMANENT)  
 **Related:** `docs/research-success-pack-2026-07-29.md` · `briefs/quiet-small-auv-survey.md` · leatherback osteoderm pack  
+**Papers shelf:** `docs/path-a-papers-working-note-2026-08-06.md`  
+**Opportunity briefs (Path A bets):**  
+1. `briefs/path-a-quiet-multimode-propulsion.md` (bet 1 · includes efficient slow transit composition / bet 6)  
+2. `briefs/path-a-riblets-regime-matched.md` (bet 2 · transit composition with form + propulsion)  
+3. `briefs/path-a-hover-station-keep.md` (bet 3)  
+4. `briefs/path-a-hydrophone-first-layout.md` (bet 4)  
+5. `briefs/path-a-foul-aware-outer-skin.md` (bet 5)  
+7. Volume-following secondary → `briefs/leatherback-osteoderm-volume-following.md` (not Path A v1 primary)  
+8. `briefs/path-a-abort-on-avoidance-law.md` (product law · non-negotiable)  
 **North star:** In Accordance with Nature · **Pair:** Form Shaped by Evolution  
 
 ---

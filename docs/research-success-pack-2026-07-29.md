@@ -9,6 +9,20 @@ This pack turns the showcase brief into a **success map**: field state, whitespa
 
 **Eli research instrument (2026-08-06):** [`docs/research-instrument-path-a-eli-2026-08-06.md`](research-instrument-path-a-eli-2026-08-06.md) — mechanism catalogue, innovation shortlist, Path A composition, reading list, refuse list.
 
+**Papers working note:** [`docs/path-a-papers-working-note-2026-08-06.md`](path-a-papers-working-note-2026-08-06.md)
+
+**Path A opportunity briefs (actionable bets):**
+| Bet | Brief |
+|-----|--------|
+| 1 Quiet multi-mode / sparse thrust | [`briefs/path-a-quiet-multimode-propulsion.md`](../briefs/path-a-quiet-multimode-propulsion.md) |
+| 2 Regime-matched riblets | [`briefs/path-a-riblets-regime-matched.md`](../briefs/path-a-riblets-regime-matched.md) |
+| 3 Hover / station-keep | [`briefs/path-a-hover-station-keep.md`](../briefs/path-a-hover-station-keep.md) |
+| 4 Hydrophone-first layout | [`briefs/path-a-hydrophone-first-layout.md`](../briefs/path-a-hydrophone-first-layout.md) |
+| 5 Foul-aware outer skin | [`briefs/path-a-foul-aware-outer-skin.md`](../briefs/path-a-foul-aware-outer-skin.md) |
+| 6 Efficient slow transit | Composed in propulsion + riblets briefs (no silent drop) |
+| 7 Volume-following (secondary) | [`briefs/leatherback-osteoderm-volume-following.md`](../briefs/leatherback-osteoderm-volume-following.md) |
+| 8 Abort-on-avoidance (law) | [`briefs/path-a-abort-on-avoidance-law.md`](../briefs/path-a-abort-on-avoidance-law.md) |
+
 ---
 
 ## 1. Bottom line (can we win?)
