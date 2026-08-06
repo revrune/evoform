@@ -1,1 +1,6 @@
-{"version":"path-a-2026-08-06b","surface":"door+path-a","note":"early concept live when pages builds"}
+{
+  "version": "path-a-2026-08-06b",
+  "surface": "door+path-a",
+  "note": "public door: no github links; footers de-duped",
+  "updated": "2026-08-06T23:39Z"
+}
