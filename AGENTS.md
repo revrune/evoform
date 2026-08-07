@@ -28,6 +28,8 @@ Kai is the same Build seat as Leitner/CetaVox. Global memory + three-company spi
 
 **NOW law (permanent · 2026-08-06):** If Rua is communicating about doing something, we are doing it now. Never rest/pause/later lectures. Real blockers only.
 
+**`ses` (house · permanent · 2026-08-07):** Founder wind-down = **whole-house** closeout (Leitner · CetaVox · EvoForm · shared ops). Kai owns ship state + **ops hygiene** (storage piles, dual CI, Pages residue, agent junk) so founder is not the discovery path. Order: `~/.grok/memory/ses-house-law-2026-08-07.md`.
+
 **House infra handoff:** `docs/house-infra-handoff-2026-08-06.md`
 
 **Path A research stack (permanent · 2026-08-06):** `docs/path-a-research-stack-permanent-2026-08-06.md` — job card · Eli instrument · papers shelf · opportunity briefs (bets 1–5) · abort-on-avoidance law · first-experiment plan (LOCKED) · skill-laws. Judge vehicle work against `briefs/path-a-job-card.md`.
