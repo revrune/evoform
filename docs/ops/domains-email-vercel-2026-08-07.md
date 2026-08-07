@@ -84,7 +84,8 @@ No Riven workspace files to merge for the 2026-08-07 domain migration — dashbo
 | GHA `Deploy public door` | Same on push of door paths when secrets set |
 | **Not public** | `briefs/` · `docs/` · research tree · prototypes |
 
-**GHA secrets** (repo `revrune/evoform`): `VERCEL_TOKEN` · `VERCEL_ORG_ID`=`team_QwxzlThVmQiaDdYIKaFY7gMB` · `VERCEL_PROJECT_ID`=`prj_ODHEe1C3BtGhJSSDEvReNER2pBsE`
+**GHA secrets** (repo `revrune/evoform`): `VERCEL_TOKEN` · `VERCEL_ORG_ID`=`team_QwxzlThVmQiaDdYIKaFY7gMB` · `VERCEL_PROJECT_ID`=`prj_ODHEe1C3BtGhJSSDEvReNER2pBsE`  
+**Set 2026-08-07** via `gh secret set` (names present). Workflow: **Deploy public door**.
 
 **Deploy identity (LOCKED · 2026-08-07):** Vercel **BLOCKS** CLI deploys when git author is `*@*.local` (Mac auto git email) — not a team member.  
 - Founder **main email** + git + Vercel owner: **ruairithered@gmail.com** (`ruairithered-4228`)  
@@ -100,14 +101,15 @@ No Riven workspace files to merge for the 2026-08-07 domain migration — dashbo
 
 **gh-pages / Pages workflow retired** for custom-domain truth. Do not re-aim DNS at GitHub.
 
-## Optional follow-ups (not go)
+## Optional follow-ups
 
-1. Send-as @domain from Gmail (pinned)
-2. DMARC → reject after reports
-3. Cosmetic: remove leftover GitHub Pages custom-domain settings in repo Settings
+1. Send-as @domain from Gmail (**pinned** — do not start)
+2. DMARC → reject after reports (later)
+3. ~~GitHub Pages custom domain cleanup~~ **n/a** — `has_pages: false` (2026-08-07)
 4. ~~Rewire Pages deploy scripts to Vercel~~ **done 2026-08-07**
-5. Varde catch-up after token reset ~2026-08-09
-6. Add Vercel Git integration or GHA secrets so every door push auto-ships
+5. Varde catch-up — **Saturday 2026-08-08** · brief `docs/ops/varde-catchup-2026-08-08.md`
+6. ~~GHA secrets + auto-deploy~~ **done 2026-08-07** · run 31149310721 green · aliased www.evoform.no
+7. **Watch:** Leitner audio still on private-repo jsDelivr (`revrune/leitnerlearning`) — same class of CDN trap; same-origin when Rua goes
 
 ## Verify (quick)
 
