@@ -14,7 +14,7 @@
 ## Public claims
 
 **evoform.no (current spine only):**  
-**In Accordance with Nature · Form Shaped by Evolution** (locked public pair · Title Case · ` · ` joins) · EvoForm · bio-inspired marine vehicles for long, quiet co-presence · sister CetaVox · early honest opportunity briefs under physics and welfare · multi-taxon teachers labeled · not a finished product page · house RevRune.
+**Form Shaped by Evolution · In Accordance with Nature** (locked public pair · Title Case · ` · ` joins · **order 2026-08-07:** name gloss first under mark, north star second) · EvoForm · bio-inspired marine vehicles for long, quiet co-presence · sister CetaVox · early honest opportunity briefs under physics and welfare · multi-taxon teachers labeled · not a finished product page.
 
 **Short slogan (locked · permanent · Eli + Rua go 2026-08-06 · method language only):**  
 **Shaped by Evolution** — allowed where brevity is required (FB adjacency, small headers, notes). Does **not** replace the full pair on the main public door. No extra claim dress (“finally”, “the future of”, product-launch tone). Name expansion (Evo + Form); not a performance claim. Skill: `evoform-product-partner`.
