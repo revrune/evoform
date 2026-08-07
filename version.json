@@ -1,7 +1,7 @@
 {
-  "version": "door-vercel-2026-08-07",
+  "version": "path-a-mockups-abs-2026-08-07",
   "surface": "door+path-a",
   "host": "vercel",
-  "note": "public door on Vercel evoform-no; thin stage only; RevRune not on door",
-  "updated": "2026-08-07T05:00Z"
+  "note": "path-a mockups use absolute /path-a/mockups/ (trailingSlash false breaks ./ relative)",
+  "updated": "2026-08-07T07:00Z"
 }
