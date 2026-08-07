@@ -1,6 +1,11 @@
 # House infra handoff — 2026-08-06
 
-**Permanent for Kai · Eli · any seat.** Session work after freeze reset + founder NOW law.
+> **SUPERSEDED for domains / DNS / public host (2026-08-07):**  
+> Custom domains are on **Vercel + Cloudflare**, not GitHub Pages.  
+> Canonical ops note: [`docs/ops/domains-email-vercel-2026-08-07.md`](ops/domains-email-vercel-2026-08-07.md)  
+> Global MEMORY: **Public host map** + **RevRune scope A**.
+
+**Permanent for Kai · Eli · Riven · any seat.** Session work after freeze reset + founder NOW law. Sections below on Pages A records / `revrune.github.io` are **historical** only.
 
 ## NOW law (founder · permanent)
 
@@ -87,13 +92,13 @@ Then verify CF → active · https://evoform.no · enforce HTTPS on GitHub Pages
 - [ ] `https://evoform.no` — wait GitHub Pages cert for custom domain, then **Enforce HTTPS**
 - [x] Handoff updated live date 2026-08-06
 
-## House map (unchanged integrity)
+## House map (updated integrity · 2026-08-07)
 
-- **RevRune** — holding vessel (GitHub `revrune` · X `@RevRune`)
-- **Leitner Learning** — leitnerlearning.com
-- **CetaVox** — cetavox.com · public ocean face
-- **EvoForm** — form shaped by evolution · house product · `evoform.no` spine waiting on registry; not a vaporware twin of CetaVox
+- **Public faces** — Leitner Learning · EvoForm · CetaVox (not RevRune as product brand)
+- **Live host** — Vercel team **LeitnerLearning** + Cloudflare per domain (see ops note 2026-08-07)
+- **RevRune** — quiet internal: GitHub `revrune` · Sentry · X `@RevRune` (political) — **not** the deploy umbrella
+- **EvoForm** — `https://www.evoform.no` thin spine live; sister to CetaVox; not a vaporware twin
 
 ---
 
-*Kai · 2026-08-06 · permanent handoff*
+*Kai · 2026-08-06 · permanent handoff · host map updated 2026-08-07*
