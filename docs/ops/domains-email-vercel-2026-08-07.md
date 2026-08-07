@@ -86,10 +86,17 @@ No Riven workspace files to merge for the 2026-08-07 domain migration — dashbo
 
 **GHA secrets** (repo `revrune/evoform`): `VERCEL_TOKEN` · `VERCEL_ORG_ID`=`team_QwxzlThVmQiaDdYIKaFY7gMB` · `VERCEL_PROJECT_ID`=`prj_ODHEe1C3BtGhJSSDEvReNER2pBsE`
 
-**Deploy identity (2026-08-07):** Vercel may **BLOCK** CLI deploys when git author is `*@*.local` (Mac auto git email) — not a team member.  
-- Team owner login: **ruairithered@gmail.com** (`ruairithered-4228`)  
-- Local publish script deploys from a **git-free temp folder** to avoid author block  
-- Optional: set repo `user.email` to the Vercel team email for commits that Vercel Git integration attributes  
+**Deploy identity (LOCKED · 2026-08-07):** Vercel **BLOCKS** CLI deploys when git author is `*@*.local` (Mac auto git email) — not a team member.  
+- Founder **main email** + git + Vercel owner: **ruairithered@gmail.com** (`ruairithered-4228`)  
+- Global git: `user.name=Ruairí Ó Daimhín` · `user.email=ruairithered@gmail.com` (set 2026-08-07)  
+- Local publish script deploys from a **git-free temp folder** as belt-and-suspenders  
+- Do **not** “fix” by upgrading to Pro for this error  
+
+**Path A mockups (LOCKED · 2026-08-07 · edge closed):**  
+- Serve from Vercel: `/path-a/mockups/*.jpg`  
+- HTML paths must be **absolute** `/path-a/mockups/…` (not `./mockups/`, not jsDelivr while private)  
+- Cause of empty viewer: `trailingSlash: false` → page at `/path-a` → relative mockups → `/mockups/` 404  
+- Fix commit: `77d4986` · Riven re-check: all assets 200  
 
 **gh-pages / Pages workflow retired** for custom-domain truth. Do not re-aim DNS at GitHub.
 
