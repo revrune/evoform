@@ -30,6 +30,8 @@
 
 6. **Seats** — Riven named himself on web Build; three-surface partnership (not dual-channel only).
 
+7. **EvoForm verticals (2026-08-07)** — Umbrella **EvoForm** = all biomimicry design. Avenues: **EvoMarine** (current) · **EvoAir** · **EvoTerra**. Architecture only for Air/Terra — no multi-vertical door thrash. File: `docs/ops/evoform-verticals-2026-08-07.md`.
+
 ## Craft state (do not thrash without go)
 
 - **evoform.no** — thin spine · full pair h1 · Path A concept live · footer north star only  
