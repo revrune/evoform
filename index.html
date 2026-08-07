@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#0a1412" />
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href="https://evoform.no/" />
+    <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/brand/mark.svg?v=1" />
     <meta property="og:title" content="EvoForm · Shaped by Evolution" />
     <meta
       property="og:description"
@@ -70,14 +72,32 @@
           max(3.5rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
       }
 
-      .mark {
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin: 0 0 1.75rem;
+        text-decoration: none;
+        color: inherit;
+        border: 0;
+      }
+
+      .brand img {
+        width: 2.15rem;
+        height: 2.15rem;
+        border-radius: 0.45rem;
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .brand .mark {
         display: inline-block;
         font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--accent);
         font-weight: 600;
-        margin: 0 0 1.75rem;
+        margin: 0;
       }
 
       h1.pair {
@@ -268,7 +288,10 @@
   </head>
   <body>
     <div class="wrap">
-      <p class="mark">EvoForm</p>
+      <a class="brand" href="/" aria-label="EvoForm home">
+        <img src="/brand/mark.svg?v=1" width="34" height="34" alt="" />
+        <span class="mark">EvoForm</span>
+      </a>
       <h1 class="pair">
         <span class="line">Shaped by Evolution</span>
         <span class="line line-b"

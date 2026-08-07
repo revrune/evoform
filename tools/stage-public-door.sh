@@ -10,6 +10,9 @@ cp "$ROOT/index.html" "$ROOT/404.html" "$ROOT/version.json" "$OUT/"
 if [ -d "$ROOT/path-a" ]; then
   cp -R "$ROOT/path-a" "$OUT/path-a"
 fi
+if [ -d "$ROOT/brand" ]; then
+  cp -R "$ROOT/brand" "$OUT/brand"
+fi
 # Explicitly not copied: briefs/ docs/ AGENTS.md README.md prototypes/ CNAME .nojekyll tools/
 echo "Staged public door → $OUT"
 find "$OUT" -type f | sort
