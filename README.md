@@ -8,6 +8,8 @@
 
 **Name locked (2026-08-05):** Keep **EvoForm**. Not cetacean-only branding. Co-presence *targets* may centre marine mammals (sister to CetaVox); **form teachers** are multi-taxon — any lineage that solved the physics we need (Living · Deep-time · Extreme · Synthetic · Speculative, always labeled).
 
+**Umbrella + verticals (LOCKED · 2026-08-07):** EvoForm covers all biomimicry design. Specific avenues may use vertical names — **EvoMarine** (current · hang-with marine mammals) · **EvoAir** (quiet aerial · bird/insect teachers) · **EvoTerra** (ground/soil/terrain). Not three public brands to launch; architecture only until go. Detail: [`docs/ops/evoform-verticals-2026-08-07.md`](docs/ops/evoform-verticals-2026-08-07.md).
+
 ### Form teachers ≠ only hang-with subjects
 
 Example **Living** lane — leatherback turtle (*Dermochelys coriacea*): longest known marine migrations; leathery carapace with interlocking / compliant structure that tolerates significant compression at depth; efficient long-range movement; internal volume usable as a model for component packing; body strategies that may thrash hardware less than hard-shell or thruster-box norms. **Not** “build a robot turtle.” **Yes** — extract mechanisms (compliance under pressure, migration-scale efficiency, packing geometry) with evidence trail, then transfer under physics and welfare constraints.
