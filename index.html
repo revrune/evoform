@@ -6,22 +6,22 @@
     <title>EvoForm · Shaped by Evolution · In Accordance with Nature</title>
     <meta
       name="description"
-      content="EvoForm · nature-inspired underwater vehicles for long, quiet observation. Shaped by Evolution · In Accordance with Nature."
+      content="EvoForm · form shaped by evolution. EvoMarine · EvoAir · EvoTerra. Nature-inspired platforms for long, quiet observation."
     />
     <meta name="theme-color" content="#0a1412" />
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href="https://evoform.no/" />
-    <meta property="og:title" content="EvoForm · nature-inspired underwater vehicles" />
+    <meta property="og:title" content="EvoForm · Shaped by Evolution" />
     <meta
       property="og:description"
-      content="Shaped by Evolution · In Accordance with Nature."
+      content="Shaped by Evolution · In Accordance with Nature. EvoMarine · EvoAir · EvoTerra."
     />
     <meta property="og:url" content="https://evoform.no/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="EvoForm" />
     <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EvoForm · nature-inspired underwater vehicles" />
+    <meta name="twitter:title" content="EvoForm · Shaped by Evolution" />
     <meta
       name="twitter:description"
       content="Shaped by Evolution · In Accordance with Nature."
@@ -91,12 +91,10 @@
         color: var(--ink);
       }
 
-      /* Primary: name gloss under EVOFORM mark */
       h1.pair .line {
         display: block;
       }
 
-      /* Secondary: north star — quieter, still readable */
       h1.pair .line-b {
         font-weight: 550;
         font-size: 0.92em;
@@ -112,13 +110,42 @@
         opacity: 0.85;
       }
 
-      .lede {
-        font-size: 1.05rem;
-        font-weight: 450;
+      /* Verticals — taxonomy, not product cards */
+      .verticals {
+        list-style: none;
+        margin: 0 0 2.25rem;
+        padding: 0;
+        max-width: 30rem;
+      }
+
+      .verticals li {
+        display: grid;
+        grid-template-columns: 7.25rem 1fr;
+        gap: 0.65rem 1rem;
+        align-items: baseline;
+        padding: 0.55rem 0;
+        border-top: 1px solid var(--line);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .verticals li:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .verticals .v-name {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: var(--ink);
+      }
+
+      .verticals .v-name[aria-current="true"] {
+        color: var(--accent);
+      }
+
+      .verticals .v-role {
         color: var(--muted);
-        margin: 0 0 2rem;
-        max-width: 28rem;
-        line-height: 1.55;
+        font-weight: 450;
       }
 
       .path-card {
@@ -169,7 +196,7 @@
         margin: 0;
       }
 
-      .sister {
+      .related {
         margin: 0 0 2.75rem;
         font-size: 0.95rem;
         color: var(--muted);
@@ -212,29 +239,6 @@
         color: var(--muted);
         letter-spacing: 0.02em;
       }
-      .foot-links {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.25rem 0;
-        margin: 0;
-      }
-
-      .foot-links a {
-        color: var(--muted);
-        border-bottom-color: transparent;
-      }
-
-      .foot-links a:hover {
-        color: var(--accent);
-        border-bottom-color: rgba(94, 201, 168, 0.4);
-      }
-
-      .sep {
-        margin: 0 0.5rem;
-        opacity: 0.4;
-        user-select: none;
-      }
 
       @media (max-width: 420px) {
         body {
@@ -254,10 +258,10 @@
           margin-bottom: 1.4rem;
         }
 
-        .lede {
-          font-size: 1.02rem;
-          max-width: none;
-          margin-bottom: 1.5rem;
+        .verticals li {
+          grid-template-columns: 1fr;
+          gap: 0.15rem;
+          padding: 0.7rem 0;
         }
       }
     </style>
@@ -271,20 +275,34 @@
           ><span class="dot" aria-hidden="true">·</span>In Accordance with Nature</span
         >
       </h1>
-      <p class="lede">
-        Nature-inspired underwater vehicles for long, quiet observation.
-      </p>
+
+      <ul class="verticals" aria-label="EvoForm verticals">
+        <li>
+          <span class="v-name" aria-current="true">EvoMarine</span>
+          <span class="v-role">Quiet co-presence with marine life</span>
+        </li>
+        <li>
+          <span class="v-name">EvoAir</span>
+          <span class="v-role">Quiet aerial co-presence and survey</span>
+        </li>
+        <li>
+          <span class="v-name">EvoTerra</span>
+          <span class="v-role">Ground, soil, and terrain platforms</span>
+        </li>
+      </ul>
+
       <a class="path-card" href="/path-a/">
-        <span class="kicker">Early concept</span>
+        <span class="kicker">EvoMarine</span>
         <span class="title">Path A · Quiet Hybrid</span>
         <span class="desc"
-          >Leatherback-form study · quieter longer observation · interactive concept boards. Not a
-          finished product.</span
+          >Leatherback-form study · quieter longer observation · concept boards</span
         >
       </a>
-      <p class="sister">
-        Sister · <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
+
+      <p class="related">
+        <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
       </p>
+
       <footer>
         <p class="foot-quiet">In Accordance with Nature</p>
       </footer>

@@ -1,7 +1,7 @@
 # EvoForm verticals — umbrella naming (2026-08-07)
 
-**LOCKED · PERMANENT** · Rua go 2026-08-07  
-**Does not ship product chrome.** Architecture + research naming only until explicit go.
+**LOCKED · PERMANENT** · Rua go 2026-08-07 · **public list go 2026-08-07**  
+Thin door may name the three verticals as **taxonomy** (roles only). Not product UIs, not multi-launch, not “Sister” language.
 
 ## Why EvoForm
 
@@ -38,14 +38,14 @@ EvoTerra (see names below),Ground / soil / terrain platforms
 
 1. **Company / door mark** stays **EvoForm** (pair: In Accordance with Nature · Form Shaped by Evolution).  
 2. **EvoMarine** = what we are shipping research for now (Path A, evoform.no underwater category).  
-3. **EvoAir** / **EvoTerra** = reserved vertical names — no sites, no dual-launch, no menu thrash without Rua **go**.  
-4. Verticals are **not** three separate houses and not a replace for CetaVox (decipher stays sister craft).  
+3. **EvoAir** / **EvoTerra** = named on door as avenues; **no separate sites / product UI / dual-launch** without Rua **go**.  
+4. Verticals are **not** three separate houses. CetaVox stays a plain related link (decipher) — no “sister” label.  
 5. Same integrity: evidence lanes, no free-lunch engineering, no harassing animals for data.
 
-## Public face (unchanged until go)
+## Public face (2026-08-07)
 
-- Thin door: EvoForm · nature-inspired underwater vehicles · sister CetaVox  
-- Do not list EvoAir / EvoTerra on the public spine yet  
+- Thin door: EVOFORM · pair · **EvoMarine / EvoAir / EvoTerra** rows · Path A under EvoMarine · CetaVox link · north-star footer  
+- No extra words (“Sister”, “Early concept”, “not a finished product”)
 
 ## Related
 
