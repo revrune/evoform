@@ -95,8 +95,9 @@ Path A hybrid sketch: streamlined sensor body · variable buoyancy · paired fin
 ## Status
 
 - Mission linked to CetaVox co-presence need (2026-07-28).  
-- Public door: thin spine only (https://evoform.no) · no product UI.  
-- **Live publish path:** GitHub Actions **Deploy public door** (workflow) from door files on **main**. Research-only commits do not rebuild the door. After door HTML/`version.json` change: push those files (or run the workflow). Fallback: `tools/publish-public-door.sh`.  
+- Public door: thin spine only (https://www.evoform.no) · no product UI.  
+- **Live host:** Vercel project **`evoform-no`** (team LeitnerLearning) · Cloudflare DNS · **not** GitHub Pages.  
+- **Live publish path:** stage thin door (`tools/stage-public-door.sh`) → Vercel production. GHA **Deploy public door** when `VERCEL_*` secrets set; local fallback `tools/publish-public-door.sh`. Research tree on **main** is not public. Ops: `docs/ops/domains-email-vercel-2026-08-07.md`.  
 - Path A research stack permanent (job card · instrument · papers · opportunity briefs · skill-laws).  
 - Masters capacity primary from Aug 2026.
 

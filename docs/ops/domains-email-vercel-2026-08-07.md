@@ -74,13 +74,33 @@ No Riven workspace files to merge for the 2026-08-07 domain migration — dashbo
 | X @RevRune | Political/ideas — not product host |
 | “House RevRune” on doors | Quiet internal only — not deploy story, not product lead |
 
+## Public door deploy (EvoForm · rewired 2026-08-07)
+
+| Piece | Role |
+|-------|------|
+| `vercel.json` | Build stages thin door → `_public/` only |
+| `tools/stage-public-door.sh` | Copies `index.html` · `404.html` · `version.json` · `path-a/**` |
+| `tools/publish-public-door.sh` | Local production deploy via Vercel CLI |
+| GHA `Deploy public door` | Same on push of door paths when secrets set |
+| **Not public** | `briefs/` · `docs/` · research tree · prototypes |
+
+**GHA secrets** (repo `revrune/evoform`): `VERCEL_TOKEN` · `VERCEL_ORG_ID`=`team_QwxzlThVmQiaDdYIKaFY7gMB` · `VERCEL_PROJECT_ID`=`prj_ODHEe1C3BtGhJSSDEvReNER2pBsE`
+
+**Deploy identity (2026-08-07):** Vercel may **BLOCK** CLI deploys when git author is `*@*.local` (Mac auto git email) — not a team member.  
+- Team owner login: **ruairithered@gmail.com** (`ruairithered-4228`)  
+- Local publish script deploys from a **git-free temp folder** to avoid author block  
+- Optional: set repo `user.email` to the Vercel team email for commits that Vercel Git integration attributes  
+
+**gh-pages / Pages workflow retired** for custom-domain truth. Do not re-aim DNS at GitHub.
+
 ## Optional follow-ups (not go)
 
 1. Send-as @domain from Gmail (pinned)
 2. DMARC → reject after reports
 3. Cosmetic: remove leftover GitHub Pages custom-domain settings in repo Settings
-4. Rewire any Pages-only deploy scripts to Vercel so door publish matches host map
+4. ~~Rewire Pages deploy scripts to Vercel~~ **done 2026-08-07**
 5. Varde catch-up after token reset ~2026-08-09
+6. Add Vercel Git integration or GHA secrets so every door push auto-ships
 
 ## Verify (quick)
 

@@ -1,22 +1,24 @@
 name: Deploy public door
 
+# Ships thin public door to Vercel (project evoform-no) — not GitHub Pages.
+# Requires repo secrets: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+# (team LeitnerLearning · project evoform-no). Until secrets exist, use:
+#   tools/publish-public-door.sh
+# or Vercel Git integration on main with vercel.json.
+
 on:
   push:
     branches: [main]
     paths:
       - "index.html"
       - "404.html"
-      - "CNAME"
-      - ".nojekyll"
       - "version.json"
       - "path-a/**"
+      - "vercel.json"
+      - "tools/stage-public-door.sh"
+      - "tools/publish-public-door.sh"
       - ".github/workflows/deploy-public-door.yml"
   workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: evoform-public-door
@@ -28,18 +30,48 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Stage
+      - name: Check Vercel secrets
+        id: secrets
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
-          mkdir -p _site
-          cp index.html 404.html CNAME .nojekyll version.json _site/
-          cp -R path-a _site/path-a
-          ls -laR _site | head -40
+          if [ -z "$VERCEL_TOKEN" ] || [ -z "$VERCEL_ORG_ID" ] || [ -z "$VERCEL_PROJECT_ID" ]; then
+            echo "missing=true" >> "$GITHUB_OUTPUT"
+            echo "::warning::VERCEL_TOKEN / VERCEL_ORG_ID / VERCEL_PROJECT_ID not set — skip GHA deploy. Use tools/publish-public-door.sh or link Git in Vercel dashboard."
+          else
+            echo "missing=false" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Node
+        if: steps.secrets.outputs.missing == 'false'
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
-          force_orphan: true
-          cname: evoform.no
+          node-version: "22"
+
+      - name: Install Vercel CLI
+        if: steps.secrets.outputs.missing == 'false'
+        run: npm install -g vercel@latest
+
+      - name: Stage public door
+        if: steps.secrets.outputs.missing == 'false'
+        run: bash tools/stage-public-door.sh _public
+
+      - name: Pull Vercel project settings
+        if: steps.secrets.outputs.missing == 'false'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      - name: Deploy to Vercel (production)
+        if: steps.secrets.outputs.missing == 'false'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          # Deploy staged static tree; project already owns evoform.no / www
+          vercel deploy _public --prod --yes --token="$VERCEL_TOKEN"

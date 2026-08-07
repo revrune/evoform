@@ -1,6 +1,7 @@
 {
-  "version": "path-a-2026-08-06b",
+  "version": "door-vercel-2026-08-07",
   "surface": "door+path-a",
-  "note": "public door: no github links; footers de-duped",
-  "updated": "2026-08-06T23:39Z"
+  "host": "vercel",
+  "note": "public door on Vercel evoform-no; thin stage only; RevRune not on door",
+  "updated": "2026-08-07T05:00Z"
 }

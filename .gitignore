@@ -1,0 +1,8 @@
+# Staged thin public door (local / CI artifact)
+_public/
+
+# Vercel local link (optional; IDs also in docs)
+.vercel/
+
+# macOS
+.DS_Store
