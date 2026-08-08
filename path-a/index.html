@@ -152,25 +152,13 @@
         line-height: 1.6;
       }
       .cross {
-        margin: 0 0 2.25rem;
+        margin: 0 0 2rem;
         font-size: 0.95rem;
+        color: var(--muted);
+        max-width: 36rem;
+        line-height: 1.55;
       }
       .cross a { font-weight: 550; }
-
-      .hero-visual {
-        margin: 0 0 2.5rem;
-        border-radius: 0.85rem;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        background: #06100e;
-        aspect-ratio: 16 / 9;
-      }
-      .hero-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.88;
-      }
 
       section.block {
         margin: 0 0 2.75rem;
@@ -321,69 +309,6 @@
         color: var(--ink);
       }
 
-      .specs {
-        display: grid;
-        gap: 0.75rem;
-      }
-      @media (min-width: 640px) { .specs { grid-template-columns: repeat(2, 1fr); } }
-      @media (min-width: 960px) { .specs { grid-template-columns: repeat(3, 1fr); } }
-      .spec {
-        border-radius: 0.75rem;
-        border: 1px solid var(--line);
-        background: var(--surface);
-        padding: 1rem 1.1rem;
-      }
-      .spec .k {
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--faint);
-        margin: 0 0 0.25rem;
-      }
-      .spec .v {
-        font-size: 1.05rem;
-        font-weight: 600;
-        margin: 0 0 0.2rem;
-      }
-      .spec .n {
-        font-size: 0.85rem;
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .sequence {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        border-top: 1px solid var(--line);
-      }
-      .sequence li {
-        display: grid;
-        grid-template-columns: 4.5rem 1fr;
-        gap: 0.75rem 1rem;
-        padding: 0.75rem 0;
-        border-bottom: 1px solid var(--line);
-        font-size: 0.95rem;
-        line-height: 1.45;
-      }
-      .sequence .when {
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--accent);
-        font-weight: 600;
-        padding-top: 0.15rem;
-      }
-      .sequence .what { color: var(--muted); }
-      .sequence .what strong {
-        display: block;
-        color: var(--ink);
-        font-weight: 600;
-        margin-bottom: 0.15rem;
-      }
-
       .gallery {
         display: grid;
         gap: 0.75rem;
@@ -481,16 +406,13 @@
         <h1>Form language</h1>
         <p class="page-sub">Leatherback as teacher · continuous skin · quiet research scale</p>
         <p class="lede">
-          Concept views for a first Path A platform. Sensors first. First systems may be
-          mass-first for pack and quiet · refine, then shrink.
+          Interactive form language for a first Path A platform. Hotspots and
+          concept studies · sensors and quiet loiter in mind.
         </p>
         <p class="cross">
-          <a href="/path-a/board/">Inspiration Board →</a>
+          Envelope, transfer stack, and Now · Next · Later live on the
+          <a href="/path-a/board/">Inspiration Board</a>.
         </p>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <img src="/path-a/mockups/form-threequarter.jpg" alt="" />
       </div>
 
       <section class="block" id="explorer">
@@ -520,49 +442,6 @@
             <div class="hotlist" id="hotlist"></div>
           </aside>
         </div>
-      </section>
-
-      <section class="block" id="specs">
-        <p class="section-label">Envelope</p>
-        <h2>First-build envelope</h2>
-        <p class="section-sub">Path A envelope · mass-first for prototype 1.</p>
-        <div class="specs">
-          <div class="spec"><p class="k">Scale</p><p class="v">Mass-first P1</p><p class="n">Room for pack · shrink later</p></div>
-          <div class="spec"><p class="k">Depth</p><p class="v">0–50 m</p><p class="n">Design toward 200 m</p></div>
-          <div class="spec"><p class="k">Speed</p><p class="v">Survey / hover</p><p class="n">~1–2 m/s transit</p></div>
-          <div class="spec"><p class="k">Power</p><p class="v">Battery</p><p class="n">Multi-hour loiter</p></div>
-          <div class="spec"><p class="k">Sensors v1</p><p class="v">Hydrophone + camera</p><p class="n">Steerable preferred</p></div>
-          <div class="spec"><p class="k">Deploy</p><p class="v">Boat or crane</p><p class="n">Research facilities OK</p></div>
-        </div>
-      </section>
-
-      <section class="block" id="sequence">
-        <p class="section-label">Sequence</p>
-        <h2>Quiet upper-water first</h2>
-        <p class="section-sub">Depth and compliance later.</p>
-        <ol class="sequence">
-          <li>
-            <span class="when">Now</span>
-            <span class="what">
-              <strong>Quiet upper-water Path A</strong>
-              Continuous-skin form · sparse thrust + buoyancy hover · hydrophone-first · tank baselines
-            </span>
-          </li>
-          <li>
-            <span class="when">Next</span>
-            <span class="what">
-              <strong>Efficiency stack</strong>
-              Regime-matched riblets only if sized · catch-up transit · steerable camera while the platform holds
-            </span>
-          </li>
-          <li>
-            <span class="when">Later</span>
-            <span class="what">
-              <strong>Depth roadmap</strong>
-              Volume-following under continuous skin · compliance as mechanism study · design toward 200 m+
-            </span>
-          </li>
-        </ol>
       </section>
 
       <section class="block" id="gallery">
@@ -641,10 +520,8 @@
         }
       ];
 
+      /* Studies beyond the explorer view set (form / profile / plan / systems). */
       const gallery = [
-        { src: "/path-a/mockups/form-threequarter.jpg", title: "Leatherback form · three-quarter" },
-        { src: "/path-a/mockups/form-profile.jpg", title: "Profile · instrument head" },
-        { src: "/path-a/mockups/form-top.jpg", title: "Plan · ridges" },
         { src: "/path-a/mockups/hover.jpg", title: "Hover language" },
         { src: "/path-a/mockups/boat-deploy.jpg", title: "Boat deploy" },
         { src: "/path-a/mockups/vs-antigoal.jpg", title: "Vs thruster box" },
