@@ -130,7 +130,7 @@
         list-style: none;
         margin: 0 0 2.5rem;
         padding: 0;
-        max-width: 28rem;
+        max-width: 26rem;
         border-top: 1px solid var(--line);
       }
 
@@ -140,16 +140,21 @@
 
       .paths a,
       .paths .p-soon {
-        display: block;
-        padding: 0.95rem 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.75rem 1.25rem;
+        padding: 0.8rem 0;
         color: inherit;
         text-decoration: none;
         border-bottom: none;
         border-radius: 0.25rem;
+        font-size: 0.98rem;
+        line-height: 1.35;
       }
 
       .paths a {
-        transition: background 0.15s ease;
+        transition: background 0.15s ease, color 0.15s ease;
       }
 
       .paths a:hover {
@@ -163,34 +168,29 @@
       }
 
       .paths .p-title {
-        display: block;
-        font-size: 1rem;
         font-weight: 600;
+        letter-spacing: -0.01em;
         color: var(--ink);
-        margin: 0 0 0.3rem;
+      }
+
+      .paths a .p-title {
+        color: var(--ink);
       }
 
       .paths a .p-title::after {
         content: " →";
         color: var(--accent);
-        opacity: 0.8;
+        opacity: 0.85;
         font-weight: 500;
       }
 
+      .paths .p-soon {
+        cursor: default;
+      }
+
       .paths .p-soon .p-title {
-        color: rgba(230, 240, 236, 0.72);
-      }
-
-      .paths .p-desc {
-        display: block;
-        font-size: 0.9rem;
-        color: var(--muted);
-        line-height: 1.45;
-        margin: 0;
-      }
-
-      .paths .p-soon .p-desc {
-        color: rgba(143, 168, 158, 0.8);
+        color: rgba(230, 240, 236, 0.55);
+        font-weight: 550;
       }
 
       a {
@@ -239,20 +239,17 @@
       <ul class="paths" aria-label="EvoMarine paths">
         <li>
           <a href="/path-a/board/">
-            <span class="p-title">Board</span>
-            <span class="p-desc">Inspirations</span>
+            <span class="p-title">Inspiration Board</span>
           </a>
         </li>
         <li>
           <a href="/path-a/">
-            <span class="p-title">Path</span>
-            <span class="p-desc">Concepts</span>
+            <span class="p-title">Visual Concepts</span>
           </a>
         </li>
         <li>
           <div class="p-soon" aria-disabled="true">
-            <span class="p-title">Iteration</span>
-            <span class="p-desc">Prototypes</span>
+            <span class="p-title">Built Prototypes</span>
           </div>
         </li>
       </ul>
