@@ -14,7 +14,7 @@
 
 ## §1 · The job
 
-Stay near marine life **longer and quieter** than a thruster box, on a **small boat-deployable** platform, so sensors (and careful partners) can observe without wrecking the scene.
+Stay near marine life **longer and quieter** than a thruster box, on a platform that can carry the energy, insulation, electronics, and fixtures the mission needs, so sensors (and careful partners) can observe without wrecking the scene.
 
 ---
 
@@ -24,7 +24,7 @@ Stay near marine life **longer and quieter** than a thruster box, on a **small b
 |----------|-----|
 | **1 · Primary** | Lower disturbance and quieter self-noise **plus** more efficient motion than a typical small prop AUV on the same mission — achieved by **streamlined form**, **shark-skin-inspired riblets**, and **sparse or undulating thrust**, each used only where it earns its place under physics and durability |
 | **2 · Secondary** | Longer loiter hours on one battery |
-| **3 · Tertiary** | Easy deploy (1–2 people, small boat) |
+| **3 · Tertiary** | Deploy that matches the mass pack (research boat or crane OK for prototype 1 · smaller deck deploy after refinement) |
 
 Numbers get filled when we measure competitors and prototypes. Order of importance is locked.
 
@@ -34,7 +34,7 @@ Numbers get filled when we measure competitors and prototypes. Order of importan
 
 | Axis | Content |
 |------|---------|
-| **Size** | ~0.5–1.2 m first build |
+| **Size** | **Mass-first for prototype 1** · sized for battery, insulation, electronics, robotic fixtures, and payload. Specialized / significant boat or crane deploy is acceptable for a premium research market. Later refinement shrinks form (phones, EVs, drones pattern). Water does not punish mass the way air does. Exact length open until pack locks. |
 | **Depth** | 0–50 m first wet tests · design toward 0–200 m |
 | **Speed** | Efficient slow survey and hover as primary mode · ability to sustain ~1–2 m/s for efficient transit / closing distance · not a high-speed racer |
 | **Power** | Battery · multi-hour loiter |
@@ -75,12 +75,13 @@ Start with a **streamlined body**, **reliable buoyancy**, **simple fairings**, a
 | 2026-08-06 | **§1–6 locked** (founder paste · full card complete) |
 | 2026-08-06 | §6 Kai role confirmed: specs/briefs · packages after go · coordinate fab shops |
 | 2026-08-06 | **Permanent pin** · handoff + research success pack cross-links · reopen only on founder rewrite |
+| 2026-08-08 | **Founder scale rewrite** · mass-first P1 (battery, insulation, electronics, robotics) · specialized boat/crane OK · premium research first · shrink after refinement · water weight advantage |
 
 ---
 
 ## One-line summary
 
-Path A is a **small, boat-deployable, quiet co-presence survey platform** that wins on **lower disturbance, quieter self-noise, and more efficient motion** than a typical small prop AUV — via streamlined form, riblets where earned, and sparse or undulating thrust — with multi-hour loiter and simple deploy; deep volume-following and flexible structures are a **later** depth roadmap, not the first hull requirement.
+Path A is a **quiet co-presence survey platform** that wins on **lower disturbance, quieter self-noise, and more efficient motion** than a typical prop AUV — via streamlined form, riblets where earned, and sparse or undulating thrust — with multi-hour loiter; first systems may be bulkier research-scale craft (boat or crane deploy) before refinement shrinks them; deep volume-following and flexible structures are a **later** depth roadmap, not the first hull requirement.
 
 ---
 
