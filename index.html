@@ -72,14 +72,24 @@
           max(3.5rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
       }
 
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.85rem 1.25rem;
+        margin: 0 0 1.85rem;
+        flex-wrap: wrap;
+      }
+
       .brand {
         display: inline-flex;
         align-items: center;
         gap: 0.65rem;
-        margin: 0 0 1.75rem;
+        margin: 0;
         text-decoration: none;
         color: inherit;
         border: 0;
+        flex-shrink: 0;
       }
 
       .brand img {
@@ -100,34 +110,25 @@
         margin: 0;
       }
 
-      h1.pair {
+      .topbar .north {
+        margin: 0;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        text-align: right;
+        max-width: 11.5rem;
+      }
+
+      h1.hero {
         font-family: var(--font-display);
         font-size: clamp(1.7rem, 5.2vw, 2.35rem);
         font-weight: 700;
-        line-height: 1.22;
+        line-height: 1.18;
         letter-spacing: -0.02em;
         margin: 0 0 1.5rem;
-        max-width: 17.5rem;
+        max-width: 12rem;
         color: var(--ink);
-      }
-
-      h1.pair .line {
-        display: block;
-      }
-
-      h1.pair .line-b {
-        font-weight: 550;
-        font-size: 0.92em;
-        color: rgba(230, 240, 236, 0.82);
-        margin-top: 0.42em;
-        max-width: 16rem;
-      }
-
-      h1.pair .dot {
-        color: var(--accent);
-        font-weight: 500;
-        margin-right: 0.28em;
-        opacity: 0.85;
       }
 
       /* Verticals — taxonomy, not product cards */
@@ -301,22 +302,6 @@
         border-bottom-color: transparent;
       }
 
-      footer {
-        margin-top: 0;
-        padding-top: 1.35rem;
-        border-top: 1px solid var(--line);
-        font-size: 0.8125rem;
-        color: var(--muted);
-        line-height: 1.55;
-      }
-
-      .foot-quiet {
-        margin: 0;
-        font-size: 0.8125rem;
-        color: var(--muted);
-        letter-spacing: 0.02em;
-      }
-
       @media (max-width: 420px) {
         body {
           font-size: 1rem;
@@ -329,9 +314,18 @@
           padding-top: max(2.5rem, env(safe-area-inset-top));
         }
 
-        h1.pair {
+        .topbar {
+          margin-bottom: 1.6rem;
+        }
+
+        .topbar .north {
+          font-size: 0.68rem;
+          max-width: 9.5rem;
+        }
+
+        h1.hero {
           font-size: clamp(1.65rem, 7.2vw, 1.95rem);
-          max-width: 14.5rem;
+          max-width: 11rem;
           margin-bottom: 1.4rem;
         }
 
@@ -345,16 +339,14 @@
   </head>
   <body>
     <div class="wrap">
-      <a class="brand" href="/" aria-label="EvoForm home">
-        <img src="/brand/mark.svg?v=1" width="34" height="34" alt="" />
-        <span class="mark">EvoForm</span>
-      </a>
-      <h1 class="pair">
-        <span class="line">Shaped by Evolution</span>
-        <span class="line line-b"
-          ><span class="dot" aria-hidden="true">·</span>In Accordance with Nature</span
-        >
-      </h1>
+      <div class="topbar">
+        <a class="brand" href="/" aria-label="EvoForm home">
+          <img src="/brand/mark.svg?v=1" width="34" height="34" alt="" />
+          <span class="mark">EvoForm</span>
+        </a>
+        <p class="north">In Accordance with Nature</p>
+      </div>
+      <h1 class="hero">Shaped by Evolution</h1>
 
       <ul class="verticals" aria-label="EvoForm verticals">
         <li>
@@ -391,10 +383,6 @@
       <p class="related">
         <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
       </p>
-
-      <footer>
-        <p class="foot-quiet">In Accordance with Nature</p>
-      </footer>
     </div>
   </body>
 </html>
