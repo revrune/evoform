@@ -167,9 +167,10 @@ def main() -> None:
     must_contain(hub, "Inspiration Board", "hub path")
     must_contain(hub, "Visual Concepts", "hub path")
     must_contain(hub, "Built Prototypes", "hub path soon")
-    must_contain(hub, "none yet", "hub prototypes empty state")
-    must_contain(hub, "Why and how", "hub board job line")
-    must_contain(hub, "What it looks like", "hub concepts job line")
+    # Hub stays thin one-line paths (no door job essay)
+    must_not_contain(hub, "none yet", "hub no empty-state essay")
+    must_not_contain(hub, "Why and how", "hub no board job line")
+    must_not_contain(hub, "p-job", "hub no p-job chrome")
 
     # Board lead phrase + Concepts bridge (Eli craft)
     must_contain(board, "Quiet Extended Presence", "board primary phrase")
