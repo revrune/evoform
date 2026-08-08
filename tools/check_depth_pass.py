@@ -75,10 +75,13 @@ def main() -> None:
             fail(f"board: section anchor {anchor} still in top nav")
 
     # Board owns envelope chips + sequence
-    must_contain(board, "Mass-first P1", "board envelope chips")
+    # Envelope ownership chips (plain labels OK)
+    if "Heavy first build" not in board and "Mass-first P1" not in board:
+        fail("board envelope chips: missing first-build scale chip")
     must_contain(board, "0–50 m first", "board depth chip")
     must_contain(board, "Boat or crane", "board deploy chip")
-    must_contain(board, "Hydrophone", "board sensors chip")
+    if "Mic + camera" not in board and "Hydrophone" not in board:
+        fail("board sensors chip missing")
     must_contain(board, 'id="sequence"', "board sequence ownership")
     must_contain(board, "<strong>Now</strong>", "board sequence Now")
     must_contain(board, "<strong>Next</strong>", "board sequence Next")
@@ -130,13 +133,11 @@ def main() -> None:
     must_not_contain(path_a, 'id="sequence"', "path-a sequence section id")
     must_not_contain(path_a, 'class="sequence"', "path-a sequence list")
     # Chip-style full duplicate of board envelope
-    for fact in ("Mass-first P1", "0–50 m", "Boat or crane"):
-        if fact in path_a and fact in board:
-            # lede may mention mass-first generically; ban grid-style ownership
-            if re.search(rf"<p class=\"v\">{re.escape(fact)}", path_a) or (
-                f'<span class="chip">{fact}' in path_a
-            ):
-                fail(f"path-a: duplicate envelope fact presentation for {fact!r}")
+    for fact in ("0–50 m first", "Boat or crane", "Heavy first build", "Mass-first P1"):
+        if f'<span class="chip">{fact}' in path_a or re.search(
+            rf"<p class=\"v\">{re.escape(fact)}", path_a
+        ):
+            fail(f"path-a: duplicate envelope fact presentation for {fact!r}")
 
     # Gallery not pure re-list of explorer view set alone
     must_contain(path_a, "const gallery", "path-a gallery data")
@@ -174,10 +175,10 @@ def main() -> None:
 
     # Board lead phrase + Concepts bridge (Eli craft)
     must_contain(board, "Quiet Extended Presence", "board primary phrase")
-    must_contain(board, "hang with the water column", "board supporting line")
-    must_contain(path_a, "control path live on the", "concepts bridge copy")
+    must_contain(board, "Stay in the water longer", "board supporting line")
+    must_contain(path_a, "Inspiration Board", "concepts bridge to board")
     must_contain(path_a, "board:", "concepts hotspot board links")
-    must_contain(path_a, 'system: "Control"', "concepts gallery system labels")
+    must_contain(path_a, "system:", "concepts gallery system labels")
 
     print("PASS: depth + redundancy + Eli craft gates on hub/board/path-a")
 

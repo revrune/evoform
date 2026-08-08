@@ -444,9 +444,9 @@
       <h1>Board</h1>
       <p class="page-sub">Quiet Extended Presence</p>
       <p class="lede">
-        Built to hang with the water column · sensors usable throughout. Working
-        hypothesis · research prototype · leatherback form teachers and avionics-style
-        active stability.
+        Stay in the water longer and quieter · sensors that keep working the whole
+        time. Working notes for a research prototype. Leatherback as teacher.
+        Stability held by a control computer.
       </p>
 
       <ol class="toc" aria-label="On this board">
@@ -485,9 +485,8 @@
         </div>
 
         <p>
-          Stability lives in software · the avionics pattern. High-rate sensing and
-          computer authority free the body to favor efficiency, compliance, and
-          quiet.
+          Stability lives in software. Fast sensing and a dedicated computer free
+          the hull to stay efficient and quiet.
         </p>
 
         <div class="grid two">
@@ -507,7 +506,7 @@
             </button>
             <div class="body">
               <h3>Side-stick</h3>
-              <p><em>Force-sense stick · small inputs · computer scales surface motion across the envelope.</em></p>
+              <p><em>Small stick inputs · the computer scales how hard the surfaces move.</em></p>
               <span class="credit">Public domain via Wikimedia Commons</span>
             </div>
           </article>
@@ -526,8 +525,8 @@
               <img src="/path-a/teachers/f16-planform.svg" alt="" loading="lazy" style="object-fit:contain;background:#f4f7f5;padding:0.75rem" />
             </button>
             <div class="body">
-              <h3>Planform reference</h3>
-              <p><em>Performance-first form · authority closed in the loop.</em></p>
+              <h3>Plan view</h3>
+              <p><em>Shape for performance · the computer keeps it flying true.</em></p>
               <span class="credit">Public domain · Wikimedia Commons</span>
             </div>
           </article>
@@ -539,7 +538,7 @@
             <tbody>
               <tr>
                 <th scope="row">Relaxed static stability</th>
-                <td>Airframe designed to be highly responsive · authority closes the loop continuously.</td>
+                <td>Airframe built to respond fast · the computer steadies it all the time.</td>
               </tr>
               <tr>
                 <th scope="row">Full fly-by-wire</th>
@@ -569,7 +568,7 @@
             <tbody>
               <tr>
                 <td>Agile airframe · multi-axis rates · fly-by-wire</td>
-                <td>Soft-stable or under-damped hull at loiter regimes</td>
+                <td>Hull that is easy to tip at slow hold · computer steadies it</td>
               </tr>
               <tr>
                 <td>Rate and g demand from the stick</td>
@@ -583,28 +582,26 @@
           </table>
         </div>
 
-        <h3>Control path</h3>
+        <h3>How control builds</h3>
         <ol class="steps">
           <li>
-            <strong>Solid attitude and depth loops</strong> (PID-class) with strong
-            state estimation
+            <strong>Hold attitude and depth well</strong> with solid sensing of
+            where the vehicle is
           </li>
           <li>
-            <strong>Middle / outer hold</strong> · depth and station-keeping ·
-            “hold here quietly” before long transit
+            <strong>Then hold place</strong> · stay put quietly before long runs
           </li>
           <li>
-            <strong>Model-based control</strong> (LTV-MPC class) when coupling and
-            underactuation need it · short horizon, real-time solver on the vehicle
+            <strong>Smarter control later</strong> if the simple loops are not enough
+            · still on the vehicle, still real time
           </li>
         </ol>
 
         <div class="callout">
-          <p class="k">Compute split</p>
+          <p class="k">Two computers</p>
           <p>
-            A lean stability computer · separate from the observation payload
-            computer. Fly-by-wire pedigree, drone flight stacks, and field hydrobatic
-            AUVs all inform the loop.
+            A small stability computer · separate from the science payload computer.
+            Lessons from fly-by-wire, drones, and research AUVs.
           </p>
         </div>
 
@@ -660,14 +657,14 @@
 
         <p>
           A multirotor tips and keeps tipping without the loop. The pilot never
-          balances four motors. The pilot commands intent. The same layered pattern
-          · retuned for water · is the practical path for EvoMarine quiet dwell.
+          balances four motors. The pilot commands intent. The same layered idea,
+          tuned for water, is the practical path for EvoMarine quiet hold.
         </p>
         <p class="muted">
-          Military fly-by-wire is heavy because of certification and combat
-          envelopes. Drone controllers are light because the mission tolerates
-          simpler redundancy. Open stacks (PX4, ArduPilot, many custom loops) show
-          this is mature engineering, not exotic research.
+          Military fly-by-wire is heavy because of certification and combat rules.
+          Drone controllers are light because the job allows simpler backups. Open
+          stacks like PX4 and ArduPilot show this is normal engineering, not exotic
+          research.
         </p>
 
         <h3>Layer transfer</h3>
@@ -708,17 +705,16 @@
         <div class="note">
           <p class="k">Why this is buildable now</p>
           <p class="muted" style="margin:0">
-            Drone flight stacks prove layered stability at low mass and cost ·
-            hydrobatic AUVs prove underwater attitude/depth authority with trim and
-            buoyancy · leatherback ridge and stroke–glide results give hull and energy
-            cues with published trails · Prototype 1 combines those for an
-            observation mission and hours-class quiet hold.
+            Drones prove layered control at low weight. Research AUVs prove depth
+            and attitude hold underwater. Leatherback work gives hull and coasting
+            cues with a paper trail. Prototype 1 puts those together for quiet
+            observation over hours.
           </p>
         </div>
 
         <p class="muted" style="margin-top:1.25rem">
           Drones prove the control pattern at everyday weight. The leatherback
-          proves the body language of efficient presence. EvoMarine joins them
+          proves efficient presence in a living body. EvoMarine joins them
           underwater. <a href="#teacher">Living teacher →</a>
         </p>
       </section>
@@ -726,12 +722,12 @@
       <!-- 03 Leatherback -->
       <section class="block" id="teacher">
         <p class="section-label">03 · Living · Dermochelys coriacea</p>
-        <h2>Leatherback as form teacher</h2>
+        <h2>Leatherback as teacher</h2>
         <p>
-          Evolution already solved migration-scale efficiency, pressure-tolerant
-          volume, continuous skin language, ridge geometry, and hydrofoil-style
-          propulsion at large size. We transfer those <strong>mechanisms</strong>
-          into manufactured form. Resemblance follows performance.
+          Evolution already solved long-range efficiency, pressure-tolerant volume,
+          continuous skin, ridge lines, and flipper-style drive at large size. We
+          take those <strong>mechanisms</strong> into a made platform. Look-alike
+          follows what works, not the other way around.
         </p>
 
         <div class="grid two">
@@ -740,8 +736,8 @@
               <img src="/path-a/teachers/leatherback-rear.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
-              <h3>Rear planform</h3>
-              <p><em>Keels, trailing silhouette, flipper geometry as control-surface teachers.</em></p>
+              <h3>Rear shape</h3>
+              <p><em>Keels, trailing edge, flippers · teachers for control surfaces.</em></p>
             </div>
           </article>
           <article class="card">
@@ -750,7 +746,7 @@
             </button>
             <div class="body">
               <h3>Adult scale</h3>
-              <p><em>~3 m class animal as a volume teacher · re-optimize for the platform we build.</em></p>
+              <p><em>~3 m class animal as a size teacher · re-size for the platform we build.</em></p>
             </div>
           </article>
           <article class="card">
@@ -759,7 +755,7 @@
             </button>
             <div class="body">
               <h3>Surface language</h3>
-              <p><em>Long body, ridge spine, low-disturbance silhouette in open water.</em></p>
+              <p><em>Long body, ridge line, quiet outline in open water.</em></p>
               <span class="credit">Footage courtesy David Currie · Instagram @dcurrie_drones</span>
             </div>
           </article>
@@ -769,7 +765,7 @@
             </button>
             <div class="body">
               <h3>Mass and presence</h3>
-              <p><em>First systems may be mass-first: batteries, insulation, electronics, robotics · boat or crane deploy OK · refine, then focus.</em></p>
+              <p><em>First builds may be heavy: batteries, insulation, electronics, robotics · boat or crane is fine · refine and shrink later.</em></p>
             </div>
           </article>
           <article class="card">
@@ -778,7 +774,7 @@
             </button>
             <div class="body">
               <h3>Ridges and flow</h3>
-              <p><em>Streamwise vortices can delay separation when regime-matched · test at Path A Reynolds.</em></p>
+              <p><em>Ridges may help flow if sized to our speed · we test before we claim it.</em></p>
             </div>
           </article>
           <article class="card">
@@ -787,7 +783,7 @@
             </button>
             <div class="body">
               <h3>Speed class</h3>
-              <p><em>Animal burst is one reference · Path A targets survey and hover (~1–2 m/s transit).</em></p>
+              <p><em>Animal burst is one reference · we aim for survey and hover (~1–2 m/s transit).</em></p>
             </div>
           </article>
           <article class="card" style="grid-column:1 / -1">
@@ -795,13 +791,13 @@
               <img src="/path-a/teachers/osteoderms-mosaic.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
-              <h3>Later depth roadmap</h3>
+              <h3>Later · deeper work</h3>
               <p>
-                Osteoderm mosaic and volume-following compliance · coupon-scale material
-                study · thermal packaging lessons after the first quiet hull.
-                Continuous-skinned first hull stays primary for quiet upper-water work.
+                Shell mosaic and flexible volume are later studies · small material
+                coupons first. The first quiet hull stays a simple continuous skin in
+                upper water.
               </p>
-              <span class="credit">Osteoderm media kept for study · not P1 scope</span>
+              <span class="credit">Study media only · not first-build scope</span>
             </div>
           </article>
         </div>
@@ -816,65 +812,65 @@
             <tbody>
               <tr>
                 <th scope="row">Hull</th>
-                <td>Leatherback proportions · planform and longitudinal ridge cues with real hydrodynamic basis</td>
+                <td>Leatherback proportions · ridge cues with real flow basis</td>
               </tr>
               <tr>
                 <th scope="row">Volume</th>
-                <td>Sized for energy, dual compute, buoyancy, insulation, robotics, and observation payload · bulkier first systems welcome · refine after learning</td>
+                <td>Room for battery, two computers, buoyancy, insulation, robotics, and sensors · bigger first builds are fine · shrink after we learn</td>
               </tr>
               <tr>
-                <th scope="row">Motion energy</th>
-                <td>Intermittent thrust with long coast · turtle stroke–glide pattern (~30% effort / ~70% glide in lab biomechanics)</td>
+                <th scope="row">Motion</th>
+                <td>Short thrust, long coast · turtle pattern in lab work is about 30% effort and 70% glide</td>
               </tr>
               <tr>
-                <th scope="row">Actuation</th>
-                <td>Hybrid · buoyancy for depth · trim mass for pitch · sparse thrust and/or few controlled foils</td>
+                <th scope="row">How it moves</th>
+                <td>Buoyancy for depth · trim mass for pitch · light thrust and a few control surfaces</td>
               </tr>
               <tr>
-                <th scope="row">Skin language</th>
-                <td>Continuous fairing · ridge geometry as function</td>
+                <th scope="row">Skin</th>
+                <td>One continuous outer skin · ridges that do a real job</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="muted" style="margin-top:1rem">
-          This is a craft that stores calm in its geometry and spends energy in
-          short, deliberate windows.
+          A craft that stays calm in its shape and spends energy in short, careful
+          bursts.
         </p>
       </section>
 
       <!-- 05 First hull -->
       <section class="block" id="transfer">
-        <p class="section-label">05 · First hull · transfer stack</p>
+        <p class="section-label">05 · First hull · what goes in first</p>
         <h2>What moves into the prototype first</h2>
         <p class="muted">
-          Quieter and efficient · longer loiter · deploy that matches the mass pack.
+          Quieter and more efficient · longer hold · deploy that fits the real weight.
         </p>
         <ul class="clean">
-          <li><strong>1 · Control computer path</strong> · multi-axis attitude and depth hold · sparse thruster authority · log for tank noise and power</li>
-          <li><strong>2 · Continuous-skin leatherback form</strong> · ridge language as function · continuous outer fairing</li>
-          <li><strong>3 · Hydrophone-first isolation</strong> · layout and mounts early</li>
-          <li><strong>4 · Buoyancy-assisted hover</strong> · lower thruster duty so listening leads · long coast in transit</li>
-          <li><strong>5 · Gentle scene exit</strong> · leave cleanly when the moment asks for it</li>
+          <li><strong>1 · Control computer</strong> · hold attitude and depth · light thruster use · log noise and power in the tank</li>
+          <li><strong>2 · Leatherback-shaped hull</strong> · ridges that do a job · continuous outer skin</li>
+          <li><strong>3 · Mic first</strong> · layout and mounts early</li>
+          <li><strong>4 · Buoyancy-assisted hover</strong> · less thruster so listening leads · long coast in transit</li>
+          <li><strong>5 · Clean exit</strong> · leave the scene gently when it is time</li>
         </ul>
         <div class="chips">
-          <span class="chip">Quiet-first</span>
-          <span class="chip">Mass-first P1</span>
+          <span class="chip">Quiet first</span>
+          <span class="chip">Heavy first build</span>
           <span class="chip">Boat or crane</span>
           <span class="chip">0–50 m first</span>
           <span class="chip">Sensors over speed</span>
-          <span class="chip">Computer-owned stability</span>
-          <span class="chip">Hydrophone + camera</span>
+          <span class="chip">Computer holds stability</span>
+          <span class="chip">Mic + camera</span>
         </div>
 
         <h3>Sequence</h3>
         <ul class="clean" id="sequence">
-          <li><strong>Now</strong> · Quiet upper-water Path A · continuous-skin form · sparse thrust + buoyancy hover · hydrophone-first · tank baselines</li>
-          <li><strong>Next</strong> · Efficiency stack · regime-matched riblets only if sized · catch-up transit · steerable camera while the platform holds</li>
-          <li><strong>Later</strong> · Depth roadmap · volume-following under continuous skin · compliance as mechanism study · design toward 200 m+</li>
+          <li><strong>Now</strong> · Quiet upper water · continuous skin · light thrust and buoyancy hover · mic first · tank baselines</li>
+          <li><strong>Next</strong> · Better efficiency only if sized right · catch-up transit · camera that turns while the body holds</li>
+          <li><strong>Later</strong> · Deeper work · flexible volume under continuous skin · study toward 200 m+</li>
         </ul>
         <p style="margin-top:1.25rem">
-          Form explorer and concept studies on <a href="/path-a/">Visual Concepts →</a>
+          Pictures and hotspots on <a href="/path-a/">Visual Concepts →</a>
         </p>
       </section>
 
@@ -889,9 +885,9 @@
               <img src="/path-a/teachers/evidence-ridges-ld.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
             </button>
             <div class="body">
-              <h3>Ridges · L/D</h3>
-              <p><em>Leatherback-glider CFD class · ridges can raise lift-to-drag at low angle of attack.</em></p>
-              <span class="credit">Paper class · illustrative redraw · implication: size ridges to Path A Reynolds before claiming drag win</span>
+              <h3>Ridges · lift and drag</h3>
+              <p><em>Published glider studies · ridges can improve lift-to-drag at a low angle of attack.</em></p>
+              <span class="credit">Paper class · redrawn chart · size ridges to our speed before claiming a drag win</span>
             </div>
           </article>
           <article class="card">
@@ -899,9 +895,9 @@
               <img src="/path-a/teachers/evidence-stroke-glide.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
             </button>
             <div class="body">
-              <h3>Stroke–glide duty</h3>
-              <p><em>Lab biomechanics · effort in a minority of the cycle · mass and low drag carry the coast.</em></p>
-              <span class="credit">Lab biomechanics class · implication: long coast reduces thruster wash during observation</span>
+              <h3>Stroke and glide</h3>
+              <p><em>Lab animal work · effort in a smaller part of the cycle · mass and low drag carry the coast.</em></p>
+              <span class="credit">Lab biomechanics · long coast means less thruster wash while we watch</span>
             </div>
           </article>
           <article class="card" style="grid-column:1 / -1">
@@ -909,23 +905,23 @@
               <img src="/path-a/teachers/evidence-hydrobatic-auv.png" alt="" loading="lazy" style="object-fit:contain;background:#0e1816" />
             </button>
             <div class="body">
-              <h3>Field research AUVs</h3>
-              <p><em>Field research AUV class · computer-owned pitch and depth with buoyancy, moving mass, and model-based control.</em></p>
-              <span class="credit">NOAA SeaBED AUV Popoki · public domain · implication: underwater attitude/depth authority is already buildable</span>
+              <h3>Research AUVs already do this</h3>
+              <p><em>Field research vehicles already hold pitch and depth with buoyancy, moving mass, and onboard control.</em></p>
+              <span class="credit">NOAA SeaBED AUV Popoki · public domain · underwater hold is already buildable</span>
             </div>
           </article>
         </div>
 
         <p style="margin-top:1.1rem">
-          <strong>Open lane.</strong> Observation hull sized for real energy and
-          payload · hybrid buoyancy and sparse thrust · sensors first.
+          <strong>Open work.</strong> Hull sized for real energy and payload · buoyancy
+          and light thrust · sensors first.
         </p>
 
-        <h3>Trial one · success frame</h3>
+        <h3>Trial one · what success looks like</h3>
         <p class="muted">
           Multi-hour smooth depth and attitude hold · calm transit with long coast
-          phases · sensors usable throughout. Depth band and endurance numbers
-          lock with scale.
+          · sensors usable the whole time. Exact depth band and hours lock with
+          scale.
         </p>
       </section>
 
@@ -949,14 +945,14 @@
         <p class="section-label">08 · Horizon</p>
         <h2>A quieter design shift</h2>
         <p>
-          Much of the last century’s underwater craft optimized for power, depth,
-          or survey speed. Another path is opening: platforms that stay longer by
-          disturbing less · that borrow stability from computation · that take hull
-          language from animals that already cross oceans on sparse effort.
+          Much of the last century’s underwater craft chased power, depth, or survey
+          speed. Another path is opening: stay longer by disturbing less · let a
+          computer hold stability · learn hull ideas from animals that already cross
+          oceans on little effort.
         </p>
         <p class="muted">
-          EvoMarine is one working sketch of that shift: performance rooted in living
-          systems, held by modern control, aimed at presence rather than spectacle.
+          EvoMarine is one sketch of that shift: form from living systems, held by
+          modern control, built to be present rather than loud.
         </p>
       </section>
 
