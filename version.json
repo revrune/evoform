@@ -1,7 +1,7 @@
 {
-  "version": "evomarine-hub-copy-2026-08-08",
+  "version": "quiet-extended-presence-2026-08-08",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "EvoMarine hub: Board + Path · shorter lede and path labels",
-  "updated": "2026-08-08T21:00Z"
+  "note": "EvoMarine line: Quiet Extended Presence",
+  "updated": "2026-08-08T22:00Z"
 }
