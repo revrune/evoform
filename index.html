@@ -90,6 +90,11 @@
         color: inherit;
         border: 0;
         flex-shrink: 0;
+        cursor: default;
+      }
+
+      a.brand {
+        cursor: pointer;
       }
 
       .brand img {
@@ -203,6 +208,16 @@
         line-height: 1.5;
       }
 
+      .related-link {
+        color: var(--muted);
+        border-bottom: none;
+      }
+
+      .related-link:hover {
+        color: var(--ink);
+        border-bottom-color: transparent;
+      }
+
       a {
         color: var(--accent);
         text-decoration: none;
@@ -255,10 +270,10 @@
   <body>
     <div class="wrap">
       <div class="topbar">
-        <a class="brand" href="/" aria-label="EvoForm home">
+        <div class="brand" aria-label="EvoForm">
           <img src="/brand/mark.svg?v=1" width="34" height="34" alt="" />
           <span class="mark">EvoForm</span>
-        </a>
+        </div>
       </div>
       <div class="hero-block">
         <p class="hero-kicker">Vehicles</p>
@@ -287,7 +302,7 @@
       </ul>
 
       <p class="related">
-        <a href="https://cetavox.com/">CetaVox</a> · Deciphering Cetacean Language
+        <a class="related-link" href="https://cetavox.com/">CetaVox · Deciphering Cetacean Language</a>
       </p>
     </div>
   </body>
