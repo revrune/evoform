@@ -79,6 +79,17 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--line);
       }
+      .nav-north {
+        margin: 0 0 0 auto;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+      @media (max-width: 720px) {
+        .nav-north { margin-left: 0; width: 100%; order: 3; }
+      }
       .nav-brand {
         display: inline-flex;
         align-items: center;
@@ -433,7 +444,7 @@
         <nav class="nav-links" aria-label="Board navigation">
           <a href="/">Home</a>
           <a href="/evomarine/">EvoMarine</a>
-          <a href="/path-a/">Path A form</a>
+          <a href="/path-a/">Path</a>
           <a href="#hypothesis">Stability</a>
           <a href="#drones">Drones</a>
           <a href="#teacher">Teacher</a>
@@ -442,6 +453,7 @@
           <a href="#open">Open</a>
           <a href="#horizon">Horizon</a>
         </nav>
+        <p class="nav-north">Shaped by Nature</p>
       </header>
 
       <p class="status">Working board · open notes · research in motion</p>
@@ -971,7 +983,7 @@
       </section>
 
       <footer class="site">
-        <p style="margin:0 0 0.35rem">In Accordance with Nature · Form Shaped by Evolution</p>
+        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
         <p style="margin:0">
           <a href="/">EvoForm</a>
           <span style="opacity:0.4"> · </span>

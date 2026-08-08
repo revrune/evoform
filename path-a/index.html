@@ -77,13 +77,23 @@
       .nav-brand:hover { text-decoration: none; }
       .nav-brand strong { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
       .nav-brand span { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); }
-      .nav-links { display: none; gap: 0.15rem; }
+      .nav-links { display: none; gap: 0.15rem; flex: 1; justify-content: flex-end; }
       @media (min-width: 640px) { .nav-links { display: flex; } }
       .nav-links a {
         color: var(--muted); text-decoration: none;
         padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.875rem;
       }
       .nav-links a:hover { color: var(--fg); background: var(--surface); text-decoration: none; }
+      .nav-north {
+        margin: 0 0 0 0.75rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--faint);
+        white-space: nowrap;
+      }
+      @media (max-width: 639px) {
+        .nav-north { margin-left: auto; }
+      }
 
       .hero {
         position: relative; overflow: hidden;
@@ -345,6 +355,7 @@
           <a href="#roadmap">Roadmap</a>
           <a href="#gallery">Gallery</a>
         </nav>
+        <p class="nav-north">Shaped by Nature</p>
       </div>
     </header>
 
@@ -500,13 +511,13 @@
     </section>
 
     <footer class="site">
-      <p class="tag">Shaped by Evolution</p>
+      <p class="tag">Shaped by Nature</p>
       <p class="meta">
         <a href="/">EvoForm</a>
         <span style="opacity:0.4"> · </span>
+        <a href="/evomarine/">EvoMarine</a>
+        <span style="opacity:0.4"> · </span>
         <a href="https://cetavox.com/">CetaVox</a>
-        <br />
-        EvoMarine · In Accordance with Nature
       </p>
     </footer>
 
