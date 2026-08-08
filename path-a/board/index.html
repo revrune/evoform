@@ -90,6 +90,23 @@
       @media (max-width: 720px) {
         .nav-north { margin-left: 0; width: 100%; order: 3; }
       }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin: 0 0 1.25rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--muted);
+        text-decoration: none;
+        line-height: 1.3;
+      }
+      .back:hover { color: var(--accent); text-decoration: none; }
+      .back:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 0.2rem;
+      }
       .nav-brand {
         display: inline-flex;
         align-items: center;
@@ -472,6 +489,8 @@
         </nav>
         <p class="nav-north">Shaped by Nature</p>
       </header>
+
+      <a class="back" href="/evomarine/">← Back</a>
 
       <p class="status">Working board · open notes · research in motion</p>
       <p class="page-kicker">Inspiration</p>
