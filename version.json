@@ -1,7 +1,7 @@
 {
-  "version": "evomarine-board-f16-teachers-2026-08-08",
+  "version": "evomarine-board-drone-proof-2026-08-08",
   "surface": "door+path-a+board",
   "host": "vercel",
-  "note": "F-16 air teacher gallery + FCC uniqueness table from Eli share pack",
-  "updated": "2026-08-08T15:00Z"
+  "note": "Drones prove stability-in-software · air→water transfer table · lean P1 control",
+  "updated": "2026-08-08T16:00Z"
 }

@@ -332,6 +332,13 @@
       }
       .horizon p:last-child { margin-bottom: 0; }
       table.arch.wide th { width: 11rem; }
+      .transfer-map thead th {
+        width: auto;
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 600;
+        background: rgba(94, 201, 168, 0.05);
+      }
       .transfer-map td:first-child { color: var(--ink); font-weight: 500; }
 
       footer.site {
@@ -579,35 +586,132 @@
         </p>
 
         <div class="callout">
-          <p class="k">Two teachers together</p>
+          <p class="k">Teachers together</p>
           <p>
             Leatherback gives the body language of efficient presence · F-16 gives
-            the control philosophy that lets an advanced body stay on a quiet path.
+            the high-performance control philosophy · drones show the same pattern
+            at everyday weight and cost. Operator commands intent · software holds
+            the platform.
           </p>
         </div>
 
-        <h3>Why this matters for Path A</h3>
+        <h3>What drones already prove</h3>
+        <p>
+          A typical multirotor is not passively stable. Tip it and it wants to keep
+          tipping. Four independent motors, coupled axes, fast dynamics. No human
+          can juggle thrust on each prop in real time the way the vehicle needs.
+        </p>
+        <p class="muted">So the stack is layered:</p>
+        <ol class="steps">
+          <li>
+            <strong>Inner loop</strong> · attitude rate and attitude hold (IMU at
+            hundreds of Hz · PID or similar)
+          </li>
+          <li>
+            <strong>Middle loop</strong> · velocity / position hold
+          </li>
+          <li>
+            <strong>Outer loop</strong> · “go there” waypoints, or a pilot stick that
+            only commands intent
+          </li>
+        </ol>
+        <p>
+          The pilot never flies the propellers. The pilot flies a stabilized
+          platform. That is the same idea as the F-16, at consumer weight and cost.
+        </p>
+        <p class="muted">
+          Military fly-by-wire is heavy because of certification, redundancy, and
+          envelope protection at combat speeds. Drone flight controllers are light
+          because the mission tolerates simpler redundancy and the physics package
+          is smaller. The pattern is the same: stability in software · body free to
+          be efficient or agile · operator commands intent. Open stacks (PX4,
+          ArduPilot, and many custom loops) show this is mature engineering, not
+          exotic research.
+        </p>
+
+        <h3>What transfers underwater</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Piece</th>
+                <th scope="col">Air drone</th>
+                <th scope="col">Underwater Path A</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Need for active stability</td>
+                <td>High (unstable airframe)</td>
+                <td>Real at loiter and hover-like dwell</td>
+              </tr>
+              <tr>
+                <td>Sensors</td>
+                <td>IMU, baro, GPS, optical flow</td>
+                <td>IMU, depth, optional DVL / speed-through-water</td>
+              </tr>
+              <tr>
+                <td>Actuation</td>
+                <td>Fast motors</td>
+                <td>Buoyancy, trim mass, sparse thrust, foils · often slower</td>
+              </tr>
+              <tr>
+                <td>Fluid</td>
+                <td>Air</td>
+                <td>Water · higher density, added mass, stronger coupling</td>
+              </tr>
+              <tr>
+                <td>Outer command</td>
+                <td>“Go there”</td>
+                <td>“Hold here quietly” / slow track</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          The algorithms are in the same family. The model and sensors change. You
+          retune for hydrodynamics, not reinvent the idea of a control computer.
+          Hydrobatic research AUVs already do versions of this with buoyancy, moving
+          mass, and model-based control. Field practice exists. EvoMarine’s job is to
+          aim that pattern at quiet, long presence on a leatherback-proportion body ·
+          not at racing or pure survey speed.
+        </p>
+
+        <h3>Why this helps the prototype</h3>
         <ul class="clean">
           <li>
-            <strong>Quiet authority.</strong> Soft, coordinated corrections can
-            hold position without continuous hard thrust.
+            A lean stability computer, solid IMU, depth sensor, and well-tuned
+            attitude/depth loops are a credible start · F-16-class quadruplex is not
+            day-one hardware.
           </li>
           <li>
-            <strong>Co-presence.</strong> Small, frequent surface and thruster
-            inputs support listening and watching.
+            <strong>“Go there / hold here”</strong> is the outer interface · sparse
+            thrusters and buoyancy are the muscles.
           </li>
           <li>
-            <strong>Hydrophone-first layout.</strong> The platform can hold still
-            or crawl while sensors stay useful.
+            Leatherback form reduces how hard the loop must work · the computer still
+            closes it.
           </li>
           <li>
-            <strong>Form + computer together.</strong> Leatherback planform and
-            ridge language lighten the control burden; the computer closes the
-            loop. Each strengthens the other.
+            <strong>Quiet authority.</strong> Soft, coordinated corrections can hold
+            position without continuous hard thrust.
+          </li>
+          <li>
+            <strong>Hydrophone-first layout.</strong> The platform can hold still or
+            crawl while sensors stay useful.
           </li>
         </ul>
 
-        <h3>Transfer map</h3>
+        <div class="callout">
+          <p class="k">One line</p>
+          <p>
+            Drones already showed that everyday vehicles can put stability in
+            software. Underwater, the same pattern applies · retuned for water ·
+            aimed at quiet dwell rather than aerial agility.
+          </p>
+        </div>
+
+        <h3>Transfer map · F-16 pedigree</h3>
         <div class="table-wrap">
           <table class="arch wide transfer-map">
             <thead>
@@ -637,7 +741,11 @@
         <ol class="steps">
           <li>
             <strong>Solid attitude and depth loops</strong> (PID-class) with strong
-            state estimation
+            state estimation · the drone-proven inner loop, retuned for water
+          </li>
+          <li>
+            <strong>Middle / outer hold</strong> · depth and station-keeping ·
+            “hold here quietly” before long transit
           </li>
           <li>
             <strong>Model-based control</strong> (LTV-MPC class) when coupling and
@@ -650,8 +758,9 @@
           <p class="k">Compute split</p>
           <p>
             A lean stability computer · separate from the observation payload
-            computer. Lessons from fly-by-wire aircraft and field hydrobatic AUVs
-            (trim, buoyancy, model-based control) inform the loop.
+            computer. Lessons from fly-by-wire aircraft, drone flight stacks, and
+            field hydrobatic AUVs (trim, buoyancy, model-based control) inform the
+            loop.
           </p>
         </div>
 
@@ -661,16 +770,19 @@
             Same pattern under the sea: a lean stability computer · IMU, depth,
             optional speed-through-water · sparse actuation · quiet hover and slow
             transit. Leatherback form lightens the burden · the control computer
-            closes the loop.
+            closes the loop. Early avionics instinct still maps · packaging got
+            lighter · fluid dynamics is the new plant model · the control idea is
+            ready to borrow.
           </p>
         </div>
 
         <div class="horizon">
           <p class="k" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:0 0 0.4rem">Horizon</p>
           <p class="muted" style="margin:0">
-            The same shift that transformed aviation · from pure passive stability
-            to computer-augmented design · can open a quieter class of underwater
-            platforms: vehicles that stay present without dominating the scene.
+            The same shift that transformed aviation and everyday drones · from pure
+            passive stability to computer-augmented design · can open a quieter class
+            of underwater platforms: vehicles that stay present without dominating
+            the scene.
           </p>
         </div>
       </section>
@@ -861,6 +973,7 @@
           <span class="chip">Presence over haste</span>
           <span class="chip">Hybrid actuation</span>
           <span class="chip">Computer-owned stability</span>
+          <span class="chip">Drone-proven loops</span>
         </div>
         <p style="margin-top:1.25rem">
           <a href="/path-a/">Open Path A form explorer →</a>
