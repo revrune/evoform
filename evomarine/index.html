@@ -138,14 +138,18 @@
         border-bottom: 1px solid var(--line);
       }
 
-      .paths a {
+      .paths a,
+      .paths .p-soon {
         display: block;
         padding: 0.95rem 0;
         color: inherit;
         text-decoration: none;
         border-bottom: none;
-        transition: background 0.15s ease;
         border-radius: 0.25rem;
+      }
+
+      .paths a {
+        transition: background 0.15s ease;
       }
 
       .paths a:hover {
@@ -166,11 +170,15 @@
         margin: 0 0 0.3rem;
       }
 
-      .paths .p-title::after {
+      .paths a .p-title::after {
         content: " →";
         color: var(--accent);
         opacity: 0.8;
         font-weight: 500;
+      }
+
+      .paths .p-soon .p-title {
+        color: rgba(230, 240, 236, 0.72);
       }
 
       .paths .p-desc {
@@ -179,6 +187,10 @@
         color: var(--muted);
         line-height: 1.45;
         margin: 0;
+      }
+
+      .paths .p-soon .p-desc {
+        color: rgba(143, 168, 158, 0.8);
       }
 
       a {
@@ -228,14 +240,20 @@
         <li>
           <a href="/path-a/board/">
             <span class="p-title">Board</span>
-            <span class="p-desc">Active stability · leatherback sea turtle as teacher</span>
+            <span class="p-desc">Inspirations</span>
           </a>
         </li>
         <li>
           <a href="/path-a/">
             <span class="p-title">Path</span>
-            <span class="p-desc">Concept views</span>
+            <span class="p-desc">Concepts</span>
           </a>
+        </li>
+        <li>
+          <div class="p-soon" aria-disabled="true">
+            <span class="p-title">Iteration</span>
+            <span class="p-desc">Prototypes</span>
+          </div>
         </li>
       </ul>
     </div>
