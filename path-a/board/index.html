@@ -434,6 +434,7 @@
           <a href="/">Home</a>
           <a href="/path-a/">Path A form</a>
           <a href="#hypothesis">Stability</a>
+          <a href="#drones">Drones</a>
           <a href="#teacher">Teacher</a>
           <a href="#architecture">Architecture</a>
           <a href="#transfer">First hull</a>
@@ -458,12 +459,13 @@
 
       <ol class="toc" aria-label="On this board">
         <li><span class="n">01</span><a href="#hypothesis">Active stability underwater · the control computer</a></li>
-        <li><span class="n">02</span><a href="#teacher">Living teacher · leatherback</a></li>
-        <li><span class="n">03</span><a href="#architecture">Architecture direction</a></li>
-        <li><span class="n">04</span><a href="#transfer">What moves into the prototype first</a></li>
-        <li><span class="n">05</span><a href="#grounding">Prior work · trial one</a></li>
-        <li><span class="n">06</span><a href="#open">Open slots · collaborators</a></li>
-        <li><span class="n">07</span><a href="#horizon">A quieter design shift</a></li>
+        <li><span class="n">02</span><a href="#drones">What drones already prove</a></li>
+        <li><span class="n">03</span><a href="#teacher">Living teacher · leatherback</a></li>
+        <li><span class="n">04</span><a href="#architecture">Architecture direction</a></li>
+        <li><span class="n">05</span><a href="#transfer">What moves into the prototype first</a></li>
+        <li><span class="n">06</span><a href="#grounding">Prior work · trial one</a></li>
+        <li><span class="n">07</span><a href="#open">Open slots · collaborators</a></li>
+        <li><span class="n">08</span><a href="#horizon">A quieter design shift</a></li>
       </ol>
 
       <!-- 01 Active stability · founder F-16 + Eli control path -->
@@ -586,16 +588,81 @@
         </p>
 
         <div class="callout">
-          <p class="k">Teachers together</p>
+          <p class="k">Teachers in the stack</p>
           <p>
-            Leatherback gives the body language of efficient presence · F-16 gives
-            the high-performance control philosophy · drones show the same pattern
-            at everyday weight and cost. Operator commands intent · software holds
-            the platform.
+            F-16 gives the high-performance control philosophy ·
+            <a href="#drones">drones</a> show the same pattern at everyday weight and
+            cost · <a href="#teacher">leatherback</a> gives the body language of
+            efficient presence. Operator commands intent · software holds the
+            platform.
           </p>
         </div>
 
-        <h3>What drones already prove</h3>
+        <h3>Transfer map · F-16 pedigree</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Air · F-16</th>
+                <th scope="col">Water · Path A (hypothesis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Agile airframe · multi-axis rates · fly-by-wire</td>
+                <td>Soft-stable or under-damped hull at loiter regimes</td>
+              </tr>
+              <tr>
+                <td>Pilot commands intent · computer holds envelope</td>
+                <td>Operator or autonomy commands intent · loop holds quiet hover and slow transit</td>
+              </tr>
+              <tr>
+                <td>Flight control computer</td>
+                <td>Underwater control computer · IMU, depth, optional DVL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Control path</h3>
+        <ol class="steps">
+          <li>
+            <strong>Solid attitude and depth loops</strong> (PID-class) with strong
+            state estimation · the drone-proven inner loop, retuned for water
+          </li>
+          <li>
+            <strong>Middle / outer hold</strong> · depth and station-keeping ·
+            “hold here quietly” before long transit
+          </li>
+          <li>
+            <strong>Model-based control</strong> (LTV-MPC class) when coupling and
+            underactuation need it · periodic linearization, short horizon,
+            real-time solver on the vehicle
+          </li>
+        </ol>
+
+        <div class="callout">
+          <p class="k">Compute split</p>
+          <p>
+            A lean stability computer · separate from the observation payload
+            computer. Lessons from fly-by-wire aircraft, drone flight stacks, and
+            field hydrobatic AUVs (trim, buoyancy, model-based control) inform the
+            loop.
+          </p>
+        </div>
+
+        <p class="muted" style="margin-top:1.25rem">
+          Next: how everyday multirotors already proved this pattern at consumer
+          weight · <a href="#drones">What drones already prove →</a>
+        </p>
+      </section>
+
+      <!-- 02 Drones · everyday proof of stability-in-software -->
+      <section class="block" id="drones">
+        <p class="section-label">02 · Everyday proof · Synthetic lane</p>
+        <h2>What drones already prove</h2>
+        <p class="lane">Consumer multirotor · flight stacks · open source</p>
+
         <p>
           A typical multirotor is not passively stable. Tip it and it wants to keep
           tipping. Four independent motors, coupled axes, fast dynamics. No human
@@ -703,7 +770,7 @@
         </ul>
 
         <div class="callout">
-          <p class="k">One line</p>
+          <p class="k">One line for the board</p>
           <p>
             Drones already showed that everyday vehicles can put stability in
             software. Underwater, the same pattern applies · retuned for water ·
@@ -711,85 +778,19 @@
           </p>
         </div>
 
-        <h3>Transfer map · F-16 pedigree</h3>
-        <div class="table-wrap">
-          <table class="arch wide transfer-map">
-            <thead>
-              <tr>
-                <th scope="col">Air · F-16</th>
-                <th scope="col">Water · Path A (hypothesis)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Agile airframe · multi-axis rates · fly-by-wire</td>
-                <td>Soft-stable or under-damped hull at loiter regimes</td>
-              </tr>
-              <tr>
-                <td>Pilot commands intent · computer holds envelope</td>
-                <td>Operator or autonomy commands intent · loop holds quiet hover and slow transit</td>
-              </tr>
-              <tr>
-                <td>Flight control computer</td>
-                <td>Underwater control computer · IMU, depth, optional DVL</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Control path</h3>
-        <ol class="steps">
-          <li>
-            <strong>Solid attitude and depth loops</strong> (PID-class) with strong
-            state estimation · the drone-proven inner loop, retuned for water
-          </li>
-          <li>
-            <strong>Middle / outer hold</strong> · depth and station-keeping ·
-            “hold here quietly” before long transit
-          </li>
-          <li>
-            <strong>Model-based control</strong> (LTV-MPC class) when coupling and
-            underactuation need it · periodic linearization, short horizon,
-            real-time solver on the vehicle
-          </li>
-        </ol>
-
-        <div class="callout">
-          <p class="k">Compute split</p>
-          <p>
-            A lean stability computer · separate from the observation payload
-            computer. Lessons from fly-by-wire aircraft, drone flight stacks, and
-            field hydrobatic AUVs (trim, buoyancy, model-based control) inform the
-            loop.
-          </p>
-        </div>
-
-        <div class="callout">
-          <p class="k">Water transfer · EvoMarine</p>
-          <p>
-            Same pattern under the sea: a lean stability computer · IMU, depth,
-            optional speed-through-water · sparse actuation · quiet hover and slow
-            transit. Leatherback form lightens the burden · the control computer
-            closes the loop. Early avionics instinct still maps · packaging got
-            lighter · fluid dynamics is the new plant model · the control idea is
-            ready to borrow.
-          </p>
-        </div>
-
         <div class="horizon">
-          <p class="k" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:0 0 0.4rem">Horizon</p>
+          <p class="k" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:0 0 0.4rem">Avionics instinct · simpler packaging</p>
           <p class="muted" style="margin:0">
-            The same shift that transformed aviation and everyday drones · from pure
-            passive stability to computer-augmented design · can open a quieter class
-            of underwater platforms: vehicles that stay present without dominating
-            the scene.
+            Early avionics instinct still maps. The world simplified the packaging.
+            Fluid dynamics is the new plant model. The control idea is ready to
+            borrow. Leatherback form next · <a href="#teacher">Living teacher →</a>
           </p>
         </div>
       </section>
 
-      <!-- 02 Teacher · full gallery · Eli refined copy -->
+      <!-- 03 Teacher · full gallery · Eli refined copy -->
       <section class="block" id="teacher">
-        <p class="section-label">02 · Living · Dermochelys coriacea</p>
+        <p class="section-label">03 · Living · Dermochelys coriacea</p>
         <h2>Leatherback as form teacher</h2>
         <p>
           Evolution already solved migration-scale efficiency, pressure-tolerant
@@ -911,7 +912,7 @@
 
       <!-- 03 Architecture -->
       <section class="block" id="architecture">
-        <p class="section-label">03 · Architecture direction</p>
+        <p class="section-label">04 · Architecture direction</p>
         <h2>Hull · energy · actuation</h2>
         <p class="muted">
           Layered direction for the craft. Complements the first-hull transfer stack below.
@@ -950,7 +951,7 @@
 
       <!-- 04 Transfer stack -->
       <section class="block" id="transfer">
-        <p class="section-label">04 · First hull · transfer stack</p>
+        <p class="section-label">05 · First hull · transfer stack</p>
         <h2>What moves into the prototype first</h2>
         <p class="muted">
           Ordered for Path A win order: quieter and efficient · longer loiter ·
@@ -982,7 +983,7 @@
 
       <!-- 05 Grounding + trial -->
       <section class="block" id="grounding">
-        <p class="section-label">05 · Prior work · trial one</p>
+        <p class="section-label">06 · Prior work · trial one</p>
         <h2>We build on</h2>
         <ul class="clean">
           <li>
@@ -1015,7 +1016,7 @@
 
       <!-- 06 Open · collaborators -->
       <section class="block" id="open">
-        <p class="section-label">06 · Living document</p>
+        <p class="section-label">07 · Living document</p>
         <h2>Open slots · collaborators</h2>
 
         <div class="note">
@@ -1047,7 +1048,7 @@
 
       <!-- Wider design note · Eli recommended closing -->
       <section class="block" id="horizon">
-        <p class="section-label">Horizon</p>
+        <p class="section-label">08 · Horizon</p>
         <h2>A quieter design shift</h2>
         <p>
           Much of the last century’s underwater craft optimized for power, depth,
