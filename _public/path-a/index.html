@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Path A · Quiet Hybrid · EvoMarine · EvoForm</title>
+    <meta
+      name="description"
+      content="EvoMarine Path A Quiet Hybrid — leatherback form language, quiet efficient loiter, boat-deployable observation."
+    />
+    <meta name="theme-color" content="#0a1412" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://evoform.no/path-a/" />
+    <meta property="og:title" content="Path A · Quiet Hybrid · EvoForm" />
+    <meta
+      property="og:description"
+      content="EvoMarine · leatherback form · longer quieter observation."
+    />
+    <meta property="og:url" content="https://evoform.no/path-a/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EvoForm" />
+    <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0a1412;
+        --surface: #0e1816;
+        --surface-2: #121f1c;
+        --fg: #e6f0ec;
+        --muted: #8fa89e;
+        --faint: #5c756c;
+        --primary: #5ec9a8;
+        --border: #1a2a26;
+        --border-strong: #2a3f38;
+        --danger: #b85c5c;
+        --ok: #5fa87a;
+        --font-sans: "DM Sans", system-ui, sans-serif;
+        --font-display: "Instrument Serif", Georgia, serif;
+        --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+        --max: 72rem;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; color-scheme: dark; }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.5;
+      }
+      a { color: var(--primary); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      button { font: inherit; color: inherit; cursor: pointer; }
+      img { max-width: 100%; display: block; }
+      .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+      @media (min-width: 640px) { .wrap { padding: 0 1.5rem; } }
+
+      .nav {
+        position: sticky; top: 0; z-index: 40;
+        border-bottom: 1px solid var(--border);
+        background: color-mix(in oklab, var(--bg) 90%, transparent);
+        backdrop-filter: blur(12px);
+      }
+      .nav-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 3.5rem; gap: 1rem;
+      }
+      .nav-brand { display: flex; align-items: center; gap: 0.55rem; color: var(--fg); text-decoration: none; }
+      .nav-brand:hover { text-decoration: none; }
+      .nav-brand strong { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
+      .nav-brand span { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); }
+      .nav-links { display: none; gap: 0.15rem; }
+      @media (min-width: 640px) { .nav-links { display: flex; } }
+      .nav-links a {
+        color: var(--muted); text-decoration: none;
+        padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.875rem;
+      }
+      .nav-links a:hover { color: var(--fg); background: var(--surface); text-decoration: none; }
+
+      .hero {
+        position: relative; overflow: hidden;
+        border-bottom: 1px solid var(--border);
+        min-height: min(78vh, 40rem);
+      }
+      .hero-bg { position: absolute; inset: 0; }
+      .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+      .hero-bg::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(90deg, var(--bg) 0%, color-mix(in oklab, var(--bg) 85%, transparent) 45%, color-mix(in oklab, var(--bg) 35%, transparent) 100%),
+          linear-gradient(to top, var(--bg) 0%, transparent 45%, color-mix(in oklab, var(--bg) 50%, transparent) 100%);
+      }
+      .hero-inner { position: relative; padding: 4rem 0 3.5rem; }
+      @media (min-width: 640px) { .hero-inner { padding: 6rem 0 5rem; } }
+      .eyebrow {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em;
+        text-transform: uppercase; color: var(--primary); margin: 0 0 1rem;
+      }
+      .hero h1 {
+        font-family: var(--font-display); font-weight: 400;
+        font-size: clamp(2.25rem, 6vw, 4.25rem); line-height: 1.05;
+        letter-spacing: -0.02em; max-width: 18ch; margin: 0 0 1.25rem;
+        text-wrap: balance;
+      }
+      .hero-lede {
+        max-width: 36rem; color: var(--muted); font-size: 1.05rem;
+        line-height: 1.6; margin: 0 0 1.75rem;
+      }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        border-radius: 999px; padding: 0.75rem 1.25rem; font-size: 0.9rem;
+        font-weight: 500; border: 1px solid transparent; text-decoration: none;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
+      }
+      .btn:hover { text-decoration: none; }
+      .btn-primary { background: var(--fg); color: var(--bg); }
+      .btn-primary:hover { background: color-mix(in oklab, var(--fg) 90%, white); }
+      .btn-ghost {
+        background: color-mix(in oklab, var(--surface) 70%, transparent);
+        border-color: var(--border-strong); color: var(--fg);
+      }
+      .btn-ghost:hover { border-color: var(--faint); }
+      .wins {
+        border-bottom: 1px solid var(--border);
+        background: color-mix(in oklab, var(--surface) 50%, transparent);
+      }
+      .wins-grid {
+        display: grid; gap: 1.5rem; padding: 2.5rem 0;
+      }
+      @media (min-width: 768px) { .wins-grid { grid-template-columns: repeat(3, 1fr); } }
+      .win-rank {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--primary); margin: 0 0 0.4rem;
+      }
+      .win h2 { font-size: 1.1rem; font-weight: 500; margin: 0 0 0.4rem; }
+      .win p { margin: 0; font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+
+      section.block { border-bottom: 1px solid var(--border); padding: 3rem 0; }
+      @media (min-width: 640px) { section.block { padding: 4rem 0; } }
+      .section-label {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--primary); margin: 0 0 0.5rem;
+      }
+      .section-title {
+        font-family: var(--font-display); font-weight: 400;
+        font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.5rem;
+      }
+      .section-sub { color: var(--muted); font-size: 0.95rem; max-width: 36rem; margin: 0 0 2rem; }
+
+      .explorer-head {
+        display: flex; flex-wrap: wrap; align-items: flex-end;
+        justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem;
+      }
+      .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .tab {
+        border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+        color: var(--muted); padding: 0.45rem 0.9rem; font-size: 0.875rem;
+      }
+      .tab[aria-selected="true"] {
+        border-color: color-mix(in oklab, var(--primary) 50%, transparent);
+        background: color-mix(in oklab, var(--primary) 15%, transparent);
+        color: var(--fg);
+      }
+      .tab:hover { color: var(--fg); }
+
+      .explorer-grid {
+        display: grid; gap: 1.25rem;
+      }
+      @media (min-width: 1024px) {
+        .explorer-grid { grid-template-columns: 1fr 20rem; gap: 1.75rem; }
+      }
+      .viewer {
+        position: relative; aspect-ratio: 16 / 10;
+        border-radius: 0.9rem; overflow: hidden;
+        border: 1px solid var(--border); background: var(--surface-2);
+      }
+      .viewer img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .hotspot {
+        position: absolute; width: 1rem; height: 1rem; margin: -0.5rem 0 0 -0.5rem;
+        border-radius: 999px; border: 2px solid var(--fg);
+        background: color-mix(in oklab, var(--bg) 50%, transparent);
+        padding: 0;
+      }
+      .hotspot.active { background: var(--primary); border-color: var(--fg); transform: scale(1.12); }
+      .hotspot::after {
+        content: ""; position: absolute; inset: -6px; border-radius: 999px;
+        border: 1px solid color-mix(in oklab, var(--fg) 35%, transparent);
+        animation: pulse 2s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.85); opacity: 0.7; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hotspot::after { animation: none; }
+        html { scroll-behavior: auto; }
+      }
+      .viewer-cap {
+        margin-top: 0.65rem; font-family: var(--font-mono);
+        font-size: 0.72rem; color: var(--faint);
+      }
+      .panel {
+        border-radius: 0.9rem; border: 1px solid var(--border);
+        background: var(--surface); padding: 1.25rem;
+      }
+      .panel h3 { margin: 0 0 0.5rem; font-size: 1.2rem; font-weight: 500; }
+      .panel p { margin: 0; font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+      .hotlist { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.35rem; }
+      .hotlist button {
+        text-align: left; border: 1px solid transparent; border-radius: 0.55rem;
+        background: transparent; padding: 0.65rem 0.75rem; font-size: 0.875rem;
+      }
+      .hotlist button:hover { background: var(--surface-2); }
+      .hotlist button.active {
+        border-color: color-mix(in oklab, var(--primary) 40%, transparent);
+        background: color-mix(in oklab, var(--primary) 10%, transparent);
+      }
+
+      .specs {
+        display: grid; gap: 0.75rem;
+      }
+      @media (min-width: 640px) { .specs { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1024px) { .specs { grid-template-columns: repeat(3, 1fr); } }
+      .spec {
+        border-radius: 0.9rem; border: 1px solid var(--border);
+        background: var(--surface); padding: 1.1rem 1.2rem;
+      }
+      .spec .k {
+        font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--faint); margin: 0 0 0.25rem;
+      }
+      .spec .v { font-size: 1.2rem; font-weight: 500; margin: 0 0 0.2rem; }
+      .spec .n { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+      .roadmap { display: grid; gap: 1rem; }
+      @media (min-width: 768px) { .roadmap { grid-template-columns: repeat(3, 1fr); } }
+      .phase {
+        border-radius: 0.9rem; border: 1px solid var(--border);
+        background: var(--surface); padding: 1.25rem; display: flex; flex-direction: column;
+      }
+      .phase .when {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--primary); margin: 0 0 0.4rem;
+      }
+      .phase h3 { margin: 0 0 1rem; font-size: 1.1rem; font-weight: 500; }
+      .phase ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+      .phase li {
+        font-size: 0.875rem; color: var(--muted); line-height: 1.4;
+        padding-left: 1.1rem; position: relative;
+      }
+      .phase li::before {
+        content: ""; position: absolute; left: 0; top: 0.45rem;
+        width: 0.4rem; height: 0.4rem; border-radius: 999px; background: var(--ok);
+      }
+
+      .refuse {
+        margin-top: 1.5rem; border-radius: 0.9rem; border: 1px solid var(--border);
+        background: var(--surface-2); padding: 1.15rem 1.25rem;
+      }
+      .refuse .k {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--faint); margin: 0 0 0.75rem;
+      }
+      .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+      .chip {
+        display: inline-flex; align-items: center; gap: 0.35rem;
+        border-radius: 999px; border: 1px solid var(--border); background: var(--bg);
+        padding: 0.35rem 0.75rem; font-size: 0.75rem; color: var(--muted);
+      }
+      .chip i {
+        display: inline-block; width: 0.45rem; height: 0.45rem; border-radius: 999px;
+        background: var(--danger);
+      }
+
+      .gallery {
+        display: grid; gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 1024px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+      .g-card {
+        border-radius: 0.85rem; overflow: hidden; border: 1px solid var(--border);
+        background: var(--surface); padding: 0; text-align: left; color: inherit;
+      }
+      .g-card:hover { border-color: var(--border-strong); }
+      .g-card .thumb { aspect-ratio: 4/3; overflow: hidden; background: var(--bg); }
+      .g-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+      .g-card:hover img { transform: scale(1.03); }
+      .g-card span {
+        display: block; padding: 0.7rem 0.8rem; font-size: 0.8rem; color: var(--muted);
+      }
+
+      footer.site {
+        text-align: center; padding: 2.75rem 1.25rem 3rem;
+      }
+      footer.site .tag {
+        font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 1.9rem);
+        margin: 0 0 0.75rem;
+      }
+      footer.site .meta {
+        font-family: var(--font-mono); font-size: 0.72rem; color: var(--faint); line-height: 1.6;
+      }
+      footer.site .meta a { color: var(--muted); }
+
+      .lightbox {
+        position: fixed; inset: 0; z-index: 50;
+        background: color-mix(in oklab, var(--bg) 92%, transparent);
+        backdrop-filter: blur(8px);
+        display: none; align-items: center; justify-content: center; padding: 1rem;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img {
+        max-height: 90dvh; max-width: 100%; border-radius: 0.6rem;
+        border: 1px solid var(--border); object-fit: contain;
+      }
+      .lightbox .close {
+        position: absolute; top: 1rem; right: 1rem;
+        border-radius: 999px; border: 1px solid var(--border);
+        background: var(--surface); width: 2.5rem; height: 2.5rem;
+        display: grid; place-items: center; color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="nav-brand" href="/">
+          <img src="/brand/mark.svg?v=1" width="28" height="28" alt="" style="border-radius:0.4rem;display:block" />
+          <strong>EvoForm</strong>
+          <span>EvoMarine</span>
+        </a>
+        <nav class="nav-links" aria-label="On this page">
+          <a href="/path-a/board/">Board</a>
+          <a href="#explorer">Form</a>
+          <a href="#specs">Specs</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#gallery">Gallery</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="/path-a/mockups/form-threequarter.jpg" alt="" />
+      </div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">EvoMarine · Path A · Quiet Hybrid</p>
+        <h1>A quiet vehicle shaped by a deep ocean teacher.</h1>
+        <p class="hero-lede">
+          Stay near marine life longer and quieter than a thruster box — small,
+          boat-deployable, sensors first.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/path-a/board/">Prototype board</a>
+          <a class="btn btn-ghost" href="#explorer">Form</a>
+          <a class="btn btn-ghost" href="#specs">Specs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wins">
+      <div class="wrap wins-grid">
+        <article class="win">
+          <p class="win-rank">01</p>
+          <h2>Quieter + more efficient</h2>
+          <p>
+            Lower disturbance and cost of transport than a small prop AUV — form,
+            regime-matched surfaces where earned, sparse thrust.
+          </p>
+        </article>
+        <article class="win">
+          <p class="win-rank">02</p>
+          <h2>Longer loiter</h2>
+          <p>
+            Multi-hour station-keeping on one pack so observation finishes without thruster wash.
+          </p>
+        </article>
+        <article class="win">
+          <p class="win-rank">03</p>
+          <h2>Easy deploy</h2>
+          <p>One or two people · small boat deck · field scale.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="explorer">
+      <div class="wrap">
+        <div class="explorer-head">
+          <div>
+            <p class="section-label">Form</p>
+            <h2 class="section-title">Leatherback Path A</h2>
+            <p class="section-sub">
+              Hotspots on the form. Living leatherback geometry as teacher.
+            </p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Views" id="view-tabs"></div>
+        </div>
+        <div class="explorer-grid">
+          <div>
+            <div class="viewer" id="viewer">
+              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Path A form view" />
+            </div>
+            <p class="viewer-cap" id="viewer-cap"></p>
+          </div>
+          <aside>
+            <div class="panel" id="hotspot-panel">
+              <p class="section-label">Hotspot</p>
+              <h3 id="hot-title">—</h3>
+              <p id="hot-body">Select a hotspot on the model.</p>
+            </div>
+            <div class="hotlist" id="hotlist"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="specs" style="background: color-mix(in oklab, var(--surface) 35%, transparent)">
+      <div class="wrap">
+        <p class="section-label">Envelope</p>
+        <h2 class="section-title">First-build specs</h2>
+        <p class="section-sub">Path A job card envelope.</p>
+        <div class="specs">
+          <div class="spec"><p class="k">Length</p><p class="v">0.5–1.2 m</p><p class="n">First build envelope</p></div>
+          <div class="spec"><p class="k">Depth</p><p class="v">0–50 m</p><p class="n">Design toward 200 m</p></div>
+          <div class="spec"><p class="k">Speed</p><p class="v">Survey / hover</p><p class="n">~1–2 m/s transit</p></div>
+          <div class="spec"><p class="k">Power</p><p class="v">Battery</p><p class="n">Multi-hour loiter</p></div>
+          <div class="spec"><p class="k">Sensors v1</p><p class="v">Hydrophone + camera</p><p class="n">Steerable preferred</p></div>
+          <div class="spec"><p class="k">Deploy</p><p class="v">1–2 people</p><p class="n">Small boat deck</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="roadmap">
+      <div class="wrap">
+        <p class="section-label">Roadmap</p>
+        <h2 class="section-title">Sequence</h2>
+        <p class="section-sub">Quiet upper-water first. Depth and compliance later.</p>
+        <div class="roadmap">
+          <article class="phase">
+            <p class="when">Now</p>
+            <h3>Quiet upper-water Path A</h3>
+            <ul>
+              <li>Continuous-skin leatherback-inspired form language</li>
+              <li>Sparse thrust + buoyancy hover</li>
+              <li>Hydrophone-first isolation</li>
+              <li>Tank noise / power baselines</li>
+            </ul>
+          </article>
+          <article class="phase">
+            <p class="when">Next</p>
+            <h3>Efficiency stack</h3>
+            <ul>
+              <li>Regime-matched riblets only if sized</li>
+              <li>Catch-up transit without racer posture</li>
+              <li>Steerable camera while platform holds</li>
+            </ul>
+          </article>
+          <article class="phase">
+            <p class="when">Later</p>
+            <h3>Depth roadmap</h3>
+            <ul>
+              <li>Volume-following under continuous skin</li>
+              <li>Osteoderm / suture compliance as mechanism study</li>
+              <li>Design toward 200 m+</li>
+            </ul>
+          </article>
+        </div>
+        <div class="refuse">
+          <p class="k">Out</p>
+          <div class="chips">
+            <span class="chip"><i></i>Thruster-box default</span>
+            <span class="chip"><i></i>Robot-animal brand</span>
+            <span class="chip"><i></i>Open osteoderm gaps v1</span>
+            <span class="chip"><i></i>Deep-ocean first hull</span>
+            <span class="chip"><i></i>Free-lunch efficiency</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="gallery">
+      <div class="wrap">
+        <p class="section-label">Gallery</p>
+        <h2 class="section-title">Concept boards</h2>
+        <p class="section-sub">Form language and systems studies.</p>
+        <div class="gallery" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <footer class="site">
+      <p class="tag">Shaped by Evolution</p>
+      <p class="meta">
+        <a href="/">EvoForm</a>
+        <span style="opacity:0.4"> · </span>
+        <a href="https://cetavox.com/">CetaVox</a>
+        <br />
+        EvoMarine · In Accordance with Nature
+      </p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image">
+      <button type="button" class="close" id="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const views = [
+        {
+          id: "form",
+          label: "Form",
+          image: "/path-a/mockups/form-threequarter.jpg",
+          caption: "Leatherback-inspired planform · continuous skin · ridge spine",
+          hotspots: [
+            { id: "ridges", x: 48, y: 38, title: "Longitudinal ridges", body: "Five keels inspired by leatherback carapace. Possible streamwise flow control — unproven at Path A Reynolds until tested." },
+            { id: "skin", x: 55, y: 55, title: "Continuous skin", body: "Foul-aware outer fairing. No open osteoderm gaps on first hull. Soft cover over any later compliance structure." },
+            { id: "foils", x: 42, y: 68, title: "Control foils", body: "Attitude and hover assist surfaces — machine joints from flipper geometry." },
+            { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Hydrophone fairing path + camera package." }
+          ]
+        },
+        {
+          id: "profile",
+          label: "Profile",
+          image: "/path-a/mockups/form-profile.jpg",
+          caption: "Side silhouette · instrument head · sparse rear thrust",
+          hotspots: [
+            { id: "head", x: 18, y: 48, title: "Instrument head", body: "Hydrophone isolation and steerable optics." },
+            { id: "carapace", x: 48, y: 36, title: "Carapace body", body: "Low, long volume for battery, buoyancy, and dry core. Leatherback planform as packing teacher." },
+            { id: "thrust", x: 88, y: 52, title: "Sparse thruster", body: "Recessed transit thrust. Hover prefers buoyancy + light control, not continuous prop wash." }
+          ]
+        },
+        {
+          id: "plan",
+          label: "Plan",
+          image: "/path-a/mockups/form-top.jpg",
+          caption: "Top orthographic · ridge geometry · foil placement",
+          hotspots: [
+            { id: "spine", x: 50, y: 48, title: "Ridge spine", body: "Multi-ridge centerline for stiffness language and possible flow attachment." },
+            { id: "midfoils", x: 50, y: 28, title: "Mid foils", body: "Paired control surfaces for roll/yaw assist during quiet loiter and slow transit." },
+            { id: "stern", x: 88, y: 50, title: "Stern thrust axis", body: "Single rear axis for efficient low-speed transit when catch-up is needed." }
+          ]
+        },
+        {
+          id: "systems",
+          label: "Systems",
+          image: "/path-a/mockups/systems-cutaway.jpg",
+          caption: "Internal layout · battery · buoyancy · sensors · thrust",
+          hotspots: [
+            { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Staggered cylindrical cells, passive conduction to housing. Cold-water layout ready for Arctic-adjacent loiter." },
+            { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster wash so hydrophones hear the scene, not the vehicle." },
+            { id: "hydro", x: 70, y: 42, title: "Hydrophone mounts", body: "First-class listening layout. Isolation from motors and flow noise is a primary design problem." },
+            { id: "cam", x: 28, y: 68, title: "Camera gimbal", body: "Prefer steerable optics so the platform can stay still while the view moves." }
+          ]
+        }
+      ];
+
+      const gallery = [
+        { src: "/path-a/mockups/form-threequarter.jpg", title: "Leatherback form · three-quarter" },
+        { src: "/path-a/mockups/form-profile.jpg", title: "Profile · instrument head" },
+        { src: "/path-a/mockups/form-top.jpg", title: "Plan · ridges" },
+        { src: "/path-a/mockups/hover.jpg", title: "Hover language" },
+        { src: "/path-a/mockups/boat-deploy.jpg", title: "Boat deploy" },
+        { src: "/path-a/mockups/vs-antigoal.jpg", title: "Vs thruster box" },
+        { src: "/path-a/mockups/riblets.jpg", title: "Riblet study" },
+        { src: "/path-a/mockups/volume-later.jpg", title: "Later · volume-following" }
+      ];
+
+      let viewId = views[0].id;
+      let hotId = views[0].hotspots[0].id;
+
+      const tabsEl = document.getElementById("view-tabs");
+      const viewer = document.getElementById("viewer");
+      const viewerImg = document.getElementById("viewer-img");
+      const viewerCap = document.getElementById("viewer-cap");
+      const hotTitle = document.getElementById("hot-title");
+      const hotBody = document.getElementById("hot-body");
+      const hotlist = document.getElementById("hotlist");
+      const galleryGrid = document.getElementById("gallery-grid");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      function currentView() {
+        return views.find((v) => v.id === viewId) || views[0];
+      }
+      function currentHot() {
+        const v = currentView();
+        return v.hotspots.find((h) => h.id === hotId) || v.hotspots[0];
+      }
+
+      function renderTabs() {
+        tabsEl.innerHTML = "";
+        views.forEach((v) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "tab";
+          b.textContent = v.label;
+          b.setAttribute("role", "tab");
+          b.setAttribute("aria-selected", v.id === viewId ? "true" : "false");
+          b.addEventListener("click", () => {
+            viewId = v.id;
+            hotId = v.hotspots[0].id;
+            renderAll();
+          });
+          tabsEl.appendChild(b);
+        });
+      }
+
+      function renderViewer() {
+        const v = currentView();
+        const h = currentHot();
+        viewerImg.src = v.image;
+        viewerImg.alt = v.caption;
+        viewerCap.textContent = v.caption;
+        viewer.querySelectorAll(".hotspot").forEach((el) => el.remove());
+        v.hotspots.forEach((hs) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "hotspot" + (hs.id === h.id ? " active" : "");
+          btn.style.left = hs.x + "%";
+          btn.style.top = hs.y + "%";
+          btn.setAttribute("aria-label", hs.title);
+          btn.addEventListener("click", () => {
+            hotId = hs.id;
+            renderAll();
+          });
+          viewer.appendChild(btn);
+        });
+        hotTitle.textContent = h.title;
+        hotBody.textContent = h.body;
+        hotlist.innerHTML = "";
+        v.hotspots.forEach((hs) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = hs.id === h.id ? "active" : "";
+          b.textContent = hs.title;
+          b.addEventListener("click", () => {
+            hotId = hs.id;
+            renderAll();
+          });
+          hotlist.appendChild(b);
+        });
+      }
+
+      function renderGallery() {
+        galleryGrid.innerHTML = "";
+        gallery.forEach((g) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "g-card";
+          b.innerHTML = '<div class="thumb"><img src="' + g.src + '" alt="" loading="lazy" /></div><span>' + g.title + "</span>";
+          b.addEventListener("click", () => openLightbox(g.src, g.title));
+          galleryGrid.appendChild(b);
+        });
+      }
+
+      function openLightbox(src, title) {
+        lightboxImg.src = src;
+        lightboxImg.alt = title || "";
+        lightbox.classList.add("open");
+      }
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+      document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+
+      function renderAll() {
+        renderTabs();
+        renderViewer();
+      }
+
+      renderAll();
+      renderGallery();
+    </script>
+  </body>
+</html>
