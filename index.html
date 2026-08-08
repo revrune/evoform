@@ -68,6 +68,10 @@
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
         padding: max(3.25rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
           max(3.5rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
       }
@@ -203,10 +207,10 @@
 
       .related {
         list-style: none;
-        margin: 3.25rem 0 0;
-        padding: 1.35rem 0 0;
-        border-top: 1px solid var(--line);
-        font-size: 0.95rem;
+        margin: auto 0 0;
+        padding: 0;
+        border: 0;
+        font-size: 0.92rem;
         color: var(--muted);
         line-height: 1.5;
         max-width: 28rem;
