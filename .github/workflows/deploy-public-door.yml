@@ -1,23 +1,14 @@
 name: Deploy public door
 
-# Ships thin public door to Vercel (project evoform-no).
-# Secrets: VERCEL_TOKEN · VERCEL_ORG_ID · VERCEL_PROJECT_ID
+# DEPRECATED as primary ship path (2026-08-08).
+# Live host is Vercel; ship with: python3 tools/deploy-vercel-rest.py
+# See docs/ops/vercel-deploy-primary-2026-08-08.md
+# GHA VERCEL_TOKEN secret is known-invalid — do not wait on this workflow.
+# Kept only as optional archive after someone installs a valid token.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "index.html"
-      - "404.html"
-      - "version.json"
-      - "path-a/**"
-      - "evomarine/**"
-      - "brand/**"
-      - "vercel.json"
-      - "tools/stage-public-door.sh"
-      - "tools/publish-public-door.sh"
-      - ".github/workflows/deploy-public-door.yml"
   workflow_dispatch:
+  # push trigger disabled — primary deploy is REST/MCP, not GHA
 
 concurrency:
   group: evoform-public-door

@@ -3,7 +3,10 @@
 > **SUPERSEDED for domains / DNS / public host (2026-08-07):**  
 > Custom domains are on **Vercel + Cloudflare**, not GitHub Pages.  
 > Canonical ops note: [`docs/ops/domains-email-vercel-2026-08-07.md`](ops/domains-email-vercel-2026-08-07.md)  
-> Global MEMORY: **Public host map** + **RevRune scope A**.
+> Global MEMORY: **Public host map** + **RevRune scope A**.  
+>  
+> **SUPERSEDED for ship path (2026-08-08):** Do **not** ship via GitHub Actions / GHA `VERCEL_TOKEN`.  
+> **Primary deploy:** [`docs/ops/vercel-deploy-primary-2026-08-08.md`](ops/vercel-deploy-primary-2026-08-08.md) · `python3 tools/deploy-vercel-rest.py`
 
 **Permanent for Kai · Eli · Riven · any seat.** Session work after freeze reset + founder NOW law. Sections below on Pages A records / `revrune.github.io` are **historical** only.
 
