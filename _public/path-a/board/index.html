@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>EvoMarine · first prototype board · EvoForm</title>
+    <title>Inspiration Board · EvoMarine · EvoForm</title>
     <meta
       name="description"
-      content="EvoMarine first prototype board · active stability (F-16 parallel) · leatherback form teachers · architecture and control path. Research prototype."
+      content="EvoMarine Inspiration Board · active stability · leatherback sea turtle as teacher · research in motion."
     />
     <meta name="theme-color" content="#0a1412" />
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href="https://evoform.no/path-a/board" />
     <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
-    <meta property="og:title" content="EvoMarine · first prototype board · EvoForm" />
+    <meta property="og:title" content="Inspiration Board · EvoMarine · EvoForm" />
     <meta
       property="og:description"
-      content="First prototype board · F-16-style control computer · leatherback teachers · quiet co-presence."
+      content="Active stability · leatherback sea turtle as teacher · research in motion."
     />
     <meta property="og:url" content="https://evoform.no/path-a/board" />
     <meta property="og:type" content="website" />
@@ -75,10 +75,22 @@
         align-items: center;
         justify-content: space-between;
         gap: 0.75rem 1.25rem;
-        margin: 0 0 2rem;
+        margin: 0 0 1.85rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--line);
       }
+      .nav-north {
+        margin: 0 0 0 auto;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+      @media (max-width: 720px) {
+        .nav-north { margin-left: 0; width: 100%; order: 3; }
+      }
+
       .nav-brand {
         display: inline-flex;
         align-items: center;
@@ -109,39 +121,37 @@
       .nav-links a { color: var(--muted); }
       .nav-links a:hover { color: var(--ink); }
 
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--warn);
-        margin: 0 0 0.85rem;
-      }
-      .status::before {
-        content: "";
-        width: 0.45rem;
-        height: 0.45rem;
-        border-radius: 999px;
-        background: var(--warn);
-        opacity: 0.85;
-      }
-
       h1 {
         font-family: var(--font-display);
         font-size: clamp(1.65rem, 5vw, 2.2rem);
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -0.02em;
-        margin: 0 0 0.65rem;
+        margin: 0 0 0.45rem;
       }
+      .page-kicker {
+        margin: 0 0 0.4rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .page-sub {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin: 0 0 0.75rem;
+        max-width: 36rem;
+        line-height: 1.5;
+      }
+
       .lede {
         color: var(--muted);
         font-size: 1.02rem;
         margin: 0 0 1.75rem;
         max-width: 36rem;
+        line-height: 1.6;
       }
 
       .toc {
@@ -316,6 +326,24 @@
       }
       .chip.out { color: #c48a8a; border-color: rgba(184, 92, 92, 0.35); }
 
+      .horizon {
+        margin: 1.25rem 0 0;
+        padding: 1rem 1.1rem;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: rgba(94, 201, 168, 0.04);
+      }
+      .horizon p:last-child { margin-bottom: 0; }
+      table.arch.wide th { width: 11rem; }
+      .transfer-map thead th {
+        width: auto;
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 600;
+        background: rgba(94, 201, 168, 0.05);
+      }
+      .transfer-map td:first-child { color: var(--ink); font-weight: 500; }
+
       footer.site {
         margin-top: 1rem;
         padding-top: 1.35rem;
@@ -406,120 +434,168 @@
           <span class="mark">EvoForm</span>
         </a>
         <nav class="nav-links" aria-label="Board navigation">
-          <a href="/">Home</a>
-          <a href="/path-a/">Path A form</a>
-          <a href="#hypothesis">Stability</a>
-          <a href="#teacher">Teacher</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#transfer">First hull</a>
-          <a href="#open">Open</a>
+          <a href="/evomarine/">EvoMarine</a>
+          <a href="/path-a/">Visual Concepts</a>
         </nav>
+        <p class="nav-north">Shaped by Nature</p>
       </header>
 
-      <p class="status">Working board · open notes · not a finished vehicle</p>
-      <h1>EvoMarine · first prototype board</h1>
+      <p class="page-kicker">Inspiration</p>
+      <h1>Board</h1>
+      <p class="page-sub">Active stability · leatherback sea turtle as teacher</p>
       <p class="lede">
-        Coherent thoughts for the first Path A platform. Living form teachers,
-        avionics-style active stability, and honest next moves. Built to hang
-        with the water column, not race through it. Claims stay inside research
-        and design · not hang-with theater.
+        Living form teachers and avionics-style active stability for a first Path A
+        platform · quiet presence, long loiter, honest observation. Claims stay inside
+        research and design.
       </p>
 
       <ol class="toc" aria-label="On this board">
-        <li><span class="n">01</span><a href="#hypothesis">Active underwater stability (F-16 parallel)</a></li>
-        <li><span class="n">02</span><a href="#teacher">Living teacher · leatherback</a></li>
-        <li><span class="n">03</span><a href="#architecture">Architecture direction</a></li>
-        <li><span class="n">04</span><a href="#transfer">What transfers to first hull</a></li>
-        <li><span class="n">05</span><a href="#grounding">Prior work · trial one</a></li>
-        <li><span class="n">06</span><a href="#open">Open slots · collaborators</a></li>
+        <li><span class="n">01</span><a href="#hypothesis">Active stability underwater · the control computer</a></li>
+        <li><span class="n">02</span><a href="#drones">What drones already prove</a></li>
+        <li><span class="n">03</span><a href="#teacher">Living teacher · leatherback</a></li>
+        <li><span class="n">04</span><a href="#architecture">Architecture direction</a></li>
+        <li><span class="n">05</span><a href="#transfer">What moves into the prototype first</a></li>
+        <li><span class="n">06</span><a href="#grounding">Prior work · trial one</a></li>
+        <li><span class="n">07</span><a href="#open">Open slots · collaborators</a></li>
+        <li><span class="n">08</span><a href="#horizon">A quieter design shift</a></li>
       </ol>
 
-      <!-- 01 Hypothesis · Kai spine + Eli control path detail -->
+      <!-- 01 Active stability · F-16 -->
       <section class="block" id="hypothesis">
-        <p class="section-label">Hypothesis · Synthetic + Living lanes</p>
-        <h2>Active stability underwater · the missing FCC</h2>
+        <p class="section-label">01 · Hypothesis · Synthetic + Living</p>
+        <h2>Active stability underwater · the control computer</h2>
         <p class="lane">Founder note · Rua · avionics systems · F-16</p>
 
         <p>
-          The F-16 Fighting Falcon is purposefully unstable. It flies more like a
-          dart than a bird or a glider. A human cannot hold a stable trajectory
-          without the flight control computer (FCC). That is a feature: relaxed
-          static stability buys agility; the computer buys survival.
+          The F-16 Fighting Falcon is purposefully agile. It behaves more like a
+          dart than a glider. A human cannot hold a precise trajectory without the
+          flight control computer. Relaxed static stability opens the design space;
+          the computer makes that space flyable.
         </p>
 
         <div class="callout">
           <p class="k">Core claim (working)</p>
           <p>
-            EvoMarine’s first prototype should treat attitude and path control
-            the way high-performance airframes treat flight control: a
-            <strong>dedicated control computer</strong> that can hold quiet
-            trajectories in conditions where the hull alone is not
-            “naturally” stable · especially hover, slow station-keeping, and
-            low-disturbance loiter near marine life.
+            EvoMarine’s first prototype should treat attitude and path control the
+            way high-performance airframes treat flight control: a
+            <strong>dedicated control computer</strong> that holds quiet
+            trajectories when the hull alone is not enough · especially hover, slow
+            station-keeping, and low-disturbance loiter near marine life.
           </p>
         </div>
 
         <p>
-          Stability lives in software · the avionics pattern. High-rate sensing
-          and computer authority free the body to favor efficiency, compliance,
-          and quiet.
+          Stability lives in software · the avionics pattern. High-rate sensing and
+          computer authority free the body to favor efficiency, compliance, and
+          quiet.
         </p>
 
-        <h3>Why this matters for Path A</h3>
-        <ul class="clean">
-          <li>
-            <strong>Quiet wins over rigid stability.</strong> A thruster box can
-            be “stable” by brute force and still wreck the acoustic scene.
-          </li>
-          <li>
-            <strong>Co-presence wants soft authority.</strong> Small, frequent,
-            coordinated surface/thruster corrections · not continuous prop wash.
-          </li>
-          <li>
-            <strong>Hydrophone-first layout</strong> only works if the platform
-            can hold still (or crawl) without fighting itself.
-          </li>
-          <li>
-            <strong>Form teachers still matter.</strong> Leatherback planform and
-            ridge language reduce the control burden; the computer closes the
-            loop. Neither replaces the other.
-          </li>
-        </ul>
-
-        <h3>Transfer map (avionics → water)</h3>
         <div class="grid two">
-          <div class="card">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-airframe.jpg" data-alt="General Dynamics F-16A Fighting Falcon in flight, USAF public domain photograph">
+              <img src="/path-a/teachers/f16-airframe.jpg" alt="" loading="lazy" />
+            </button>
             <div class="body">
-              <h3>Air · F-16</h3>
-              <p>
-                Unstable airframe · FCC multi-axis rates · fly-by-wire · pilot
-                commands intent; computer holds envelope.
-              </p>
+              <h3>Airframe held by the loop</h3>
+              <p><em>Relaxed static stability made the airframe agile · the flight control computer made it flyable.</em></p>
+              <span class="credit">USAF · public domain via Wikimedia Commons</span>
             </div>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-sidestick.jpg" data-alt="F-16 side-stick controller in the cockpit">
+              <img src="/path-a/teachers/f16-sidestick.jpg" alt="" loading="lazy" />
+            </button>
             <div class="body">
-              <h3>Water · Path A (hypothesis)</h3>
-              <p>
-                Soft-stable or under-damped hull at loiter Re · underwater
-                control computer · sensor fusion (IMU, depth, optional DVL) ·
-                operator or autonomy commands intent; loop holds quiet hover and
-                slow transit.
-              </p>
+              <h3>Side-stick</h3>
+              <p><em>Force-sense stick · small inputs · computer scales surface motion across the envelope.</em></p>
+              <span class="credit">Public domain via Wikimedia Commons</span>
             </div>
-          </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-fbw-concept.svg" data-alt="Diagram of fly-by-wire control path">
+              <img src="/path-a/teachers/f16-fbw-concept.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Fly-by-wire path</h3>
+              <p><em>Sensors and computers close the loop · surfaces follow the computer.</em></p>
+              <span class="credit">EvoForm diagram</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-planform.svg" data-alt="Three-view line drawing of the F-16 Fighting Falcon">
+              <img src="/path-a/teachers/f16-planform.svg" alt="" loading="lazy" style="object-fit:contain;background:#f4f7f5;padding:0.75rem" />
+            </button>
+            <div class="body">
+              <h3>Planform reference</h3>
+              <p><em>Performance-first form · stability authority in software.</em></p>
+              <span class="credit">Public domain · Wikimedia Commons</span>
+            </div>
+          </article>
+        </div>
+
+        <h3>What makes the F-16 flight control system unique</h3>
+        <div class="table-wrap">
+          <table class="arch wide">
+            <tbody>
+              <tr>
+                <th scope="row">Relaxed static stability</th>
+                <td>Airframe designed to be highly responsive. The computer holds the trajectory humans cannot hold alone.</td>
+              </tr>
+              <tr>
+                <th scope="row">Full fly-by-wire</th>
+                <td>Continuous surface drive from the flight control computer · pilot sets rate and g demand.</td>
+              </tr>
+              <tr>
+                <th scope="row">Quadruplex redundancy</th>
+                <td>Four independent channels · graceful degradation if one fails.</td>
+              </tr>
+              <tr>
+                <th scope="row">High-rate sensing</th>
+                <td>Accelerometers, rate gyros, air data · continuous correction at high rate.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Transfer map · F-16 pedigree</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Air · F-16</th>
+                <th scope="col">Water · Path A (hypothesis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Agile airframe · multi-axis rates · fly-by-wire</td>
+                <td>Soft-stable or under-damped hull at loiter regimes</td>
+              </tr>
+              <tr>
+                <td>Pilot sets demand · computer holds envelope</td>
+                <td>Autonomy or operator sets demand · loop holds quiet hover and slow transit</td>
+              </tr>
+              <tr>
+                <td>Flight control computer</td>
+                <td>Underwater control computer · IMU, depth, optional DVL</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <h3>Control path</h3>
         <ol class="steps">
           <li>
-            <strong>Solid attitude and depth loops</strong> (PID-class) with good
+            <strong>Solid attitude and depth loops</strong> (PID-class) with strong
             state estimation
           </li>
           <li>
-            <strong>Upgrade to model-based control</strong> (LTV-MPC class) when
-            coupling and underactuation need it · periodic linearization, short
-            horizon, real-time solver on the vehicle
+            <strong>Middle / outer hold</strong> · depth and station-keeping ·
+            “hold here quietly” before long transit
+          </li>
+          <li>
+            <strong>Model-based control</strong> (LTV-MPC class) when coupling and
+            underactuation need it · short horizon, real-time solver on the vehicle
           </li>
         </ol>
 
@@ -527,40 +603,135 @@
           <p class="k">Compute split</p>
           <p>
             A lean stability computer · separate from the observation payload
-            computer. Lessons from fly-by-wire aircraft and field hydrobatic AUVs
-            (trim, buoyancy, model-based control) inform the loop.
+            computer. Fly-by-wire pedigree, drone flight stacks, and field hydrobatic
+            AUVs all inform the loop.
           </p>
+        </div>
+
+        <p class="muted" style="margin-top:1.25rem">
+          <a href="#drones">What drones already prove →</a>
+        </p>
+      </section>
+
+      <!-- 02 Drones -->
+      <section class="block" id="drones">
+        <p class="section-label">02 · Everyday proof · Synthetic lane</p>
+        <h2>What drones already prove</h2>
+        <p class="lane">Consumer multirotor · flight stacks · open source</p>
+
+        <p>
+          A typical multirotor is not passively stable. Tip it and it wants to keep
+          tipping. Four independent motors, coupled axes, fast dynamics. No human
+          can juggle thrust on each prop in real time the way the vehicle needs.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-multirotor-flight.jpg" data-alt="Multirotor drone in flight against sky">
+              <img src="/path-a/teachers/drone-multirotor-flight.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Multirotor in flight</h3>
+              <p><em>Everyday unstable airframe · held by a flight controller.</em></p>
+              <span class="credit">Wikimedia Commons · public media</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-flight-controller-board.png" data-alt="Pixhawk-class flight controller board">
+              <img src="/path-a/teachers/drone-flight-controller-board.png" alt="" loading="lazy" style="object-fit:contain;background:#0e1816;padding:0.75rem" />
+            </button>
+            <div class="body">
+              <h3>Flight controller board</h3>
+              <p><em>Light stability computer · IMU + high-rate loop · consumer weight.</em></p>
+              <span class="credit">Pixhawk-class · Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-control-stack.svg" data-alt="Three-layer control stack diagram" style="aspect-ratio:16/9">
+              <img src="/path-a/teachers/drone-control-stack.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Layered stack</h3>
+              <p><em>Inner: attitude · Middle: velocity/position · Outer: “go there / hold here.”</em></p>
+              <span class="credit">EvoForm diagram</span>
+            </div>
+          </article>
+        </div>
+
+        <p>
+          A multirotor tips and keeps tipping without the loop. The pilot never
+          balances four motors. The pilot commands intent. The same layered pattern
+          · retuned for water · is the practical path for EvoMarine quiet dwell.
+        </p>
+        <p class="muted">
+          Military fly-by-wire is heavy because of certification and combat
+          envelopes. Drone controllers are light because the mission tolerates
+          simpler redundancy. Open stacks (PX4, ArduPilot, many custom loops) show
+          this is mature engineering, not exotic research.
+        </p>
+
+        <h3>Layer transfer</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Layer</th>
+                <th scope="col">Air drone</th>
+                <th scope="col">EvoMarine (hypothesis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inner</td>
+                <td>Attitude rate / attitude</td>
+                <td>Attitude + depth</td>
+              </tr>
+              <tr>
+                <td>Middle</td>
+                <td>Velocity / position</td>
+                <td>Station-keep / slow track</td>
+              </tr>
+              <tr>
+                <td>Outer</td>
+                <td>Waypoint / “go there”</td>
+                <td>“Hold here quietly”</td>
+              </tr>
+              <tr>
+                <td>Sensors</td>
+                <td>IMU, baro, GPS</td>
+                <td>IMU, depth, optional DVL</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="note">
-          <p class="k">Label</p>
+          <p class="k">Why this is buildable now</p>
           <p class="muted" style="margin:0">
-            This is a design hypothesis with a strong engineering pedigree in air,
-            not a claim that commercial AUVs lack all control systems. The gap we
-            care about is <em>quiet, long-dwell, co-presence-grade</em> control ·
-            sparse actuation, hydrophone-safe, abort-on-avoidance ready · not
-            raw depth rating or survey speed.
+            Drone flight stacks prove layered stability at low mass and cost ·
+            hydrobatic AUVs prove underwater attitude/depth authority with trim and
+            buoyancy · leatherback ridge and stroke–glide results give hull and energy
+            cues with published trails · Prototype 1 combines those for an
+            observation mission and hours-class quiet hold.
           </p>
         </div>
+
+        <p class="muted" style="margin-top:1.25rem">
+          Drones prove the control pattern at everyday weight. The leatherback
+          proves the body language of efficient presence. EvoMarine joins them
+          underwater. <a href="#teacher">Living teacher →</a>
+        </p>
       </section>
 
-      <!-- 02 Teacher · Kai full gallery + Eli performance line -->
+      <!-- 03 Leatherback -->
       <section class="block" id="teacher">
-        <p class="section-label">Living · Dermochelys coriacea</p>
+        <p class="section-label">03 · Living · Dermochelys coriacea</p>
         <h2>Leatherback as form teacher</h2>
-        <p class="muted">
-          Not “build a robot turtle.” Extract mechanisms with an evidence trail,
-          then transfer under physics and welfare. Path A first hull stays
-          continuous-skinned. Prototype 1 scale is mass-first: room for battery,
-          insulation, electronics, and robotic fixtures · refine and shrink later.
-        </p>
         <p>
           Evolution already solved migration-scale efficiency, pressure-tolerant
           volume, continuous skin language, ridge geometry, and hydrofoil-style
           propulsion at large size. We transfer those <strong>mechanisms</strong>
-          into manufactured form. The closer the performance, the more the craft
-          will naturally share planform with the animal. Resemblance follows
-          performance.
+          into manufactured form. Resemblance follows performance.
         </p>
 
         <div class="grid two">
@@ -570,16 +741,16 @@
             </button>
             <div class="body">
               <h3>Rear planform</h3>
-              <p>Keels, trailing silhouette, flipper geometry as control-surface teachers · machine joints, not cosplay.</p>
+              <p><em>Keels, trailing silhouette, flipper geometry as control-surface teachers.</em></p>
             </div>
           </article>
           <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-3m.jpg" data-alt="Leatherback length scale about 3 meters or 9.8 feet">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-3m.jpg" data-alt="Leatherback length scale about 3 meters">
               <img src="/path-a/teachers/leatherback-scale-3m.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
               <h3>Adult scale</h3>
-              <p>~3 m / 9.8 ft class animal. Plate size and joints are re-optimized for the platform we build · never photocopy adult geometry at animal size.</p>
+              <p><em>~3 m class animal as a volume teacher · re-optimize for the platform we build.</em></p>
             </div>
           </article>
           <article class="card">
@@ -588,86 +759,58 @@
             </button>
             <div class="body">
               <h3>Surface language</h3>
-              <p>Long body, ridge spine, low disturbance silhouette in open water.</p>
+              <p><em>Long body, ridge spine, low-disturbance silhouette in open water.</em></p>
               <span class="credit">Footage courtesy David Currie · Instagram @dcurrie_drones</span>
             </div>
           </article>
           <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-human.jpg" data-alt="Historic photograph of a large leatherback on a truck bed with two people for scale">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-human.jpg" data-alt="Historic photograph of a large leatherback with people for scale">
               <img src="/path-a/teachers/leatherback-scale-human.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
               <h3>Mass and presence</h3>
-              <p>Human frame as scale for first-system mass: batteries, insulation, electronics, robotic fixtures. Specialized boat or crane deploy is fine for a premium research market. Water does not punish weight the way air does. Phones, EVs, and drones started bulkier too · refine, then shrink.</p>
-            </div>
-          </article>
-        </div>
-
-        <h3>Osteoderm mosaic · later depth roadmap</h3>
-        <p class="muted">
-          Volume-following compliance via suture-linked plates under soft skin.
-          Secondary to first quiet upper-water hull · not a v1 requirement.
-        </p>
-        <div class="grid two">
-          <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderms-mosaic.jpg" data-alt="Diagram of osteoderm mosaic on leatherback carapace">
-              <img src="/path-a/teachers/osteoderms-mosaic.jpg" alt="" loading="lazy" />
-            </button>
-            <div class="body">
-              <h3>Osteoderms</h3>
-              <p>Interlocking bony tiles with compliant joints. Architecture teacher for later envelope compliance · not a pressure hull.</p>
+              <p><em>First systems may be mass-first: batteries, insulation, electronics, robotics · boat or crane deploy OK · refine, then focus.</em></p>
             </div>
           </article>
           <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderm-micro.jpg" data-alt="Macro and micro view of osteoderm tissue">
-              <img src="/path-a/teachers/osteoderm-micro.jpg" alt="" loading="lazy" />
-            </button>
-            <div class="body">
-              <h3>Material grain</h3>
-              <p>Macro tissue and micro structure · coupon-scale study before any mosaic claim on a hull.</p>
-            </div>
-          </article>
-        </div>
-
-        <h3>Ridges, flow, heat, speed</h3>
-        <div class="grid two">
-          <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/ridges-flow-paper.jpg" data-alt="Scientific figure of ridge-induced streamwise vortices and delayed separation">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/ridges-flow-paper.jpg" data-alt="Ridge-induced streamwise vortices figure">
               <img src="/path-a/teachers/ridges-flow-paper.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
               <h3>Ridges and flow</h3>
-              <p>Streamwise vortices can delay separation when regime-matched. Test at Path A Reynolds · do not free-lunch drag claims.</p>
+              <p><em>Streamwise vortices can delay separation when regime-matched · test at Path A Reynolds.</em></p>
             </div>
           </article>
           <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-speed.jpg" data-alt="Leatherback swimming with 22 mph callout">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-speed.jpg" data-alt="Leatherback swimming speed reference">
               <img src="/path-a/teachers/leatherback-speed.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
               <h3>Speed class</h3>
-              <p>~22 mph burst class for the animal. Path A targets survey/hover (~1–2 m/s transit), not racer posture.</p>
+              <p><em>Animal burst is one reference · Path A targets survey and hover (~1–2 m/s transit).</em></p>
             </div>
           </article>
-          <article class="card">
-            <button type="button" class="thumb" data-lb="/path-a/teachers/countercurrent-heat.jpg" data-alt="Diagram of countercurrent heat exchange with blubber and locomotor muscle">
-              <img src="/path-a/teachers/countercurrent-heat.jpg" alt="" loading="lazy" />
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderms-mosaic.jpg" data-alt="Osteoderm mosaic diagram" style="aspect-ratio:21/9">
+              <img src="/path-a/teachers/osteoderms-mosaic.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
-              <h3>Countercurrent heat</h3>
-              <p>Living thermal regulation. Possible later electronics packaging lesson · not first-hull scope.</p>
+              <h3>Later depth roadmap</h3>
+              <p>
+                Osteoderm mosaic and volume-following compliance · coupon-scale material
+                study · thermal packaging lessons after the first quiet hull.
+                Continuous-skinned first hull stays primary for quiet upper-water work.
+              </p>
+              <span class="credit">Osteoderm media kept for study · not P1 scope</span>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- 03 Architecture · Eli table (non-redundant with transfer stack) -->
+      <!-- 04 Architecture -->
       <section class="block" id="architecture">
-        <p class="section-label">Architecture direction</p>
+        <p class="section-label">04 · Architecture direction</p>
         <h2>Hull · energy · actuation</h2>
-        <p class="muted">
-          Layered direction for the craft. Complements the first-hull transfer stack below · not a replace for it.
-        </p>
         <div class="table-wrap">
           <table class="arch">
             <tbody>
@@ -677,7 +820,7 @@
               </tr>
               <tr>
                 <th scope="row">Volume</th>
-                <td>Size chosen to hold energy, dual compute, buoyancy, insulation, robotics, and observation payload · bulkier first systems OK · shrink after refinement</td>
+                <td>Sized for energy, dual compute, buoyancy, insulation, robotics, and observation payload · bulkier first systems welcome · refine after learning</td>
               </tr>
               <tr>
                 <th scope="row">Motion energy</th>
@@ -689,27 +832,30 @@
               </tr>
               <tr>
                 <th scope="row">Skin language</th>
-                <td>Continuous fairing · ridge geometry as function, not ornament</td>
+                <td>Continuous fairing · ridge geometry as function</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="muted" style="margin-top:1rem">
+          This is a craft that stores calm in its geometry and spends energy in
+          short, deliberate windows.
+        </p>
       </section>
 
-      <!-- 04 Transfer · Kai full stack -->
+      <!-- 05 First hull -->
       <section class="block" id="transfer">
-        <p class="section-label">First hull · transfer stack</p>
+        <p class="section-label">05 · First hull · transfer stack</p>
         <h2>What moves into the prototype first</h2>
         <p class="muted">
-          Ordered against Path A win order: quieter + efficient · longer loiter · deploy that matches the mass pack (boat or crane when needed).
+          Quieter and efficient · longer loiter · deploy that matches the mass pack.
         </p>
         <ul class="clean">
-          <li><strong>1 · Control computer path</strong> · multi-axis attitude/depth hold; sparse thruster authority; log for tank noise and power (experiment #1). PID-class first; model-based when needed (see above).</li>
-          <li><strong>2 · Continuous-skin leatherback form</strong> · ridge language optional; no open osteoderm gaps on v1.</li>
-          <li><strong>3 · Hydrophone-first isolation</strong> · layout and mounts before fancy surfaces.</li>
-          <li><strong>4 · Buoyancy-assisted hover</strong> · reduce thruster duty cycle so listening wins. Long coast phases when in transit.</li>
-          <li><strong>5 · Abort-on-avoidance law</strong> · lower disturbance than current methods; leave the scene.</li>
-          <li><strong>Later ·</strong> regime-matched riblets · steerable camera · volume-following / osteoderm study.</li>
+          <li><strong>1 · Control computer path</strong> · multi-axis attitude and depth hold · sparse thruster authority · log for tank noise and power</li>
+          <li><strong>2 · Continuous-skin leatherback form</strong> · ridge language as function · continuous outer fairing</li>
+          <li><strong>3 · Hydrophone-first isolation</strong> · layout and mounts early</li>
+          <li><strong>4 · Buoyancy-assisted hover</strong> · lower thruster duty so listening leads · long coast in transit</li>
+          <li><strong>5 · Gentle scene exit</strong> · leave cleanly when the moment asks for it</li>
         </ul>
         <div class="chips">
           <span class="chip">Quiet-first</span>
@@ -717,91 +863,112 @@
           <span class="chip">Boat or crane</span>
           <span class="chip">0–50 m first</span>
           <span class="chip">Sensors over speed</span>
-          <span class="chip out">Robot-animal brand</span>
-          <span class="chip out">Thruster-box default</span>
-          <span class="chip out">Deep-ocean first hull</span>
+          <span class="chip">Computer-owned stability</span>
         </div>
         <p style="margin-top:1.25rem">
-          <a href="/path-a/">Open Path A form explorer →</a>
+          <a href="/path-a/">Visual Concepts →</a>
         </p>
       </section>
 
-      <!-- 05 Grounding + trial · Eli only -->
+      <!-- 06 Prior work + evidence -->
       <section class="block" id="grounding">
-        <p class="section-label">Grounding · trial one</p>
-        <h2>Prior work we build on</h2>
-        <ul class="clean">
-          <li>
-            Leatherback ridges improve lift-to-drag at low angle of attack in
-            published glider CFD · we build on that result.
-          </li>
-          <li>
-            Turtle propulsion studies show thrust concentrated in a minority of the
-            cycle, with mass and low drag carrying the glide.
-          </li>
-          <li>
-            Hydrobatic research AUVs already demonstrate computer-owned pitch,
-            depth, and agile maneuvers using buoyancy, moving mass, and model
-            predictive control in the field.
-          </li>
-        </ul>
-        <p>
-          Our open lane is the <strong>combination</strong>: observation hull sized
-          for real energy and payload · hybrid buoyancy and sparse thrust ·
-          avionics-style authority · quiet presence for sensing.
+        <p class="section-label">06 · Prior work · trial one</p>
+        <h2>We build on</h2>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-ridges-ld.svg" data-alt="Illustrative bar chart of ridged versus smooth lift-to-drag">
+              <img src="/path-a/teachers/evidence-ridges-ld.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Ridges · L/D</h3>
+              <p><em>Published glider CFD · ridges improve lift-to-drag at low angle of attack.</em></p>
+              <span class="credit">Illustrative redraw · cite leatherback-glider CFD on evidence trail</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-stroke-glide.svg" data-alt="Illustrative chart of 30 percent thrust and 70 percent glide">
+              <img src="/path-a/teachers/evidence-stroke-glide.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Stroke–glide duty</h3>
+              <p><em>Turtle propulsion studies · effort in a minority of the cycle · mass and low drag carry the coast.</em></p>
+              <span class="credit">EvoForm diagram · illustrative</span>
+            </div>
+          </article>
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-hydrobatic-auv.png" data-alt="NOAA SeaBED research autonomous underwater vehicle" style="aspect-ratio:16/9">
+              <img src="/path-a/teachers/evidence-hydrobatic-auv.png" alt="" loading="lazy" style="object-fit:contain;background:#0e1816" />
+            </button>
+            <div class="body">
+              <h3>Field research AUVs</h3>
+              <p><em>Research AUVs already run computer-owned pitch and depth with buoyancy, moving mass, and model-based control.</em></p>
+              <span class="credit">NOAA SeaBED AUV Popoki · public domain via Wikimedia Commons</span>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin-top:1.1rem">
+          <strong>Open lane.</strong> Observation hull sized for real energy and
+          payload · hybrid buoyancy and sparse thrust · quiet presence for sensing.
         </p>
 
         <h3>Trial one · success frame</h3>
         <p class="muted">
           Multi-hour smooth depth and attitude hold · calm transit with long coast
-          phases · sensors usable throughout. Depth band and endurance numbers will
+          phases · sensors usable throughout. Depth band and endurance numbers
           lock with scale.
         </p>
       </section>
 
-      <!-- 06 Open · Kai + Eli collaborators -->
+      <!-- 07 Open -->
       <section class="block" id="open">
-        <p class="section-label">Living document</p>
-        <h2>Open slots · collaborators welcome</h2>
-
+        <p class="section-label">07 · Living document</p>
+        <h2>Open slots · collaborators</h2>
         <div class="note">
-          <p class="k">Still open (scale and geometry)</p>
+          <p class="k">Still open</p>
           <p class="muted" style="margin:0">
-            Exact length and displacement for prototype 1 · first systems may be
-            large enough for pack volume and research-facility deploy (specialized
-            boat, crane) · later refinement targets smaller forms · foil count and
-            degrees of freedom (simpler 2-DOF vs richer 3-DOF shoulders) · exact
-            sensor set for the stability loop · shallow-trial depth rating and
-            hours target. Geometry stays flexible until scale and foil choice are
-            set. When those lock, we issue a thin update block only.
+            Exact length and displacement for prototype 1 · foil count and degrees
+            of freedom · sensor set for the stability loop · shallow-trial depth
+            rating and hours target. Geometry stays flexible until scale and foil
+            choice are set.
           </p>
         </div>
         <div class="note">
-          <p class="k">Next physics (locked plan)</p>
+          <p class="k">Next physics · how this board grows</p>
           <p class="muted" style="margin:0">
-            Tank noise + power (bet 1) with hydrophone on the same rig (bet 4).
-            Not a fab go. Control-loop experiments can share that rig when
-            sensors and logging are ready.
-          </p>
-        </div>
-        <div class="note">
-          <p class="k">How we work · how this board grows</p>
-          <p class="muted" style="margin:0">
-            Design problem → multi-lane biology under physics → shareable brief →
-            build what survives contact with prior art. Rua goes · Kai ships text,
-            figures, and links · Eli pastes judgment when asked. No waitlist · no
-            product storefront · no dual ocean launch chrome. Integrity first ·
-            form shaped by evolution · sister to CetaVox.
+            Tank noise and power with hydrophone on the same rig. Design problem →
+            multi-lane biology under physics → shareable brief → build what survives
+            contact with prior art. Rua goes · Kai ships · Eli offers judgment when
+            asked. Integrity first · form shaped by evolution · sister to CetaVox.
           </p>
         </div>
       </section>
 
+      <!-- 08 Horizon -->
+      <section class="block" id="horizon">
+        <p class="section-label">08 · Horizon</p>
+        <h2>A quieter design shift</h2>
+        <p>
+          Much of the last century’s underwater craft optimized for power, depth,
+          or survey speed. Another path is opening: platforms that stay longer by
+          disturbing less · that borrow stability from computation · that take hull
+          language from animals that already cross oceans on sparse effort.
+        </p>
+        <p class="muted">
+          EvoMarine is one working sketch of that shift: performance rooted in living
+          systems, held by modern control, aimed at presence rather than spectacle.
+        </p>
+      </section>
+
       <footer class="site">
-        <p style="margin:0 0 0.35rem">In Accordance with Nature · Form Shaped by Evolution</p>
+        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
         <p style="margin:0">
           <a href="/">EvoForm</a>
           <span style="opacity:0.4"> · </span>
-          EvoMarine · first prototype board
+          <a href="/evomarine/">EvoMarine</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="/path-a/">Visual Concepts</a>
           <span style="opacity:0.4"> · </span>
           <a href="https://cetavox.com/">CetaVox</a>
         </p>

@@ -75,7 +75,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 0.75rem 1.25rem;
-        margin: 0 0 2rem;
+        margin: 0 0 1.85rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--line);
       }
@@ -121,33 +121,13 @@
       .nav-links a { color: var(--muted); }
       .nav-links a:hover { color: var(--ink); }
 
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--warn);
-        margin: 0 0 0.85rem;
-      }
-      .status::before {
-        content: "";
-        width: 0.45rem;
-        height: 0.45rem;
-        border-radius: 999px;
-        background: var(--warn);
-        opacity: 0.85;
-      }
-
       h1 {
         font-family: var(--font-display);
         font-size: clamp(1.65rem, 5vw, 2.2rem);
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -0.02em;
-        margin: 0 0 0.65rem;
+        margin: 0 0 0.45rem;
       }
       .page-kicker {
         margin: 0 0 0.4rem;
@@ -160,8 +140,8 @@
 
       .page-sub {
         color: var(--muted);
-        font-size: 1.05rem;
-        margin: 0 0 1rem;
+        font-size: 1.02rem;
+        margin: 0 0 0.75rem;
         max-width: 36rem;
         line-height: 1.5;
       }
@@ -171,6 +151,7 @@
         font-size: 1.02rem;
         margin: 0 0 1.75rem;
         max-width: 36rem;
+        line-height: 1.6;
       }
 
       .toc {
@@ -345,13 +326,6 @@
       }
       .chip.out { color: #c48a8a; border-color: rgba(184, 92, 92, 0.35); }
 
-      .lede-more {
-        color: var(--muted);
-        font-size: 0.98rem;
-        margin: -0.85rem 0 1.75rem;
-        max-width: 38rem;
-        line-height: 1.6;
-      }
       .horizon {
         margin: 1.25rem 0 0;
         padding: 1rem 1.1rem;
@@ -460,32 +434,19 @@
           <span class="mark">EvoForm</span>
         </a>
         <nav class="nav-links" aria-label="Board navigation">
-          <a href="/">Home</a>
           <a href="/evomarine/">EvoMarine</a>
-          <a href="/path-a/">Path</a>
-          <a href="#hypothesis">Stability</a>
-          <a href="#drones">Drones</a>
-          <a href="#teacher">Teacher</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#transfer">First hull</a>
-          <a href="#open">Open</a>
-          <a href="#horizon">Horizon</a>
+          <a href="/path-a/">Visual Concepts</a>
         </nav>
         <p class="nav-north">Shaped by Nature</p>
       </header>
 
-      <p class="status">Working board · open notes · research in motion</p>
       <p class="page-kicker">Inspiration</p>
       <h1>Board</h1>
       <p class="page-sub">Active stability · leatherback sea turtle as teacher</p>
       <p class="lede">
-        A first Path A platform shaped by living form teachers and avionics-style
-        active stability. Built to hang with the water column. Quiet presence, long
-        loiter, honest observation · claims stay inside research and design.
-      </p>
-      <p class="lede-more">
-        Less industrial force in the water · more forms that learn from what already
-        swims well.
+        Living form teachers and avionics-style active stability for a first Path A
+        platform · quiet presence, long loiter, honest observation. Claims stay inside
+        research and design.
       </p>
 
       <ol class="toc" aria-label="On this board">
@@ -905,7 +866,7 @@
           <span class="chip">Computer-owned stability</span>
         </div>
         <p style="margin-top:1.25rem">
-          <a href="/path-a/">Open Path A form explorer →</a>
+          <a href="/path-a/">Visual Concepts →</a>
         </p>
       </section>
 
@@ -1005,7 +966,9 @@
         <p style="margin:0">
           <a href="/">EvoForm</a>
           <span style="opacity:0.4"> · </span>
-          EvoMarine · Inspiration Board
+          <a href="/evomarine/">EvoMarine</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="/path-a/">Visual Concepts</a>
           <span style="opacity:0.4"> · </span>
           <a href="https://cetavox.com/">CetaVox</a>
         </p>

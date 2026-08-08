@@ -1,7 +1,7 @@
 {
-  "version": "drop-back-button-2026-08-08",
+  "version": "depth-pass-board-concepts-2026-08-08",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Remove Back chrome; browser/history is enough",
-  "updated": "2026-08-09T10:00Z"
+  "note": "Align Inspiration Board + Visual Concepts to locked home/hub grammar",
+  "updated": "2026-08-08T12:00Z"
 }

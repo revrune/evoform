@@ -1,7 +1,7 @@
 {
-  "version": "evomarine-mass-first-p1-2026-08-08",
-  "surface": "door+path-a+board",
+  "version": "depth-pass-board-concepts-2026-08-08",
+  "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Mass-first prototype 1 scale · premium research boat/crane OK · shrink later",
+  "note": "Align Inspiration Board + Visual Concepts to locked home/hub grammar",
   "updated": "2026-08-08T12:00Z"
 }
