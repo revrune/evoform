@@ -34,4 +34,6 @@ Kai is the same Build seat as Leitner/CetaVox. Global memory + three-company spi
 
 **Path A research stack (permanent · 2026-08-06):** `docs/path-a-research-stack-permanent-2026-08-06.md` — job card · Eli instrument · papers shelf · opportunity briefs (bets 1–5) · abort-on-avoidance law · first-experiment plan (LOCKED) · skill-laws. Judge vehicle work against `briefs/path-a-job-card.md`.
 
+**Public chrome · Board + Visual Concepts (LOCKED · permanent · 2026-08-08):** `docs/public-chrome-board-concepts-locked-2026-08-08.md` — shared top chrome · ownership split (Concepts = form UI · Board = research facts) · plain English · home/hub stay thin. **Gate before stage/deploy:** `python3 tools/check_depth_pass.py`.
+
 See `README.md`, `briefs/`, and `docs/` for full law.

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Gate: EvoMarine depth + redundancy ownership on Board and Visual Concepts.
+"""Permanent gate: public chrome + ownership for Board and Visual Concepts.
 
-Drives the real source HTML files (not a reimplementation of the pages).
-Exit 0 only when acceptance criteria hold on disk.
+Law: docs/public-chrome-board-concepts-locked-2026-08-08.md
+Drives the real source HTML (not a reimplementation). Exit 0 only if locked
+rules hold on disk.
 """
 from __future__ import annotations
 
@@ -15,8 +16,27 @@ BOARD = ROOT / "path-a" / "board" / "index.html"
 PATH_A = ROOT / "path-a" / "index.html"
 HOME = ROOT / "index.html"
 HUB = ROOT / "evomarine" / "index.html"
+SEAL = ROOT / "docs" / "public-chrome-board-concepts-locked-2026-08-08.md"
 
 EXPLORER_DEFAULT = "/path-a/mockups/form-threequarter.jpg"
+BOARD_SECTIONS = (
+    "hypothesis",
+    "drones",
+    "teacher",
+    "architecture",
+    "transfer",
+    "grounding",
+    "open",
+    "horizon",
+)
+# Brochure / jargon phrases banned as public voice (body text, not asset paths)
+BANNED_PUBLIC = (
+    "form language",
+    "regime-matched",
+    "streamwise geometry",
+    "control path live",
+    "transfer stack",
+)
 
 
 def fail(msg: str) -> None:
@@ -34,171 +54,160 @@ def must_not_contain(text: str, needle: str, where: str) -> None:
         fail(f"{where}: must not contain {needle!r}")
 
 
+def nav_inner(html: str, where: str) -> str:
+    m = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', html, re.S)
+    if not m:
+        fail(f"{where}: missing nav-links")
+    return m.group(1)
+
+
+def assert_shared_chrome(html: str, where: str) -> None:
+    """Chrome law §1 — both deep pages."""
+    must_contain(html, 'href="/"', f"{where} brand→home")
+    must_contain(html, "Shaped by Nature", f"{where} north")
+    must_contain(html, 'href="/evomarine/"', f"{where} EvoMarine")
+    if re.search(r">\s*Back\s*<", html):
+        fail(f"{where}: Back chrome present")
+    nav = nav_inner(html, where)
+    if "Inspiration Board" in nav:
+        fail(f"{where}: Inspiration Board must not appear in top nav")
+    if "Visual Concepts" in nav:
+        fail(f"{where}: Visual Concepts must not appear in top nav")
+    # EvoMarine is the only path link in nav-links
+    if not re.search(r'href="/evomarine/"[^>]*>\s*EvoMarine\s*<', nav):
+        fail(f"{where}: EvoMarine missing from top nav")
+    # No multi-anchor app nav
+    for anchor in ("#hypothesis", "#drones", "#teacher", "#architecture", "#explorer"):
+        if anchor in nav:
+            fail(f"{where}: section anchor {anchor} still in top nav")
+
+
 def main() -> None:
+    if not SEAL.is_file():
+        fail(f"missing permanent seal: {SEAL.relative_to(ROOT)}")
+
     board = BOARD.read_text(encoding="utf-8")
     path_a = PATH_A.read_text(encoding="utf-8")
     home = HOME.read_text(encoding="utf-8")
     hub = HUB.read_text(encoding="utf-8")
 
-    # --- Board chrome ---
-    must_contain(board, 'href="/"', "board brand home")
-    must_contain(board, "Shaped by Nature", "board north")
-    must_contain(board, "EvoMarine", "board sibling")
-    must_not_contain(board, 'href="/path-a/">Path</a>', "board old Path label")
-    must_not_contain(board, "Working board", "board status line")
-    must_not_contain(board, "lede-more", "board second lede class")
-    if re.search(r">\s*Back\s*<", board):
-        fail("board: Back chrome present")
-    must_contain(board, "Inspiration", "board kicker")
+    # --- §1 Chrome: both pages ---
+    assert_shared_chrome(board, "board")
+    assert_shared_chrome(path_a, "path-a")
+
+    must_contain(board, 'class="page-kicker">Inspiration</', "board kicker")
     must_contain(board, "<h1>Board</h1>", "board h1")
-    # Mirror Concepts: EvoMarine only in top nav (not Visual Concepts label)
-    board_nav = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', board, re.S)
-    if not board_nav:
-        fail("board: missing nav-links")
-    if "Visual Concepts" in board_nav.group(1):
-        fail("board: Visual Concepts should not appear in top nav")
-    if "EvoMarine" not in board_nav.group(1):
-        fail("board: EvoMarine missing from top nav")
-    # No page lede under Board title (Concepts pattern)
     if re.search(r"<h1>Board</h1>\s*<p class=\"(page-sub|lede)\"", board):
         fail("board: no sub/lede under Board title")
-    for sid in (
-        "hypothesis",
-        "drones",
-        "teacher",
-        "architecture",
-        "transfer",
-        "grounding",
-        "open",
-        "horizon",
-    ):
+
+    must_contain(path_a, 'class="page-kicker">Visual</', "path-a kicker")
+    must_contain(path_a, "<h1>Concepts</h1>", "path-a h1")
+    if re.search(r"<h1>Concepts</h1>\s*<p class=\"(page-sub|lede)\"", path_a):
+        fail("path-a: no sub/lede under Concepts title")
+
+    # --- §2 Ownership: Board ---
+    for sid in BOARD_SECTIONS:
         must_contain(board, f'id="{sid}"', f"board section {sid}")
-        # Non-empty body after section open
         m = re.search(rf'id="{sid}"[^>]*>.*?</section>', board, re.S)
         if not m or len(m.group(0)) < 200:
             fail(f"board section {sid}: body too thin")
-    nav_block = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', board, re.S)
-    if not nav_block:
-        fail("board: missing nav-links")
-    for anchor in ("#hypothesis", "#drones", "#teacher", "#architecture"):
-        if anchor in nav_block.group(1):
-            fail(f"board: section anchor {anchor} still in top nav")
 
-    # Board owns envelope chips + sequence
-    # Envelope ownership chips (plain labels OK)
     if "Heavy first build" not in board and "Mass-first P1" not in board:
-        fail("board envelope chips: missing first-build scale chip")
+        fail("board: missing first-build scale chip")
     must_contain(board, "0–50 m first", "board depth chip")
     must_contain(board, "Boat or crane", "board deploy chip")
     if "Mic + camera" not in board and "Hydrophone" not in board:
-        fail("board sensors chip missing")
+        fail("board: sensors chip missing")
     must_contain(board, 'id="sequence"', "board sequence ownership")
     must_contain(board, "<strong>Now</strong>", "board sequence Now")
     must_contain(board, "<strong>Next</strong>", "board sequence Next")
     must_contain(board, "<strong>Later</strong>", "board sequence Later")
 
-    # --- Visual Concepts chrome + form UI ---
-    must_contain(path_a, "Shaped by Nature", "path-a north")
-    must_contain(path_a, "EvoMarine", "path-a sibling")
+    # --- §2 Ownership: Concepts form UI only ---
     must_contain(path_a, 'id="explorer"', "path-a explorer")
     must_contain(path_a, 'id="gallery"', "path-a gallery")
     must_contain(path_a, 'id="gallery-grid"', "path-a gallery grid")
     must_contain(path_a, "view-tabs", "path-a view tabs")
     must_contain(path_a, "hotspot", "path-a hotspot wiring")
-    must_not_contain(path_a, "fonts.googleapis.com", "path-a google fonts")
-    must_not_contain(path_a, "Instrument Serif", "path-a product font")
-    must_not_contain(path_a, 'class="refuse"', "path-a refuse block")
-    must_not_contain(path_a, ">Out<", "path-a Out label")
-    must_not_contain(path_a, "Thruster-box default", "path-a refuse chips")
-    must_not_contain(path_a, 'class="wins"', "path-a brochure wins")
-    must_not_contain(path_a, "btn-primary", "path-a primary CTA stack")
-    must_not_contain(path_a, "Prototype board", "path-a old CTA label")
-    if re.search(r">\s*Back\s*<", path_a):
-        fail("path-a: Back chrome present")
-    must_contain(path_a, "Visual Concepts", "path-a identity")
-    must_contain(path_a, "Iowan Old Style", "path-a display font family")
-    must_contain(path_a, "system-ui", "path-a system ui font")
+    must_contain(path_a, "board:", "path-a hotspot board links")
+    must_contain(path_a, "Board notes", "path-a quiet board pointer")
+    must_contain(path_a, "<h2>Leatherback sea turtle</h2>", "path-a form title")
 
-    # --- Redundancy: no dual form stack ---
-    must_not_contain(path_a, "hero-visual", "path-a dual hero class")
-    # Decorative hero image using same path as explorer default (outside #viewer)
-    outside_viewer = re.sub(
-        r'<div class="viewer"[^>]*>.*?</div>', "", path_a, count=1, flags=re.S
-    )
-    # Still allow og:image and JS view config; ban standalone img tags of default mockup
-    standalone = re.findall(
-        rf'<img[^>]+src="{re.escape(EXPLORER_DEFAULT)}"[^>]*>', outside_viewer
-    )
-    # viewer-img is inside .viewer (stripped); any remaining img with that src is a dual stack
-    if standalone:
-        fail(
-            "path-a: decorative form-threequarter img outside explorer viewer "
-            f"({len(standalone)} occurrence(s))"
-        )
-
-    # --- Redundancy: Concepts must not own full envelope/sequence sections ---
-    must_not_contain(path_a, 'id="specs"', "path-a full envelope section")
-    must_not_contain(path_a, "First-build envelope", "path-a envelope heading")
-    must_not_contain(path_a, 'id="sequence"', "path-a sequence section id")
-    must_not_contain(path_a, 'class="sequence"', "path-a sequence list")
-    # Chip-style full duplicate of board envelope
+    must_not_contain(path_a, 'id="specs"', "path-a no full envelope section")
+    must_not_contain(path_a, "First-build envelope", "path-a no envelope heading")
+    must_not_contain(path_a, 'id="sequence"', "path-a no sequence section")
+    must_not_contain(path_a, 'class="sequence"', "path-a no sequence list")
     for fact in ("0–50 m first", "Boat or crane", "Heavy first build", "Mass-first P1"):
         if f'<span class="chip">{fact}' in path_a or re.search(
-            rf"<p class=\"v\">{re.escape(fact)}", path_a
+            rf'<p class="v">{re.escape(fact)}', path_a
         ):
             fail(f"path-a: duplicate envelope fact presentation for {fact!r}")
 
-    # Gallery not pure re-list of explorer view set alone
-    must_contain(path_a, "const gallery", "path-a gallery data")
+    must_not_contain(path_a, "hero-visual", "path-a no dual hero")
+    outside_viewer = re.sub(
+        r'<div class="viewer"[^>]*>.*?</div>', "", path_a, count=1, flags=re.S
+    )
+    if re.findall(
+        rf'<img[^>]+src="{re.escape(EXPLORER_DEFAULT)}"[^>]*>', outside_viewer
+    ):
+        fail("path-a: decorative form-threequarter outside explorer viewer")
+
     gal_m = re.search(r"const gallery\s*=\s*\[(.*?)\];", path_a, re.S)
     if not gal_m:
         fail("path-a: cannot parse gallery array")
     gal_body = gal_m.group(1)
-    explorer_only = (
+    for name in (
         "form-threequarter.jpg",
         "form-profile.jpg",
         "form-top.jpg",
         "systems-cutaway.jpg",
-    )
-    for name in explorer_only:
+    ):
         if name in gal_body:
-            fail(f"path-a gallery re-lists explorer view image {name}")
+            fail(f"path-a gallery re-lists explorer view {name}")
     if "hover.jpg" not in gal_body and "boat-deploy.jpg" not in gal_body:
         fail("path-a gallery lacks non-explorer studies")
+    must_contain(path_a, "system:", "path-a gallery system labels")
 
-    # Quiet pointer into Board notes from hotspots
-    must_contain(path_a, "Board notes", "path-a board pointer")
+    # Product-brochure leftovers
+    must_not_contain(path_a, "fonts.googleapis.com", "path-a no Google fonts")
+    must_not_contain(path_a, "Instrument Serif", "path-a no product font")
+    must_not_contain(path_a, 'class="refuse"', "path-a no refuse block")
+    must_not_contain(path_a, 'class="wins"', "path-a no brochure wins")
+    must_not_contain(path_a, "btn-primary", "path-a no primary CTA stack")
+    must_not_contain(path_a, "Leatherback Path A", "path-a no Path A title")
+    must_not_contain(path_a, "Leatherback sea turtle concept", "path-a no double concept")
+    must_contain(path_a, "Iowan Old Style", "path-a house display font")
+    must_contain(path_a, "system-ui", "path-a system ui font")
 
-    # --- Frozen home + hub ---
+    # --- §3 Public English (banned stacks in body copy) ---
+    for page, label in ((board, "board"), (path_a, "path-a")):
+        body = page.split("<body", 1)[-1].lower()
+        # Ignore script asset paths loosely: check visible-ish by stripping tags first
+        visible = re.sub(r"<script[\s\S]*?</script>", " ", body)
+        visible = re.sub(r"<[^>]+>", " ", visible)
+        for phrase in BANNED_PUBLIC:
+            if phrase in visible:
+                fail(f"{label}: banned public phrase {phrase!r}")
+        if "—" in page.split("<body", 1)[-1]:
+            # Allow in comments only; ban in body markup text nodes roughly
+            if re.search(r">[^<]*—[^<]*<", page.split("<body", 1)[-1]):
+                fail(f"{label}: em dash in public markup text")
+
+    # --- §4 Home + hub frozen thin ---
     must_contain(home, "Vehicles Shaped by Nature", "home title slogan")
     must_contain(home, "Shaped by Nature", "home hero")
     must_contain(home, "EvoMarine", "home vertical")
+    must_contain(home, 'href="/evomarine/"', "home EvoMarine link")
     must_contain(hub, "Quiet Extended Presence", "hub lede")
     must_contain(hub, "Inspiration Board", "hub path")
     must_contain(hub, "Visual Concepts", "hub path")
     must_contain(hub, "Built Prototypes", "hub path soon")
-    # Hub stays thin one-line paths (no door job essay)
     must_not_contain(hub, "none yet", "hub no empty-state essay")
-    must_not_contain(hub, "Why and how", "hub no board job line")
+    must_not_contain(hub, "Why and how", "hub no door job line")
     must_not_contain(hub, "p-job", "hub no p-job chrome")
 
-    # Board lead phrase + Concepts bridge (Eli craft)
-    # QEP may live in body/meta, not forced under Board title
-    must_contain(path_a, "EvoMarine", "concepts nav sibling")
-    # Nav should not label this page as Inspiration Board
-    nav = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', path_a, re.S)
-    if nav and "Inspiration Board" in nav.group(1):
-        fail("path-a: Inspiration Board should not appear in top nav")
-    must_contain(path_a, "<h2>Leatherback sea turtle</h2>", "concepts title")
-    must_not_contain(path_a, "Leatherback sea turtle concept", "concepts no double concept")
-    must_not_contain(path_a, "Leatherback Sea Turtle inspired", "concepts no redundant inspired line")
-    must_not_contain(path_a, "Leatherback Path A", "concepts no Path A title")
-    must_not_contain(path_a, "Pictures and hotspots", "concepts no lede fluff")
-    must_contain(path_a, "board:", "concepts hotspot board links")
-    must_contain(path_a, "system:", "concepts gallery system labels")
-
-    print("PASS: depth + redundancy + Eli craft gates on hub/board/path-a")
-
+    print("PASS: permanent chrome + ownership gate (board · concepts · home · hub)")
+    print(f"  seal: {SEAL.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
