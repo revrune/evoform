@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Three-layer drone control stack: outer go there, middle velocity, inner attitude">
+  <rect width="720" height="420" fill="#0a1412"/>
+  <text x="360" y="36" text-anchor="middle" fill="#e6f0ec" font-family="Georgia,serif" font-size="20">Layered control · pilot flies the platform</text>
+  <!-- Outer -->
+  <rect x="80" y="60" width="560" height="78" rx="12" fill="#121f1c" stroke="#5ec9a8" stroke-width="1.5"/>
+  <text x="100" y="92" fill="#5ec9a8" font-family="ui-monospace,monospace" font-size="11" letter-spacing="0.12em">OUTER</text>
+  <text x="100" y="118" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">“Go there” / hold here</text>
+  <text x="480" y="118" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">waypoints · intent stick</text>
+  <!-- Middle -->
+  <rect x="120" y="160" width="480" height="78" rx="12" fill="#0e1816" stroke="#5ec9a8" stroke-width="1.5"/>
+  <text x="140" y="192" fill="#5ec9a8" font-family="ui-monospace,monospace" font-size="11" letter-spacing="0.12em">MIDDLE</text>
+  <text x="140" y="218" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Velocity / position hold</text>
+  <text x="420" y="218" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">station-keep · slow track</text>
+  <!-- Inner -->
+  <rect x="160" y="260" width="400" height="78" rx="12" fill="#0e1816" stroke="#5ec9a8" stroke-width="2"/>
+  <text x="180" y="292" fill="#5ec9a8" font-family="ui-monospace,monospace" font-size="11" letter-spacing="0.12em">INNER · HIGH RATE</text>
+  <text x="180" y="318" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Attitude rate · attitude</text>
+  <text x="400" y="318" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">IMU · PID · motors</text>
+  <text x="360" y="380" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">Same family underwater · retune sensors and plant · keep the layers</text>
+  <text x="360" y="402" text-anchor="middle" fill="#5c756c" font-family="system-ui,sans-serif" font-size="11">EvoForm diagram</text>
+</svg>
