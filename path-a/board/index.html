@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>First prototype board · EvoMarine · EvoForm</title>
+    <meta
+      name="description"
+      content="EvoMarine working board — first prototype hypotheses, leatherback form teachers, active underwater stability. Open notes, not a finished vehicle."
+    />
+    <meta name="theme-color" content="#0a1412" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://evoform.no/path-a/board" />
+    <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
+    <meta property="og:title" content="First prototype board · EvoMarine · EvoForm" />
+    <meta
+      property="og:description"
+      content="Working board for EvoMarine first prototype — form teachers, active stability hypothesis."
+    />
+    <meta property="og:url" content="https://evoform.no/path-a/board" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EvoForm" />
+    <meta property="og:image" content="https://evoform.no/path-a/teachers/leatherback-rear.jpg" />
+    <style>
+      :root {
+        --bg: #0a1412;
+        --surface: #0e1816;
+        --surface-2: #121f1c;
+        --ink: #e6f0ec;
+        --muted: #8fa89e;
+        --faint: #5c756c;
+        --accent: #5ec9a8;
+        --line: rgba(230, 240, 236, 0.12);
+        --line-strong: rgba(230, 240, 236, 0.22);
+        --warn: #c9a45e;
+        --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        --max: 42rem;
+        --wide: 56rem;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { background: var(--bg); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        color: var(--ink);
+        font-family: var(--font-ui);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        background:
+          radial-gradient(ellipse 80% 50% at 50% -10%, rgba(94, 201, 168, 0.07), transparent 55%),
+          var(--bg);
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 0.2rem;
+      }
+      img { max-width: 100%; display: block; }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: max(1.5rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
+          max(3rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
+      }
+      .wrap-wide { max-width: var(--wide); }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem 1.25rem;
+        margin: 0 0 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        color: inherit;
+        text-decoration: none;
+      }
+      .nav-brand:hover { text-decoration: none; }
+      .nav-brand img {
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius: 0.4rem;
+      }
+      .nav-brand .mark {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+      .nav-links a { color: var(--muted); }
+      .nav-links a:hover { color: var(--ink); }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--warn);
+        margin: 0 0 0.85rem;
+      }
+      .status::before {
+        content: "";
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 999px;
+        background: var(--warn);
+        opacity: 0.85;
+      }
+
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(1.65rem, 5vw, 2.2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.65rem;
+      }
+      .lede {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin: 0 0 1.75rem;
+        max-width: 36rem;
+      }
+
+      .toc {
+        list-style: none;
+        margin: 0 0 2.5rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: rgba(94, 201, 168, 0.04);
+      }
+      .toc li {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+      }
+      .toc a { color: var(--ink); }
+      .toc a:hover { color: var(--accent); }
+      .toc .n {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--faint);
+        margin-right: 0.45rem;
+      }
+
+      section.block {
+        margin: 0 0 2.75rem;
+        padding-top: 0.25rem;
+      }
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin: 0 0 0.45rem;
+      }
+      h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.3rem, 3.5vw, 1.65rem);
+        font-weight: 650;
+        line-height: 1.25;
+        margin: 0 0 0.75rem;
+      }
+      h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin: 1.35rem 0 0.45rem;
+      }
+      p { margin: 0 0 0.9rem; }
+      p.muted, .muted { color: var(--muted); }
+      ul.clean {
+        margin: 0 0 1rem;
+        padding: 0 0 0 1.15rem;
+        color: var(--muted);
+      }
+      ul.clean li { margin: 0 0 0.4rem; }
+      ul.clean strong { color: var(--ink); font-weight: 600; }
+
+      .callout {
+        margin: 1.1rem 0 1.35rem;
+        padding: 1rem 1.1rem;
+        border-left: 3px solid var(--accent);
+        border-radius: 0 0.55rem 0.55rem 0;
+        background: rgba(94, 201, 168, 0.06);
+      }
+      .callout p:last-child { margin-bottom: 0; }
+      .callout .k {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 0.4rem;
+      }
+
+      .lane {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--faint);
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        padding: 0.2rem 0.55rem;
+        margin: 0 0 0.75rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 0.85rem;
+        margin: 1.1rem 0 0.5rem;
+      }
+      @media (min-width: 640px) {
+        .grid.two { grid-template-columns: 1fr 1fr; }
+        .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: var(--surface);
+        overflow: hidden;
+      }
+      .card button.thumb,
+      .card .thumb {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: #06100e;
+        cursor: zoom-in;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+      }
+      .card .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.25s ease;
+      }
+      .card button.thumb:hover img { transform: scale(1.03); }
+      .card .body {
+        padding: 0.85rem 0.95rem 1rem;
+      }
+      .card .body h3 {
+        margin: 0 0 0.35rem;
+        font-size: 0.95rem;
+      }
+      .card .body p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .card .credit {
+        display: block;
+        margin-top: 0.45rem;
+        font-size: 0.72rem;
+        color: var(--faint);
+      }
+
+      .note {
+        border: 1px dashed var(--line-strong);
+        border-radius: 0.75rem;
+        padding: 1rem 1.1rem;
+        background: transparent;
+        margin: 1rem 0;
+      }
+      .note .k {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin: 0 0 0.45rem;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0.75rem 0 0;
+      }
+      .chip {
+        font-size: 0.75rem;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.3rem 0.7rem;
+        background: var(--surface-2);
+      }
+      .chip.out { color: #c48a8a; border-color: rgba(184, 92, 92, 0.35); }
+
+      footer.site {
+        margin-top: 1rem;
+        padding-top: 1.35rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8125rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: rgba(6, 12, 10, 0.92);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img {
+        max-height: 90dvh;
+        max-width: 100%;
+        border-radius: 0.5rem;
+        border: 1px solid var(--line);
+        object-fit: contain;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap wrap-wide">
+      <header class="nav">
+        <a class="nav-brand" href="/" aria-label="EvoForm home">
+          <img src="/brand/mark.svg?v=1" width="30" height="30" alt="" />
+          <span class="mark">EvoForm</span>
+        </a>
+        <nav class="nav-links" aria-label="Board navigation">
+          <a href="/">Home</a>
+          <a href="/path-a/">Path A form</a>
+          <a href="#hypothesis">Hypothesis</a>
+          <a href="#teacher">Teacher</a>
+          <a href="#open">Open</a>
+        </nav>
+      </header>
+
+      <p class="status">Working board · open notes · not a finished vehicle</p>
+      <h1>EvoMarine · first prototype board</h1>
+      <p class="lede">
+        Coherent thoughts for the first Path A platform. Living form teachers,
+        avionics-style active stability, and honest next moves. Claims stay
+        inside research and design — not hang-with theater.
+      </p>
+
+      <ol class="toc" aria-label="On this board">
+        <li><span class="n">01</span><a href="#hypothesis">Active underwater stability (F-16 parallel)</a></li>
+        <li><span class="n">02</span><a href="#teacher">Living teacher · leatherback</a></li>
+        <li><span class="n">03</span><a href="#transfer">What transfers to first hull</a></li>
+        <li><span class="n">04</span><a href="#open">Open slots · Eli + next</a></li>
+      </ol>
+
+      <!-- 01 Hypothesis -->
+      <section class="block" id="hypothesis">
+        <p class="section-label">Hypothesis · Synthetic + Living lanes</p>
+        <h2>Active stability underwater — the missing FCC</h2>
+        <p class="lane">Founder note · Rua · avionics systems · F-16</p>
+
+        <p>
+          The F-16 Fighting Falcon is purposefully unstable. It flies more like a
+          dart than a bird or a glider. A human cannot hold a stable trajectory
+          without the flight control computer (FCC). That is a feature: relaxed
+          static stability buys agility; the computer buys survival.
+        </p>
+
+        <div class="callout">
+          <p class="k">Core claim (working)</p>
+          <p>
+            EvoMarine’s first prototype should treat attitude and path control
+            the way high-performance airframes treat flight control: a
+            <strong>dedicated control computer</strong> that can hold quiet
+            trajectories in conditions where the hull alone is not
+            “naturally” stable — especially hover, slow station-keeping, and
+            low-disturbance loiter near marine life.
+          </p>
+        </div>
+
+        <h3>Why this matters for Path A</h3>
+        <ul class="clean">
+          <li>
+            <strong>Quiet wins over rigid stability.</strong> A thruster box can
+            be “stable” by brute force and still wreck the acoustic scene.
+          </li>
+          <li>
+            <strong>Co-presence wants soft authority.</strong> Small, frequent,
+            coordinated surface/thruster corrections — not continuous prop wash.
+          </li>
+          <li>
+            <strong>Hydrophone-first layout</strong> only works if the platform
+            can hold still (or crawl) without fighting itself.
+          </li>
+          <li>
+            <strong>Form teachers still matter.</strong> Leatherback planform and
+            ridge language reduce the control burden; the computer closes the
+            loop. Neither replaces the other.
+          </li>
+        </ul>
+
+        <h3>Transfer map (avionics → water)</h3>
+        <div class="grid two">
+          <div class="card">
+            <div class="body">
+              <h3>Air · F-16</h3>
+              <p>
+                Unstable airframe · FCC multi-axis rates · fly-by-wire · pilot
+                commands intent; computer holds envelope.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="body">
+              <h3>Water · Path A (hypothesis)</h3>
+              <p>
+                Soft-stable or under-damped hull at loiter Re · underwater
+                control computer · sensor fusion (IMU, depth, optional DVL) ·
+                operator or autonomy commands intent; loop holds quiet hover and
+                slow transit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <p class="k">Label</p>
+          <p class="muted" style="margin:0">
+            This is a design hypothesis with a strong engineering pedigree in air,
+            not a claim that commercial AUVs lack all control systems. The gap we
+            care about is <em>quiet, long-dwell, co-presence-grade</em> control —
+            sparse actuation, hydrophone-safe, abort-on-avoidance ready — not
+            raw depth rating or survey speed.
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 Teacher -->
+      <section class="block" id="teacher">
+        <p class="section-label">Living · Dermochelys coriacea</p>
+        <h2>Leatherback as form teacher</h2>
+        <p class="muted">
+          Not “build a robot turtle.” Extract mechanisms with an evidence trail,
+          then transfer under physics and welfare. Path A first hull stays small
+          (about 0.5–1.2 m) and continuous-skinned.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-rear.jpg" data-alt="Leatherback rear silhouette against dark water">
+              <img src="/path-a/teachers/leatherback-rear.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Rear planform</h3>
+              <p>Keels, trailing silhouette, flipper geometry as control-surface teachers — machine joints, not cosplay.</p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-3m.jpg" data-alt="Leatherback length scale about 3 meters or 9.8 feet">
+              <img src="/path-a/teachers/leatherback-scale-3m.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Adult scale</h3>
+              <p>~3 m / 9.8 ft class animal. We re-optimize plate size and joints for a sub-meter platform — never photocopy adult geometry.</p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-surface.jpg" data-alt="Leatherback at surface from above">
+              <img src="/path-a/teachers/leatherback-surface.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Surface language</h3>
+              <p>Long body, ridge spine, low disturbance silhouette in open water.</p>
+              <span class="credit">Footage courtesy David Currie · Instagram @dcurrie_drones</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-human.jpg" data-alt="Historic photograph of a large leatherback on a truck bed with two people for scale">
+              <img src="/path-a/teachers/leatherback-scale-human.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Mass and presence</h3>
+              <p>Human-scale reality check. First prototype stays boat-deployable; the teacher’s size is not the product size.</p>
+            </div>
+          </article>
+        </div>
+
+        <h3>Osteoderm mosaic · later depth roadmap</h3>
+        <p class="muted">
+          Volume-following compliance via suture-linked plates under soft skin.
+          Secondary to first quiet upper-water hull — not a v1 requirement.
+        </p>
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderms-mosaic.jpg" data-alt="Diagram of osteoderm mosaic on leatherback carapace">
+              <img src="/path-a/teachers/osteoderms-mosaic.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Osteoderms</h3>
+              <p>Interlocking bony tiles with compliant joints. Architecture teacher for later envelope compliance — not a pressure hull.</p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderm-micro.jpg" data-alt="Macro and micro view of osteoderm tissue">
+              <img src="/path-a/teachers/osteoderm-micro.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Material grain</h3>
+              <p>Macro tissue and micro structure — coupon-scale study before any mosaic claim on a hull.</p>
+            </div>
+          </article>
+        </div>
+
+        <h3>Ridges, flow, heat, speed</h3>
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/ridges-flow-paper.jpg" data-alt="Scientific figure of ridge-induced streamwise vortices and delayed separation">
+              <img src="/path-a/teachers/ridges-flow-paper.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Ridges and flow</h3>
+              <p>Streamwise vortices can delay separation when regime-matched. Test at Path A Reynolds — do not free-lunch drag claims.</p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-speed.jpg" data-alt="Leatherback swimming with 22 mph callout">
+              <img src="/path-a/teachers/leatherback-speed.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Speed class</h3>
+              <p>~22 mph burst class for the animal. Path A targets survey/hover (~1–2 m/s transit), not racer posture.</p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/countercurrent-heat.jpg" data-alt="Diagram of countercurrent heat exchange with blubber and locomotor muscle">
+              <img src="/path-a/teachers/countercurrent-heat.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Countercurrent heat</h3>
+              <p>Living thermal regulation. Possible later electronics packaging lesson — not first-hull scope.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03 Transfer -->
+      <section class="block" id="transfer">
+        <p class="section-label">First hull · transfer stack</p>
+        <h2>What moves into the prototype first</h2>
+        <p class="muted">
+          Ordered against Path A win order: quieter + efficient · longer loiter · easy deploy.
+        </p>
+        <ul class="clean">
+          <li><strong>1 · Control computer path</strong> — multi-axis attitude/depth hold; sparse thruster authority; log for tank noise and power (experiment #1).</li>
+          <li><strong>2 · Continuous-skin leatherback form</strong> — ridge language optional; no open osteoderm gaps on v1.</li>
+          <li><strong>3 · Hydrophone-first isolation</strong> — layout and mounts before fancy surfaces.</li>
+          <li><strong>4 · Buoyancy-assisted hover</strong> — reduce thruster duty cycle so listening wins.</li>
+          <li><strong>5 · Abort-on-avoidance law</strong> — lower disturbance than current methods; leave the scene.</li>
+          <li><strong>Later ·</strong> regime-matched riblets · steerable camera · volume-following / osteoderm study.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Quiet-first</span>
+          <span class="chip">Boat deploy</span>
+          <span class="chip">0–50 m first</span>
+          <span class="chip">Sensors over speed</span>
+          <span class="chip out">Robot-animal brand</span>
+          <span class="chip out">Thruster-box default</span>
+          <span class="chip out">Deep-ocean first hull</span>
+        </div>
+        <p style="margin-top:1.25rem">
+          <a href="/path-a/">Open Path A form explorer →</a>
+        </p>
+      </section>
+
+      <!-- 04 Open -->
+      <section class="block" id="open">
+        <p class="section-label">Living document</p>
+        <h2>Open slots</h2>
+        <div class="note">
+          <p class="k">Eli summary</p>
+          <p class="muted" style="margin:0">
+            Founder will paste a fuller Expert summary here. Board holds space
+            until that lands — no invented Eli voice.
+          </p>
+        </div>
+        <div class="note">
+          <p class="k">Next physics (locked plan)</p>
+          <p class="muted" style="margin:0">
+            Tank noise + power (bet 1) with hydrophone on the same rig (bet 4).
+            Not a fab go. Control-loop experiments can share that rig when
+            sensors and logging are ready.
+          </p>
+        </div>
+        <div class="note">
+          <p class="k">How this board grows</p>
+          <p class="muted" style="margin:0">
+            Rua goes · Kai ships text, figures, and links · Eli pastes judgment
+            packets when asked. No waitlist · no product storefront · no dual
+            ocean launch chrome.
+          </p>
+        </div>
+      </section>
+
+      <footer class="site">
+        <p style="margin:0 0 0.35rem">In Accordance with Nature · Form Shaped by Evolution</p>
+        <p style="margin:0">
+          <a href="/">EvoForm</a>
+          <span style="opacity:0.4"> · </span>
+          EvoMarine
+          <span style="opacity:0.4"> · </span>
+          <a href="https://cetavox.com/">CetaVox</a>
+        </p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image">
+      <button type="button" class="close" id="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      function openLb(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+      }
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+      document.querySelectorAll("[data-lb]").forEach((el) => {
+        el.addEventListener("click", () => openLb(el.getAttribute("data-lb"), el.getAttribute("data-alt")));
+      });
+      document.getElementById("lightbox-close").addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>

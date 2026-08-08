@@ -149,7 +149,21 @@
         line-height: 1.45;
       }
 
+      .verticals li:has(> a.v-row) {
+        display: block;
+        padding: 0;
+        border-top: none;
+      }
+
       .verticals li:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .verticals li:has(> a.v-row):last-child {
+        border-bottom: none;
+      }
+
+      .verticals li:has(> a.v-row):last-child a.v-row {
         border-bottom: 1px solid var(--line);
       }
 
@@ -166,6 +180,49 @@
       .verticals .v-role {
         color: var(--muted);
         font-weight: 450;
+      }
+
+      /* Clickable current vertical (EvoMarine → prototype board) */
+      .verticals a.v-row {
+        display: grid;
+        grid-template-columns: 7.25rem 1fr;
+        gap: 0.65rem 1rem;
+        align-items: baseline;
+        padding: 0.55rem 0;
+        border-top: 1px solid var(--line);
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: inherit;
+        text-decoration: none;
+        border-bottom: none;
+        margin: 0;
+        border-radius: 0.35rem;
+        transition: background 0.15s ease;
+      }
+
+      .verticals a.v-row:hover {
+        background: rgba(94, 201, 168, 0.06);
+        border-bottom-color: transparent;
+      }
+
+      .verticals a.v-row:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .verticals a.v-row .v-role::after {
+        content: " →";
+        color: var(--accent);
+        opacity: 0.7;
+        margin-left: 0.2rem;
+      }
+
+      @media (max-width: 420px) {
+        .verticals a.v-row {
+          grid-template-columns: 1fr;
+          gap: 0.15rem;
+          padding: 0.7rem 0;
+        }
       }
 
       .path-card {
@@ -301,8 +358,10 @@
 
       <ul class="verticals" aria-label="EvoForm verticals">
         <li>
-          <span class="v-name" aria-current="true">EvoMarine</span>
-          <span class="v-role">Quiet co-presence with marine life</span>
+          <a class="v-row" href="/path-a/board/" aria-current="true">
+            <span class="v-name">EvoMarine</span>
+            <span class="v-role">Quiet co-presence with marine life</span>
+          </a>
         </li>
         <li>
           <span class="v-name">EvoAir</span>
@@ -314,11 +373,18 @@
         </li>
       </ul>
 
+      <a class="path-card" href="/path-a/board/">
+        <span class="kicker">EvoMarine · first prototype</span>
+        <span class="title">Working board · hypotheses + teachers</span>
+        <span class="desc"
+          >Active stability · leatherback form teachers · Path A next moves</span
+        >
+      </a>
       <a class="path-card" href="/path-a/">
         <span class="kicker">EvoMarine</span>
-        <span class="title">Path A · Quiet Hybrid</span>
+        <span class="title">Path A · Quiet Hybrid form</span>
         <span class="desc"
-          >Leatherback-form study · quieter longer observation · concept boards</span
+          >Leatherback-form explorer · envelope · concept boards</span
         >
       </a>
 
