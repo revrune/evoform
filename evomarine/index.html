@@ -3,31 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>EvoForm · Shaped by Evolution · In Accordance with Nature</title>
+    <title>EvoMarine · EvoForm</title>
     <meta
       name="description"
-      content="EvoForm · form shaped by evolution. EvoMarine · EvoAir · EvoTerra. Nature-inspired platforms for long, quiet observation."
+      content="EvoMarine · quiet co-presence with marine life. Prototype board and Path A Quiet Hybrid form."
     />
     <meta name="theme-color" content="#0a1412" />
     <meta name="color-scheme" content="dark" />
-    <link rel="canonical" href="https://evoform.no/" />
+    <link rel="canonical" href="https://evoform.no/evomarine/" />
     <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/brand/mark.svg?v=1" />
-    <meta property="og:title" content="EvoForm · Shaped by Evolution" />
+    <meta property="og:title" content="EvoMarine · EvoForm" />
     <meta
       property="og:description"
-      content="Shaped by Evolution · In Accordance with Nature. EvoMarine · EvoAir · EvoTerra."
+      content="Quiet co-presence with marine life · prototype board · Path A form."
     />
-    <meta property="og:url" content="https://evoform.no/" />
+    <meta property="og:url" content="https://evoform.no/evomarine/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="EvoForm" />
     <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EvoForm · Shaped by Evolution" />
-    <meta
-      name="twitter:description"
-      content="Shaped by Evolution · In Accordance with Nature."
-    />
     <style>
       :root {
         --bg: #0a1412;
@@ -89,7 +82,6 @@
         text-decoration: none;
         color: inherit;
         border: 0;
-        flex-shrink: 0;
       }
 
       .brand img {
@@ -97,17 +89,14 @@
         height: 2.15rem;
         border-radius: 0.45rem;
         display: block;
-        flex-shrink: 0;
       }
 
       .brand .mark {
-        display: inline-block;
         font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--accent);
         font-weight: 600;
-        margin: 0;
       }
 
       .topbar .north {
@@ -120,19 +109,39 @@
         max-width: 11.5rem;
       }
 
-      h1.hero {
+      .crumb {
+        margin: 0 0 0.85rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .crumb a {
+        color: var(--muted);
+        border-bottom: none;
+      }
+
+      .crumb a:hover {
+        color: var(--accent);
+      }
+
+      h1 {
         font-family: var(--font-display);
-        font-size: clamp(1.7rem, 5.2vw, 2.35rem);
+        font-size: clamp(1.7rem, 5.2vw, 2.2rem);
         font-weight: 700;
         line-height: 1.18;
         letter-spacing: -0.02em;
-        margin: 0 0 1.5rem;
-        max-width: 12rem;
+        margin: 0 0 0.45rem;
         color: var(--ink);
       }
 
-      /* Three clean verticals · secondary detail lives one click deeper */
-      .verticals {
+      .lede {
+        margin: 0 0 1.75rem;
+        color: var(--muted);
+        font-size: 1rem;
+        max-width: 28rem;
+      }
+
+      .paths {
         list-style: none;
         margin: 0 0 2.5rem;
         padding: 0;
@@ -140,64 +149,51 @@
         border-top: 1px solid var(--line);
       }
 
-      .verticals > li {
+      .paths li {
         border-bottom: 1px solid var(--line);
       }
 
-      .verticals .v-row {
-        display: grid;
-        grid-template-columns: 7.5rem 1fr;
-        gap: 0.65rem 1rem;
-        align-items: baseline;
-        padding: 0.85rem 0;
-        font-size: 0.95rem;
-        line-height: 1.45;
+      .paths a {
+        display: block;
+        padding: 0.95rem 0;
         color: inherit;
         text-decoration: none;
         border-bottom: none;
-        margin: 0;
-        border-radius: 0.25rem;
         transition: background 0.15s ease;
+        border-radius: 0.25rem;
       }
 
-      .verticals a.v-row:hover {
+      .paths a:hover {
         background: rgba(94, 201, 168, 0.05);
         border-bottom-color: transparent;
       }
 
-      .verticals a.v-row:focus-visible {
+      .paths a:focus-visible {
         outline: 2px solid var(--accent);
         outline-offset: 3px;
       }
 
-      .verticals .v-name {
+      .paths .p-title {
+        display: block;
+        font-size: 1rem;
         font-weight: 600;
-        letter-spacing: 0.01em;
         color: var(--ink);
+        margin: 0 0 0.3rem;
       }
 
-      .verticals a.v-row .v-name {
+      .paths .p-title::after {
+        content: " →";
         color: var(--accent);
+        opacity: 0.8;
+        font-weight: 500;
       }
 
-      .verticals .v-role {
+      .paths .p-desc {
+        display: block;
+        font-size: 0.9rem;
         color: var(--muted);
-        font-weight: 450;
-      }
-
-      .verticals .v-soon .v-name {
-        color: rgba(230, 240, 236, 0.72);
-      }
-
-      .verticals .v-soon .v-role {
-        color: rgba(143, 168, 158, 0.8);
-      }
-
-      .related {
-        margin: 0 0 2.75rem;
-        font-size: 0.95rem;
-        color: var(--muted);
-        line-height: 1.5;
+        line-height: 1.45;
+        margin: 0;
       }
 
       a {
@@ -217,36 +213,15 @@
       }
 
       @media (max-width: 420px) {
-        body {
-          font-size: 1rem;
-          line-height: 1.68;
-        }
-
         .wrap {
           padding-left: max(1.15rem, env(safe-area-inset-left));
           padding-right: max(1.15rem, env(safe-area-inset-right));
           padding-top: max(2.5rem, env(safe-area-inset-top));
         }
 
-        .topbar {
-          margin-bottom: 1.6rem;
-        }
-
         .topbar .north {
           font-size: 0.68rem;
           max-width: 9.5rem;
-        }
-
-        h1.hero {
-          font-size: clamp(1.65rem, 7.2vw, 1.95rem);
-          max-width: 11rem;
-          margin-bottom: 1.4rem;
-        }
-
-        .verticals .v-row {
-          grid-template-columns: 1fr;
-          gap: 0.15rem;
-          padding: 0.75rem 0;
         }
       }
     </style>
@@ -260,32 +235,25 @@
         </a>
         <p class="north">In Accordance with Nature</p>
       </div>
-      <h1 class="hero">Shaped by Evolution</h1>
 
-      <ul class="verticals" aria-label="EvoForm verticals">
+      <p class="crumb"><a href="/">EvoForm</a> · EvoMarine</p>
+      <h1>EvoMarine</h1>
+      <p class="lede">Quiet co-presence with marine life. Paths open for research and first prototype work.</p>
+
+      <ul class="paths" aria-label="EvoMarine paths">
         <li>
-          <a class="v-row" href="/evomarine/">
-            <span class="v-name">EvoMarine</span>
-            <span class="v-role">Quiet co-presence with marine life</span>
+          <a href="/path-a/board/">
+            <span class="p-title">Prototype board</span>
+            <span class="p-desc">Active stability · drones · leatherback teachers · architecture and control path</span>
           </a>
         </li>
-        <li class="v-soon">
-          <div class="v-row">
-            <span class="v-name">EvoAir</span>
-            <span class="v-role">Quiet aerial co-presence and survey</span>
-          </div>
-        </li>
-        <li class="v-soon">
-          <div class="v-row">
-            <span class="v-name">EvoTerra</span>
-            <span class="v-role">Ground, soil, and terrain platforms</span>
-          </div>
+        <li>
+          <a href="/path-a/">
+            <span class="p-title">Path A form</span>
+            <span class="p-desc">Quiet Hybrid explorer · envelope · concept views</span>
+          </a>
         </li>
       </ul>
-
-      <p class="related">
-        <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
-      </p>
     </div>
   </body>
 </html>

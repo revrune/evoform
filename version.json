@@ -1,7 +1,7 @@
 {
-  "version": "door-verticals-nested-2026-08-08",
-  "surface": "door+path-a+board",
+  "version": "door-hub-evomarine-2026-08-08",
+  "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Door: EvoMarine nests board+form · three verticals only · no chunky path cards",
-  "updated": "2026-08-08T19:00Z"
+  "note": "Door: three clean verticals · EvoMarine hub secondary page for board+form",
+  "updated": "2026-08-08T20:00Z"
 }

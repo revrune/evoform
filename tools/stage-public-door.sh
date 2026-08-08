@@ -10,6 +10,9 @@ cp "$ROOT/index.html" "$ROOT/404.html" "$ROOT/version.json" "$OUT/"
 if [ -d "$ROOT/path-a" ]; then
   cp -R "$ROOT/path-a" "$OUT/path-a"
 fi
+if [ -d "$ROOT/evomarine" ]; then
+  cp -R "$ROOT/evomarine" "$OUT/evomarine"
+fi
 if [ -d "$ROOT/brand" ]; then
   cp -R "$ROOT/brand" "$OUT/brand"
 fi
