@@ -1,5 +1,8 @@
 # SES handoff · 2026-08-06
 
+> **Historical.** Public host + ship path now: Vercel · `docs/ops/vercel-deploy-primary-2026-08-08.md`.  
+> Do not use this note for deploy procedure.
+
 **Seat:** Kai · **Founder:** Rua · **Pick up:** next session after GitHub recovers  
 
 ---

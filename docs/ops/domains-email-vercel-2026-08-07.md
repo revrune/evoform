@@ -74,24 +74,22 @@ No Riven workspace files to merge for the 2026-08-07 domain migration — dashbo
 | X @RevRune | Political/ideas — not product host |
 | “House RevRune” on doors | Quiet internal only — not deploy story, not product lead |
 
-## Public door deploy (EvoForm · rewired 2026-08-07)
+## Public door deploy (EvoForm)
+
+> **PRIMARY ship path (LOCKED · 2026-08-08):**  
+> [`vercel-deploy-primary-2026-08-08.md`](vercel-deploy-primary-2026-08-08.md) · `python3 tools/deploy-vercel-rest.py`  
+> GitHub is a **record**. Do **not** ship via GHA / dead `VERCEL_TOKEN` / waiting on Actions.
 
 | Piece | Role |
 |-------|------|
-| `vercel.json` | Build stages thin door → `_public/` only |
-| `tools/stage-public-door.sh` | Copies `index.html` · `404.html` · `version.json` · `path-a/**` |
-| `tools/publish-public-door.sh` | Local production deploy via Vercel CLI |
-| GHA `Deploy public door` | Same on push of door paths when secrets set |
+| `vercel.json` | Optional build config · live ship uses staged `_public/` tree |
+| `tools/stage-public-door.sh` | Copies door tree → `_public/` |
+| `tools/deploy-vercel-rest.py` | **Primary** production deploy (MCP OAuth REST) |
+| `tools/publish-public-door.sh` | Alias → `deploy-vercel-rest.py` |
+| GHA `Deploy public door` | **Deprecated as primary** · push trigger off · `VERCEL_TOKEN` secret known-invalid 2026-08-08 |
 | **Not public** | `briefs/` · `docs/` · research tree · prototypes |
 
-**GHA secrets** (repo `revrune/evoform`): `VERCEL_TOKEN` · `VERCEL_ORG_ID`=`team_QwxzlThVmQiaDdYIKaFY7gMB` · `VERCEL_PROJECT_ID`=`prj_ODHEe1C3BtGhJSSDEvReNER2pBsE`  
-**Set 2026-08-07** via `gh secret set` (names present). Workflow: **Deploy public door**.
-
-**Deploy identity (LOCKED · 2026-08-07):** Vercel **BLOCKS** CLI deploys when git author is `*@*.local` (Mac auto git email) — not a team member.  
-- Founder **main email** + git + Vercel owner: **ruairithered@gmail.com** (`ruairithered-4228`)  
-- Global git: `user.name=Ruairí Ó Daimhín` · `user.email=ruairithered@gmail.com` (set 2026-08-07)  
-- Local publish script deploys from a **git-free temp folder** as belt-and-suspenders  
-- Do **not** “fix” by upgrading to Pro for this error  
+**Auth:** Grok Vercel MCP token in `~/.grok/mcp_credentials.json` · re-auth MCP if probe fails · do not thrash GHA secrets first.
 
 **Path A mockups (LOCKED · 2026-08-07 · edge closed):**  
 - Serve from Vercel: `/path-a/mockups/*.jpg`  

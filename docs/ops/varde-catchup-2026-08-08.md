@@ -24,7 +24,7 @@
 
 3. **Founder git identity** — global email **ruairithered@gmail.com** (main). Mac `*@*.local` authors **BLOCK** Vercel team deploys.
 
-4. **EvoForm door deploy** — thin stage to Vercel `evoform-no` (`vercel.json` · `tools/stage-public-door.sh` · publish script). GHA secrets set 2026-08-07.
+4. **EvoForm door deploy** — **primary:** `python3 tools/deploy-vercel-rest.py` (MCP OAuth REST · 2026-08-08 lock). Stage: `tools/stage-public-door.sh`. GHA is **not** primary.
 
 5. **Path A mockups** — absolute `/path-a/mockups/…` (relative `./` broke under `trailingSlash: false`). Live OK · Riven edge closed · `77d4986`.
 
@@ -42,7 +42,7 @@
 ## Watch (not go tonight)
 
 - Leitner **audio** still references `cdn.jsdelivr.net/gh/revrune/leitnerlearning@…` while repo is **private** → CDN 404 risk (same class as Path A CDN trap). Fix = same-origin on Vercel when Rua goes.  
-- GHA auto-deploy for evoform door (secrets set; verify green run).  
+- GHA auto-deploy for evoform door — **deprecated as primary** (use REST deploy).  
 - Varde craft pass only if Rua asks — no unsolicited door redesign.
 
 ## Done bar for Varde re-entry

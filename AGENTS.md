@@ -4,6 +4,16 @@
 **Folder:** `~/evoform` · **Sister:** CetaVox (`~/cetavox`) · **Sibling product:** Leitner Learning (`~/sprakflow`)  
 **Team:** Rua (founder) · Kai (Build) · Eli (product judgment, Grok.com)
 
+## Ship (read first · permanent)
+
+| Step | Command |
+|------|---------|
+| Gate (board/concepts) | `python3 tools/check_depth_pass.py` |
+| Stage | `bash tools/stage-public-door.sh` |
+| **Production** | **`python3 tools/deploy-vercel-rest.py`** |
+
+Live: **Vercel** · evoform.no. GitHub = archive only. **Never** open with GHA / dead `VERCEL_TOKEN` / five-minute Actions wait. Law: `docs/ops/vercel-deploy-primary-2026-08-08.md`.
+
 ## Short spine (brother/public)
 
 **EvoForm: Bio-inspired marine vehicles for long, quiet co-presence**
