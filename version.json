@@ -1,7 +1,7 @@
 {
-  "version": "inner-back-button-2026-08-08",
+  "version": "drop-back-button-2026-08-08",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "One-level Back on hub, board, and Path (not on home)",
-  "updated": "2026-08-09T09:00Z"
+  "note": "Remove Back chrome; browser/history is enough",
+  "updated": "2026-08-09T10:00Z"
 }
