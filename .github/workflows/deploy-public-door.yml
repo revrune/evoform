@@ -11,6 +11,7 @@ on:
       - "404.html"
       - "version.json"
       - "path-a/**"
+      - "evomarine/**"
       - "brand/**"
       - "vercel.json"
       - "tools/stage-public-door.sh"
