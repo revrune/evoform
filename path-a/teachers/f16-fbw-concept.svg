@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="Fly-by-wire concept: pilot intent through sensors and computer to control surfaces">
+  <rect width="960" height="420" fill="#0a1412"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5ec9a8"/>
+    </marker>
+  </defs>
+  <!-- boxes -->
+  <rect x="40" y="150" width="160" height="90" rx="12" fill="#0e1816" stroke="#5ec9a8" stroke-width="1.5"/>
+  <text x="120" y="190" text-anchor="middle" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Pilot intent</text>
+  <text x="120" y="214" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">rate · force · stick</text>
+
+  <rect x="280" y="150" width="180" height="90" rx="12" fill="#0e1816" stroke="#5ec9a8" stroke-width="1.5"/>
+  <text x="370" y="190" text-anchor="middle" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Sensors</text>
+  <text x="370" y="214" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">IMU · rates · air data</text>
+
+  <rect x="540" y="150" width="180" height="90" rx="12" fill="#121f1c" stroke="#5ec9a8" stroke-width="2"/>
+  <text x="630" y="185" text-anchor="middle" fill="#5ec9a8" font-family="system-ui,sans-serif" font-size="14" font-weight="600">FLIGHT CONTROL</text>
+  <text x="630" y="208" text-anchor="middle" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Computer</text>
+  <text x="630" y="228" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="12">quadruplex · high-rate loop</text>
+
+  <rect x="800" y="150" width="120" height="90" rx="12" fill="#0e1816" stroke="#5ec9a8" stroke-width="1.5"/>
+  <text x="860" y="190" text-anchor="middle" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Surfaces</text>
+  <text x="860" y="214" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">actuators</text>
+
+  <!-- arrows -->
+  <line x1="200" y1="195" x2="270" y2="195" stroke="#5ec9a8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="460" y1="195" x2="530" y2="195" stroke="#5ec9a8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="720" y1="195" x2="790" y2="195" stroke="#5ec9a8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- feedback loop -->
+  <path d="M860 240 C860 320, 370 320, 370 240" fill="none" stroke="#5c756c" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <text x="615" y="345" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">continuous sensing · continuous correction</text>
+
+  <text x="480" y="50" text-anchor="middle" fill="#e6f0ec" font-family="Georgia,serif" font-size="22">Fly-by-wire · intent in, stability in software</text>
+  <text x="480" y="80" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="14">Air pattern that opens form design space · same class of idea for Path A quiet loiter</text>
+</svg>

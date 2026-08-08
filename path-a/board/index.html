@@ -489,6 +489,103 @@
           quiet.
         </p>
 
+        <h3>Air teacher · F-16 flight control</h3>
+        <p class="muted">
+          The F-16 showed that a vehicle can be designed for performance first, with
+          a dedicated flight control computer holding attitude and path at high rate.
+          Four-channel fly-by-wire · pilot commands intent · computer holds the
+          envelope.
+        </p>
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-airframe.jpg" data-alt="General Dynamics F-16A Fighting Falcon in flight, USAF public domain photograph">
+              <img src="/path-a/teachers/f16-airframe.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Airframe held by the loop</h3>
+              <p>A platform designed for response, held by continuous computer authority.</p>
+              <span class="credit">USAF · public domain via Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-sidestick.jpg" data-alt="F-16 side-stick controller in the cockpit">
+              <img src="/path-a/teachers/f16-sidestick.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Side-stick · intent in</h3>
+              <p>Force-sense stick · small inputs · computer scales surface motion across the envelope.</p>
+              <span class="credit">Public domain via Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-fbw-concept.svg" data-alt="Diagram of fly-by-wire: pilot intent through sensors and flight control computer to control surfaces with continuous feedback">
+              <img src="/path-a/teachers/f16-fbw-concept.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Fly-by-wire path</h3>
+              <p>Sensors and computers close the loop · pilot commands intent · surfaces follow the computer.</p>
+              <span class="credit">EvoForm diagram · concept illustration</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-planform.svg" data-alt="Three-view line drawing of the F-16 Fighting Falcon">
+              <img src="/path-a/teachers/f16-planform.svg" alt="" loading="lazy" style="object-fit:contain;background:#f4f7f5;padding:0.75rem" />
+            </button>
+            <div class="body">
+              <h3>Planform reference</h3>
+              <p>Relaxed static stability made the airframe agile · the flight control computer made it flyable.</p>
+              <span class="credit">Public domain line drawing · Wikimedia Commons</span>
+            </div>
+          </article>
+        </div>
+
+        <h3>What makes the F-16 flight control system unique</h3>
+        <div class="table-wrap">
+          <table class="arch wide">
+            <tbody>
+              <tr>
+                <th scope="row">Relaxed static stability</th>
+                <td>Airframe designed to be highly responsive. The computer holds the trajectory humans cannot hold alone.</td>
+              </tr>
+              <tr>
+                <th scope="row">Full fly-by-wire</th>
+                <td>Pilot commands intent (rate / g). The flight control computer continuously drives the surfaces.</td>
+              </tr>
+              <tr>
+                <th scope="row">Quadruplex redundancy</th>
+                <td>Four independent channels. Loss of one leaves a working triplex system · graceful degradation.</td>
+              </tr>
+              <tr>
+                <th scope="row">High-rate sensing</th>
+                <td>Accelerometers, rate gyros, air data · continuous correction at high rate.</td>
+              </tr>
+              <tr>
+                <th scope="row">Envelope protection</th>
+                <td>Angle-of-attack and g limiters sit in the same loop · agility inside a safe envelope.</td>
+              </tr>
+              <tr>
+                <th scope="row">Side-stick</th>
+                <td>Force-sense stick · small inputs · computer scales surface motion for consistent response.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          The breakthrough was not only computers on a jet. It was opening the
+          airframe design space because stability could live in software. That is
+          the parallel for EvoMarine: open the underwater form for efficiency,
+          compliance, and quiet · let a dedicated control computer hold hover, slow
+          station-keeping, and low-disturbance loiter.
+        </p>
+
+        <div class="callout">
+          <p class="k">Two teachers together</p>
+          <p>
+            Leatherback gives the body language of efficient presence · F-16 gives
+            the control philosophy that lets an advanced body stay on a quiet path.
+          </p>
+        </div>
+
         <h3>Why this matters for Path A</h3>
         <ul class="clean">
           <li>
@@ -555,6 +652,16 @@
             A lean stability computer · separate from the observation payload
             computer. Lessons from fly-by-wire aircraft and field hydrobatic AUVs
             (trim, buoyancy, model-based control) inform the loop.
+          </p>
+        </div>
+
+        <div class="callout">
+          <p class="k">Water transfer · EvoMarine</p>
+          <p>
+            Same pattern under the sea: a lean stability computer · IMU, depth,
+            optional speed-through-water · sparse actuation · quiet hover and slow
+            transit. Leatherback form lightens the burden · the control computer
+            closes the loop.
           </p>
         </div>
 
