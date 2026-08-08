@@ -131,41 +131,27 @@
         color: var(--ink);
       }
 
-      /* Verticals — taxonomy, not product cards */
+      /* Verticals — three doors · open one nests light paths */
       .verticals {
         list-style: none;
-        margin: 0 0 2.25rem;
+        margin: 0 0 2.5rem;
         padding: 0;
-        max-width: 30rem;
+        max-width: 28rem;
+        border-top: 1px solid var(--line);
       }
 
-      .verticals li {
+      .verticals > li {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .verticals .v-head {
         display: grid;
-        grid-template-columns: 7.25rem 1fr;
+        grid-template-columns: 7.5rem 1fr;
         gap: 0.65rem 1rem;
         align-items: baseline;
-        padding: 0.55rem 0;
-        border-top: 1px solid var(--line);
-        font-size: 0.92rem;
+        padding: 0.85rem 0;
+        font-size: 0.95rem;
         line-height: 1.45;
-      }
-
-      .verticals li:has(> a.v-row) {
-        display: block;
-        padding: 0;
-        border-top: none;
-      }
-
-      .verticals li:last-child {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .verticals li:has(> a.v-row):last-child {
-        border-bottom: none;
-      }
-
-      .verticals li:has(> a.v-row):last-child a.v-row {
-        border-bottom: 1px solid var(--line);
       }
 
       .verticals .v-name {
@@ -174,7 +160,7 @@
         color: var(--ink);
       }
 
-      .verticals .v-name[aria-current="true"] {
+      .verticals .v-name.is-open {
         color: var(--accent);
       }
 
@@ -183,95 +169,75 @@
         font-weight: 450;
       }
 
-      /* Clickable current vertical (EvoMarine → prototype board) */
-      .verticals a.v-row {
-        display: grid;
-        grid-template-columns: 7.25rem 1fr;
-        gap: 0.65rem 1rem;
+      .verticals .v-soon .v-name {
+        color: rgba(230, 240, 236, 0.55);
+      }
+
+      .verticals .v-soon .v-role {
+        color: rgba(143, 168, 158, 0.75);
+      }
+
+      /* EvoMarine open: nested paths, not chunky cards */
+      .verticals .v-open {
+        padding: 0.2rem 0 0.85rem;
+      }
+
+      .verticals .v-open .v-head {
+        padding-bottom: 0.45rem;
+      }
+
+      .v-paths {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 0.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .v-paths a {
+        display: flex;
+        flex-wrap: wrap;
         align-items: baseline;
-        padding: 0.55rem 0;
-        border-top: 1px solid var(--line);
-        font-size: 0.92rem;
-        line-height: 1.45;
+        gap: 0.25rem 0.55rem;
+        padding: 0.4rem 0.55rem 0.4rem 7.5rem;
+        margin: 0 -0.15rem;
+        border-radius: 0.45rem;
+        border-bottom: none;
         color: inherit;
         text-decoration: none;
-        border-bottom: none;
-        margin: 0;
-        border-radius: 0.35rem;
         transition: background 0.15s ease;
       }
 
-      .verticals a.v-row:hover {
-        background: rgba(94, 201, 168, 0.06);
+      .v-paths a:hover {
+        background: rgba(94, 201, 168, 0.07);
         border-bottom-color: transparent;
       }
 
-      .verticals a.v-row:focus-visible {
+      .v-paths a:focus-visible {
         outline: 2px solid var(--accent);
-        outline-offset: 3px;
+        outline-offset: 2px;
       }
 
-      .verticals a.v-row .v-role::after {
+      .v-paths .p-title {
+        font-size: 0.9rem;
+        font-weight: 550;
+        color: var(--ink);
+      }
+
+      .v-paths .p-title::after {
         content: " →";
         color: var(--accent);
-        opacity: 0.7;
-        margin-left: 0.2rem;
+        opacity: 0.75;
+        font-weight: 500;
       }
 
-      @media (max-width: 420px) {
-        .verticals a.v-row {
-          grid-template-columns: 1fr;
-          gap: 0.15rem;
-          padding: 0.7rem 0;
-        }
-      }
-
-      .path-card {
-        display: block;
-        margin: 0 0 2.25rem;
-        padding: 1rem 1.1rem 1.05rem;
-        border: 1px solid var(--line);
-        border-radius: 0.75rem;
-        background: rgba(94, 201, 168, 0.04);
-        text-decoration: none;
-        color: inherit;
-        transition: border-color 0.15s ease, background 0.15s ease;
-      }
-
-      .path-card:hover {
-        border-color: rgba(94, 201, 168, 0.35);
-        background: rgba(94, 201, 168, 0.07);
-      }
-
-      .path-card:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 3px;
-      }
-
-      .path-card .kicker {
-        display: block;
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--accent);
-        font-weight: 600;
-        margin: 0 0 0.4rem;
-      }
-
-      .path-card .title {
-        display: block;
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--ink);
-        margin: 0 0 0.35rem;
-      }
-
-      .path-card .desc {
-        display: block;
-        font-size: 0.92rem;
+      .v-paths .p-desc {
+        flex: 1 1 100%;
+        font-size: 0.8rem;
         color: var(--muted);
-        line-height: 1.45;
-        margin: 0;
+        line-height: 1.4;
+        max-width: 22rem;
       }
 
       .related {
@@ -295,11 +261,6 @@
         outline: 2px solid var(--accent);
         outline-offset: 3px;
         border-radius: 0.2rem;
-      }
-
-      .path-card a,
-      .path-card:hover {
-        border-bottom-color: transparent;
       }
 
       @media (max-width: 420px) {
@@ -329,10 +290,14 @@
           margin-bottom: 1.4rem;
         }
 
-        .verticals li {
+        .verticals .v-head {
           grid-template-columns: 1fr;
           gap: 0.15rem;
-          padding: 0.7rem 0;
+          padding: 0.75rem 0;
+        }
+
+        .v-paths a {
+          padding-left: 0.45rem;
         }
       }
     </style>
@@ -349,36 +314,39 @@
       <h1 class="hero">Shaped by Evolution</h1>
 
       <ul class="verticals" aria-label="EvoForm verticals">
-        <li>
-          <a class="v-row" href="/path-a/board/" aria-current="true">
-            <span class="v-name">EvoMarine</span>
+        <li class="v-open">
+          <div class="v-head">
+            <span class="v-name is-open" id="evomarine-label">EvoMarine</span>
             <span class="v-role">Quiet co-presence with marine life</span>
-          </a>
+          </div>
+          <ul class="v-paths" aria-labelledby="evomarine-label">
+            <li>
+              <a href="/path-a/board/">
+                <span class="p-title">Prototype board</span>
+                <span class="p-desc">Active stability · leatherback teachers · control path</span>
+              </a>
+            </li>
+            <li>
+              <a href="/path-a/">
+                <span class="p-title">Path A form</span>
+                <span class="p-desc">Quiet Hybrid explorer · envelope · concept views</span>
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <span class="v-name">EvoAir</span>
-          <span class="v-role">Quiet aerial co-presence and survey</span>
+        <li class="v-soon">
+          <div class="v-head">
+            <span class="v-name">EvoAir</span>
+            <span class="v-role">Quiet aerial co-presence and survey</span>
+          </div>
         </li>
-        <li>
-          <span class="v-name">EvoTerra</span>
-          <span class="v-role">Ground, soil, and terrain platforms</span>
+        <li class="v-soon">
+          <div class="v-head">
+            <span class="v-name">EvoTerra</span>
+            <span class="v-role">Ground, soil, and terrain platforms</span>
+          </div>
         </li>
       </ul>
-
-      <a class="path-card" href="/path-a/board/">
-        <span class="kicker">EvoMarine · first prototype</span>
-        <span class="title">Prototype board</span>
-        <span class="desc"
-          >Active stability · leatherback teachers · architecture and control path</span
-        >
-      </a>
-      <a class="path-card" href="/path-a/">
-        <span class="kicker">EvoMarine</span>
-        <span class="title">Path A · Quiet Hybrid form</span>
-        <span class="desc"
-          >Leatherback-form explorer · envelope · concept boards</span
-        >
-      </a>
 
       <p class="related">
         <a href="https://cetavox.com/">CetaVox</a> · deciphering whale and dolphin sounds
