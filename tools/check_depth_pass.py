@@ -44,7 +44,6 @@ def main() -> None:
     must_contain(board, 'href="/"', "board brand home")
     must_contain(board, "Shaped by Nature", "board north")
     must_contain(board, "EvoMarine", "board sibling")
-    must_contain(board, "Visual Concepts", "board sibling name")
     must_not_contain(board, 'href="/path-a/">Path</a>', "board old Path label")
     must_not_contain(board, "Working board", "board status line")
     must_not_contain(board, "lede-more", "board second lede class")
@@ -52,6 +51,17 @@ def main() -> None:
         fail("board: Back chrome present")
     must_contain(board, "Inspiration", "board kicker")
     must_contain(board, "<h1>Board</h1>", "board h1")
+    # Mirror Concepts: EvoMarine only in top nav (not Visual Concepts label)
+    board_nav = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', board, re.S)
+    if not board_nav:
+        fail("board: missing nav-links")
+    if "Visual Concepts" in board_nav.group(1):
+        fail("board: Visual Concepts should not appear in top nav")
+    if "EvoMarine" not in board_nav.group(1):
+        fail("board: EvoMarine missing from top nav")
+    # No page lede under Board title (Concepts pattern)
+    if re.search(r"<h1>Board</h1>\s*<p class=\"(page-sub|lede)\"", board):
+        fail("board: no sub/lede under Board title")
     for sid in (
         "hypothesis",
         "drones",
@@ -89,7 +99,6 @@ def main() -> None:
 
     # --- Visual Concepts chrome + form UI ---
     must_contain(path_a, "Shaped by Nature", "path-a north")
-    must_contain(path_a, "Inspiration Board", "path-a sibling")
     must_contain(path_a, "EvoMarine", "path-a sibling")
     must_contain(path_a, 'id="explorer"', "path-a explorer")
     must_contain(path_a, 'id="gallery"', "path-a gallery")
@@ -157,8 +166,8 @@ def main() -> None:
     if "hover.jpg" not in gal_body and "boat-deploy.jpg" not in gal_body:
         fail("path-a gallery lacks non-explorer studies")
 
-    # Cross-link pointer to Board ownership
-    must_contain(path_a, "Inspiration Board", "path-a board pointer")
+    # Quiet pointer into Board notes from hotspots
+    must_contain(path_a, "Board notes", "path-a board pointer")
 
     # --- Frozen home + hub ---
     must_contain(home, "Vehicles Shaped by Nature", "home title slogan")
@@ -174,9 +183,17 @@ def main() -> None:
     must_not_contain(hub, "p-job", "hub no p-job chrome")
 
     # Board lead phrase + Concepts bridge (Eli craft)
-    must_contain(board, "Quiet Extended Presence", "board primary phrase")
-    must_contain(board, "Stay in the water longer", "board supporting line")
-    must_contain(path_a, "Inspiration Board", "concepts bridge to board")
+    # QEP may live in body/meta, not forced under Board title
+    must_contain(path_a, "EvoMarine", "concepts nav sibling")
+    # Nav should not label this page as Inspiration Board
+    nav = re.search(r'<nav class="nav-links"[^>]*>(.*?)</nav>', path_a, re.S)
+    if nav and "Inspiration Board" in nav.group(1):
+        fail("path-a: Inspiration Board should not appear in top nav")
+    must_contain(path_a, "<h2>Leatherback sea turtle</h2>", "concepts title")
+    must_not_contain(path_a, "Leatherback sea turtle concept", "concepts no double concept")
+    must_not_contain(path_a, "Leatherback Sea Turtle inspired", "concepts no redundant inspired line")
+    must_not_contain(path_a, "Leatherback Path A", "concepts no Path A title")
+    must_not_contain(path_a, "Pictures and hotspots", "concepts no lede fluff")
     must_contain(path_a, "board:", "concepts hotspot board links")
     must_contain(path_a, "system:", "concepts gallery system labels")
 

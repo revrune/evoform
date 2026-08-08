@@ -79,18 +79,6 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--line);
       }
-      .nav-north {
-        margin: 0 0 0 auto;
-        font-size: 0.72rem;
-        letter-spacing: 0.04em;
-        color: var(--muted);
-        line-height: 1.35;
-        white-space: nowrap;
-      }
-      @media (max-width: 720px) {
-        .nav-north { margin-left: 0; width: 100%; order: 3; }
-      }
-
       .nav-brand {
         display: inline-flex;
         align-items: center;
@@ -119,7 +107,18 @@
         color: var(--muted);
       }
       .nav-links a { color: var(--muted); }
-      .nav-links a:hover { color: var(--ink); }
+      .nav-links a:hover { color: var(--ink); text-decoration: none; }
+      .nav-north {
+        margin: 0 0 0 auto;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+      @media (max-width: 720px) {
+        .nav-north { margin-left: 0; width: 100%; order: 3; }
+      }
 
       h1 {
         font-family: var(--font-display);
@@ -127,7 +126,7 @@
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -0.02em;
-        margin: 0 0 0.45rem;
+        margin: 0 0 1.5rem;
       }
       .page-kicker {
         margin: 0 0 0.4rem;
@@ -136,22 +135,6 @@
         text-transform: uppercase;
         color: var(--accent);
         font-weight: 600;
-      }
-
-      .page-sub {
-        color: var(--muted);
-        font-size: 1.02rem;
-        margin: 0 0 0.75rem;
-        max-width: 36rem;
-        line-height: 1.5;
-      }
-
-      .lede {
-        color: var(--muted);
-        font-size: 1.02rem;
-        margin: 0 0 1.75rem;
-        max-width: 36rem;
-        line-height: 1.6;
       }
 
       .toc {
@@ -435,52 +418,43 @@
         </a>
         <nav class="nav-links" aria-label="Board navigation">
           <a href="/evomarine/">EvoMarine</a>
-          <a href="/path-a/">Visual Concepts</a>
         </nav>
         <p class="nav-north">Shaped by Nature</p>
       </header>
 
       <p class="page-kicker">Inspiration</p>
       <h1>Board</h1>
-      <p class="page-sub">Quiet Extended Presence</p>
-      <p class="lede">
-        Stay in the water longer and quieter · sensors that keep working the whole
-        time. Working notes for a research prototype. Leatherback as teacher.
-        Stability held by a control computer.
-      </p>
 
       <ol class="toc" aria-label="On this board">
-        <li><span class="n">01</span><a href="#hypothesis">Active stability underwater · the control computer</a></li>
-        <li><span class="n">02</span><a href="#drones">What drones already prove</a></li>
-        <li><span class="n">03</span><a href="#teacher">Living teacher · leatherback</a></li>
-        <li><span class="n">04</span><a href="#architecture">Architecture direction</a></li>
-        <li><span class="n">05</span><a href="#transfer">What moves into the prototype first</a></li>
-        <li><span class="n">06</span><a href="#grounding">Prior work · trial one</a></li>
-        <li><span class="n">07</span><a href="#open">Open slots · collaborators</a></li>
-        <li><span class="n">08</span><a href="#horizon">A quieter design shift</a></li>
+        <li><span class="n">01</span><a href="#hypothesis">Active stability</a></li>
+        <li><span class="n">02</span><a href="#drones">What drones prove</a></li>
+        <li><span class="n">03</span><a href="#teacher">Leatherback sea turtle</a></li>
+        <li><span class="n">04</span><a href="#architecture">Architecture</a></li>
+        <li><span class="n">05</span><a href="#transfer">First prototype</a></li>
+        <li><span class="n">06</span><a href="#grounding">Prior work</a></li>
+        <li><span class="n">07</span><a href="#open">Open</a></li>
+        <li><span class="n">08</span><a href="#horizon">Horizon</a></li>
       </ol>
 
       <!-- 01 Active stability · F-16 -->
       <section class="block" id="hypothesis">
-        <p class="section-label">01 · Hypothesis · Synthetic + Living</p>
-        <h2>Active stability underwater · the control computer</h2>
-        <p class="lane">Founder note · Rua · avionics systems · F-16</p>
+        <p class="section-label">01</p>
+        <h2>Active stability</h2>
+        <p class="lane">Founder note · F-16</p>
 
         <p>
-          The F-16 Fighting Falcon is purposefully agile. It behaves more like a
-          dart than a glider. A human cannot hold a precise trajectory without the
-          flight control computer. Relaxed static stability opens the design space;
-          the computer makes that space flyable.
+          The F-16 is built to be agile. It behaves more like a dart than a glider.
+          A human cannot hold a precise path without the flight control computer.
+          The computer makes that open design space flyable.
         </p>
 
         <div class="callout">
-          <p class="k">Core claim (working)</p>
+          <p class="k">Working claim</p>
           <p>
-            EvoMarine’s first prototype should treat attitude and path control the
-            way high-performance airframes treat flight control: a
-            <strong>dedicated control computer</strong> that holds quiet
-            trajectories when the hull alone is not enough · especially hover, slow
-            station-keeping, and low-disturbance loiter near marine life.
+            EvoMarine’s first prototype should use a
+            <strong>dedicated control computer</strong> to hold quiet paths when the
+            hull alone is not enough · hover, slow hold, and calm loiter near marine
+            life.
           </p>
         </div>
 
@@ -532,7 +506,7 @@
           </article>
         </div>
 
-        <h3>What makes the F-16 flight control system unique</h3>
+        <h3>Why the F-16 control system matters</h3>
         <div class="table-wrap">
           <table class="arch wide">
             <tbody>
@@ -542,27 +516,27 @@
               </tr>
               <tr>
                 <th scope="row">Full fly-by-wire</th>
-                <td>Continuous surface drive from the flight control computer · pilot sets rate and g demand.</td>
+                <td>Surfaces driven by the flight computer · pilot sets rate and g demand.</td>
               </tr>
               <tr>
-                <th scope="row">Quadruplex redundancy</th>
-                <td>Four independent channels · graceful degradation if one fails.</td>
+                <th scope="row">Four-way backup</th>
+                <td>Four independent channels · still works if one fails.</td>
               </tr>
               <tr>
-                <th scope="row">High-rate sensing</th>
-                <td>Accelerometers, rate gyros, air data · continuous correction at high rate.</td>
+                <th scope="row">Fast sensing</th>
+                <td>Accelerometers, rate gyros, air data · continuous correction.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3>Transfer map · F-16 pedigree</h3>
+        <h3>Air to water</h3>
         <div class="table-wrap">
           <table class="arch wide transfer-map">
             <thead>
               <tr>
                 <th scope="col">Air · F-16</th>
-                <th scope="col">Water · Path A (hypothesis)</th>
+                <th scope="col">Water · working idea</th>
               </tr>
             </thead>
             <tbody>
@@ -572,11 +546,11 @@
               </tr>
               <tr>
                 <td>Rate and g demand from the stick</td>
-                <td>Quiet hover and slow transit as outer hold targets</td>
+                <td>Quiet hover and slow transit as the outer goals</td>
               </tr>
               <tr>
                 <td>Flight control computer</td>
-                <td>Underwater control computer · IMU, depth, optional DVL</td>
+                <td>Underwater control computer · attitude, depth, optional speed-over-ground</td>
               </tr>
             </tbody>
           </table>
@@ -604,17 +578,13 @@
             Lessons from fly-by-wire, drones, and research AUVs.
           </p>
         </div>
-
-        <p class="muted" style="margin-top:1.25rem">
-          <a href="#drones">What drones already prove →</a>
-        </p>
       </section>
 
       <!-- 02 Drones -->
       <section class="block" id="drones">
-        <p class="section-label">02 · Everyday proof · Synthetic lane</p>
-        <h2>What drones already prove</h2>
-        <p class="lane">Consumer multirotor · flight stacks · open source</p>
+        <p class="section-label">02</p>
+        <h2>What drones prove</h2>
+        <p class="lane">Everyday multirotor · open flight stacks</p>
 
         <p>
           A typical multirotor is not passively stable. Tip it and it wants to keep
@@ -712,22 +682,17 @@
           </p>
         </div>
 
-        <p class="muted" style="margin-top:1.25rem">
-          Drones prove the control pattern at everyday weight. The leatherback
-          proves efficient presence in a living body. EvoMarine joins them
-          underwater. <a href="#teacher">Living teacher →</a>
-        </p>
       </section>
 
       <!-- 03 Leatherback -->
       <section class="block" id="teacher">
-        <p class="section-label">03 · Living · Dermochelys coriacea</p>
-        <h2>Leatherback as teacher</h2>
+        <p class="section-label">03</p>
+        <h2>Leatherback sea turtle</h2>
         <p>
           Evolution already solved long-range efficiency, pressure-tolerant volume,
           continuous skin, ridge lines, and flipper-style drive at large size. We
-          take those <strong>mechanisms</strong> into a made platform. Look-alike
-          follows what works, not the other way around.
+          take those ideas into a made platform. Look-alike follows what works, not
+          the other way around.
         </p>
 
         <div class="grid two">
@@ -754,7 +719,7 @@
               <img src="/path-a/teachers/leatherback-surface.jpg" alt="" loading="lazy" />
             </button>
             <div class="body">
-              <h3>Surface language</h3>
+              <h3>At the surface</h3>
               <p><em>Long body, ridge line, quiet outline in open water.</em></p>
               <span class="credit">Footage courtesy David Currie · Instagram @dcurrie_drones</span>
             </div>
@@ -805,8 +770,8 @@
 
       <!-- 04 Architecture -->
       <section class="block" id="architecture">
-        <p class="section-label">04 · Architecture direction</p>
-        <h2>Hull · energy · actuation</h2>
+        <p class="section-label">04</p>
+        <h2>Architecture</h2>
         <div class="table-wrap">
           <table class="arch">
             <tbody>
@@ -841,8 +806,8 @@
 
       <!-- 05 First hull -->
       <section class="block" id="transfer">
-        <p class="section-label">05 · First hull · what goes in first</p>
-        <h2>What moves into the prototype first</h2>
+        <p class="section-label">05</p>
+        <h2>First prototype</h2>
         <p class="muted">
           Quieter and more efficient · longer hold · deploy that fits the real weight.
         </p>
@@ -850,7 +815,7 @@
           <li><strong>1 · Control computer</strong> · hold attitude and depth · light thruster use · log noise and power in the tank</li>
           <li><strong>2 · Leatherback-shaped hull</strong> · ridges that do a job · continuous outer skin</li>
           <li><strong>3 · Mic first</strong> · layout and mounts early</li>
-          <li><strong>4 · Buoyancy-assisted hover</strong> · less thruster so listening leads · long coast in transit</li>
+          <li><strong>4 · Buoyancy hover</strong> · less thruster so listening leads · long coast in transit</li>
           <li><strong>5 · Clean exit</strong> · leave the scene gently when it is time</li>
         </ul>
         <div class="chips">
@@ -869,15 +834,12 @@
           <li><strong>Next</strong> · Better efficiency only if sized right · catch-up transit · camera that turns while the body holds</li>
           <li><strong>Later</strong> · Deeper work · flexible volume under continuous skin · study toward 200 m+</li>
         </ul>
-        <p style="margin-top:1.25rem">
-          Pictures and hotspots on <a href="/path-a/">Visual Concepts →</a>
-        </p>
       </section>
 
       <!-- 06 Prior work + evidence -->
       <section class="block" id="grounding">
-        <p class="section-label">06 · Prior work · trial one</p>
-        <h2>We build on</h2>
+        <p class="section-label">06</p>
+        <h2>Prior work</h2>
 
         <div class="grid two">
           <article class="card">
@@ -927,23 +889,22 @@
 
       <!-- 07 Open -->
       <section class="block" id="open">
-        <p class="section-label">07 · Living document</p>
-        <h2>Open slots · collaborators</h2>
+        <p class="section-label">07</p>
+        <h2>Open</h2>
         <div class="note">
-          <p class="k">Open parameters</p>
+          <p class="k">Still open</p>
           <p class="muted" style="margin:0">
-            Length and displacement for prototype 1 · foil count and degrees of
-            freedom · sensor set for the stability loop · shallow-trial depth rating
-            and hours target. Geometry stays flexible until scale and foil choice
-            are set.
+            Length and weight for prototype 1 · how many fins · which sensors for
+            the stability loop · shallow-trial depth and hours target. Shape stays
+            flexible until scale and fins are set.
           </p>
         </div>
       </section>
 
       <!-- 08 Horizon -->
       <section class="block" id="horizon">
-        <p class="section-label">08 · Horizon</p>
-        <h2>A quieter design shift</h2>
+        <p class="section-label">08</p>
+        <h2>Horizon</h2>
         <p>
           Much of the last century’s underwater craft chased power, depth, or survey
           speed. Another path is opening: stay longer by disturbing less · let a
@@ -963,12 +924,7 @@
           <span style="opacity:0.4"> · </span>
           <a href="/evomarine/">EvoMarine</a>
           <span style="opacity:0.4"> · </span>
-          <a href="/path-a/">Visual Concepts</a>
-          <span style="opacity:0.4"> · </span>
           <a href="https://cetavox.com/">CetaVox</a>
-        </p>
-        <p style="margin:0.65rem 0 0; font-size:0.8rem; opacity:0.85">
-          Team Rua · Eli · Kai · collaborators · research prototype
         </p>
       </footer>
     </div>

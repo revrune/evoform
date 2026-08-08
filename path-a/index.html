@@ -264,11 +264,20 @@
         .hotspot::after { animation: none; }
         html { scroll-behavior: auto; }
       }
+      .viewer-lead {
+        margin: 0 0 0.75rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.4;
+      }
       .viewer-cap {
         margin-top: 0.65rem;
         font-family: var(--font-mono);
         font-size: 0.72rem;
         color: var(--faint);
+      }
+      .explorer-head h2 {
+        margin: 0;
       }
       .panel {
         border-radius: 0.85rem;
@@ -415,7 +424,6 @@
         </a>
         <nav class="nav-links" aria-label="Concepts navigation">
           <a href="/evomarine/">EvoMarine</a>
-          <a href="/path-a/board/">Inspiration Board</a>
         </nav>
         <p class="nav-north">Shaped by Nature</p>
       </header>
@@ -423,41 +431,27 @@
       <div class="wrap-narrow" style="padding: 0; max-width: var(--max)">
         <p class="page-kicker">Visual</p>
         <h1>Concepts</h1>
-        <p class="page-sub">Leatherback as teacher · smooth outer skin · early research build</p>
-        <p class="lede">
-          Pictures and hotspots for the first platform. Shape, size, and where the
-          sensors sit. How we hold and steer it lives on the board.
-        </p>
-        <p class="cross">
-          Size, build order, and control live on the
-          <a href="/path-a/board/">Inspiration Board</a>.
-        </p>
       </div>
 
       <section class="block" id="explorer">
         <div class="explorer-head">
           <div>
-            <p class="section-label">Form</p>
-            <h2>Leatherback Path A</h2>
-            <p class="section-sub" style="margin-bottom: 0">
-              Click a point on the shape. The living teacher is the leatherback.
-            </p>
+            <h2>Leatherback sea turtle</h2>
           </div>
           <div class="tabs" role="tablist" aria-label="Views" id="view-tabs"></div>
         </div>
         <div class="explorer-grid">
           <div>
             <div class="viewer" id="viewer">
-              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Path A form view" />
+              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Leatherback sea turtle inspired form" />
             </div>
             <p class="viewer-cap" id="viewer-cap"></p>
           </div>
           <aside>
             <div class="panel" id="hotspot-panel">
-              <p class="section-label">Hotspot</p>
               <h3 id="hot-title">Ridge lines</h3>
               <p id="hot-body">Five long ridges like a leatherback shell. We still need tank tests before we claim they help flow.</p>
-              <a class="hot-link" id="hot-link" href="/path-a/board/#teacher">On the Inspiration Board →</a>
+              <a class="hot-link" id="hot-link" href="/path-a/board/#teacher">Board notes →</a>
             </div>
             <div class="hotlist" id="hotlist"></div>
           </aside>
@@ -465,9 +459,6 @@
       </section>
 
       <section class="block" id="gallery">
-        <p class="section-label">Gallery</p>
-        <h2>More views</h2>
-        <p class="section-sub">Extra studies beyond the hotspot model.</p>
         <div class="gallery" id="gallery-grid"></div>
       </section>
 
@@ -477,8 +468,6 @@
           <a href="/">EvoForm</a>
           <span style="opacity:0.4"> · </span>
           <a href="/evomarine/">EvoMarine</a>
-          <span style="opacity:0.4"> · </span>
-          <a href="/path-a/board/">Inspiration Board</a>
           <span style="opacity:0.4"> · </span>
           <a href="https://cetavox.com/">CetaVox</a>
         </p>
@@ -615,7 +604,7 @@
         if (h.board) {
           hotLink.href = h.board;
           hotLink.hidden = false;
-          hotLink.textContent = "On the Inspiration Board →";
+          hotLink.textContent = "Board notes →";
         } else {
           hotLink.hidden = true;
         }
