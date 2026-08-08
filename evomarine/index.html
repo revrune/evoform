@@ -140,17 +140,14 @@
 
       .paths a,
       .paths .p-soon {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 0.75rem 1.25rem;
-        padding: 0.8rem 0;
+        display: block;
+        padding: 0.85rem 0;
         color: inherit;
         text-decoration: none;
         border-bottom: none;
         border-radius: 0.25rem;
         font-size: 0.98rem;
-        line-height: 1.35;
+        line-height: 1.4;
       }
 
       .paths a {
@@ -168,6 +165,7 @@
       }
 
       .paths .p-title {
+        display: block;
         font-weight: 600;
         letter-spacing: -0.01em;
         color: var(--ink);
@@ -184,6 +182,15 @@
         font-weight: 500;
       }
 
+      .paths .p-job {
+        display: block;
+        margin: 0.25rem 0 0;
+        font-size: 0.9rem;
+        font-weight: 450;
+        color: var(--muted);
+        max-width: 24rem;
+      }
+
       .paths .p-soon {
         cursor: default;
       }
@@ -191,6 +198,10 @@
       .paths .p-soon .p-title {
         color: rgba(230, 240, 236, 0.55);
         font-weight: 550;
+      }
+
+      .paths .p-soon .p-job {
+        color: rgba(143, 168, 158, 0.75);
       }
 
       a {
@@ -240,16 +251,19 @@
         <li>
           <a href="/path-a/board/">
             <span class="p-title">Inspiration Board</span>
+            <span class="p-job">Why and how · teachers · control · trial frame</span>
           </a>
         </li>
         <li>
           <a href="/path-a/">
             <span class="p-title">Visual Concepts</span>
+            <span class="p-job">What it looks like · form language · hotspots</span>
           </a>
         </li>
         <li>
           <div class="p-soon" aria-disabled="true">
             <span class="p-title">Built Prototypes</span>
+            <span class="p-job">What has been made · none yet</span>
           </div>
         </li>
       </ul>

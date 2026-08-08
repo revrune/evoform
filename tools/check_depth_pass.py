@@ -167,8 +167,19 @@ def main() -> None:
     must_contain(hub, "Inspiration Board", "hub path")
     must_contain(hub, "Visual Concepts", "hub path")
     must_contain(hub, "Built Prototypes", "hub path soon")
+    must_contain(hub, "none yet", "hub prototypes empty state")
+    must_contain(hub, "Why and how", "hub board job line")
+    must_contain(hub, "What it looks like", "hub concepts job line")
 
-    print("PASS: depth + redundancy gates on board + path-a + frozen home/hub")
+    # Board lead phrase + Concepts bridge (Eli craft)
+    must_contain(board, "Quiet Extended Presence", "board primary phrase")
+    must_contain(board, "hang with the water column", "board supporting line")
+    must_contain(path_a, "control path live on the", "concepts bridge copy")
+    must_contain(path_a, "board:", "concepts hotspot board links")
+    must_contain(path_a, 'system: "Control"', "concepts gallery system labels")
+
+    print("PASS: depth + redundancy + Eli craft gates on hub/board/path-a")
+
 
 
 if __name__ == "__main__":

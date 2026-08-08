@@ -282,10 +282,17 @@
         font-weight: 600;
       }
       .panel p {
-        margin: 0;
+        margin: 0 0 0.65rem;
         font-size: 0.9rem;
         color: var(--muted);
         line-height: 1.55;
+      }
+      .panel p:last-child { margin-bottom: 0; }
+      .panel .hot-link {
+        display: inline-block;
+        margin-top: 0.15rem;
+        font-size: 0.85rem;
+        font-weight: 550;
       }
       .hotlist {
         margin-top: 0.75rem;
@@ -337,9 +344,21 @@
         transition: transform 0.3s ease;
       }
       .g-card:hover img { transform: scale(1.03); }
-      .g-card span {
+      .g-card .g-meta {
         display: block;
         padding: 0.7rem 0.8rem;
+      }
+      .g-card .g-sys {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 0.25rem;
+      }
+      .g-card .g-title {
+        display: block;
         font-size: 0.8rem;
         color: var(--muted);
       }
@@ -406,11 +425,11 @@
         <h1>Form language</h1>
         <p class="page-sub">Leatherback as teacher · continuous skin · quiet research scale</p>
         <p class="lede">
-          Interactive form language for a first Path A platform. Hotspots and
-          concept studies · sensors and quiet loiter in mind.
+          Interactive form language for a first Path A platform. Shape, scale, and
+          sensor placement · not the control essay.
         </p>
         <p class="cross">
-          Envelope, transfer stack, and Now · Next · Later live on the
+          Envelope, transfer stack, and control path live on the
           <a href="/path-a/board/">Inspiration Board</a>.
         </p>
       </div>
@@ -436,8 +455,9 @@
           <aside>
             <div class="panel" id="hotspot-panel">
               <p class="section-label">Hotspot</p>
-              <h3 id="hot-title">—</h3>
-              <p id="hot-body">Select a hotspot on the model.</p>
+              <h3 id="hot-title">Longitudinal ridges</h3>
+              <p id="hot-body">Five keels as leatherback streamwise geometry · test at Path A Reynolds before claiming flow benefit.</p>
+              <a class="hot-link" id="hot-link" href="/path-a/board/#teacher">On the Inspiration Board →</a>
             </div>
             <div class="hotlist" id="hotlist"></div>
           </aside>
@@ -478,10 +498,10 @@
           image: "/path-a/mockups/form-threequarter.jpg",
           caption: "Leatherback-inspired planform · continuous skin · ridge spine",
           hotspots: [
-            { id: "ridges", x: 48, y: 38, title: "Longitudinal ridges", body: "Five keels inspired by leatherback carapace. Possible streamwise flow control · unproven at Path A Reynolds until tested." },
-            { id: "skin", x: 55, y: 55, title: "Continuous skin", body: "Foul-aware outer fairing. No open osteoderm gaps on first hull. Soft cover over any later compliance structure." },
-            { id: "foils", x: 42, y: 68, title: "Control foils", body: "Attitude and hover assist surfaces · machine joints from flipper geometry." },
-            { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Hydrophone fairing path + camera package." }
+            { id: "ridges", x: 48, y: 38, title: "Longitudinal ridges", body: "Five keels as leatherback streamwise geometry · test at Path A Reynolds before claiming flow benefit.", board: "/path-a/board/#teacher" },
+            { id: "skin", x: 55, y: 55, title: "Continuous skin", body: "Foul-aware outer fairing on first hull · no open osteoderm gaps · soft cover if compliance comes later.", board: "/path-a/board/#architecture" },
+            { id: "foils", x: 42, y: 68, title: "Control foils", body: "Attitude and hover assist surfaces · machine joints from flipper geometry, not a robot animal.", board: "/path-a/board/#architecture" },
+            { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Hydrophone fairing path plus camera package at the quiet end of the hull.", board: "/path-a/board/#transfer" }
           ]
         },
         {
@@ -490,9 +510,9 @@
           image: "/path-a/mockups/form-profile.jpg",
           caption: "Side silhouette · instrument head · sparse rear thrust",
           hotspots: [
-            { id: "head", x: 18, y: 48, title: "Instrument head", body: "Hydrophone isolation and steerable optics." },
-            { id: "carapace", x: 48, y: 36, title: "Carapace body", body: "Low, long volume for battery, buoyancy, and dry core. Leatherback planform as packing teacher." },
-            { id: "thrust", x: 88, y: 52, title: "Sparse thruster", body: "Recessed transit thrust. Hover prefers buoyancy + light control, not continuous prop wash." }
+            { id: "head", x: 18, y: 48, title: "Instrument head", body: "Hydrophone isolation and steerable optics so the platform can stay still while the view moves.", board: "/path-a/board/#transfer" },
+            { id: "carapace", x: 48, y: 36, title: "Carapace body", body: "Low, long volume for battery, buoyancy, and dry core · leatherback planform as packing teacher.", board: "/path-a/board/#teacher" },
+            { id: "thrust", x: 88, y: 52, title: "Sparse thruster", body: "Recessed transit thrust · hover prefers buoyancy and light control, not continuous prop wash.", board: "/path-a/board/#architecture" }
           ]
         },
         {
@@ -501,9 +521,9 @@
           image: "/path-a/mockups/form-top.jpg",
           caption: "Top orthographic · ridge geometry · foil placement",
           hotspots: [
-            { id: "spine", x: 50, y: 48, title: "Ridge spine", body: "Multi-ridge centerline for stiffness language and possible flow attachment." },
-            { id: "midfoils", x: 50, y: 28, title: "Mid foils", body: "Paired control surfaces for roll/yaw assist during quiet loiter and slow transit." },
-            { id: "stern", x: 88, y: 50, title: "Stern thrust axis", body: "Single rear axis for efficient low-speed transit when catch-up is needed." }
+            { id: "spine", x: 50, y: 48, title: "Ridge spine", body: "Multi-ridge centerline for stiffness language and possible flow attachment when regime-matched.", board: "/path-a/board/#teacher" },
+            { id: "midfoils", x: 50, y: 28, title: "Mid foils", body: "Paired surfaces for roll and yaw assist during quiet loiter and slow transit.", board: "/path-a/board/#architecture" },
+            { id: "stern", x: 88, y: 50, title: "Stern thrust axis", body: "Single rear axis for efficient low-speed transit when catch-up is needed.", board: "/path-a/board/#architecture" }
           ]
         },
         {
@@ -512,21 +532,21 @@
           image: "/path-a/mockups/systems-cutaway.jpg",
           caption: "Internal layout · battery · buoyancy · sensors · thrust",
           hotspots: [
-            { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Staggered cylindrical cells, passive conduction to housing. Cold-water layout ready for Arctic-adjacent loiter." },
-            { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster wash so hydrophones hear the scene, not the vehicle." },
-            { id: "hydro", x: 70, y: 42, title: "Hydrophone mounts", body: "First-class listening layout. Isolation from motors and flow noise is a primary design problem." },
-            { id: "cam", x: 28, y: 68, title: "Camera gimbal", body: "Prefer steerable optics so the platform can stay still while the view moves." }
+            { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Mass-first pack room for multi-hour loiter · shrink after tank learning.", board: "/path-a/board/#transfer" },
+            { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster wash so hydrophones hear the scene, not the vehicle.", board: "/path-a/board/#architecture" },
+            { id: "hydro", x: 70, y: 42, title: "Hydrophone mounts", body: "First-class listening layout · isolation from motors and flow noise is a primary design problem.", board: "/path-a/board/#transfer" },
+            { id: "cam", x: 28, y: 68, title: "Camera gimbal", body: "Steerable optics preferred so the platform holds while the view moves.", board: "/path-a/board/#transfer" }
           ]
         }
       ];
 
-      /* Studies beyond the explorer view set (form / profile / plan / systems). */
+      /* Studies beyond the explorer view set · labeled by system. */
       const gallery = [
-        { src: "/path-a/mockups/hover.jpg", title: "Hover language" },
-        { src: "/path-a/mockups/boat-deploy.jpg", title: "Boat deploy" },
-        { src: "/path-a/mockups/vs-antigoal.jpg", title: "Vs thruster box" },
-        { src: "/path-a/mockups/riblets.jpg", title: "Riblet study" },
-        { src: "/path-a/mockups/volume-later.jpg", title: "Later · volume-following" }
+        { src: "/path-a/mockups/hover.jpg", system: "Control", title: "Hover language" },
+        { src: "/path-a/mockups/boat-deploy.jpg", system: "Form", title: "Boat or crane deploy" },
+        { src: "/path-a/mockups/vs-antigoal.jpg", system: "Form", title: "Vs thruster box" },
+        { src: "/path-a/mockups/riblets.jpg", system: "Energy", title: "Riblet study" },
+        { src: "/path-a/mockups/volume-later.jpg", system: "Form", title: "Later · volume-following" }
       ];
 
       let viewId = views[0].id;
@@ -538,6 +558,7 @@
       const viewerCap = document.getElementById("viewer-cap");
       const hotTitle = document.getElementById("hot-title");
       const hotBody = document.getElementById("hot-body");
+      const hotLink = document.getElementById("hot-link");
       const hotlist = document.getElementById("hotlist");
       const galleryGrid = document.getElementById("gallery-grid");
       const lightbox = document.getElementById("lightbox");
@@ -591,6 +612,13 @@
         });
         hotTitle.textContent = h.title;
         hotBody.textContent = h.body;
+        if (h.board) {
+          hotLink.href = h.board;
+          hotLink.hidden = false;
+          hotLink.textContent = "On the Inspiration Board →";
+        } else {
+          hotLink.hidden = true;
+        }
         hotlist.innerHTML = "";
         v.hotspots.forEach((hs) => {
           const b = document.createElement("button");
@@ -611,8 +639,15 @@
           const b = document.createElement("button");
           b.type = "button";
           b.className = "g-card";
-          b.innerHTML = '<div class="thumb"><img src="' + g.src + '" alt="" loading="lazy" /></div><span>' + g.title + "</span>";
-          b.addEventListener("click", () => openLightbox(g.src, g.title));
+          b.innerHTML =
+            '<div class="thumb"><img src="' +
+            g.src +
+            '" alt="" loading="lazy" /></div><span class="g-meta"><span class="g-sys">' +
+            g.system +
+            '</span><span class="g-title">' +
+            g.title +
+            "</span></span>";
+          b.addEventListener("click", () => openLightbox(g.src, g.system + " · " + g.title));
           galleryGrid.appendChild(b);
         });
       }
