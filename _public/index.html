@@ -68,6 +68,10 @@
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
         padding: max(3.25rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
           max(3.5rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
       }
@@ -202,10 +206,22 @@
       }
 
       .related {
-        margin: 0 0 2.75rem;
-        font-size: 0.95rem;
+        list-style: none;
+        margin: auto 0 0;
+        padding: 0;
+        border: 0;
+        font-size: 0.92rem;
         color: var(--muted);
         line-height: 1.5;
+        max-width: 28rem;
+      }
+
+      .related li {
+        margin: 0 0 0.65rem;
+      }
+
+      .related li:last-child {
+        margin-bottom: 0;
       }
 
       .related-link {
@@ -301,9 +317,14 @@
         </li>
       </ul>
 
-      <p class="related">
-        <a class="related-link" href="https://cetavox.com/">CetaVox · Deciphering Cetacean Language</a>
-      </p>
+      <ul class="related" aria-label="Sister and sibling projects">
+        <li>
+          <a class="related-link" href="https://cetavox.com/">CetaVox · Deciphering Cetacean Language</a>
+        </li>
+        <li>
+          <a class="related-link" href="https://leitnerlearning.com/">Leitner Learning · Language Learning</a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
