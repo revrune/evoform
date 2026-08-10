@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EvoForm">
+  <!-- Quiet form mark · continuous skin · ridge spine · non-figurative · sea-ink -->
+  <rect width="64" height="64" rx="13" fill="#0a1412"/>
+  <rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="#5ec9a8" stroke-width="1.75" opacity="0.4"/>
+  <!-- Planform: long quiet body (works as hull / craft section, not an animal) -->
+  <path
+    fill="#5ec9a8"
+    d="M12 34.5
+       C14 24 22 16.5 32 16.5
+       C44 16.5 52.5 24 54.5 34
+       C52.5 43.5 44 50.5 32 50.5
+       C20 50.5 13.5 43 12 34.5 Z"
+    opacity="0.22"
+  />
+  <path
+    fill="none"
+    stroke="#5ec9a8"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M13.5 34
+       C15.5 25.5 22.5 19 32 19
+       C43.5 19 51 25.5 53 34
+       C51 42 43.5 47.5 32 47.5
+       C20.5 47.5 14.5 41.5 13.5 34 Z"
+  />
+  <!-- Longitudinal ridges · form language, not decoration -->
+  <path fill="none" stroke="#5ec9a8" stroke-width="1.6" stroke-linecap="round" opacity="0.95"
+        d="M18 34 H48"/>
+  <path fill="none" stroke="#5ec9a8" stroke-width="1.35" stroke-linecap="round" opacity="0.55"
+        d="M20 29.2 H46"/>
+  <path fill="none" stroke="#5ec9a8" stroke-width="1.35" stroke-linecap="round" opacity="0.55"
+        d="M20 38.8 H46"/>
+  <!-- Sensor / leading intent · technical point, not an eye -->
+  <circle cx="48.5" cy="34" r="2.6" fill="#5ec9a8"/>
+</svg>

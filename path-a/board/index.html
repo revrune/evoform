@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Inspiration Board · EvoMarine · EvoForm</title>
+    <meta
+      name="description"
+      content="EvoMarine Inspiration Board · Quiet Extended Presence · working hypothesis · research prototype."
+    />
+    <meta name="theme-color" content="#0a1412" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://evoform.no/path-a/board" />
+    <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
+    <meta property="og:title" content="Inspiration Board · EvoMarine · EvoForm" />
+    <meta
+      property="og:description"
+      content="Quiet Extended Presence · teachers · control · trial frame."
+    />
+    <meta property="og:url" content="https://evoform.no/path-a/board" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EvoForm" />
+    <meta property="og:image" content="https://evoform.no/path-a/teachers/leatherback-rear.jpg" />
+    <style>
+      :root {
+        --bg: #0a1412;
+        --surface: #0e1816;
+        --surface-2: #121f1c;
+        --ink: #e6f0ec;
+        --muted: #8fa89e;
+        --faint: #5c756c;
+        --accent: #5ec9a8;
+        --line: rgba(230, 240, 236, 0.12);
+        --line-strong: rgba(230, 240, 236, 0.22);
+        --warn: #c9a45e;
+        --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        --max: 42rem;
+        --wide: 56rem;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { background: var(--bg); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        color: var(--ink);
+        font-family: var(--font-ui);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        background:
+          radial-gradient(ellipse 80% 50% at 50% -10%, rgba(94, 201, 168, 0.07), transparent 55%),
+          var(--bg);
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 0.2rem;
+      }
+      img { max-width: 100%; display: block; }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: max(1.5rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
+          max(3rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
+      }
+      .wrap-wide { max-width: var(--wide); }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem 1.25rem;
+        margin: 0 0 1.85rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        color: inherit;
+        text-decoration: none;
+      }
+      .nav-brand:hover { text-decoration: none; }
+      .nav-brand img {
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius: 0.4rem;
+      }
+      .nav-brand .mark {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+      .nav-links a { color: var(--muted); }
+      .nav-links a:hover { color: var(--ink); text-decoration: none; }
+      .nav-north {
+        margin: 0 0 0 auto;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+      @media (max-width: 720px) {
+        .nav-north { margin-left: 0; width: 100%; order: 3; }
+      }
+
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(1.65rem, 5vw, 2.2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.5rem;
+      }
+      .page-kicker {
+        margin: 0 0 0.4rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .toc {
+        list-style: none;
+        margin: 0 0 2.5rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: rgba(94, 201, 168, 0.04);
+      }
+      .toc li {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+      }
+      .toc a { color: var(--ink); }
+      .toc a:hover { color: var(--accent); }
+      .toc .n {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--faint);
+        margin-right: 0.45rem;
+      }
+
+      section.block {
+        margin: 0 0 2.75rem;
+        padding-top: 0.25rem;
+      }
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin: 0 0 0.45rem;
+      }
+      h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.3rem, 3.5vw, 1.65rem);
+        font-weight: 650;
+        line-height: 1.25;
+        margin: 0 0 0.75rem;
+      }
+      h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin: 1.35rem 0 0.45rem;
+      }
+      p { margin: 0 0 0.9rem; }
+      p.muted, .muted { color: var(--muted); }
+      ul.clean {
+        margin: 0 0 1rem;
+        padding: 0 0 0 1.15rem;
+        color: var(--muted);
+      }
+      ul.clean li { margin: 0 0 0.4rem; }
+      ul.clean strong { color: var(--ink); font-weight: 600; }
+
+      .callout {
+        margin: 1.1rem 0 1.35rem;
+        padding: 1rem 1.1rem;
+        border-left: 3px solid var(--accent);
+        border-radius: 0 0.55rem 0.55rem 0;
+        background: rgba(94, 201, 168, 0.06);
+      }
+      .callout p:last-child { margin-bottom: 0; }
+      .callout .k {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 0.4rem;
+      }
+
+      .lane {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--faint);
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        padding: 0.2rem 0.55rem;
+        margin: 0 0 0.75rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 0.85rem;
+        margin: 1.1rem 0 0.5rem;
+      }
+      @media (min-width: 640px) {
+        .grid.two { grid-template-columns: 1fr 1fr; }
+        .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: var(--surface);
+        overflow: hidden;
+      }
+      .card button.thumb,
+      .card .thumb {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: #06100e;
+        cursor: zoom-in;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+      }
+      .card .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.25s ease;
+      }
+      .card button.thumb:hover img { transform: scale(1.03); }
+      .card .body {
+        padding: 0.85rem 0.95rem 1rem;
+      }
+      .card .body h3 {
+        margin: 0 0 0.35rem;
+        font-size: 0.95rem;
+      }
+      .card .body p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .card .credit {
+        display: block;
+        margin-top: 0.45rem;
+        font-size: 0.72rem;
+        color: var(--faint);
+      }
+
+      .note {
+        border: 1px dashed var(--line-strong);
+        border-radius: 0.75rem;
+        padding: 1rem 1.1rem;
+        background: transparent;
+        margin: 1rem 0;
+      }
+      .note .k {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin: 0 0 0.45rem;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0.75rem 0 0;
+      }
+      .chip {
+        font-size: 0.75rem;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.3rem 0.7rem;
+        background: var(--surface-2);
+      }
+      .chip.out { color: #c48a8a; border-color: rgba(184, 92, 92, 0.35); }
+
+      .horizon {
+        margin: 1.25rem 0 0;
+        padding: 1rem 1.1rem;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: rgba(94, 201, 168, 0.04);
+      }
+      .horizon p:last-child { margin-bottom: 0; }
+      table.arch.wide th { width: 11rem; }
+      .transfer-map thead th {
+        width: auto;
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 600;
+        background: rgba(94, 201, 168, 0.05);
+      }
+      .transfer-map td:first-child { color: var(--ink); font-weight: 500; }
+
+      footer.site {
+        margin-top: 1rem;
+        padding-top: 1.35rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8125rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: rgba(6, 12, 10, 0.92);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img {
+        max-height: 90dvh;
+        max-width: 100%;
+        border-radius: 0.5rem;
+        border: 1px solid var(--line);
+        object-fit: contain;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    
+      .table-wrap {
+        margin: 1.1rem 0 0.5rem;
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        background: var(--surface);
+      }
+      table.arch {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+      }
+      table.arch th,
+      table.arch td {
+        text-align: left;
+        padding: 0.8rem 1rem;
+        vertical-align: top;
+        border-bottom: 1px solid var(--line);
+      }
+      table.arch tr:last-child th,
+      table.arch tr:last-child td { border-bottom: 0; }
+      table.arch th {
+        width: 7.5rem;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 0.85rem;
+      }
+      table.arch td {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      ol.steps {
+        margin: 0 0 1rem;
+        padding: 0 0 0 1.25rem;
+        color: var(--muted);
+      }
+      ol.steps li { margin: 0 0 0.5rem; }
+      ol.steps strong { color: var(--ink); font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap wrap-wide">
+      <header class="nav">
+        <a class="nav-brand" href="/" aria-label="EvoForm home">
+          <img src="/brand/mark.svg?v=1" width="30" height="30" alt="" />
+          <span class="mark">EvoForm</span>
+        </a>
+        <nav class="nav-links" aria-label="Board navigation">
+          <a href="/evomarine/">EvoMarine</a>
+        </nav>
+        <p class="nav-north">Shaped by Nature</p>
+      </header>
+
+      <p class="page-kicker">Inspiration</p>
+      <h1>Board</h1>
+
+      <ol class="toc" aria-label="On this board">
+        <li><span class="n">01</span><a href="#hypothesis">Active stability</a></li>
+        <li><span class="n">02</span><a href="#drones">What drones prove</a></li>
+        <li><span class="n">03</span><a href="#teacher">Leatherback sea turtle</a></li>
+        <li><span class="n">04</span><a href="#architecture">Architecture</a></li>
+        <li><span class="n">05</span><a href="#transfer">First prototype</a></li>
+        <li><span class="n">06</span><a href="#grounding">Prior work</a></li>
+        <li><span class="n">07</span><a href="#open">Open</a></li>
+        <li><span class="n">08</span><a href="#horizon">Horizon</a></li>
+      </ol>
+
+      <!-- 01 Active stability · F-16 -->
+      <section class="block" id="hypothesis">
+        <p class="section-label">01</p>
+        <h2>Active stability</h2>
+        <p class="lane">Founder note · F-16</p>
+
+        <p>
+          The F-16 is built to be agile. It behaves more like a dart than a glider.
+          A human cannot hold a precise path without the flight control computer.
+          The computer makes that open design space flyable.
+        </p>
+
+        <div class="callout">
+          <p class="k">Working claim</p>
+          <p>
+            EvoMarine’s first prototype should use a
+            <strong>dedicated control computer</strong> to hold quiet paths when the
+            hull alone is not enough · hover, slow hold, and calm loiter near marine
+            life.
+          </p>
+        </div>
+
+        <p>
+          Stability lives in software. Fast sensing and a dedicated computer free
+          the hull to stay efficient and quiet.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-airframe.jpg" data-alt="General Dynamics F-16A Fighting Falcon in flight, USAF public domain photograph">
+              <img src="/path-a/teachers/f16-airframe.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Airframe held by the loop</h3>
+              <p><em>Relaxed static stability made the airframe agile · the flight control computer made it flyable.</em></p>
+              <span class="credit">USAF · public domain via Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-sidestick.jpg" data-alt="F-16 side-stick controller in the cockpit">
+              <img src="/path-a/teachers/f16-sidestick.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Side-stick</h3>
+              <p><em>Small stick inputs · the computer scales how hard the surfaces move.</em></p>
+              <span class="credit">Public domain via Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-fbw-concept.svg" data-alt="Diagram of fly-by-wire control path">
+              <img src="/path-a/teachers/f16-fbw-concept.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Fly-by-wire path</h3>
+              <p><em>Sensors and computers close the loop · surfaces follow the computer.</em></p>
+              <span class="credit">EvoForm diagram</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/f16-planform.svg" data-alt="Three-view line drawing of the F-16 Fighting Falcon">
+              <img src="/path-a/teachers/f16-planform.svg" alt="" loading="lazy" style="object-fit:contain;background:#f4f7f5;padding:0.75rem" />
+            </button>
+            <div class="body">
+              <h3>Plan view</h3>
+              <p><em>Shape for performance · the computer keeps it flying true.</em></p>
+              <span class="credit">Public domain · Wikimedia Commons</span>
+            </div>
+          </article>
+        </div>
+
+        <h3>Why the F-16 control system matters</h3>
+        <div class="table-wrap">
+          <table class="arch wide">
+            <tbody>
+              <tr>
+                <th scope="row">Relaxed static stability</th>
+                <td>Airframe built to respond fast · the computer steadies it all the time.</td>
+              </tr>
+              <tr>
+                <th scope="row">Full fly-by-wire</th>
+                <td>Surfaces driven by the flight computer · pilot sets rate and g demand.</td>
+              </tr>
+              <tr>
+                <th scope="row">Four-way backup</th>
+                <td>Four independent channels · still works if one fails.</td>
+              </tr>
+              <tr>
+                <th scope="row">Fast sensing</th>
+                <td>Accelerometers, rate gyros, air data · continuous correction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Air to water</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Air · F-16</th>
+                <th scope="col">Water · working idea</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Agile airframe · multi-axis rates · fly-by-wire</td>
+                <td>Hull that is easy to tip at slow hold · computer steadies it</td>
+              </tr>
+              <tr>
+                <td>Rate and g demand from the stick</td>
+                <td>Quiet hover and slow transit as the outer goals</td>
+              </tr>
+              <tr>
+                <td>Flight control computer</td>
+                <td>Underwater control computer · attitude, depth, optional speed-over-ground</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>How control builds</h3>
+        <ol class="steps">
+          <li>
+            <strong>Hold attitude and depth well</strong> with solid sensing of
+            where the vehicle is
+          </li>
+          <li>
+            <strong>Then hold place</strong> · stay put quietly before long runs
+          </li>
+          <li>
+            <strong>Smarter control later</strong> if the simple loops are not enough
+            · still on the vehicle, still real time
+          </li>
+        </ol>
+
+        <div class="callout">
+          <p class="k">Two computers</p>
+          <p>
+            A small stability computer · separate from the science payload computer.
+            Lessons from fly-by-wire, drones, and research AUVs.
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 Drones -->
+      <section class="block" id="drones">
+        <p class="section-label">02</p>
+        <h2>What drones prove</h2>
+        <p class="lane">Everyday multirotor · open flight stacks</p>
+
+        <p>
+          A typical multirotor is not passively stable. Tip it and it wants to keep
+          tipping. Four independent motors, coupled axes, fast dynamics. No human
+          can juggle thrust on each prop in real time the way the vehicle needs.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-multirotor-flight.jpg" data-alt="Multirotor drone in flight against sky">
+              <img src="/path-a/teachers/drone-multirotor-flight.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Multirotor in flight</h3>
+              <p><em>Everyday unstable airframe · held by a flight controller.</em></p>
+              <span class="credit">Wikimedia Commons · public media</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-flight-controller-board.png" data-alt="Pixhawk-class flight controller board">
+              <img src="/path-a/teachers/drone-flight-controller-board.png" alt="" loading="lazy" style="object-fit:contain;background:#0e1816;padding:0.75rem" />
+            </button>
+            <div class="body">
+              <h3>Flight controller board</h3>
+              <p><em>Light stability computer · IMU + high-rate loop · consumer weight.</em></p>
+              <span class="credit">Pixhawk-class · Wikimedia Commons</span>
+            </div>
+          </article>
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/drone-control-stack.svg" data-alt="Three-layer control stack diagram" style="aspect-ratio:16/9">
+              <img src="/path-a/teachers/drone-control-stack.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Layered stack</h3>
+              <p><em>Inner: attitude · Middle: velocity/position · Outer: “go there / hold here.”</em></p>
+              <span class="credit">EvoForm diagram</span>
+            </div>
+          </article>
+        </div>
+
+        <p>
+          A multirotor tips and keeps tipping without the loop. The pilot never
+          balances four motors. The pilot commands intent. The same layered idea,
+          tuned for water, is the practical path for EvoMarine quiet hold.
+        </p>
+        <p class="muted">
+          Military fly-by-wire is heavy because of certification and combat rules.
+          Drone controllers are light because the job allows simpler backups. Open
+          stacks like PX4 and ArduPilot show this is normal engineering, not exotic
+          research.
+        </p>
+
+        <h3>Layer transfer</h3>
+        <div class="table-wrap">
+          <table class="arch wide transfer-map">
+            <thead>
+              <tr>
+                <th scope="col">Layer</th>
+                <th scope="col">Air drone</th>
+                <th scope="col">EvoMarine (hypothesis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inner</td>
+                <td>Attitude rate / attitude</td>
+                <td>Attitude + depth</td>
+              </tr>
+              <tr>
+                <td>Middle</td>
+                <td>Velocity / position</td>
+                <td>Station-keep / slow track</td>
+              </tr>
+              <tr>
+                <td>Outer</td>
+                <td>Waypoint / “go there”</td>
+                <td>“Hold here quietly”</td>
+              </tr>
+              <tr>
+                <td>Sensors</td>
+                <td>IMU, baro, GPS</td>
+                <td>IMU, depth, optional DVL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <p class="k">Why this is buildable now</p>
+          <p class="muted" style="margin:0">
+            Drones prove layered control at low weight. Research AUVs prove depth
+            and attitude hold underwater. Leatherback work gives hull and coasting
+            cues with a paper trail. Prototype 1 puts those together for quiet
+            observation over hours.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- 03 Leatherback -->
+      <section class="block" id="teacher">
+        <p class="section-label">03</p>
+        <h2>Leatherback sea turtle</h2>
+        <p>
+          Evolution already solved long-range efficiency, pressure-tolerant volume,
+          continuous skin, ridge lines, and flipper-style drive at large size. We
+          take those ideas into a made platform. Look-alike follows what works, not
+          the other way around.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-rear.jpg" data-alt="Leatherback rear silhouette against dark water">
+              <img src="/path-a/teachers/leatherback-rear.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Rear shape</h3>
+              <p><em>Keels, trailing edge, flippers · teachers for control surfaces.</em></p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-3m.jpg" data-alt="Leatherback length scale about 3 meters">
+              <img src="/path-a/teachers/leatherback-scale-3m.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Adult scale</h3>
+              <p><em>~3 m class animal as a size teacher · re-size for the platform we build.</em></p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-surface.jpg" data-alt="Leatherback at surface from above">
+              <img src="/path-a/teachers/leatherback-surface.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>At the surface</h3>
+              <p><em>Long body, ridge line, quiet outline in open water.</em></p>
+              <span class="credit">Footage courtesy David Currie · Instagram @dcurrie_drones</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-scale-human.jpg" data-alt="Historic photograph of a large leatherback with people for scale">
+              <img src="/path-a/teachers/leatherback-scale-human.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Mass and presence</h3>
+              <p><em>First builds may be heavy: batteries, insulation, electronics, robotics · boat or crane is fine · refine and shrink later.</em></p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/ridges-flow-paper.jpg" data-alt="Ridge-induced streamwise vortices figure">
+              <img src="/path-a/teachers/ridges-flow-paper.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Ridges and flow</h3>
+              <p><em>Ridges may help flow if sized to our speed · we test before we claim it.</em></p>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/leatherback-speed.jpg" data-alt="Leatherback swimming speed reference">
+              <img src="/path-a/teachers/leatherback-speed.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Speed class</h3>
+              <p><em>Animal burst is one reference · we aim for survey and hover (~1–2 m/s transit).</em></p>
+            </div>
+          </article>
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/osteoderms-mosaic.jpg" data-alt="Osteoderm mosaic diagram" style="aspect-ratio:21/9">
+              <img src="/path-a/teachers/osteoderms-mosaic.jpg" alt="" loading="lazy" />
+            </button>
+            <div class="body">
+              <h3>Later · deeper work</h3>
+              <p>
+                Shell mosaic and flexible volume are later studies · small material
+                coupons first. The first quiet hull stays a simple continuous skin in
+                upper water.
+              </p>
+              <span class="credit">Study media only · not first-build scope</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 04 Architecture -->
+      <section class="block" id="architecture">
+        <p class="section-label">04</p>
+        <h2>Architecture</h2>
+        <div class="table-wrap">
+          <table class="arch">
+            <tbody>
+              <tr>
+                <th scope="row">Hull</th>
+                <td>Leatherback proportions · ridge cues with real flow basis</td>
+              </tr>
+              <tr>
+                <th scope="row">Volume</th>
+                <td>Room for battery, two computers, buoyancy, insulation, robotics, and sensors · bigger first builds are fine · shrink after we learn</td>
+              </tr>
+              <tr>
+                <th scope="row">Motion</th>
+                <td>Short thrust, long coast · turtle pattern in lab work is about 30% effort and 70% glide</td>
+              </tr>
+              <tr>
+                <th scope="row">How it moves</th>
+                <td>Buoyancy for depth · trim mass for pitch · light thrust and a few control surfaces</td>
+              </tr>
+              <tr>
+                <th scope="row">Skin</th>
+                <td>One continuous outer skin · ridges that do a real job</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="margin-top:1rem">
+          A craft that stays calm in its shape and spends energy in short, careful
+          bursts.
+        </p>
+      </section>
+
+      <!-- 05 First hull -->
+      <section class="block" id="transfer">
+        <p class="section-label">05</p>
+        <h2>First prototype</h2>
+        <p class="muted">
+          Quieter and more efficient · longer hold · deploy that fits the real weight.
+        </p>
+        <ul class="clean">
+          <li><strong>1 · Control computer</strong> · hold attitude and depth · light thruster use · log noise and power in the tank</li>
+          <li><strong>2 · Leatherback-shaped hull</strong> · ridges that do a job · continuous outer skin</li>
+          <li><strong>3 · Mic first</strong> · layout and mounts early</li>
+          <li><strong>4 · Buoyancy hover</strong> · less thruster so listening leads · long coast in transit</li>
+          <li><strong>5 · Clean exit</strong> · leave the scene gently when it is time</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Quiet first</span>
+          <span class="chip">Heavy first build</span>
+          <span class="chip">Boat or crane</span>
+          <span class="chip">0–50 m first</span>
+          <span class="chip">Sensors over speed</span>
+          <span class="chip">Computer holds stability</span>
+          <span class="chip">Mic + camera</span>
+        </div>
+
+        <h3>Sequence</h3>
+        <ul class="clean" id="sequence">
+          <li><strong>Now</strong> · Quiet upper water · continuous skin · light thrust and buoyancy hover · mic first · tank baselines</li>
+          <li><strong>Next</strong> · Better efficiency only if sized right · catch-up transit · camera that turns while the body holds</li>
+          <li><strong>Later</strong> · Deeper work · flexible volume under continuous skin · study toward 200 m+</li>
+        </ul>
+      </section>
+
+      <!-- 06 Prior work + evidence -->
+      <section class="block" id="grounding">
+        <p class="section-label">06</p>
+        <h2>Prior work</h2>
+
+        <div class="grid two">
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-ridges-ld.svg" data-alt="Illustrative bar chart of ridged versus smooth lift-to-drag">
+              <img src="/path-a/teachers/evidence-ridges-ld.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Ridges · lift and drag</h3>
+              <p><em>Published glider studies · ridges can improve lift-to-drag at a low angle of attack.</em></p>
+              <span class="credit">Paper class · redrawn chart · size ridges to our speed before claiming a drag win</span>
+            </div>
+          </article>
+          <article class="card">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-stroke-glide.svg" data-alt="Illustrative chart of 30 percent thrust and 70 percent glide">
+              <img src="/path-a/teachers/evidence-stroke-glide.svg" alt="" loading="lazy" style="object-fit:contain;background:#0a1412;padding:0.5rem" />
+            </button>
+            <div class="body">
+              <h3>Stroke and glide</h3>
+              <p><em>Lab animal work · effort in a smaller part of the cycle · mass and low drag carry the coast.</em></p>
+              <span class="credit">Lab biomechanics · long coast means less thruster wash while we watch</span>
+            </div>
+          </article>
+          <article class="card" style="grid-column:1 / -1">
+            <button type="button" class="thumb" data-lb="/path-a/teachers/evidence-hydrobatic-auv.png" data-alt="NOAA SeaBED research autonomous underwater vehicle" style="aspect-ratio:16/9">
+              <img src="/path-a/teachers/evidence-hydrobatic-auv.png" alt="" loading="lazy" style="object-fit:contain;background:#0e1816" />
+            </button>
+            <div class="body">
+              <h3>Research AUVs already do this</h3>
+              <p><em>Field research vehicles already hold pitch and depth with buoyancy, moving mass, and onboard control.</em></p>
+              <span class="credit">NOAA SeaBED AUV Popoki · public domain · underwater hold is already buildable</span>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin-top:1.1rem">
+          <strong>Open work.</strong> Hull sized for real energy and payload · buoyancy
+          and light thrust · sensors first.
+        </p>
+
+        <h3>Trial one · what success looks like</h3>
+        <p class="muted">
+          Multi-hour smooth depth and attitude hold · calm transit with long coast
+          · sensors usable the whole time. Exact depth band and hours lock with
+          scale.
+        </p>
+      </section>
+
+      <!-- 07 Open -->
+      <section class="block" id="open">
+        <p class="section-label">07</p>
+        <h2>Open</h2>
+        <div class="note">
+          <p class="k">Still open</p>
+          <p class="muted" style="margin:0">
+            Length and weight for prototype 1 · how many fins · which sensors for
+            the stability loop · shallow-trial depth and hours target. Shape stays
+            flexible until scale and fins are set.
+          </p>
+        </div>
+      </section>
+
+      <!-- 08 Horizon -->
+      <section class="block" id="horizon">
+        <p class="section-label">08</p>
+        <h2>Horizon</h2>
+        <p>
+          Much of the last century’s underwater craft chased power, depth, or survey
+          speed. Another path is opening: stay longer by disturbing less · let a
+          computer hold stability · learn hull ideas from animals that already cross
+          oceans on little effort.
+        </p>
+        <p class="muted">
+          EvoMarine is one sketch of that shift: form from living systems, held by
+          modern control, built to be present rather than loud.
+        </p>
+      </section>
+
+      <footer class="site">
+        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
+        <p style="margin:0">
+          <a href="/">EvoForm</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="/evomarine/">EvoMarine</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="https://cetavox.com/">CetaVox</a>
+        </p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image">
+      <button type="button" class="close" id="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      function openLb(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+      }
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+      document.querySelectorAll("[data-lb]").forEach((el) => {
+        el.addEventListener("click", () =>
+          openLb(el.getAttribute("data-lb"), el.getAttribute("data-alt"))
+        );
+      });
+      document.getElementById("lightbox-close").addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>

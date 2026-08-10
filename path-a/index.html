@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Visual Concepts · EvoMarine · EvoForm</title>
+    <meta
+      name="description"
+      content="EvoMarine Visual Concepts · leatherback teacher · pictures and hotspots for the first platform."
+    />
+    <meta name="theme-color" content="#0a1412" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://evoform.no/path-a/" />
+    <link rel="icon" href="/brand/favicon.svg?v=1" type="image/svg+xml" />
+    <meta property="og:title" content="Visual Concepts · EvoMarine · EvoForm" />
+    <meta
+      property="og:description"
+      content="EvoMarine · leatherback teacher · shape and sensor placement."
+    />
+    <meta property="og:url" content="https://evoform.no/path-a/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EvoForm" />
+    <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      :root {
+        --bg: #0a1412;
+        --surface: #0e1816;
+        --surface-2: #121f1c;
+        --ink: #e6f0ec;
+        --muted: #8fa89e;
+        --faint: #5c756c;
+        --accent: #5ec9a8;
+        --line: rgba(230, 240, 236, 0.12);
+        --line-strong: rgba(230, 240, 236, 0.22);
+        --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        --max: 42rem;
+        --wide: 56rem;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { background: var(--bg); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        color: var(--ink);
+        font-family: var(--font-ui);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        background:
+          radial-gradient(ellipse 80% 50% at 50% -10%, rgba(94, 201, 168, 0.07), transparent 55%),
+          var(--bg);
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 0.2rem;
+      }
+      button { font: inherit; color: inherit; cursor: pointer; }
+      img { max-width: 100%; display: block; }
+
+      .wrap {
+        max-width: var(--wide);
+        margin: 0 auto;
+        padding: max(1.5rem, env(safe-area-inset-top)) max(1.35rem, env(safe-area-inset-right))
+          max(3rem, env(safe-area-inset-bottom)) max(1.35rem, env(safe-area-inset-left));
+      }
+      .wrap-narrow { max-width: var(--max); }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem 1.25rem;
+        margin: 0 0 1.85rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        color: inherit;
+        text-decoration: none;
+      }
+      .nav-brand:hover { text-decoration: none; }
+      .nav-brand img {
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius: 0.4rem;
+      }
+      .nav-brand .mark {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        font-size: 0.875rem;
+      }
+      .nav-links a { color: var(--muted); }
+      .nav-links a:hover { color: var(--ink); text-decoration: none; }
+      .nav-north {
+        margin: 0 0 0 auto;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+      @media (max-width: 720px) {
+        .nav-north { margin-left: 0; width: 100%; order: 3; }
+      }
+
+      .page-kicker {
+        margin: 0 0 0.4rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(1.65rem, 5vw, 2.2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.45rem;
+      }
+      .page-sub {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin: 0 0 0.75rem;
+        max-width: 36rem;
+        line-height: 1.5;
+      }
+      .lede {
+        color: var(--muted);
+        font-size: 1.02rem;
+        margin: 0 0 1rem;
+        max-width: 36rem;
+        line-height: 1.6;
+      }
+      .cross {
+        margin: 0 0 2rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+        max-width: 36rem;
+        line-height: 1.55;
+      }
+      .cross a { font-weight: 550; }
+
+      section.block {
+        margin: 0 0 2.75rem;
+        padding-top: 0.25rem;
+      }
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin: 0 0 0.45rem;
+      }
+      h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.3rem, 3.5vw, 1.65rem);
+        font-weight: 650;
+        line-height: 1.25;
+        margin: 0 0 0.5rem;
+      }
+      .section-sub {
+        color: var(--muted);
+        font-size: 0.95rem;
+        max-width: 36rem;
+        margin: 0 0 1.5rem;
+      }
+
+      .explorer-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .tab {
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+        padding: 0.45rem 0.9rem;
+        font-size: 0.875rem;
+      }
+      .tab[aria-selected="true"] {
+        border-color: rgba(94, 201, 168, 0.45);
+        background: rgba(94, 201, 168, 0.12);
+        color: var(--ink);
+      }
+      .tab:hover { color: var(--ink); }
+
+      .explorer-grid {
+        display: grid;
+        gap: 1.25rem;
+      }
+      @media (min-width: 900px) {
+        .explorer-grid { grid-template-columns: 1fr 18rem; gap: 1.5rem; }
+      }
+      .viewer {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        border-radius: 0.85rem;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+      }
+      .viewer img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hotspot {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        margin: -0.5rem 0 0 -0.5rem;
+        border-radius: 999px;
+        border: 2px solid var(--ink);
+        background: rgba(10, 20, 18, 0.5);
+        padding: 0;
+      }
+      .hotspot.active {
+        background: var(--accent);
+        border-color: var(--ink);
+        transform: scale(1.12);
+      }
+      .hotspot::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 999px;
+        border: 1px solid rgba(230, 240, 236, 0.35);
+        animation: pulse 2s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.85); opacity: 0.7; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hotspot::after { animation: none; }
+        html { scroll-behavior: auto; }
+      }
+      .viewer-lead {
+        margin: 0 0 0.75rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+      .viewer-cap {
+        margin-top: 0.65rem;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--faint);
+      }
+      .explorer-head h2 {
+        margin: 0;
+      }
+      .panel {
+        border-radius: 0.85rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        padding: 1.15rem 1.2rem;
+      }
+      .panel h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+      .panel p {
+        margin: 0 0 0.65rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .panel p:last-child { margin-bottom: 0; }
+      .panel .hot-link {
+        display: inline-block;
+        margin-top: 0.15rem;
+        font-size: 0.85rem;
+        font-weight: 550;
+      }
+      .hotlist {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .hotlist button {
+        text-align: left;
+        border: 1px solid transparent;
+        border-radius: 0.55rem;
+        background: transparent;
+        padding: 0.6rem 0.7rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+      .hotlist button:hover { background: var(--surface-2); color: var(--ink); }
+      .hotlist button.active {
+        border-color: rgba(94, 201, 168, 0.4);
+        background: rgba(94, 201, 168, 0.1);
+        color: var(--ink);
+      }
+
+      .gallery {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 900px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+      .g-card {
+        border-radius: 0.75rem;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        padding: 0;
+        text-align: left;
+        color: inherit;
+      }
+      .g-card:hover { border-color: var(--line-strong); }
+      .g-card .thumb {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #06100e;
+      }
+      .g-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .g-card:hover img { transform: scale(1.03); }
+      .g-card .g-meta {
+        display: block;
+        padding: 0.7rem 0.8rem;
+      }
+      .g-card .g-sys {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 0.25rem;
+      }
+      .g-card .g-title {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      footer.site {
+        margin-top: 1rem;
+        padding-top: 1.35rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8125rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: rgba(6, 12, 10, 0.92);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img {
+        max-height: 90dvh;
+        max-width: 100%;
+        border-radius: 0.5rem;
+        border: 1px solid var(--line);
+        object-fit: contain;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="nav">
+        <a class="nav-brand" href="/" aria-label="EvoForm home">
+          <img src="/brand/mark.svg?v=1" width="30" height="30" alt="" />
+          <span class="mark">EvoForm</span>
+        </a>
+        <nav class="nav-links" aria-label="Concepts navigation">
+          <a href="/evomarine/">EvoMarine</a>
+        </nav>
+        <p class="nav-north">Shaped by Nature</p>
+      </header>
+
+      <div class="wrap-narrow" style="padding: 0; max-width: var(--max)">
+        <p class="page-kicker">Visual</p>
+        <h1>Concepts</h1>
+      </div>
+
+      <section class="block" id="explorer">
+        <div class="explorer-head">
+          <div>
+            <h2>Leatherback sea turtle</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Views" id="view-tabs"></div>
+        </div>
+        <div class="explorer-grid">
+          <div>
+            <div class="viewer" id="viewer">
+              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Leatherback sea turtle inspired form" />
+            </div>
+            <p class="viewer-cap" id="viewer-cap"></p>
+          </div>
+          <aside>
+            <div class="panel" id="hotspot-panel">
+              <h3 id="hot-title">Ridge lines</h3>
+              <p id="hot-body">Five long ridges like a leatherback shell. We still need tank tests before we claim they help flow.</p>
+              <a class="hot-link" id="hot-link" href="/path-a/board/#teacher">Board notes →</a>
+            </div>
+            <div class="hotlist" id="hotlist"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="block" id="gallery">
+        <div class="gallery" id="gallery-grid"></div>
+      </section>
+
+      <footer class="site">
+        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
+        <p style="margin:0">
+          <a href="/">EvoForm</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="/evomarine/">EvoMarine</a>
+          <span style="opacity:0.4"> · </span>
+          <a href="https://cetavox.com/">CetaVox</a>
+        </p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image">
+      <button type="button" class="close" id="lightbox-close" aria-label="Close">✕</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const views = [
+        {
+          id: "form",
+          label: "Form",
+          image: "/path-a/mockups/form-threequarter.jpg",
+          caption: "Leatherback shape · smooth skin · ridge line",
+          hotspots: [
+            { id: "ridges", x: 48, y: 38, title: "Ridge lines", body: "Five long ridges like a leatherback shell. We still need tank tests before we claim they help flow.", board: "/path-a/board/#teacher" },
+            { id: "skin", x: 55, y: 55, title: "Smooth outer skin", body: "One continuous outer skin on the first build. No open shell gaps. Soft cover later if we need give under pressure.", board: "/path-a/board/#architecture" },
+            { id: "foils", x: 42, y: 68, title: "Control surfaces", body: "Small fins for pitch and hold. Inspired by flippers. Not a robot turtle.", board: "/path-a/board/#architecture" },
+            { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Mic and camera at the quiet end of the hull.", board: "/path-a/board/#transfer" }
+          ]
+        },
+        {
+          id: "profile",
+          label: "Profile",
+          image: "/path-a/mockups/form-profile.jpg",
+          caption: "Side view · sensor head · light rear thrust",
+          hotspots: [
+            { id: "head", x: 18, y: 48, title: "Sensor head", body: "Mic kept quiet from the motors. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
+            { id: "carapace", x: 48, y: 36, title: "Body volume", body: "Long, low space for battery, buoyancy, and dry gear. Leatherback packing as the size teacher.", board: "/path-a/board/#teacher" },
+            { id: "thrust", x: 88, y: 52, title: "Light thruster", body: "Thrust for moving between spots. Hover prefers buoyancy and small corrections, not a constant prop wash.", board: "/path-a/board/#architecture" }
+          ]
+        },
+        {
+          id: "plan",
+          label: "Plan",
+          image: "/path-a/mockups/form-top.jpg",
+          caption: "Top view · ridges · side fins",
+          hotspots: [
+            { id: "spine", x: 50, y: 48, title: "Center ridges", body: "Ridge line down the middle for stiffness. Flow help only if tests show it at our speed.", board: "/path-a/board/#teacher" },
+            { id: "midfoils", x: 50, y: 28, title: "Side fins", body: "A pair of fins to help roll and turn while we hold still or move slowly.", board: "/path-a/board/#architecture" },
+            { id: "stern", x: 88, y: 50, title: "Rear thrust", body: "One rear thrust line for calm transit when we need to catch up.", board: "/path-a/board/#architecture" }
+          ]
+        },
+        {
+          id: "systems",
+          label: "Systems",
+          image: "/path-a/mockups/systems-cutaway.jpg",
+          caption: "Inside · battery · buoyancy · sensors · thrust",
+          hotspots: [
+            { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Room for multi-hour work on the first build. Smaller packs after we learn in the tank.", board: "/path-a/board/#transfer" },
+            { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster noise so the mic hears the sea, not the vehicle.", board: "/path-a/board/#architecture" },
+            { id: "hydro", x: 70, y: 42, title: "Mic mounts", body: "Listening comes first. Keep motors and flow noise off the hydrophone.", board: "/path-a/board/#transfer" },
+            { id: "cam", x: 28, y: 68, title: "Camera", body: "Prefer a turning camera so the platform can stay still while the view moves.", board: "/path-a/board/#transfer" }
+          ]
+        }
+      ];
+
+      /* Extra studies · not the four explorer views. */
+      const gallery = [
+        { src: "/path-a/mockups/hover.jpg", system: "Hold", title: "Hover" },
+        { src: "/path-a/mockups/boat-deploy.jpg", system: "Deploy", title: "Boat or crane" },
+        { src: "/path-a/mockups/vs-antigoal.jpg", system: "Compare", title: "Not a thruster box" },
+        { src: "/path-a/mockups/riblets.jpg", system: "Skin", title: "Surface texture study" },
+        { src: "/path-a/mockups/volume-later.jpg", system: "Later", title: "Depth compliance later" }
+      ];
+
+      let viewId = views[0].id;
+      let hotId = views[0].hotspots[0].id;
+
+      const tabsEl = document.getElementById("view-tabs");
+      const viewer = document.getElementById("viewer");
+      const viewerImg = document.getElementById("viewer-img");
+      const viewerCap = document.getElementById("viewer-cap");
+      const hotTitle = document.getElementById("hot-title");
+      const hotBody = document.getElementById("hot-body");
+      const hotLink = document.getElementById("hot-link");
+      const hotlist = document.getElementById("hotlist");
+      const galleryGrid = document.getElementById("gallery-grid");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      function currentView() {
+        return views.find((v) => v.id === viewId) || views[0];
+      }
+      function currentHot() {
+        const v = currentView();
+        return v.hotspots.find((h) => h.id === hotId) || v.hotspots[0];
+      }
+
+      function renderTabs() {
+        tabsEl.innerHTML = "";
+        views.forEach((v) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "tab";
+          b.textContent = v.label;
+          b.setAttribute("role", "tab");
+          b.setAttribute("aria-selected", v.id === viewId ? "true" : "false");
+          b.addEventListener("click", () => {
+            viewId = v.id;
+            hotId = v.hotspots[0].id;
+            renderAll();
+          });
+          tabsEl.appendChild(b);
+        });
+      }
+
+      function renderViewer() {
+        const v = currentView();
+        const h = currentHot();
+        viewerImg.src = v.image;
+        viewerImg.alt = v.caption;
+        viewerCap.textContent = v.caption;
+        viewer.querySelectorAll(".hotspot").forEach((el) => el.remove());
+        v.hotspots.forEach((hs) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "hotspot" + (hs.id === h.id ? " active" : "");
+          btn.style.left = hs.x + "%";
+          btn.style.top = hs.y + "%";
+          btn.setAttribute("aria-label", hs.title);
+          btn.addEventListener("click", () => {
+            hotId = hs.id;
+            renderAll();
+          });
+          viewer.appendChild(btn);
+        });
+        hotTitle.textContent = h.title;
+        hotBody.textContent = h.body;
+        if (h.board) {
+          hotLink.href = h.board;
+          hotLink.hidden = false;
+          hotLink.textContent = "Board notes →";
+        } else {
+          hotLink.hidden = true;
+        }
+        hotlist.innerHTML = "";
+        v.hotspots.forEach((hs) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = hs.id === h.id ? "active" : "";
+          b.textContent = hs.title;
+          b.addEventListener("click", () => {
+            hotId = hs.id;
+            renderAll();
+          });
+          hotlist.appendChild(b);
+        });
+      }
+
+      function renderGallery() {
+        galleryGrid.innerHTML = "";
+        gallery.forEach((g) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "g-card";
+          b.innerHTML =
+            '<div class="thumb"><img src="' +
+            g.src +
+            '" alt="" loading="lazy" /></div><span class="g-meta"><span class="g-sys">' +
+            g.system +
+            '</span><span class="g-title">' +
+            g.title +
+            "</span></span>";
+          b.addEventListener("click", () => openLightbox(g.src, g.system + " · " + g.title));
+          galleryGrid.appendChild(b);
+        });
+      }
+
+      function openLightbox(src, title) {
+        lightboxImg.src = src;
+        lightboxImg.alt = title || "";
+        lightbox.classList.add("open");
+      }
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+      document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+
+      function renderAll() {
+        renderTabs();
+        renderViewer();
+      }
+
+      renderAll();
+      renderGallery();
+    </script>
+  </body>
+</html>

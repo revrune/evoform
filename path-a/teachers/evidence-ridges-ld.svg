@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Bar chart: ridged shell improves lift-to-drag versus smooth at low angle of attack">
+  <rect width="640" height="360" fill="#0a1412"/>
+  <text x="320" y="36" text-anchor="middle" fill="#e6f0ec" font-family="Georgia,serif" font-size="18">Ridges · lift-to-drag at low AoA</text>
+  <text x="320" y="58" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="12">Illustrative of published leatherback-glider CFD narrative · not a data table</text>
+  <!-- axes -->
+  <line x1="100" y1="280" x2="540" y2="280" stroke="#5c756c" stroke-width="1.5"/>
+  <line x1="100" y1="100" x2="100" y2="280" stroke="#5c756c" stroke-width="1.5"/>
+  <!-- smooth bar -->
+  <rect x="160" y="190" width="100" height="90" rx="6" fill="#121f1c" stroke="#5c756c"/>
+  <text x="210" y="300" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="13">Smooth</text>
+  <text x="210" y="180" text-anchor="middle" fill="#8fa89e" font-family="system-ui,sans-serif" font-size="12">L/D baseline</text>
+  <!-- ridged bar taller -->
+  <rect x="340" y="120" width="100" height="160" rx="6" fill="#121f1c" stroke="#5ec9a8" stroke-width="2"/>
+  <text x="390" y="300" text-anchor="middle" fill="#e6f0ec" font-family="system-ui,sans-serif" font-size="13">Ridged</text>
+  <text x="390" y="110" text-anchor="middle" fill="#5ec9a8" font-family="system-ui,sans-serif" font-size="12">Higher L/D</text>
+  <text x="320" y="340" text-anchor="middle" fill="#5c756c" font-family="system-ui,sans-serif" font-size="11">Redrawn cue for board · cite glider CFD on evidence trail</text>
+</svg>
