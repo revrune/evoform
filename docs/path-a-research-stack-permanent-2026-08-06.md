@@ -21,6 +21,7 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 | **Public copy law** | global memory | No honesty theater · Leitner-clean door |
 | **First-experiment plan** | `docs/path-a-first-experiment-plan-2026-08-06.md` | **LOCKED · PERMANENT** · rank #1 tank noise+power (bet 1) + hydrophone (bet 4) · not fab |
 | **Concepts iteration law** | `docs/path-a-concepts-iteration-law-2026-08-13.md` | **LOCKED · PERMANENT** · keep hull studies · Board is the form brief · form from nature |
+| **Two-foil tank card** | `docs/path-a-two-foil-tank-card-2026-08-13.md` | **LOCKED as next study** · not a new public hull · 30/70 unlocked |
 
 ---
 
@@ -36,6 +37,7 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 | **Easy study card** | `docs/path-a-study-card-easy.md` · 30-min path |
 | **Study review (media)** | `docs/path-a-study-review.html` · open in browser with concept visuals |
 | **Structure check** | `tools/check_path_a_briefs.py` (`python3 tools/check_path_a_briefs.py`) |
+| **Two-foil tank card** | `docs/path-a-two-foil-tank-card-2026-08-13.md` · next study · tank numbers, not a mockup |
 
 ---
 

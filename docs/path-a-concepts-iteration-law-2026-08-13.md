@@ -38,6 +38,8 @@ New studies **add**. They do not replace keepers.
 
 A **Drive** still (`study-drive-form.jpg`) may live on disk. It stays **off** the public page until it is a usable platform and not a robot turtle.
 
+**Next study (LOCKED 2026-08-13):** not a fourth explorer still. File: `docs/path-a-two-foil-tank-card-2026-08-13.md`. Two working foils · tank numbers · 30/70 stays unlocked (green turtle, not leatherback).
+
 ### 3. Form from nature
 
 Engineer the teacher’s **shape and motion** into something we can build and fly with a control computer.
