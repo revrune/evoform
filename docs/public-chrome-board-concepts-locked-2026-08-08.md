@@ -27,7 +27,7 @@ Footer may stay thin: EvoForm · EvoMarine · CetaVox. Path names belong on the 
 
 | Surface | Owns |
 |---------|------|
-| **Visual Concepts** `/path-a/` | Form explorer · hotspots · gallery studies · quiet “Board notes” pointer |
+| **Visual Concepts** `/path-a/` | Form explorer · **hull studies kept on the page** · hotspots · gallery studies · quiet “Board notes” pointer |
 | **Inspiration Board** `/path-a/board/` | Why/how · F-16/drones/leatherback teachers · architecture · first prototype chips · Now/Next/Later sequence · evidence · open · horizon |
 | **EvoMarine hub** `/evomarine/` | **Quiet Extended Presence** · three doors only (Inspiration Board · Visual Concepts · Built Prototypes) · no essays |
 | **Home** `/` | Thin taxonomy · Vehicles · Shaped by Nature · EvoMarine live · Air/Terra soon |
@@ -66,6 +66,10 @@ Exit 0 required before stage (`tools/stage-public-door.sh`) and prod deploy of b
 
 ---
 
+## 6. Hull studies (LOCKED · 2026-08-13)
+
+Concepts **keeps** leatherback studies **Outline · Packed · Long**. New studies add. Do not overwrite or drop a keeper without Rua go. Full law: `docs/path-a-concepts-iteration-law-2026-08-13.md`.
+
 ## Still open (not locked)
 
 - Exact board paragraph polish  
@@ -73,6 +77,8 @@ Exit 0 required before stage (`tools/stage-public-door.sh`) and prod deploy of b
 - Gallery asset set and labels  
 - Built Prototypes content  
 - Shared CSS build system  
+- Which study is prototype 1  
+- Whether a Drive / motion study goes public  
 
 ---
 

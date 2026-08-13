@@ -20,6 +20,7 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 | **Public category** | thin door | nature-inspired underwater vehicles |
 | **Public copy law** | global memory | No honesty theater · Leitner-clean door |
 | **First-experiment plan** | `docs/path-a-first-experiment-plan-2026-08-06.md` | **LOCKED · PERMANENT** · rank #1 tank noise+power (bet 1) + hydrophone (bet 4) · not fab |
+| **Concepts iteration law** | `docs/path-a-concepts-iteration-law-2026-08-13.md` | **LOCKED · PERMANENT** · keep hull studies · Board is the form brief · form from nature |
 
 ---
 
@@ -61,7 +62,8 @@ This is the **canonical map** of Path A research law and opportunity briefs so n
 2. Riblets and textured surfaces require **regime-matched** sizing and explicit fouling/cleanability; open deep mosaic gaps not default on first hulls.  
 3. **Volume-following** compressible architectures remain secondary (later depth); do not delay the upper-water quiet platform.  
 4. **Abort-on-avoidance** and lower-disturbance-than-current-methods are product law.  
-5. Public claims stay **thin-spine**: nature-inspired underwater vehicles for long quiet observation; no finished AUV for sale, no co-presence theatre, no robot-animal product identity.
+5. Public claims stay **thin-spine**: nature-inspired underwater vehicles for long quiet observation; no finished AUV for sale, no co-presence theatre, no robot-animal product identity.  
+6. Keep Concepts hull studies (Outline · Packed · Long at minimum). Never discard a study without Rua go. Board is the form brief. Engineer how the teacher is shaped and how it moves. Generic survey-AUV + decorative ridges is a miss. Ridges are a coupon. Motion (flipper 30/70, ray foils) is first-class. Still no robot-animal identity.
 
 ---
 

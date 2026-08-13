@@ -132,6 +132,17 @@ def main() -> None:
     must_contain(path_a, "board:", "path-a hotspot board links")
     must_contain(path_a, "Board notes", "path-a quiet board pointer")
     must_contain(path_a, "<h2>Leatherback sea turtle</h2>", "path-a form title")
+    must_contain(path_a, "study-tabs", "path-a study tabs")
+    must_contain(path_a, 'id: "outline"', "path-a Outline study")
+    must_contain(path_a, 'id: "packed"', "path-a Packed study")
+    must_contain(path_a, 'id: "long"', "path-a Long study")
+    for rel in (
+        "path-a/mockups/form-threequarter.jpg",
+        "path-a/mockups/study-packed-form.jpg",
+        "path-a/mockups/study-long-form.jpg",
+    ):
+        if not (ROOT / rel).is_file():
+            fail(f"path-a: missing keeper still {rel}")
 
     must_not_contain(path_a, 'id="specs"', "path-a no full envelope section")
     must_not_contain(path_a, "First-build envelope", "path-a no envelope heading")

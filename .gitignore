@@ -6,3 +6,6 @@ _public/
 
 # macOS
 .DS_Store
+
+# Local iteration backups (not the public door)
+.local/
