@@ -162,6 +162,10 @@
         margin: 0 0 2.75rem;
         padding-top: 0.25rem;
       }
+      section.frame {
+        margin: 0 0 2rem;
+        padding-bottom: 0.15rem;
+      }
       .section-label {
         font-family: var(--font-mono);
         font-size: 0.68rem;
@@ -327,13 +331,63 @@
       }
       .transfer-map td:first-child { color: var(--ink); font-weight: 500; }
 
-      footer.site {
-        margin-top: 1rem;
+      .door-foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.85rem 1.5rem;
+        margin-top: 1.6rem;
         padding-top: 1.35rem;
         border-top: 1px solid var(--line);
-        font-size: 0.8125rem;
+      }
+      .house-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.65rem;
+        margin: 0;
+      }
+      .house-mark {
+        display: block;
+        width: 2.25rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .house-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 0.08rem;
+      }
+      .house-name {
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        font-size: 0.92rem;
+      }
+      .house-slogan {
         color: var(--muted);
-        line-height: 1.55;
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+      .related {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.15rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.92rem;
+      }
+      .related-link {
+        color: var(--muted);
+        border-bottom: none;
+      }
+      .related-link:hover {
+        color: var(--ink);
       }
 
       .lightbox {
@@ -425,6 +479,21 @@
       <p class="page-kicker">Inspiration</p>
       <h1>Board</h1>
 
+      <section class="block frame" id="horizon">
+        <p class="section-label">Why</p>
+        <h2>Horizon</h2>
+        <p>
+          Much of the last century’s underwater craft chased power, depth, or survey
+          speed. Another path is opening: stay longer by disturbing less · let a
+          computer hold stability · learn hull ideas from animals that already cross
+          oceans on little effort.
+        </p>
+        <p class="muted">
+          EvoMarine is one sketch of that shift: form from living systems, held by
+          modern control, built to be present rather than loud.
+        </p>
+      </section>
+
       <ol class="toc" aria-label="On this board">
         <li><span class="n">01</span><a href="#hypothesis">Active stability</a></li>
         <li><span class="n">02</span><a href="#drones">What drones prove</a></li>
@@ -433,7 +502,6 @@
         <li><span class="n">05</span><a href="#transfer">First prototype</a></li>
         <li><span class="n">06</span><a href="#grounding">Prior work</a></li>
         <li><span class="n">07</span><a href="#open">Open</a></li>
-        <li><span class="n">08</span><a href="#horizon">Horizon</a></li>
       </ol>
 
       <!-- 01 Active stability · F-16 -->
@@ -901,31 +969,31 @@
         </div>
       </section>
 
-      <!-- 08 Horizon -->
-      <section class="block" id="horizon">
-        <p class="section-label">08</p>
-        <h2>Horizon</h2>
-        <p>
-          Much of the last century’s underwater craft chased power, depth, or survey
-          speed. Another path is opening: stay longer by disturbing less · let a
-          computer hold stability · learn hull ideas from animals that already cross
-          oceans on little effort.
+      <footer class="door-foot">
+        <p class="house-line">
+          <img
+            class="house-mark"
+            src="/brand/run-mark.png?v=2"
+            alt=""
+            width="36"
+            height="36"
+            decoding="async"
+          />
+          <span class="house-copy">
+            <span class="house-name">Rún</span>
+            <span class="house-slogan">Revealing Mystery</span>
+          </span>
         </p>
-        <p class="muted">
-          EvoMarine is one sketch of that shift: form from living systems, held by
-          modern control, built to be present rather than loud.
-        </p>
-      </section>
-
-      <footer class="site">
-        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
-        <p style="margin:0">
-          <a href="/">EvoForm</a>
-          <span style="opacity:0.4"> · </span>
-          <a href="/evomarine/">EvoMarine</a>
-          <span style="opacity:0.4"> · </span>
-          <a href="https://cetavox.com/">CetaVox</a>
-        </p>
+        <ul class="related" aria-label="Related">
+          <li>
+            <a class="related-link" href="https://www.cetavox.com/">CetaVox</a>
+          </li>
+          <li>
+            <a class="related-link" href="https://leitnerlearning.com/"
+              >Leitner Learning</a
+            >
+          </li>
+        </ul>
       </footer>
     </div>
 

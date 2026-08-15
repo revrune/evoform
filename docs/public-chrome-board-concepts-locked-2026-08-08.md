@@ -19,7 +19,7 @@
 | Back chrome | **None** · browser history is enough |
 | Sibling names in top bar | **Forbidden** · do not put “Inspiration Board” on Concepts nav or “Visual Concepts” on Board nav (confuses place) |
 
-Footer is the **house strip**, same on every public page (home · EvoMarine · Concepts · Board): mark + **Rún** / **Revealing Mystery** left · sister **names** (CetaVox · Leitner Learning) one line right. In-site path stays in the **header**. Do not restate Shaped by Nature or EvoForm · EvoMarine in the footer.
+Footer is the **house strip**, same on every public page (home · EvoMarine · Concepts · Board): mark + **Rún** / **Revealing Mystery** left · sister **names** (CetaVox · Leitner Learning) one line right. In-site path stays in the **header**. Do not restate Shaped by Nature or EvoForm · EvoMarine in the footer. Short pages (home · EvoMarine) **pin** the bar to the bottom of the window. Long pages (Concepts · Board) keep it at the end of the content.
 
 ---
 
@@ -28,7 +28,7 @@ Footer is the **house strip**, same on every public page (home · EvoMarine · C
 | Surface | Owns |
 |---------|------|
 | **Visual Concepts** `/path-a/` | Form explorer · **hull studies kept on the page** · hotspots · gallery studies · quiet “Board notes” pointer |
-| **Inspiration Board** `/path-a/board/` | Why/how · F-16/drones/leatherback teachers · architecture · first prototype chips · Now/Next/Later sequence · evidence · open · horizon |
+| **Inspiration Board** `/path-a/board/` | **Opens with Horizon** (why this direction) · then F-16/drones/leatherback teachers · architecture · first prototype chips · Now/Next/Later · evidence · open. Horizon is the frame, not chapter 08. |
 | **EvoMarine hub** `/evomarine/` | **Quiet Extended Presence** · three doors only (Inspiration Board · Visual Concepts · Built Prototypes) · no essays |
 | **Home** `/` | Thin taxonomy · Vehicles · Shaped by Nature · EvoMarine live · Air/Terra soon |
 

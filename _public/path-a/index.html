@@ -6,7 +6,7 @@
     <title>Visual Concepts · EvoMarine · EvoForm</title>
     <meta
       name="description"
-      content="EvoMarine Visual Concepts · leatherback teacher · pictures and hotspots for the first platform."
+      content="EvoMarine Visual Concepts · leatherback and cownose teachers · pictures and hotspots for the first platform."
     />
     <meta name="theme-color" content="#0a1412" />
     <meta name="color-scheme" content="dark" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Visual Concepts · EvoMarine · EvoForm" />
     <meta
       property="og:description"
-      content="EvoMarine · leatherback teacher · shape and sensor placement."
+      content="EvoMarine · leatherback and cownose teachers · shape and sensor placement."
     />
     <meta property="og:url" content="https://evoform.no/path-a/" />
     <meta property="og:type" content="website" />
@@ -195,6 +195,8 @@
         gap: 1rem;
         margin-bottom: 1.25rem;
       }
+      .teacher-tabs, .study-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.75rem; }
+      .study-tabs[hidden] { display: none; }
       .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
       .tab {
         border-radius: 999px;
@@ -372,13 +374,63 @@
         color: var(--muted);
       }
 
-      footer.site {
-        margin-top: 1rem;
+      .door-foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.85rem 1.5rem;
+        margin-top: 1.6rem;
         padding-top: 1.35rem;
         border-top: 1px solid var(--line);
-        font-size: 0.8125rem;
+      }
+      .house-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.65rem;
+        margin: 0;
+      }
+      .house-mark {
+        display: block;
+        width: 2.25rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .house-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 0.08rem;
+      }
+      .house-name {
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        font-size: 0.92rem;
+      }
+      .house-slogan {
         color: var(--muted);
-        line-height: 1.55;
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+      .related {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.15rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.92rem;
+      }
+      .related-link {
+        color: var(--muted);
+        border-bottom: none;
+      }
+      .related-link:hover {
+        color: var(--ink);
       }
 
       .lightbox {
@@ -436,14 +488,16 @@
       <section class="block" id="explorer">
         <div class="explorer-head">
           <div>
+            <div class="teacher-tabs" role="tablist" aria-label="Teachers" id="teacher-tabs"></div>
             <h2>Leatherback sea turtle</h2>
+            <div class="study-tabs" role="tablist" aria-label="Hull studies" id="study-tabs"></div>
           </div>
           <div class="tabs" role="tablist" aria-label="Views" id="view-tabs"></div>
         </div>
         <div class="explorer-grid">
           <div>
             <div class="viewer" id="viewer">
-              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Leatherback sea turtle inspired form" />
+              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Leatherback living-form study" />
             </div>
             <p class="viewer-cap" id="viewer-cap"></p>
           </div>
@@ -462,15 +516,31 @@
         <div class="gallery" id="gallery-grid"></div>
       </section>
 
-      <footer class="site">
-        <p style="margin:0 0 0.35rem">Shaped by Nature</p>
-        <p style="margin:0">
-          <a href="/">EvoForm</a>
-          <span style="opacity:0.4"> · </span>
-          <a href="/evomarine/">EvoMarine</a>
-          <span style="opacity:0.4"> · </span>
-          <a href="https://cetavox.com/">CetaVox</a>
+      <footer class="door-foot">
+        <p class="house-line">
+          <img
+            class="house-mark"
+            src="/brand/run-mark.png?v=2"
+            alt=""
+            width="36"
+            height="36"
+            decoding="async"
+          />
+          <span class="house-copy">
+            <span class="house-name">Rún</span>
+            <span class="house-slogan">Revealing Mystery</span>
+          </span>
         </p>
+        <ul class="related" aria-label="Related">
+          <li>
+            <a class="related-link" href="https://www.cetavox.com/">CetaVox</a>
+          </li>
+          <li>
+            <a class="related-link" href="https://leitnerlearning.com/"
+              >Leitner Learning</a
+            >
+          </li>
+        </ul>
       </footer>
     </div>
 
@@ -480,51 +550,195 @@
     </div>
 
     <script>
-      const views = [
+      const systemsView = {
+        id: "systems",
+        label: "Systems",
+        image: "/path-a/mockups/systems-cutaway.jpg",
+        caption: "Inside · battery · buoyancy · sensors · thrust",
+        hotspots: [
+          { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Room for multi-hour work on the first build. Smaller packs after we learn in the tank.", board: "/path-a/board/#transfer" },
+          { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster noise so the mic hears the sea, not the vehicle.", board: "/path-a/board/#architecture" },
+          { id: "hydro", x: 70, y: 42, title: "Mic mounts", body: "Listening comes first. Keep motors and flow noise off the hydrophone.", board: "/path-a/board/#transfer" },
+          { id: "cam", x: 28, y: 68, title: "Camera", body: "Prefer a turning camera so the platform can stay still while the view moves.", board: "/path-a/board/#transfer" }
+        ]
+      };
+
+      const teachers = [
         {
-          id: "form",
-          label: "Form",
-          image: "/path-a/mockups/form-threequarter.jpg",
-          caption: "Leatherback shape · smooth skin · ridge line",
-          hotspots: [
-            { id: "ridges", x: 48, y: 38, title: "Ridge lines", body: "Five long ridges like a leatherback shell. We still need tank tests before we claim they help flow.", board: "/path-a/board/#teacher" },
-            { id: "skin", x: 55, y: 55, title: "Smooth outer skin", body: "One continuous outer skin on the first build. No open shell gaps. Soft cover later if we need give under pressure.", board: "/path-a/board/#architecture" },
-            { id: "foils", x: 42, y: 68, title: "Control surfaces", body: "Small fins for pitch and hold. Inspired by flippers. Not a robot turtle.", board: "/path-a/board/#architecture" },
-            { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Mic and camera at the quiet end of the hull.", board: "/path-a/board/#transfer" }
+          id: "leatherback",
+          label: "Leatherback",
+          title: "Leatherback sea turtle",
+          studies: [
+            {
+              id: "outline",
+              label: "Outline",
+              views: [
+                {
+                  id: "form",
+                  label: "Form",
+                  image: "/path-a/mockups/form-threequarter.jpg",
+                  caption: "Outline · living form · flippers still costume",
+                  hotspots: [
+                    { id: "ridges", x: 48, y: 38, title: "Ridge lines", body: "Five long ridges like a leatherback shell. We still need tank tests before we claim they help flow.", board: "/path-a/board/#teacher" },
+                    { id: "skin", x: 55, y: 55, title: "Smooth outer skin", body: "One continuous outer skin on the first build. No open shell gaps. Soft cover later if we need give under pressure.", board: "/path-a/board/#architecture" },
+                    { id: "foils", x: 42, y: 68, title: "Flipper foils", body: "This is the motion teacher. Long high-aspect foils. Lab work on sea turtles is about 30 percent stroke and 70 percent glide. Not a robot turtle.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "Mic and camera at the quiet end. The neck in this study is costume. Later studies fair the face into the hull.", board: "/path-a/board/#transfer" }
+                  ]
+                },
+                {
+                  id: "profile",
+                  label: "Profile",
+                  image: "/path-a/mockups/form-profile.jpg",
+                  caption: "Outline · side · packed volume · flipper at rest",
+                  hotspots: [
+                    { id: "head", x: 18, y: 48, title: "Sensor head", body: "Mic kept quiet from the motors. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
+                    { id: "carapace", x: 48, y: 36, title: "Body volume", body: "Leatherback packing as the size teacher. Room for battery, buoyancy, two computers, and dry gear.", board: "/path-a/board/#teacher" },
+                    { id: "thrust", x: 88, y: 52, title: "Light thruster", body: "Backup for catch-up. The Board wants short thrust and a long coast, like the animal.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "plan",
+                  label: "Plan",
+                  image: "/path-a/mockups/form-top.jpg",
+                  caption: "Outline · top · ridges · side surfaces",
+                  hotspots: [
+                    { id: "spine", x: 50, y: 48, title: "Center ridges", body: "Ridge line down the middle for stiffness. Flow help only if tests show it at our speed.", board: "/path-a/board/#teacher" },
+                    { id: "midfoils", x: 50, y: 28, title: "Side surfaces", body: "A pair of surfaces to help roll and turn. On the animal these are flippers that also drive.", board: "/path-a/board/#architecture" },
+                    { id: "stern", x: 88, y: 50, title: "Rear thrust", body: "One rear line for calm transit when we need to catch up.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                systemsView
+              ]
+            },
+            {
+              id: "packed",
+              label: "Packed",
+              views: [
+                {
+                  id: "form",
+                  label: "Form",
+                  image: "/path-a/mockups/study-packed-form.jpg",
+                  caption: "Packed · volume first · neck still costume",
+                  hotspots: [
+                    { id: "ridges", x: 52, y: 42, title: "Ridge lines", body: "Ridges kept from the animal. At our slow survey speed they may do little. Tank first.", board: "/path-a/board/#teacher" },
+                    { id: "skin", x: 58, y: 55, title: "Smooth outer skin", body: "One continuous outer skin. No open shell gaps on the first build.", board: "/path-a/board/#architecture" },
+                    { id: "foils", x: 55, y: 78, title: "Control surfaces", body: "Small planes only. This study traded flippers for packing. That is a loss of the motion teacher.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 22, y: 55, title: "Sensor nose", body: "Mic and camera at the quiet end. The neck is still costume.", board: "/path-a/board/#transfer" }
+                  ]
+                },
+                {
+                  id: "profile",
+                  label: "Profile",
+                  image: "/path-a/mockups/study-packed-profile.jpg",
+                  caption: "Packed · side · short deep hull",
+                  hotspots: [
+                    { id: "head", x: 18, y: 50, title: "Sensor head", body: "Instruments up front. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
+                    { id: "carapace", x: 50, y: 42, title: "Body volume", body: "Short and deep for battery and buoyancy. Easy to pack. Pays more form drag than a longer hull.", board: "/path-a/board/#teacher" },
+                    { id: "thrust", x: 88, y: 48, title: "Light thruster", body: "Rear unit for catch-up. Hover still prefers buoyancy.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "plan",
+                  label: "Plan",
+                  image: "/path-a/mockups/study-packed-plan.jpg",
+                  caption: "Packed · top · fat oval",
+                  hotspots: [
+                    { id: "spine", x: 50, y: 48, title: "Center ridges", body: "Same five-ridge idea on a fatter plan. Job is unproven at our speed.", board: "/path-a/board/#teacher" },
+                    { id: "midfoils", x: 50, y: 22, title: "Side planes", body: "Small planes. Not the animal's flippers.", board: "/path-a/board/#architecture" },
+                    { id: "stern", x: 88, y: 50, title: "Rear thrust", body: "One rear line for calm catch-up.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                systemsView
+              ]
+            },
+            {
+              id: "long",
+              label: "Long",
+              views: [
+                {
+                  id: "form",
+                  label: "Form",
+                  image: "/path-a/mockups/study-long-form.jpg",
+                  caption: "Long · cruise hull · looks like a survey AUV",
+                  hotspots: [
+                    { id: "ridges", x: 42, y: 32, title: "Ridge lines", body: "Grooves on a long hull. At slow hover they are probably pointless. We keep the study so we can compare.", board: "/path-a/board/#teacher" },
+                    { id: "skin", x: 50, y: 48, title: "Smooth outer skin", body: "One continuous skin. Easy to build. Little of the living form remains.", board: "/path-a/board/#architecture" },
+                    { id: "foils", x: 48, y: 52, title: "Control surfaces", body: "Small planes. The motion teacher is gone. This is the AUV end of the range.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 78, y: 68, title: "Sensor nose", body: "Flush face. Honest as a vehicle. Weak as a nature-shaped form.", board: "/path-a/board/#transfer" }
+                  ]
+                },
+                {
+                  id: "profile",
+                  label: "Profile",
+                  image: "/path-a/mockups/study-long-profile.jpg",
+                  caption: "Long · side · 3.5 to 1 teardrop",
+                  hotspots: [
+                    { id: "head", x: 12, y: 52, title: "Sensor face", body: "Mic kept quiet from the motors.", board: "/path-a/board/#transfer" },
+                    { id: "carapace", x: 45, y: 42, title: "Body volume", body: "Longer fineness cuts form drag. Harder to pack the first heavy build.", board: "/path-a/board/#teacher" },
+                    { id: "thrust", x: 90, y: 48, title: "Light thruster", body: "Rear prop as the main drive. That is not how the animal moves.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "plan",
+                  label: "Plan",
+                  image: "/path-a/mockups/study-long-plan.jpg",
+                  caption: "Long · top · cruise plan",
+                  hotspots: [
+                    { id: "spine", x: 48, y: 48, title: "Center ridges", body: "Low ridges. Weak bet at survey speed.", board: "/path-a/board/#teacher" },
+                    { id: "midfoils", x: 68, y: 22, title: "Side planes", body: "Small planes near the nose. Not flipper span.", board: "/path-a/board/#architecture" },
+                    { id: "stern", x: 12, y: 50, title: "Rear thrust", body: "One rear line. AUV layout.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                systemsView
+              ]
+            }
           ]
         },
         {
-          id: "profile",
-          label: "Profile",
-          image: "/path-a/mockups/form-profile.jpg",
-          caption: "Side view · sensor head · light rear thrust",
-          hotspots: [
-            { id: "head", x: 18, y: 48, title: "Sensor head", body: "Mic kept quiet from the motors. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
-            { id: "carapace", x: 48, y: 36, title: "Body volume", body: "Long, low space for battery, buoyancy, and dry gear. Leatherback packing as the size teacher.", board: "/path-a/board/#teacher" },
-            { id: "thrust", x: 88, y: 52, title: "Light thruster", body: "Thrust for moving between spots. Hover prefers buoyancy and small corrections, not a constant prop wash.", board: "/path-a/board/#architecture" }
-          ]
-        },
-        {
-          id: "plan",
-          label: "Plan",
-          image: "/path-a/mockups/form-top.jpg",
-          caption: "Top view · ridges · side fins",
-          hotspots: [
-            { id: "spine", x: 50, y: 48, title: "Center ridges", body: "Ridge line down the middle for stiffness. Flow help only if tests show it at our speed.", board: "/path-a/board/#teacher" },
-            { id: "midfoils", x: 50, y: 28, title: "Side fins", body: "A pair of fins to help roll and turn while we hold still or move slowly.", board: "/path-a/board/#architecture" },
-            { id: "stern", x: 88, y: 50, title: "Rear thrust", body: "One rear thrust line for calm transit when we need to catch up.", board: "/path-a/board/#architecture" }
-          ]
-        },
-        {
-          id: "systems",
-          label: "Systems",
-          image: "/path-a/mockups/systems-cutaway.jpg",
-          caption: "Inside · battery · buoyancy · sensors · thrust",
-          hotspots: [
-            { id: "battery", x: 40, y: 52, title: "Battery pack", body: "Room for multi-hour work on the first build. Smaller packs after we learn in the tank.", board: "/path-a/board/#transfer" },
-            { id: "buoy", x: 55, y: 38, title: "Buoyancy", body: "Hold depth without thruster noise so the mic hears the sea, not the vehicle.", board: "/path-a/board/#architecture" },
-            { id: "hydro", x: 70, y: 42, title: "Mic mounts", body: "Listening comes first. Keep motors and flow noise off the hydrophone.", board: "/path-a/board/#transfer" },
-            { id: "cam", x: 28, y: 68, title: "Camera", body: "Prefer a turning camera so the platform can stay still while the view moves.", board: "/path-a/board/#transfer" }
+          id: "ray",
+          label: "Cownose ray",
+          title: "Cownose ray",
+          studies: [
+            {
+              id: "foils",
+              label: "Foils",
+              views: [
+                {
+                  id: "form",
+                  label: "Form",
+                  image: "/path-a/mockups/ray-form-threequarter.jpg",
+                  caption: "Ray-taught planform · lifting foils · not a costume",
+                  hotspots: [
+                    { id: "planform", x: 48, y: 48, title: "Flat planform", body: "A wide, low diamond like a cownose disc. More room for sensors on a quiet face. Not a robot ray.", board: "/path-a/board/#teacher" },
+                    { id: "pectoral", x: 72, y: 62, title: "Pectoral foils", body: "This is how a ray moves. Large slow foils. First build can use them as planes. A traveling wave only if the tank says quieter than a prop.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 78, y: 42, title: "Sensor nose", body: "Mic and camera at the quiet end. Same listening-first rule as the leatherback hull.", board: "/path-a/board/#transfer" },
+                    { id: "stern", x: 18, y: 52, title: "Light rear thrust", body: "A small rear unit for moving between spots. Hover still prefers buoyancy, not a constant wash.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "profile",
+                  label: "Profile",
+                  image: "/path-a/mockups/ray-form-profile.jpg",
+                  caption: "Side view · low body · foil span",
+                  hotspots: [
+                    { id: "head", x: 78, y: 42, title: "Sensor head", body: "Instruments up front, away from the prop. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
+                    { id: "foil", x: 52, y: 22, title: "Foil span", body: "Cownose rays cruise near 1 m/s with large slow fin motion. We steal the span and the speed, not the animal.", board: "/path-a/board/#teacher" },
+                    { id: "thrust", x: 14, y: 48, title: "Rear unit", body: "Thrust for transit. If we later undulate the foils, this unit can go quieter or rest.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "plan",
+                  label: "Plan",
+                  image: "/path-a/mockups/ray-form-top.jpg",
+                  caption: "Top view · diamond hull · two foils",
+                  hotspots: [
+                    { id: "disc", x: 48, y: 48, title: "Disc packing", body: "Battery and buoyancy sit in the thick center. The edges stay thin so the foils can work.", board: "/path-a/board/#teacher" },
+                    { id: "leftfoil", x: 28, y: 22, title: "Port foil", body: "One foil each side. Hold, roll, and slow lift. Tank tests decide if a traveling wave is worth the joints.", board: "/path-a/board/#architecture" },
+                    { id: "stern", x: 18, y: 58, title: "Rear thrust", body: "One rear line for calm catch-up. Same job as on the leatherback study.", board: "/path-a/board/#architecture" }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ];
@@ -538,9 +752,14 @@
         { src: "/path-a/mockups/volume-later.jpg", system: "Later", title: "Depth compliance later" }
       ];
 
-      let viewId = views[0].id;
-      let hotId = views[0].hotspots[0].id;
+      let teacherId = teachers[0].id;
+      let studyId = teachers[0].studies[0].id;
+      let viewId = teachers[0].studies[0].views[0].id;
+      let hotId = teachers[0].studies[0].views[0].hotspots[0].id;
 
+      const teacherTabsEl = document.getElementById("teacher-tabs");
+      const studyTabsEl = document.getElementById("study-tabs");
+      const teacherTitle = document.querySelector("#explorer h2");
       const tabsEl = document.getElementById("view-tabs");
       const viewer = document.getElementById("viewer");
       const viewerImg = document.getElementById("viewer-img");
@@ -553,17 +772,74 @@
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightbox-img");
 
+      function currentTeacher() {
+        return teachers.find((t) => t.id === teacherId) || teachers[0];
+      }
+      function currentStudy() {
+        const t = currentTeacher();
+        return t.studies.find((s) => s.id === studyId) || t.studies[0];
+      }
       function currentView() {
-        return views.find((v) => v.id === viewId) || views[0];
+        const s = currentStudy();
+        return s.views.find((v) => v.id === viewId) || s.views[0];
       }
       function currentHot() {
         const v = currentView();
         return v.hotspots.find((h) => h.id === hotId) || v.hotspots[0];
       }
 
+      function selectStudy(s) {
+        studyId = s.id;
+        viewId = s.views[0].id;
+        hotId = s.views[0].hotspots[0].id;
+      }
+
+      function renderTeacherTabs() {
+        teacherTabsEl.innerHTML = "";
+        teachers.forEach((t) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "tab";
+          b.textContent = t.label;
+          b.setAttribute("role", "tab");
+          b.setAttribute("aria-selected", t.id === teacherId ? "true" : "false");
+          b.addEventListener("click", () => {
+            teacherId = t.id;
+            selectStudy(t.studies[0]);
+            renderAll();
+          });
+          teacherTabsEl.appendChild(b);
+        });
+        teacherTitle.textContent = currentTeacher().title;
+      }
+
+      function renderStudyTabs() {
+        const t = currentTeacher();
+        if (!t.studies || t.studies.length < 2) {
+          studyTabsEl.hidden = true;
+          studyTabsEl.innerHTML = "";
+          return;
+        }
+        studyTabsEl.hidden = false;
+        studyTabsEl.innerHTML = "";
+        t.studies.forEach((s) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "tab";
+          b.textContent = s.label;
+          b.setAttribute("role", "tab");
+          b.setAttribute("aria-selected", s.id === studyId ? "true" : "false");
+          b.addEventListener("click", () => {
+            selectStudy(s);
+            renderAll();
+          });
+          studyTabsEl.appendChild(b);
+        });
+      }
+
       function renderTabs() {
         tabsEl.innerHTML = "";
-        views.forEach((v) => {
+        currentStudy().views.forEach((v) => {
           const b = document.createElement("button");
           b.type = "button";
           b.className = "tab";
@@ -659,6 +935,8 @@
       });
 
       function renderAll() {
+        renderTeacherTabs();
+        renderStudyTabs();
         renderTabs();
         renderViewer();
       }

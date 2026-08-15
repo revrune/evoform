@@ -112,6 +112,11 @@ def main() -> None:
         if not m or len(m.group(0)) < 200:
             fail(f"board section {sid}: body too thin")
 
+    h_pos = board.find('id="horizon"')
+    hyp_pos = board.find('id="hypothesis"')
+    if h_pos < 0 or hyp_pos < 0 or h_pos > hyp_pos:
+        fail("board: Horizon must open the page (before Active stability)")
+
     if "Heavy first build" not in board and "Mass-first P1" not in board:
         fail("board: missing first-build scale chip")
     must_contain(board, "0–50 m first", "board depth chip")

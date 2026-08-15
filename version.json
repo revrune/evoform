@@ -1,7 +1,7 @@
 {
-  "version": "evomarine-foot-pin-2026-08-15",
+  "version": "board-horizon-open-2026-08-15",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "EvoMarine footer pins to the bottom like home.",
-  "updated": "2026-08-15T16:30Z"
+  "note": "Board opens with Horizon so the why is first.",
+  "updated": "2026-08-15T18:10Z"
 }
