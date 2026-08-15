@@ -197,6 +197,13 @@
       }
       .teacher-tabs, .study-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.75rem; }
       .study-tabs[hidden] { display: none; }
+      .teacher-lede {
+        margin: 0.35rem 0 0.85rem;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.5;
+        max-width: 34rem;
+      }
       .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
       .tab {
         border-radius: 999px;
@@ -490,6 +497,7 @@
           <div>
             <div class="teacher-tabs" role="tablist" aria-label="Teachers" id="teacher-tabs"></div>
             <h2>Leatherback sea turtle</h2>
+            <p class="teacher-lede" id="teacher-lede">Long-range form. Continuous skin, ridges, flipper-style drive.</p>
             <div class="study-tabs" role="tablist" aria-label="Hull studies" id="study-tabs"></div>
           </div>
           <div class="tabs" role="tablist" aria-label="Views" id="view-tabs"></div>
@@ -568,6 +576,7 @@
           id: "leatherback",
           label: "Leatherback",
           title: "Leatherback sea turtle",
+          lede: "Long-range form. Continuous skin, ridges, flipper-style drive.",
           studies: [
             {
               id: "outline",
@@ -580,9 +589,9 @@
                   caption: "Outline study · living form · flippers still stand-in",
                   hotspots: [
                     { id: "ridges", x: 48, y: 38, title: "Ridge lines", body: "Five long ridges, taken from the leatherback shell. Tank tests come before any flow claim.", board: "/path-a/board/#teacher" },
-                    { id: "skin", x: 55, y: 55, title: "Smooth outer skin", body: "A continuous outer skin, so the flow does not break up. Quieter form on the first build.", board: "/path-a/board/#architecture" },
-                    { id: "foils", x: 42, y: 68, title: "Flipper foils", body: "Living flippers teach the control surfaces. Machine joints, living geometry.", board: "/path-a/board/#architecture" },
-                    { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "The nose is reserved for listening and watching. Layout before ornament.", board: "/path-a/board/#transfer" }
+                    { id: "skin", x: 55, y: 55, title: "Smooth outer skin", body: "A continuous outer skin, so the flow does not break up.", board: "/path-a/board/#architecture" },
+                    { id: "foils", x: 42, y: 68, title: "Flipper foils", body: "Living flippers teach the control surfaces.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 78, y: 58, title: "Sensor nose", body: "The nose is reserved for listening and watching.", board: "/path-a/board/#transfer" }
                   ]
                 },
                 {
@@ -698,6 +707,7 @@
           id: "ray",
           label: "Cownose ray",
           title: "Cownose ray",
+          lede: "Wide slow foils. A teacher for lift and quiet hold.",
           studies: [
             {
               id: "foils",
@@ -711,7 +721,7 @@
                   hotspots: [
                     { id: "planform", x: 48, y: 48, title: "Flat planform", body: "A wide, low diamond like a cownose disc. More room for sensors on a quiet face.", board: "/path-a/board/#teacher" },
                     { id: "pectoral", x: 72, y: 62, title: "Pectoral foils", body: "Large slow foils, taken from how a ray moves. First build can use them as planes.", board: "/path-a/board/#architecture" },
-                    { id: "nose", x: 78, y: 42, title: "Sensor nose", body: "Forward volume reserved for listening and watching · layout before ornament.", board: "/path-a/board/#transfer" },
+                    { id: "nose", x: 78, y: 42, title: "Sensor nose", body: "The nose is reserved for listening and watching.", board: "/path-a/board/#transfer" },
                     { id: "stern", x: 18, y: 52, title: "Light rear thrust", body: "A small rear unit for moving between spots. Hover still prefers buoyancy.", board: "/path-a/board/#architecture" }
                   ]
                 },
@@ -759,6 +769,7 @@
       const teacherTabsEl = document.getElementById("teacher-tabs");
       const studyTabsEl = document.getElementById("study-tabs");
       const teacherTitle = document.querySelector("#explorer h2");
+      const teacherLede = document.getElementById("teacher-lede");
       const tabsEl = document.getElementById("view-tabs");
       const viewer = document.getElementById("viewer");
       const viewerImg = document.getElementById("viewer-img");
@@ -810,6 +821,7 @@
           teacherTabsEl.appendChild(b);
         });
         teacherTitle.textContent = currentTeacher().title;
+        if (teacherLede) teacherLede.textContent = currentTeacher().lede || "";
       }
 
       function renderStudyTabs() {
