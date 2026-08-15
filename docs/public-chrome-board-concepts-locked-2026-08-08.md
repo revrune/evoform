@@ -42,8 +42,20 @@ Footer is the **house strip**, same on every public page (home · EvoMarine · C
 - Prefer ` · ` joins or full stops · **no em dashes** in public copy  
 - Refuse as page voice: *form language* · *regime-matched* · *streamwise* · *control path* / *transfer stack* as marketing speak  
 - No **Path A** in public titles when there is no Path B on the surface  
-- Research honesty stays (working claim · tank tests · evidence cues) · jargon goes  
 - Hotspots: title + one clear sentence · optional quiet board link  
+
+### Public vs internal (LOCKED · 2026-08-15 · founder)
+
+Same split as the house slogan. **This site is public.** It is for excitement and investment.
+
+| Surface | Voice |
+|---------|--------|
+| **Public** | What we **do**. Ours. Positive. Confident. |
+| **Internal** | What we refuse · one-of-many honesty · engineering hedges · role limits |
+
+**Do not** write on the door: “one sketch,” “just one of,” “already done elsewhere,” “go look at other companies,” or a list of what we are **not**. That is programming language. Keep it in briefs and agent law.
+
+**Do not overpromise** (no finished vehicle for sale · no hang-with theatre · no robot-animal). **Do not undercut.** Teachers (leatherback, F-16, drones) stay as how we learn, not as rivals who already own the job.
 
 Wording of individual cards may still be refined by Rua. Structure and ownership do not reopen without go.
 

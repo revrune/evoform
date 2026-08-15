@@ -116,6 +116,8 @@ def main() -> None:
     hyp_pos = board.find('id="hypothesis"')
     if h_pos < 0 or hyp_pos < 0 or h_pos > hyp_pos:
         fail("board: Horizon must open the page (before Active stability)")
+    if "one sketch" in board.lower():
+        fail("board: public voice — do not undercut (one sketch)")
 
     if "Heavy first build" not in board and "Mass-first P1" not in board:
         fail("board: missing first-build scale chip")
