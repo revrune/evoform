@@ -19,7 +19,7 @@
 | Back chrome | **None** · browser history is enough |
 | Sibling names in top bar | **Forbidden** · do not put “Inspiration Board” on Concepts nav or “Visual Concepts” on Board nav (confuses place) |
 
-Footer may stay thin: EvoForm · EvoMarine · CetaVox. Path names belong on the **hub** doors, not as competing page titles in chrome.
+Footer is the **house strip**, same on every public page (home · EvoMarine · Concepts · Board): mark + **Rún** / **Revealing Mystery** left · sister **names** (CetaVox · Leitner Learning) one line right. In-site path stays in the **header**. Do not restate Shaped by Nature or EvoForm · EvoMarine in the footer.
 
 ---
 

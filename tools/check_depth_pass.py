@@ -217,6 +217,17 @@ def main() -> None:
     must_not_contain(hub, "Why and how", "hub no door job line")
     must_not_contain(hub, "p-job", "hub no p-job chrome")
 
+    # House strip on every public page (2026-08-15)
+    for page, label in (
+        (home, "home"),
+        (hub, "evomarine"),
+        (path_a, "path-a"),
+        (board, "board"),
+    ):
+        must_contain(page, "Revealing Mystery", f"{label} house slogan")
+        must_contain(page, "cetavox.com", f"{label} CetaVox")
+        must_contain(page, "leitnerlearning.com", f"{label} Leitner")
+
     print("PASS: permanent chrome + ownership gate (board · concepts · home · hub)")
     print(f"  seal: {SEAL.relative_to(ROOT)}")
 

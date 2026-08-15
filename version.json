@@ -1,7 +1,7 @@
 {
-  "version": "door-foot-bar-2026-08-15",
+  "version": "house-foot-all-pages-2026-08-15",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Door footer: house left, sister names one line right.",
-  "updated": "2026-08-15T14:00Z"
+  "note": "Same house footer on every public page.",
+  "updated": "2026-08-15T16:00Z"
 }
