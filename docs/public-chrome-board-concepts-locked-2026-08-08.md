@@ -53,7 +53,7 @@ Same split as the house slogan. **This site is public.** It is for excitement an
 | **Public** | What we **do**. Ours. Positive. Confident. |
 | **Internal** | What we refuse · one-of-many honesty · engineering hedges · role limits |
 
-**Do not** write on the door: “one sketch,” “just one of,” “another path is opening,” “already done elsewhere,” “go look at other companies,” or a list of what we are **not**. Do not frame our work as a field trend we joined. EvoMarine is the subject. That is programming language for briefs and agent law.
+**Do not** write on the door: “one sketch,” “just one of,” “another path is opening,” “already done elsewhere,” “go look at other companies,” or a list of what we are **not**. Do not frame our work as a field trend we joined. EvoMarine is the subject. Horizon **leads with the living world**, not last-century craft and not the computer. That is programming language for briefs and agent law.
 
 **Do not overpromise** (no finished vehicle for sale · no hang-with theatre · no robot-animal). **Do not undercut.** Teachers (leatherback, F-16, drones) stay as how we learn, not as rivals who already own the job.
 

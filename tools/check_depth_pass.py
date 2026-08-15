@@ -118,6 +118,13 @@ def main() -> None:
         fail("board: Horizon must open the page (before Active stability)")
     if "one sketch" in board.lower() or "another path is opening" in board.lower():
         fail("board: public voice — do not undercut (field-trend / one of many)")
+    hz = re.search(r'id="horizon"[^>]*>.*?</section>', board, re.S)
+    if hz:
+        body = hz.group(0).lower()
+        nature_at = min((i for i in (body.find("natural world"), body.find("living")) if i >= 0), default=-1)
+        computer_at = body.find("computer")
+        if nature_at < 0 or (computer_at >= 0 and nature_at > computer_at):
+            fail("board: Horizon must lead with the living world, not the computer")
 
     if "Heavy first build" not in board and "Mass-first P1" not in board:
         fail("board: missing first-build scale chip")
