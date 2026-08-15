@@ -1,7 +1,7 @@
 {
-  "version": "house-foot-all-pages-2026-08-15",
+  "version": "evomarine-foot-pin-2026-08-15",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Same house footer on every public page.",
-  "updated": "2026-08-15T16:00Z"
+  "note": "EvoMarine footer pins to the bottom like home.",
+  "updated": "2026-08-15T16:30Z"
 }
