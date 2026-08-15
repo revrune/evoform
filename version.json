@@ -1,7 +1,7 @@
 {
-  "version": "board-horizon-watches-2026-08-15",
+  "version": "board-horizon-observes-2026-08-15",
   "surface": "door+evomarine+path-a+board",
   "host": "vercel",
-  "note": "Horizon closer: stay longer, quieter, closer to the life it watches.",
-  "updated": "2026-08-15T20:50Z"
+  "note": "Horizon closer: observes.",
+  "updated": "2026-08-15T21:00Z"
 }
