@@ -38,11 +38,12 @@ Footer is the **house strip**, same on every public page (home · EvoMarine · C
 
 ## 3. Public English
 
-- Short · spoken · concrete  
-- Prefer ` · ` joins or full stops · **no em dashes** in public copy  
-- Refuse as page voice: *form language* · *regime-matched* · *streamwise* · *control path* / *transfer stack* as marketing speak  
+- Write as a person would say it. Complete sentences. Something you can see.  
+- Prefer full stops. ` · ` is for short joins, not a stack of slogan atoms. **No em dashes.**  
+- Refuse as page voice: *form language* · *regime-matched* · *streamwise* · *control path* / *transfer stack* · “models the natural world” · “disturbing less” as a catchphrase  
 - No **Path A** in public titles when there is no Path B on the surface  
 - Hotspots: title + one clear sentence · optional quiet board link  
+- Read it aloud. If it sounds like locked phrases glued together, rewrite.  
 
 ### Public vs internal (LOCKED · 2026-08-15 · founder)
 
