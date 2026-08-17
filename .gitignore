@@ -9,3 +9,6 @@ _public/
 
 # Local iteration backups (not the public door)
 .local/
+
+# Local print / foil shop (not the public door)
+prototypes/
