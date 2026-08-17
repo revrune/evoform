@@ -19,7 +19,7 @@
 | Back chrome | **None** · browser history is enough |
 | Sibling names in top bar | **Forbidden** · do not put “Inspiration Board” on Concepts nav or “Visual Concepts” on Board nav (confuses place) |
 
-Footer is the **house strip**, same on every public page (home · EvoMarine · Concepts · Board): mark + **Rún** / **Revealing Mystery** left · sister **names** (CetaVox · Leitner Learning) one line right. In-site path stays in the **header**. Do not restate Shaped by Nature or EvoForm · EvoMarine in the footer. Short pages (home · EvoMarine) **pin** the bar to the bottom of the window. Long pages (Concepts · Board) keep it at the end of the content.
+Footer is the **house strip**, same on every public page (home · EvoMarine · Concepts · Board): mark + **Rún AS** / **Revealing Mystery** left · sister **names** (CetaVox · Leitner Learning) one line right. In-site path stays in the **header**. Do not restate Shaped by Nature or EvoForm · EvoMarine in the footer. Short pages (home · EvoMarine) **pin** the bar to the bottom of the window. Long pages (Concepts · Board) keep it at the end of the content.
 
 ---
 
