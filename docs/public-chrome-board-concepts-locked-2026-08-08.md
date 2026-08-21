@@ -81,7 +81,7 @@ Exit 0 required before stage (`tools/stage-public-door.sh`) and prod deploy of b
 
 ## 6. Hull studies (LOCKED · 2026-08-13)
 
-Concepts **keeps** leatherback studies **Outline · Packed · Long**. New studies add. Do not overwrite or drop a keeper without Rua go. Full law: `docs/path-a-concepts-iteration-law-2026-08-13.md`.
+Concepts **keeps** leatherback studies **Outline · Packed · Long**. **Span** added 2026-08-21 (Rua go). New studies add. Do not overwrite or drop a keeper without Rua go. Full law: `docs/path-a-concepts-iteration-law-2026-08-13.md`.
 
 ## Still open (not locked)
 

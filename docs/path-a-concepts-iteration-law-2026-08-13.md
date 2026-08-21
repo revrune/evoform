@@ -34,6 +34,8 @@ Hull studies on Concepts are **kept**. Do not overwrite, hide, or delete a study
 | **Packed** | `study-packed-form.jpg` · `study-packed-profile.jpg` · `study-packed-plan.jpg` | Volume first. Motion teacher gone. |
 | **Long** | `study-long-form.jpg` · `study-long-profile.jpg` · `study-long-plan.jpg` | Cruise AUV end of the range. Weak as EvoForm. |
 
+**Added (2026-08-21 · Rua go):** **Span** · `study-span-form.jpg` · `study-span-profile.jpg` · `study-span-plan.jpg` · composed Path A: working foils, flush listening face, quiet tail. Leads the leatherback tabs. Does not replace keepers.
+
 New studies **add**. They do not replace keepers.
 
 A **Drive** still (`study-drive-form.jpg`) may live on disk. It stays **off** the public page until it is a usable platform and not a robot turtle.

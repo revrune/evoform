@@ -46,7 +46,7 @@ Kai is the same Build seat as Leitner/CetaVox. Global memory + three-company spi
 
 **Public chrome · Board + Visual Concepts (LOCKED · permanent · 2026-08-08):** `docs/public-chrome-board-concepts-locked-2026-08-08.md` — shared top chrome · ownership split (Concepts = form UI · Board = research facts) · plain English · home/hub stay thin. **Gate before stage/deploy:** `python3 tools/check_depth_pass.py`.
 
-**Concepts iteration law (LOCKED · permanent · 2026-08-13):** `docs/path-a-concepts-iteration-law-2026-08-13.md` — keep Outline · Packed · Long · Board is the form brief · engineer living form and motion · no discarded studies without Rua go.
+**Concepts iteration law (LOCKED · permanent · 2026-08-13):** `docs/path-a-concepts-iteration-law-2026-08-13.md` — keep Outline · Packed · Long · **Span** added 2026-08-21 · Board is the form brief · engineer living form and motion · no discarded studies without Rua go.
 
 **Vercel deploy PRIMARY (LOCKED · permanent · 2026-08-08):** Live host is **Vercel** (evoform.no). GitHub is a **record**, not the ship path. **Always:** `python3 tools/deploy-vercel-rest.py` (MCP OAuth REST · `docs/ops/vercel-deploy-primary-2026-08-08.md`). **Do not** default to GHA `VERCEL_TOKEN`, `vercel login`, or waiting on Actions. GHA secret is known-invalid; re-auth **Vercel MCP** if REST probe fails.
 

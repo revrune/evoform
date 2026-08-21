@@ -150,10 +150,14 @@ def main() -> None:
     must_contain(path_a, 'id: "outline"', "path-a Outline study")
     must_contain(path_a, 'id: "packed"', "path-a Packed study")
     must_contain(path_a, 'id: "long"', "path-a Long study")
+    must_contain(path_a, 'id: "span"', "path-a Span study")
     for rel in (
         "path-a/mockups/form-threequarter.jpg",
         "path-a/mockups/study-packed-form.jpg",
         "path-a/mockups/study-long-form.jpg",
+        "path-a/mockups/study-span-form.jpg",
+        "path-a/mockups/study-span-profile.jpg",
+        "path-a/mockups/study-span-plan.jpg",
     ):
         if not (ROOT / rel).is_file():
             fail(f"path-a: missing keeper still {rel}")
