@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://evoform.no/path-a/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="EvoForm" />
-    <meta property="og:image" content="https://evoform.no/path-a/mockups/form-threequarter.jpg" />
+    <meta property="og:image" content="https://evoform.no/path-a/mockups/study-span-form.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <style>
       :root {
@@ -505,7 +505,7 @@
         <div class="explorer-grid">
           <div>
             <div class="viewer" id="viewer">
-              <img id="viewer-img" src="/path-a/mockups/form-threequarter.jpg" alt="Leatherback living-form study" />
+              <img id="viewer-img" src="/path-a/mockups/study-span-form.jpg" alt="Leatherback span study · working foils" />
             </div>
             <p class="viewer-cap" id="viewer-cap"></p>
           </div>
@@ -578,6 +578,49 @@
           title: "Leatherback sea turtle",
           lede: "Long-range form. Continuous skin, ridges, flipper-style drive.",
           studies: [
+            {
+              id: "span",
+              label: "Span",
+              views: [
+                {
+                  id: "form",
+                  label: "Form",
+                  image: "/path-a/mockups/study-span-form.jpg",
+                  caption: "Span study · working foils · listening face",
+                  hotspots: [
+                    { id: "ridges", x: 45, y: 32, title: "Ridge lines", body: "Five long ridges, taken from the leatherback shell. Tank tests come before any flow claim.", board: "/path-a/board/#teacher" },
+                    { id: "skin", x: 55, y: 48, title: "Smooth outer skin", body: "A continuous outer skin, so the flow does not break up.", board: "/path-a/board/#architecture" },
+                    { id: "foils", x: 38, y: 72, title: "Lifting foils", body: "Two working foils, one each side. This is how we fly the hull at survey speed.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 84, y: 54, title: "Listening face", body: "The nose is reserved for listening and watching. Hydrophone first.", board: "/path-a/board/#transfer" }
+                  ]
+                },
+                {
+                  id: "profile",
+                  label: "Profile",
+                  image: "/path-a/mockups/study-span-profile.jpg",
+                  caption: "Span · side · foil section · quiet tail",
+                  hotspots: [
+                    { id: "head", x: 88, y: 48, title: "Listening face", body: "Hydrophone kept quiet from the motors. Camera can turn while the body stays still.", board: "/path-a/board/#transfer" },
+                    { id: "carapace", x: 48, y: 38, title: "Body volume", body: "Leatherback packing as the size teacher. Room for battery, buoyancy, two computers, and dry gear.", board: "/path-a/board/#teacher" },
+                    { id: "foil", x: 52, y: 62, title: "Foil section", body: "A cambered lifting foil, blended into the hull. Hold and slow lift live here.", board: "/path-a/board/#architecture" },
+                    { id: "thrust", x: 10, y: 46, title: "Quiet tail", body: "A small ducted unit for catch-up. Hover still prefers buoyancy.", board: "/path-a/board/#architecture" }
+                  ]
+                },
+                {
+                  id: "plan",
+                  label: "Plan",
+                  image: "/path-a/mockups/study-span-plan.jpg",
+                  caption: "Span · top · two foils",
+                  hotspots: [
+                    { id: "spine", x: 48, y: 48, title: "Center ridges", body: "A ridge line down the middle for stiffness. Flow help waits on tank tests at our speed.", board: "/path-a/board/#teacher" },
+                    { id: "leftfoil", x: 52, y: 18, title: "Port foil", body: "One foil each side. Hold, roll, and slow lift.", board: "/path-a/board/#architecture" },
+                    { id: "stern", x: 12, y: 50, title: "Quiet tail", body: "One rear line for calm catch-up.", board: "/path-a/board/#architecture" },
+                    { id: "nose", x: 88, y: 50, title: "Listening face", body: "The nose is reserved for listening and watching.", board: "/path-a/board/#transfer" }
+                  ]
+                },
+                systemsView
+              ]
+            },
             {
               id: "outline",
               label: "Outline",
